@@ -17,13 +17,18 @@
           "settings": {
             "desktop_image": "shopify://shop_images/heroOvenoncounter1920X1080.png",
             "color_scheme": "",
+            "eyebrow": "Health optimized. Hands-off.",
             "heading": "Eat Better. Think Less.",
-            "text": "<p>AI powered cooking appliances that learns you, plans for you, and and cooks for you - autonomously.</p>",
+            "text": "<p>AI powered cooking appliances that learn you, plan for you, and cook for you - autonomously.</p>",
             "text_width": "small",
             "button_label": "Shop Now",
             "button_link": "shopify://products/brisk-it-argo-640-a-i-powered-and-wifi-grill-sams-club-exclusive",
             "button_dot": true,
             "button_style": "primary",
+            "button_label_2": "How It Works",
+            "button_link_2": "",
+            "button_dot_2": false,
+            "button_style_2": "secondary",
             "overlay_enable": true,
             "overlay_opacity": 0,
             "overlay_opacity_mobile": 0
@@ -71,6 +76,7 @@
       ],
       "settings": {
         "header_overlay": true,
+        "floating_header": true,
         "header_transparent": false,
         "color_scheme_header": "",
         "light_logo": true,
