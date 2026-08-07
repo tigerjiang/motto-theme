@@ -17,9 +17,9 @@
           "settings": {
             "desktop_image": "shopify://shop_images/heroOvenoncounter1920X1080.png",
             "color_scheme": "",
-            "eyebrow": "Health optimized. Hands-off.",
             "heading": "Eat Better. Think Less.",
-            "text": "<p>AI powered cooking appliances that learn you, plan for you, and cook for you - autonomously.</p>",
+            "eyebrow": "Health optimized. Hands-off.",
+            "text": "<p>AI powered cooking appliances that learns you, plans for you, and and cooks for you - autonomously.</p>",
             "text_width": "small",
             "button_label": "Shop Now",
             "button_link": "shopify://products/brisk-it-argo-640-a-i-powered-and-wifi-grill-sams-club-exclusive",
@@ -40,12 +40,17 @@
           "settings": {
             "color_scheme": "",
             "heading": "Audio Tools for Clarity",
+            "eyebrow": "Health optimized. Hands-off.",
             "text": "<p>Upgrade your sound with accessories for clearer, more professional audio.</p>",
             "text_width": "small",
             "button_label": "Shop Now",
             "button_link": "shopify://collections/accessories",
             "button_dot": true,
             "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_dot_2": false,
+            "button_style_2": "secondary",
             "overlay_enable": true,
             "overlay_opacity": 0,
             "overlay_opacity_mobile": 0
@@ -57,12 +62,17 @@
           "settings": {
             "color_scheme": "",
             "heading": "Compact Sound Solution",
+            "eyebrow": "Health optimized. Hands-off.",
             "text": "<p>Enjoy powerful sound in a small package, perfect for on-the-go recording and easy storage.</p>",
             "text_width": "small",
             "button_label": "Shop Now",
             "button_link": "",
             "button_dot": true,
             "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_dot_2": false,
+            "button_style_2": "secondary",
             "overlay_enable": true,
             "overlay_opacity": 0,
             "overlay_opacity_mobile": 0
@@ -96,6 +106,56 @@
         "text_animation": true,
         "margin_top": "no-indent",
         "margin_bottom": "no-indent"
+      }
+    },
+    "collections_list_R46PWM": {
+      "type": "collections-list",
+      "blocks": {
+        "collection_item_LgVA6D": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "color_scheme": "",
+            "image": "shopify://shop_images/img-zelosbypool-720x720.png",
+            "image_has_container": false,
+            "collection_heading_size": "h2",
+            "overlay_enable": false,
+            "overlay_opacity": 0.2
+          }
+        },
+        "collection_item_6q7LCk": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "color_scheme": "",
+            "image": "shopify://shop_images/img-ovenondarkcounter-720x720.png",
+            "image_has_container": false,
+            "collection_heading_size": "h2",
+            "overlay_enable": false,
+            "overlay_opacity": 0.2
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_LgVA6D",
+        "collection_item_6q7LCk"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "section_heading": "",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": false,
+        "content-align": "align-left",
+        "columns_per_row": 2,
+        "collection_heading_tag": "div",
+        "swipe_on_mobile": false,
+        "image_ratio": "1/1",
+        "margin_top": "xl",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
       }
     },
     "product_grid_WB63CA": {
@@ -675,56 +735,6 @@
         "swipe_on_mobile": true,
         "image_ratio_first": "4/3",
         "image_ratio": "16/9",
-        "margin_top": "xl",
-        "margin_bottom": "no-indent",
-        "padding_top": "xs",
-        "padding_bottom": "xs"
-      }
-    },
-    "collections_list_R46PWM": {
-      "type": "collections-list",
-      "blocks": {
-        "collection_item_LgVA6D": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "color_scheme": "",
-            "image": "shopify://shop_images/img-zelosbypool-720x720.png",
-            "image_has_container": false,
-            "collection_heading_size": "h2",
-            "overlay_enable": false,
-            "overlay_opacity": 0.2
-          }
-        },
-        "collection_item_6q7LCk": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "color_scheme": "",
-            "image": "shopify://shop_images/img-ovenondarkcounter-720x720.png",
-            "image_has_container": false,
-            "collection_heading_size": "h2",
-            "overlay_enable": false,
-            "overlay_opacity": 0.2
-          }
-        }
-      },
-      "block_order": [
-        "collection_item_LgVA6D",
-        "collection_item_6q7LCk"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "section_heading": "",
-        "section_heading_tag": "h2",
-        "section_heading_size": "h2",
-        "subheading": "",
-        "dot": false,
-        "content-align": "align-left",
-        "columns_per_row": 2,
-        "collection_heading_tag": "div",
-        "swipe_on_mobile": false,
-        "image_ratio": "1/1",
         "margin_top": "xl",
         "margin_bottom": "no-indent",
         "padding_top": "xs",
