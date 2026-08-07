@@ -1,0 +1,244 @@
+{{ 'section-ai-kitchen.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .ai-kitchen {
+    --ai-kitchen-accent: {{ section.settings.accent_color }};
+    --ai-kitchen-step-color: {{ section.settings.step_color }};
+    --ai-kitchen-heading-color: {{ section.settings.heading_color }};
+    --ai-kitchen-background: {{ section.settings.background_color }};
+  }
+{%- endstyle -%}
+
+<div class="ai-kitchen">
+  <div class="ai-kitchen__inner">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="ai-kitchen__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <ol class="ai-kitchen__steps" aria-label="{{ section.settings.steps_label | escape }}">
+        {%- for block in section.blocks -%}
+          <li class="ai-kitchen__step" {{ block.shopify_attributes }}>
+            <div class="ai-kitchen__step-content">
+              {%- if block.settings.image != blank -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 88
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '44, 88',
+                    sizes: '44px',
+                    class: 'ai-kitchen__step-image',
+                    alt: ''
+                }}
+              {%- else -%}
+                <div class="ai-kitchen__step-placeholder" aria-hidden="true">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <span class="ai-kitchen__step-label">{{ block.settings.text | escape }}</span>
+              {%- endif -%}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ol>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ai-kitchen__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.download_title != blank or section.settings.app_store_image != blank or section.settings.google_play_image != blank -%}
+      <div class="ai-kitchen__download">
+        {%- if section.settings.download_title != blank -%}
+          <p class="ai-kitchen__download-title">{{ section.settings.download_title | escape }}</p>
+        {%- endif -%}
+        <div class="ai-kitchen__download-links">
+          {%- if section.settings.app_store_image != blank -%}
+            <a
+              class="ai-kitchen__download-link"
+              {% if section.settings.app_store_url != blank %}
+                href="{{ section.settings.app_store_url }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+              aria-label="{{ section.settings.app_store_label | escape }}"
+            >
+              {{
+                section.settings.app_store_image
+                | image_url: width: 240
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '120, 240',
+                  sizes: '120px',
+                  class: 'ai-kitchen__download-image',
+                  alt: ''
+              }}
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.google_play_image != blank -%}
+            <a
+              class="ai-kitchen__download-link"
+              {% if section.settings.google_play_url != blank %}
+                href="{{ section.settings.google_play_url }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+              aria-label="{{ section.settings.google_play_label | escape }}"
+            >
+              {{
+                section.settings.google_play_image
+                | image_url: width: 240
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '120, 240',
+                  sizes: '120px',
+                  class: 'ai-kitchen__download-image',
+                  alt: ''
+              }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "AI Kitchen",
+  "tag": "section",
+  "class": "ai-kitchen-section",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Top title",
+      "default": "Your AI Kitchen"
+    },
+    {
+      "type": "text",
+      "id": "steps_label",
+      "label": "Steps accessibility label",
+      "default": "How AI Kitchen works"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main heading",
+      "default": "Turn your goals, budget, and tastes into meals tailored just for you."
+    },
+    {
+      "type": "text",
+      "id": "download_title",
+      "label": "Download title",
+      "default": "Download the app"
+    },
+    {
+      "type": "header",
+      "content": "App Store button"
+    },
+    {
+      "type": "image_picker",
+      "id": "app_store_image",
+      "label": "Button image"
+    },
+    {
+      "type": "url",
+      "id": "app_store_url",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "app_store_label",
+      "label": "Accessible label",
+      "default": "Download on the App Store"
+    },
+    {
+      "type": "header",
+      "content": "Google Play button"
+    },
+    {
+      "type": "image_picker",
+      "id": "google_play_image",
+      "label": "Button image"
+    },
+    {
+      "type": "url",
+      "id": "google_play_url",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "google_play_label",
+      "label": "Accessible label",
+      "default": "Get it on Google Play"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#FBF9F6"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Titles and connectors",
+      "default": "#E87928"
+    },
+    {
+      "type": "color",
+      "id": "step_color",
+      "label": "Step text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Main heading",
+      "default": "#13294B"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Step"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "AI Kitchen",
+      "blocks": [
+        { "type": "step", "settings": { "text": "Plan" } },
+        { "type": "step", "settings": { "text": "Balance" } },
+        { "type": "step", "settings": { "text": "Shop" } },
+        { "type": "step", "settings": { "text": "Cook" } },
+        { "type": "step", "settings": { "text": "Learn" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
