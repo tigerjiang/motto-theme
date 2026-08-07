@@ -1,3 +1,7 @@
+.collections-list{
+  background-color: #fefbf7;   
+}
+
 .collections-list .swipe-on-mobile__nav {
   margin-top: 0;
   padding-left: 2rem;
