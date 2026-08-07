@@ -12,7 +12,11 @@
 {%- style -%}
   {% render 'section-margin' %}
   {% render 'section-padding' %}
-
+  #shopify-section-{{ section.id }} {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
   .start-spin {
 
   	transition: all {{ slideshow_delay}}s linear !important;
