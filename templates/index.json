@@ -23,7 +23,7 @@
             "text_width": "small",
             "button_label": "Shop Now",
             "button_link": "shopify://products/brisk-it-argo-640-a-i-powered-and-wifi-grill-sams-club-exclusive",
-            "button_dot": true,
+            "button_dot": false,
             "button_style": "primary",
             "button_label_2": "How It Works",
             "button_link_2": "",
