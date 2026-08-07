@@ -61,7 +61,7 @@
   text-transform: uppercase;
 }
 .customer .field #Address-error {
-  font-family: DM Sans;
+  font-family: var(--font-body-family);
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;

@@ -1,0 +1,77 @@
+{% comment %}
+  Roboto font files mirrored from briskit-app.
+  Use font-family: 'Roboto' with font-weight/font-style to select a face.
+{% endcomment %}
+{% comment %}theme-check-disable AssetPreload{% endcomment %}
+<link rel="preload" as="font" href="{{ 'Roboto-Regular.ttf' | asset_url }}" type="font/ttf" crossorigin>
+{% comment %}theme-check-enable AssetPreload{% endcomment %}
+{% style %}
+  @font-face {
+    font-family: 'Roboto';
+    src: url("{{ 'Roboto-Regular.ttf' | asset_url }}") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url("{{ 'Roboto-Italic.ttf' | asset_url }}") format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url("{{ 'Roboto-Medium.ttf' | asset_url }}") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url("{{ 'Roboto-SemiBold.ttf' | asset_url }}") format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url("{{ 'Roboto-SemiBoldItalic.ttf' | asset_url }}") format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url("{{ 'Roboto-Bold.ttf' | asset_url }}") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url("{{ 'Roboto-BoldItalic.ttf' | asset_url }}") format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  :root {
+    --font-body-family: 'Roboto', sans-serif;
+    --font-heading-family: 'Roboto', sans-serif;
+    --font-subtitle-family: 'Roboto', sans-serif;
+    --font-heading-card-family: 'Roboto', sans-serif;
+    --font-text-card-family: 'Roboto', sans-serif;
+    --font-button-family: 'Roboto', sans-serif;
+    --font-header-menu-family: 'Roboto', sans-serif;
+    --font-footer-menu-family: 'Roboto', sans-serif;
+    --font-popups-heading-family: 'Roboto', sans-serif;
+    --font-popups-text-family: 'Roboto', sans-serif;
+  }
+{% endstyle %}
