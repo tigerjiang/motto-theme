@@ -9,8 +9,13 @@
 {%- style -%}
   {% render 'section-margin' %}
   {% render 'section-padding' %}
-{%- endstyle -%}
 
+   #shopify-section-{{ section.id }} {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+{%- endstyle -%}
 <div
   class="card-list-section card-list color-{{ section.settings.color_scheme }} background"
   data-speed="{{ slideshow_speed }}"
