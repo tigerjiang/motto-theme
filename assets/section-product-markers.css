@@ -1,6 +1,42 @@
 .product-markers * {
   box-sizing: border-box;
 }
+.product-markers {
+  padding: 4rem 2rem;
+  background: var(--product-markers-background, #f6ded4);
+}
+.product-markers > .product-markers__wrapper > .container {
+  max-width: none;
+  padding: 0;
+}
+.product-markers__overlay-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: calc(100% - 4rem);
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Roboto', 'Roboto Flex', sans-serif;
+  font-size: clamp(2.8rem, 4vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 750px) {
+  .product-markers {
+    padding: 6rem 5rem;
+  }
+  .product-markers__overlay-heading {
+    width: calc(100% - 8rem);
+  }
+}
+@media screen and (min-width: 990px) {
+  .product-markers {
+    padding: 8rem 9rem;
+  }
+}
 .product-markers--border-top {
   border-top: 0.1rem solid rgba(var(--color-border));
 }

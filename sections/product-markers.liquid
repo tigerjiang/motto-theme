@@ -4,41 +4,33 @@
   defer="defer"
 ></script>
 {% style %}
-  {% render 'section-padding' %}
-    {% render 'section-margin' %}
-    #shopify-section-{{ section.id }} {
-    	--letter-spacing: {{ section.settings.letter_spacing }}em;
-    }
+  #shopify-section-{{ section.id }} {
+    padding: 0;
+    --letter-spacing: {{ section.settings.letter_spacing }}em;
+    --product-markers-background: {{ section.settings.background_color }};
+  }
     #shopify-section-{{ section.id }} .have-overlay {
-    	--overlay-alpha : {{ section.settings.overlay_opacity }}%;
+      --overlay-alpha: {{ section.settings.overlay_opacity }}%;
 
-  position: relative;
-    &::before {
-    	content: "";
-    	position: absolute;
-    	width: 100%;
-    	height: 100%;
-    	top: 0;
-    	left: 0;
-    	z-index: -1;
-    	pointer-events: none;
-    	transition: all 0.4s ease;
-    	background: rgba(var(--color-overlay), var(--overlay-alpha));
-    }
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        pointer-events: none;
+        transition: all 0.4s ease;
+        background: rgba(var(--color-overlay), var(--overlay-alpha));
+      }
     }
 {% endstyle %}
 
-<div class="product-markers section-{{ section.id }}-padding  background {% if section.settings.show_border_top %} product-markers--border-top{% endif %} {% if section.settings.show_border_bottom %} product-markers--border-bottom {% endif %}">
+<div class="product-markers {% if section.settings.show_border_top %} product-markers--border-top{% endif %} {% if section.settings.show_border_bottom %} product-markers--border-bottom {% endif %}">
   <div class="product-markers__wrapper">
     <div class="container">
-      {% render 'section-header',
-        section_heading: section.settings.section_heading,
-        section_subheading: section.settings.subheading,
-        section_heading_size: section.settings.section_heading_size,
-        section_heading_tag: section.settings.heading_tag,
-        dot: section.settings.dot,
-        line: section.settings.line
-      %}
       <div class="product-markers__box">
         <div class="product-markers__img">
           <div class="product-markers__img-box">
@@ -177,6 +169,11 @@
                 {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
               {%- endif -%}
             </div>
+            {%- if section.settings.overlay_heading != blank -%}
+              <{{ section.settings.heading_tag }} class="product-markers__overlay-heading">
+                {{ section.settings.overlay_heading | escape }}
+              </{{ section.settings.heading_tag }}>
+            {%- endif -%}
           </div>
           <div class="product-markers-for-mobile">
             {%- for block in section.blocks -%}
@@ -229,6 +226,18 @@
       "id": "color_scheme",
       "default": "background-2",
       "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "default": "#F6DED4",
+      "label": "Background color"
+    },
+    {
+      "type": "text",
+      "id": "overlay_heading",
+      "label": "Image heading",
+      "default": "Brisk It AI handles the cooking. You handle living."
     },
     {
       "type": "header",
