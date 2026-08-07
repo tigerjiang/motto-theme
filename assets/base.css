@@ -1794,7 +1794,7 @@ deferred-media {
 
 /* Global Brisk It button
    Scalable recreation of btn-red.png: the centre expands with the label while
-   the 24px corner cuts remain fixed. */
+   the end caps remain fixed. */
 .button--primary,
 .button--secondary,
 .button--tertiary,
@@ -1802,12 +1802,12 @@ deferred-media {
 .customer .button--secondary,
 .customer .button--tertiary {
   min-width: 7.2rem;
-  min-height: 4.6rem;
-  padding: 1.5rem 1.4rem;
+  min-height: 4.4rem;
+  padding: 1.4rem;
   gap: 0.8rem;
   border: 0;
-  border-radius: 0;
-  background: #eb3300;
+  border-radius: 0.7rem;
+  background: #e03813;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
@@ -1817,20 +1817,18 @@ deferred-media {
   letter-spacing: 0.016rem;
   text-transform: none;
   clip-path: polygon(
-    2.4rem 0,
-    calc(100% - 1rem) 0,
-    100% 1rem,
-    100% calc(100% - 2.4rem),
-    calc(100% - 2.4rem) 100%,
-    1rem 100%,
-    0 calc(100% - 1rem),
-    0 2.4rem
+    1.4rem 0,
+    100% 0,
+    100% calc(100% - 1.4rem),
+    calc(100% - 1.4rem) 100%,
+    0 100%,
+    0 1.4rem
   );
 }
 
 .button.dot_active,
 .customer .button.dot_active {
-  padding: 1.5rem 1.4rem;
+  padding: 1.4rem;
 }
 
 .button--primary:focus,
@@ -1841,7 +1839,7 @@ deferred-media {
 .customer .button--primary:hover,
 .customer .button--secondary:hover,
 .customer .button--tertiary:hover {
-  background: #d92f00;
+  background: #c93211;
   color: #ffffff;
 }
 .button--arrow,
@@ -2038,6 +2036,14 @@ deferred-media {
 .customer button.disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.button--primary[aria-disabled=true],
+.button--secondary[aria-disabled=true],
+.button--tertiary[aria-disabled=true],
+.customer .button--primary[aria-disabled=true],
+.customer .button--secondary[aria-disabled=true],
+.customer .button--tertiary[aria-disabled=true] {
+  opacity: 1;
 }
 .button:disabled:hover::before,
 .button[aria-disabled=true]:hover::before,
