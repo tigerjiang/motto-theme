@@ -622,6 +622,18 @@ main .section--has-overlay.shopify-section:first-child {
   background-attachment: fixed;
 }
 
+body.template-index {
+  --color-background: 254, 251, 247;
+  --gradient-background: #fefbf7;
+  background-color: #fefbf7;
+}
+
+body.template-index .background,
+body.template-index .testimonials--experts,
+body.template-index .product-markers {
+  background: #fefbf7;
+}
+
 p {
   color: rgb(var(--color-foreground));
 }
