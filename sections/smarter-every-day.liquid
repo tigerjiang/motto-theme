@@ -1,0 +1,144 @@
+{{ 'section-smarter-every-day.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .smarter-every-day {
+    --smarter-background-start: {{ section.settings.background_start }};
+    --smarter-background-end: {{ section.settings.background_end }};
+    --smarter-accent: {{ section.settings.accent_color }};
+    --smarter-text: {{ section.settings.text_color }};
+  }
+{%- endstyle -%}
+
+<div class="smarter-every-day">
+  <div class="smarter-every-day__inner">
+    <div class="smarter-every-day__content">
+      <div class="smarter-every-day__copy">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="smarter-every-day__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.heading != blank -%}
+          <h2 class="smarter-every-day__heading">{{ section.settings.heading | escape | newline_to_br }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.text != blank -%}
+          <div class="smarter-every-day__text rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank -%}
+          <div class="smarter-every-day__button">
+            {% render 'button',
+              btn_label: section.settings.button_label,
+              btn_link: section.settings.button_link,
+              btn_style: 'primary',
+              add_classes: 'smarter-every-day__button-link focus-inset'
+            %}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="smarter-every-day__media">
+        {%- if section.settings.image != blank -%}
+          {%- liquid
+            assign image_alt = section.settings.image.alt
+            if image_alt == blank
+              assign image_alt = section.settings.heading
+            endif
+          -%}
+          {{
+            section.settings.image
+            | image_url: width: 2200
+            | image_tag:
+              loading: 'lazy',
+              widths: '480, 720, 960, 1200, 1600, 2000, 2200',
+              sizes: '(min-width: 990px) calc(100vw - 400px), calc(100vw - 40px)',
+              class: 'smarter-every-day__image',
+              alt: image_alt
+          }}
+        {%- else -%}
+          {{ 'lifestyle-2' | placeholder_svg_tag: 'smarter-every-day__placeholder placeholder-svg' }}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Smarter every day",
+  "tag": "section",
+  "class": "smarter-every-day-section",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "SMARTer Every DaY"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "AI That Plans Around Real Life"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Brisk It learns, adapts, and plans the perfect meals; so you can focus on what matters.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "How It Works"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_start",
+      "label": "Gradient start",
+      "default": "#F7F2EE"
+    },
+    {
+      "type": "color",
+      "id": "background_end",
+      "label": "Gradient end",
+      "default": "#F6F3F1"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Eyebrow",
+      "default": "#E87928"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Heading and text",
+      "default": "#13294B"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Smarter every day"
+    }
+  ]
+}
+{% endschema %}

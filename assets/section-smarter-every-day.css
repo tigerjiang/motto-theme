@@ -1,0 +1,129 @@
+.smarter-every-day {
+  --smarter-background-start: #f7f2ee;
+  --smarter-background-end: #f6f3f1;
+  --smarter-accent: #e87928;
+  --smarter-text: #13294b;
+  background: linear-gradient(90deg, var(--smarter-background-start) 0%, var(--smarter-background-end) 100%);
+}
+
+.smarter-every-day__inner {
+  padding: 80px 60px;
+}
+
+.smarter-every-day__content {
+  display: grid;
+  grid-template-columns: 228px minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+
+.smarter-every-day__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  gap: 20px;
+}
+
+.smarter-every-day__eyebrow,
+.smarter-every-day__heading,
+.smarter-every-day__text,
+.smarter-every-day__text p {
+  margin: 0;
+}
+
+.smarter-every-day__eyebrow {
+  color: var(--smarter-accent);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.smarter-every-day__heading {
+  color: var(--smarter-text);
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: normal;
+}
+
+.smarter-every-day__text {
+  max-width: 250px;
+  color: var(--smarter-text);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+.smarter-every-day__text > * + * {
+  margin-top: 14px;
+}
+
+.smarter-every-day__button {
+  line-height: 0;
+}
+
+.smarter-every-day__media {
+  min-width: 0;
+}
+
+.smarter-every-day__image,
+.smarter-every-day__placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.smarter-every-day__placeholder {
+  min-height: 360px;
+  color: rgba(19, 41, 75, 0.18);
+  background: rgba(255, 255, 255, 0.32);
+}
+
+@media screen and (max-width: 1199px) {
+  .smarter-every-day__inner {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .smarter-every-day__content {
+    grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+  }
+
+  .smarter-every-day__heading {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .smarter-every-day__inner {
+    padding: 60px 20px;
+  }
+
+  .smarter-every-day__content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .smarter-every-day__heading {
+    max-width: 480px;
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .smarter-every-day__text {
+    max-width: 420px;
+  }
+
+  .smarter-every-day__placeholder {
+    min-height: 240px;
+  }
+}
