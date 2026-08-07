@@ -1,3 +1,49 @@
+.card-list__container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.card-list .section-header {
+  margin-bottom: 4rem;
+}
+
+.card-list .section-header__title {
+  color: #13294b;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+@media (min-width: 750px) {
+  .card-list__container {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .card-list .section-header__title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 990px) {
+  .card-list__container {
+    max-width: none;
+    padding: 10rem 8rem;
+  }
+
+  .card-list .section-header {
+    margin-bottom: 6rem;
+  }
+
+  .card-list .section-header__title {
+    font-size: 4.8rem;
+  }
+}
+
 .card-list-pagination {
   display: flex;
   margin-bottom: 2.4rem;
