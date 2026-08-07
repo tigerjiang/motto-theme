@@ -20,7 +20,7 @@
 {%- endstyle -%}
 
 <div
-  class="testimonials color-{{ section.settings.color_scheme }} background section-{{ section.id }}-padding"
+  class="testimonials testimonials--experts color-{{ section.settings.color_scheme }} background section-{{ section.id }}-padding"
   data-id="shopify-section-{{ section.id }}"
   data-autoplay="{{ autoplay }}"
   data-stop-autoplay="{{ stop_autoplay }}"
@@ -166,7 +166,7 @@
     {
       "type": "text",
       "id": "section_heading",
-      "default": "t:sections.testimonials.settings.heading.label",
+      "default": "What The Experts Are Saying",
       "label": "t:sections.all.section-header.heading.label"
     },
     {
@@ -240,13 +240,13 @@
     {
       "type": "text",
       "id": "subheading",
-      "default": "t:sections.testimonials.settings.subheading.label",
+      "default": "Reviews",
       "label": "t:sections.all.section-header.subheading.label"
     },
     {
       "type": "checkbox",
       "id": "dot",
-      "default": true,
+      "default": false,
       "label": "t:sections.all.section-header.dot.label"
     },
     {
@@ -473,7 +473,7 @@
         {
           "type": "checkbox",
           "id": "enable_stars",
-          "default": true,
+          "default": false,
           "label": "t:sections.testimonials.blocks.testimonials_slide.settings.rating.enable_stars.label"
         },
         {
