@@ -1,1 +1,97 @@
-{"type":"header","name":"t:sections.header.settings.header-group.label","sections":{"announcement-bar":{"type":"announcement-bar","settings":{"height":40,"height_mobile":40,"color_scheme":"","enable_slider":false,"slide_duration":2,"speed":0.8,"text":"Display a limited-time deal or important notice here","button_label":"Shop Now","button_link":""}},"header":{"type":"header","blocks":{"search_promo":{"type":"search_promo","settings":{"enable_search_promo":true,"show_links_block":true,"links_label":"Popular searches","link_label_1":"Some popular search tags","link_1":"","link_label_2":"Some popular search tags","link_2":"","link_label_3":"Some popular search tags","link_3":"","link_label_4":"","link_4":"","link_label_5":"","link_5":"","link_label_6":"","link_6":"","show_products_block":true,"products_label":"","product_list":[],"button_label":"","button_link":""}},"simple_mega_menu_wTfqFz":{"type":"simple_mega_menu","settings":{"simple_mega_menu_trigger":"Features"}}},"block_order":["search_promo","simple_mega_menu_wTfqFz"],"settings":{"color_scheme":"","header_type":"top-menu","logo_position":"center-logo","full_menu":true,"background":"primary","enable_border":false,"logo":"shopify:\/\/shop_images\/briskit.png","section_heading_tag":"h1","apply_logo_pages":false,"logo_width":90,"menu":"main-menu","enable_country_selector":true,"show_country_flag":false,"enable_language_selector":true,"enable_social":true,"buttons_type":"text","sticky_header_type":"on-scroll-up","menu_heading_tag":"h3","enable_account_btn":true,"enable_account_modal_component":true,"customer_account_menu":"","enable_search":true}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.header.settings.header-group.label",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "height": 40,
+        "height_mobile": 40,
+        "color_scheme": "",
+        "enable_slider": false,
+        "slide_duration": 2,
+        "speed": 0.8,
+        "text": "Display a limited-time deal or important notice here",
+        "button_label": "Shop Now",
+        "button_link": ""
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "search_promo": {
+          "type": "search_promo",
+          "settings": {
+            "enable_search_promo": true,
+            "show_links_block": true,
+            "links_label": "Popular searches",
+            "link_label_1": "Some popular search tags",
+            "link_1": "",
+            "link_label_2": "Some popular search tags",
+            "link_2": "",
+            "link_label_3": "Some popular search tags",
+            "link_3": "",
+            "link_label_4": "",
+            "link_4": "",
+            "link_label_5": "",
+            "link_5": "",
+            "link_label_6": "",
+            "link_6": "",
+            "show_products_block": true,
+            "products_label": "",
+            "product_list": [],
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "simple_mega_menu_wTfqFz": {
+          "type": "simple_mega_menu",
+          "settings": {
+            "simple_mega_menu_trigger": "Features"
+          }
+        }
+      },
+      "block_order": [
+        "search_promo",
+        "simple_mega_menu_wTfqFz"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "header_type": "top-menu",
+        "logo_position": "center-logo",
+        "full_menu": true,
+        "background": "primary",
+        "enable_border": false,
+        "logo": "shopify://shop_images/briskit.png",
+        "section_heading_tag": "h1",
+        "apply_logo_pages": false,
+        "logo_width": 90,
+        "menu": "main-menu",
+        "enable_country_selector": false,
+        "show_country_flag": false,
+        "enable_language_selector": false,
+        "enable_social": true,
+        "buttons_type": "icon",
+        "sticky_header_type": "on-scroll-up",
+        "menu_heading_tag": "h3",
+        "enable_account_btn": true,
+        "enable_account_modal_component": true,
+        "customer_account_menu": "",
+        "enable_search": true
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
