@@ -446,6 +446,22 @@
         "padding_bottom": "xs"
       }
     },
+    "smarter_every_day_8BzYiH": {
+      "type": "smarter-every-day",
+      "name": "Smarter every day",
+      "settings": {
+        "eyebrow": "SMARTer Every DaY",
+        "heading": "AI That Plans Around Real Life",
+        "text": "<p>Brisk It learns, adapts, and plans the perfect meals; so you can focus on what matters.</p>",
+        "button_label": "How It Works",
+        "button_link": "",
+        "image": "shopify://shop_images/Brisk_It_-_Motto_Home_Design_v8___aidiagram-desktop.png",
+        "background_start": "#F7F2EE",
+        "background_end": "#F6F3F1",
+        "accent_color": "#E87928",
+        "text_color": "#13294B"
+      }
+    },
     "testimonials_jbRNEW": {
       "type": "testimonials",
       "blocks": {
@@ -936,22 +952,6 @@
         "padding_top": "m",
         "padding_bottom": "m"
       }
-    },
-    "smarter_every_day_8BzYiH": {
-      "type": "smarter-every-day",
-      "name": "Smarter every day",
-      "settings": {
-        "eyebrow": "SMARTer Every DaY",
-        "heading": "AI That Plans Around Real Life",
-        "text": "<p>Brisk It learns, adapts, and plans the perfect meals; so you can focus on what matters.</p>",
-        "button_label": "How It Works",
-        "button_link": "",
-        "image": "shopify://shop_images/Brisk_It_-_Motto_Home_Design_v8___aidiagram-desktop.png",
-        "background_start": "#F7F2EE",
-        "background_end": "#F6F3F1",
-        "accent_color": "#E87928",
-        "text_color": "#13294B"
-      }
     }
   },
   "order": [
@@ -959,6 +959,7 @@
     "ai_kitchen_bUXdrx",
     "collections_list_R46PWM",
     "product_grid_WB63CA",
+    "smarter_every_day_8BzYiH",
     "blockquote_rwtxJE",
     "product_slider_XAHzUr",
     "card-list",
@@ -971,7 +972,6 @@
     "featured_blog_geAXtY",
     "collapsible_content_VRdJUD",
     "image_collage_eixXBp",
-    "newsletter_fp7GUw",
-    "smarter_every_day_8BzYiH"
+    "newsletter_fp7GUw"
   ]
 }
