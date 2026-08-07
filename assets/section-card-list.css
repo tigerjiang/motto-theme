@@ -1,3 +1,7 @@
+.card-list {
+  background-color: #fefbf7;
+}
+
 .card-list__container {
   padding-top: 4rem;
   padding-bottom: 4rem;
