@@ -178,7 +178,7 @@
         "collection_item_LgVA6D": {
           "type": "collection_item",
           "settings": {
-            "collection": "",
+            "collection": "shop-all",
             "color_scheme": "",
             "image": "shopify://shop_images/img-zelosbypool-720x720.png",
             "image_has_container": false,
@@ -190,7 +190,7 @@
         "collection_item_6q7LCk": {
           "type": "collection_item",
           "settings": {
-            "collection": "",
+            "collection": "shop-all",
             "color_scheme": "",
             "image": "shopify://shop_images/img-ovenondarkcounter-720x720.png",
             "image_has_container": false,
@@ -254,6 +254,22 @@
         "overlay_opacity": 0.3,
         "margin_top": "xl",
         "margin_bottom": "no-indent"
+      }
+    },
+    "smarter_every_day_8BzYiH": {
+      "type": "smarter-every-day",
+      "name": "Smarter every day",
+      "settings": {
+        "eyebrow": "SMARTer Every DaY",
+        "heading": "AI That Plans Around Real Life",
+        "text": "<p>Brisk It learns, adapts, and plans the perfect meals; so you can focus on what matters.</p>",
+        "button_label": "How It Works",
+        "button_link": "",
+        "image": "shopify://shop_images/Brisk_It_-_Motto_Home_Design_v8___aidiagram-desktop.png",
+        "background_start": "#f7f2ee",
+        "background_end": "#f6f3f1",
+        "accent_color": "#e87928",
+        "text_color": "#13294b"
       }
     },
     "blockquote_rwtxJE": {
@@ -444,22 +460,6 @@
         "margin_bottom": "no-indent",
         "padding_top": "xs",
         "padding_bottom": "xs"
-      }
-    },
-    "smarter_every_day_8BzYiH": {
-      "type": "smarter-every-day",
-      "name": "Smarter every day",
-      "settings": {
-        "eyebrow": "SMARTer Every DaY",
-        "heading": "AI That Plans Around Real Life",
-        "text": "<p>Brisk It learns, adapts, and plans the perfect meals; so you can focus on what matters.</p>",
-        "button_label": "How It Works",
-        "button_link": "",
-        "image": "shopify://shop_images/Brisk_It_-_Motto_Home_Design_v8___aidiagram-desktop.png",
-        "background_start": "#F7F2EE",
-        "background_end": "#F6F3F1",
-        "accent_color": "#E87928",
-        "text_color": "#13294B"
       }
     },
     "testimonials_jbRNEW": {
