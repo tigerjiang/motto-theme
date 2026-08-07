@@ -31,16 +31,30 @@
   endfor
 %}
 
-<div class="popular-products section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background">
+<div class="popular-products{% if section.settings.eyebrow != blank %} popular-products--featured{% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background">
   <div class="container">
-    {% render 'section-header',
-      section_heading: section.settings.section_heading,
-      section_subheading: section.settings.subheading,
-      section_heading_size: section.settings.section_heading_size,
-      section_heading_tag: section.settings.heading_tag,
-      dot: section.settings.dot,
-      line: section.settings.line
-    %}
+    {% if section.settings.eyebrow != blank %}
+      <div class="popular-products__header">
+        <p class="popular-products__eyebrow">{{ section.settings.eyebrow }}</p>
+        {% if section.settings.section_heading != blank %}
+          <{{ section.settings.heading_tag }} class="popular-products__heading">
+            {{ section.settings.section_heading }}
+          </{{ section.settings.heading_tag }}>
+        {% endif %}
+        {% if section.settings.subheading != blank %}
+          <p class="popular-products__description">{{ section.settings.subheading }}</p>
+        {% endif %}
+      </div>
+    {% else %}
+      {% render 'section-header',
+        section_heading: section.settings.section_heading,
+        section_subheading: section.settings.subheading,
+        section_heading_size: section.settings.section_heading_size,
+        section_heading_tag: section.settings.heading_tag,
+        dot: section.settings.dot,
+        line: section.settings.line
+      %}
+    {% endif %}
     <div class="popular-product__wrapper"></div>
   </div>
   {% if count <= section.settings.columns_per_row %}
@@ -123,6 +137,11 @@
     {
       "type": "header",
       "content": "t:sections.all.section-header.label"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
     },
     {
       "type": "text",
