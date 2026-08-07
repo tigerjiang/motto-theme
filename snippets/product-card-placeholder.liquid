@@ -1,0 +1,48 @@
+{% comment %}
+  Renders a product card placeholder
+  Usage:
+  {% render 'product-card-placeholder' %}
+{% endcomment %}
+{% liquid
+  case media_size
+    when 'landscape'
+      assign image_size = '70%'
+    when 'portrait'
+      assign image_size = '130%'
+    when 'square'
+      assign image_size = '100%'
+    else
+      assign image_size = '130%'
+  endcase
+%}
+<div class="product-card card-wrapper color-{{ settings.card_color_scheme }}">
+  <div class="card card--product card--product-placeholder" tabindex="-1">
+    <div class="card__inner">
+      <div
+        class="media media--transparent media--hover-effect"
+        style="padding-bottom: {{ image_size }};"
+      >
+        {% assign placeholder = index | modulo: 4 | plus: 1 %}
+        {{ 'product-apparel-' | append: placeholder | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+      <div class="card__information-top"></div>
+    </div>
+  </div>
+
+  <div class="card-information">
+    <div class="card-information__wrapper card-information__wrapper--{{ content_alignment }}">
+      <div class="card-information__group card-information__group--{{ content_alignment }}">
+        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+        {% comment %}
+          <div class="caption-with-letter-spacing card__subtitle card__vendor">
+            {{ 'products.product.vendor' | t }}
+          </div>
+        {% endcomment %}
+        <{{ product_heading_tag }} class="card__title">
+          {{ 'products.product.product_heading' | t }}
+        </{{ product_heading_tag }}>
+        {% render 'price' %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,208 @@
+{% liquid
+  assign has_slider = false
+  if section.settings.enable_slider and section.blocks != blank
+    assign has_slider = true
+  endif
+%}
+{%- if has_slider -%}
+  <script src="{{ 'announcement.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+<style>
+  :root {
+  	--announcement-height: {{ section.settings.height_mobile }}px;
+  }
+
+  @media screen and (min-width: 765px) {
+  	:root {
+  	--announcement-height: {{ section.settings.height }}px;
+  }
+  }
+</style>
+
+<script src="{{ 'ann-bar.js' | asset_url }}" defer="defer"></script>
+
+<div
+  class="announcement-bar {% if has_slider %} announcement-bar--swiper swiper{% endif %} color-{{ section.settings.color_scheme }} background"
+  role="region"
+  aria-label="{{ 'sections.header.announcement' | t }}"
+  data-delay="{{ section.settings.slide_duration | times: 1000 }}"
+  data-speed="{{ section.settings.speed | times: 1000 }}"
+>
+  <div class="announcement-bar__wrapper{% if has_slider %} swiper-wrapper{% endif %}">
+    {%- if section.settings.text != blank -%}
+      <div class="announcement-bar__message {% if has_slider %} swiper-slide{% endif %}">
+        <div class="announcement-bar__message-inner">
+          <div class="announcement-bar__text">
+            {{ section.settings.text }}
+          </div>
+          {% if section.settings.button_label != blank %}
+            <a
+              {% if section.settings.button_link != blank %}
+                href="{{ section.settings.button_link }}"
+              {% else %}
+                disabled
+              {% endif %}
+              class="announcement-bar__button button--arrow"
+            >
+              {{ section.settings.button_label }}
+              {% render 'icon-caret' %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {%- endif -%}
+    {%- for block in section.blocks -%}
+      {%- if block.settings.text != blank -%}
+        <div
+          class="announcement-bar__message color-{{ block.settings.color_scheme }} background{% if has_slider %} swiper-slide{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="announcement-bar__message-inner">
+            <div class="announcement-bar__text">
+              {{- block.settings.text -}}
+            </div>
+            {% if block.settings.button_label != blank %}
+              <a
+                {% if block.settings.button_link != blank %}
+                  href="{{ block.settings.button_link }}"
+                {% else %}
+                  disabled
+                {% endif %}
+                class="announcement-bar__button button--arrow"
+              >
+                {{ block.settings.button_label }}
+                {% render 'icon-caret' %}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "class": "section-announcement",
+  "settings": [
+    {
+      "type": "range",
+      "id": "height",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "t:sections.announcement-bar.settings.height.label"
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "t:sections.announcement-bar.settings.height_mobile.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-3",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.announcement-bar.settings.slider_header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_slider",
+      "label": "t:sections.announcement-bar.settings.enable_slider.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "slide_duration",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "unit": "s",
+      "label": "t:sections.announcement-bar.settings.slide_duration.label"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 0,
+      "max": 6,
+      "step": 0.1,
+      "default": 0.8,
+      "unit": "s",
+      "label": "t:sections.announcement-bar.settings.speed.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "default": "t:sections.announcement-bar.settings.default.label",
+      "label": "t:sections.announcement-bar.settings.text.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.button.header_button.content"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.announcement-bar.settings.button_label.default",
+      "label": "t:sections.all.button.button_label.label",
+      "info": "t:sections.all.button.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.all.button.button_link.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement_slide",
+      "name": "t:sections.announcement-bar.blocks.slide.name",
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "default": "background-3",
+          "label": "t:sections.all.color_scheme.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "t:sections.announcement-bar.settings.default.label",
+          "label": "t:sections.announcement-bar.settings.text.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.button.header_button.content"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.announcement-bar.settings.button_label.default",
+          "label": "t:sections.all.button.button_label.label",
+          "info": "t:sections.all.button.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.all.button.button_link.label"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {
+      "text": "For example, a test of the announcement of some news"
+    }
+  }
+}
+{% endschema %}

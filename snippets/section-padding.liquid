@@ -1,0 +1,126 @@
+{% comment %}/* Mobile (default) */{% endcomment %} .section-{{ section.id }}-padding {
+{% if section.settings.padding_top == 'xs' %}
+  padding-top: 3.2rem;
+{% elsif section.settings.padding_top == 'xl' %}
+  padding-top: 10rem;
+{% elsif section.settings.padding_top == 'l' %}
+  padding-top: 7rem;
+{% elsif section.settings.padding_top == 'm' %}
+  padding-top: 6.4rem;
+{% elsif section.settings.padding_top == 's' %}
+  padding-top: 4rem;
+{% else %}
+  padding-top: 0;
+{% endif %}
+
+{% if section.settings.padding_bottom == 'xs' %}
+  padding-bottom: 3.2rem;
+{% elsif section.settings.padding_bottom == 'xl' %}
+  padding-bottom: 10rem;
+{% elsif section.settings.padding_bottom == 'l' %}
+  padding-bottom: 7rem;
+{% elsif section.settings.padding_bottom == 'm' %}
+  padding-bottom: 6.4rem;
+{% elsif section.settings.padding_bottom == 's' %}
+  padding-bottom: 4rem;
+{% else %}
+  padding-bottom: 0;
+{% endif %}
+}
+
+{% comment %}/* Tablet/Medium screens (750px - 1099px) */{% endcomment %}
+@media screen and (min-width: 750px) and (max-width: 1099px) { .section-
+{{- section.id -}}
+-padding {
+{% if section.settings.padding_top == 'xs' %}
+  padding-top: 3.6rem;
+{% elsif section.settings.padding_top == 'xl' %}
+  padding-top: 12rem;
+{% elsif section.settings.padding_top == 'l' %}
+  padding-top: 8.5rem;
+{% elsif section.settings.padding_top == 'm' %}
+  padding-top: 6.7rem;
+{% elsif section.settings.padding_top == 's' %}
+  padding-top: 4.4rem;
+{% else %}
+  padding-top: 0;
+{% endif %}
+
+{% if section.settings.padding_bottom == 'xs' %}
+  padding-bottom: 3.6rem;
+{% elsif section.settings.padding_bottom == 'xl' %}
+  padding-bottom: 12rem;
+{% elsif section.settings.padding_bottom == 'l' %}
+  padding-bottom: 8.5rem;
+{% elsif section.settings.padding_bottom == 'm' %}
+  padding-bottom: 6.7rem;
+{% elsif section.settings.padding_bottom == 's' %}
+  padding-bottom: 4.4rem;
+{% else %}
+  padding-bottom: 0;
+{% endif %}
+} }
+
+{% comment %}/* Large screens (1100px - 1359px) */{% endcomment %}
+@media screen and (min-width: 1100px) and (max-width: 1359px) { .section-
+{{- section.id -}}
+-padding {
+{% if section.settings.padding_top == 'xs' %}
+  padding-top: 3.8rem;
+{% elsif section.settings.padding_top == 'xl' %}
+  padding-top: 13.5rem;
+{% elsif section.settings.padding_top == 'l' %}
+  padding-top: 9.25rem;
+{% elsif section.settings.padding_top == 'm' %}
+  padding-top: 6.85rem;
+{% elsif section.settings.padding_top == 's' %}
+  padding-top: 4.6rem;
+{% else %}
+  padding-top: 0;
+{% endif %}
+
+{% if section.settings.padding_bottom == 'xs' %}
+  padding-bottom: 3.8rem;
+{% elsif section.settings.padding_bottom == 'xl' %}
+  padding-bottom: 13.5rem;
+{% elsif section.settings.padding_bottom == 'l' %}
+  padding-bottom: 9.25rem;
+{% elsif section.settings.padding_bottom == 'm' %}
+  padding-bottom: 6.85rem;
+{% elsif section.settings.padding_bottom == 's' %}
+  padding-bottom: 4.6rem;
+{% else %}
+  padding-bottom: 0;
+{% endif %}
+} }
+
+{% comment %}/* Extra large screens (1360px+) */{% endcomment %}
+@media screen and (min-width: 1360px) { .section-{{ section.id }}-padding {
+{% if section.settings.padding_top == 'xs' %}
+  padding-top: 4rem;
+{% elsif section.settings.padding_top == 'xl' %}
+  padding-top: 15rem;
+{% elsif section.settings.padding_top == 'l' %}
+  padding-top: 10rem;
+{% elsif section.settings.padding_top == 'm' %}
+  padding-top: 7rem;
+{% elsif section.settings.padding_top == 's' %}
+  padding-top: 4.8rem;
+{% else %}
+  padding-top: 0;
+{% endif %}
+
+{% if section.settings.padding_bottom == 'xs' %}
+  padding-bottom: 4rem;
+{% elsif section.settings.padding_bottom == 'xl' %}
+  padding-bottom: 15rem;
+{% elsif section.settings.padding_bottom == 'l' %}
+  padding-bottom: 10rem;
+{% elsif section.settings.padding_bottom == 'm' %}
+  padding-bottom: 7rem;
+{% elsif section.settings.padding_bottom == 's' %}
+  padding-bottom: 4.8rem;
+{% else %}
+  padding-bottom: 0;
+{% endif %}
+} }

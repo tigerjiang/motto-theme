@@ -1,0 +1,91 @@
+{% doc %}
+  Renders a popup on the product page.
+
+  @param {string} block_id - Block ID
+  @param {string} popup_label - Label for modal opener button
+  @param {string} [block_attributes] - Render shopify_attributes
+  @param {string} [popup_color_scheme] - Color scheme modal window
+  @param {string} [popup_content_heading] - Heading for modal window
+  @param {string} [popup_content_text] - Text for modal window
+  @param {string} [popup_page_content] - Custom page content for modal window
+  @param {string} [class] - Custom CSS class
+
+  @example
+  {% render 'product-block-popup', block_id: block.id, popup_label: block.settings.button_label %}
+{% enddoc %}
+
+{% liquid
+  assign modal_heading = popup_content_heading | default: popup_label
+%}
+
+{%- if popup_label != blank -%}
+  <div
+    class="product-popup no-js-hidden"
+    {% if block_attributes != blank -%}
+      {{ block_attributes }}
+    {%- endif %}
+  >
+    <modal-opener data-modal="#ProductModal-{{ block_id }}">
+      <button
+        id="ProductModalOpener-{{ block_id }}"
+        class="product-popup__button button button--tertiary focus-inset"
+        type="button"
+        aria-haspopup="dialog"
+      >
+        <span class="button__label">
+          {{- popup_label -}}
+        </span>
+      </button>
+    </modal-opener>
+
+    <modal-dialog
+      id="ProductModal-{{ block_id }}"
+      class="product-popup-modal modal {% if class != blank %} {{class}}{% endif %}"
+    >
+      <div id="ModalCloseOverlay-{{ block_id }}" class="product-popup-modal__overlay modal__overlay"></div>
+
+      <div
+        role="dialog"
+        aria-label="{{ popup_label }}"
+        aria-modal="true"
+        class="product-popup-modal__content modal__content color-{{ popup_color_scheme }}"
+        tabindex="-1"
+      >
+        <div class="product-popup-modal__heading modal__heading">
+          <span class="subtitle">
+            {{- modal_heading -}}
+          </span>
+
+          <button
+            id="ModalClose-{{ block_id }}"
+            type="button"
+            class="product-popup-modal__close modal-close-button focus-inset"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            {% render 'icon-close' %}
+          </button>
+        </div>
+
+        <div class="product-popup-modal__content-wrapper">
+          <div class="product-popup-modal__content-inner">
+            {%- if popup_content_text != blank or popup_page_content != blank -%}
+              {%- if popup_content_text != blank -%}
+                <div class="product-popup-modal__text rte rte--product">
+                  {{- popup_content_text -}}
+                </div>
+              {%- endif -%}
+
+              {%- if popup_page_content != blank -%}
+                <div class="product-popup-modal__page rte rte--product">
+                  {{ popup_page_content }}
+                </div>
+              {%- endif -%}
+            {%- else -%}
+              {{- 'accessibility.no_content' | t -}}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </modal-dialog>
+  </div>
+{%- endif -%}

@@ -1,0 +1,316 @@
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  {% render 'section-margin' %}
+{%- endstyle -%}
+
+{%- liquid
+  assign collection_image = collection.image
+
+  if collection_image == blank and collection.id == blank
+    assign collection_image = section.settings.image_products
+  endif
+-%}
+
+<div
+  class="collection-hero {% if section.settings.full_width == false %} container {% endif %}"
+  {% if section.settings.header_overlay and section.settings.full_width %}
+    data-header-overlay="true"
+  {% endif %}
+>
+  <div
+    class="collection-hero__wrapper color-{{ section.settings.color_scheme }}"
+    style="
+      --opacity-overlay:{{ section.settings.overlay_opacity }};
+        {% if section.settings.image_ratio != "adapt" and section.settings.show_collection_image %}
+      	--aspect-ratio: {{ section.settings.image_ratio }};
+      {% elsif section.settings.image_ratio == 'adapt' and collection_image != blank and section.settings.show_collection_image %}
+      	--aspect-ratio: {{collection_image.aspect_ratio }};
+      {% endif %}
+    "
+  >
+    {%- if section.settings.show_collection_image and collection_image -%}
+      {% capture sizes %}
+        (min-width: 1100px) calc(100vw + 200px), 
+        calc(100vw + 60px)
+      {% endcapture %}
+      {{
+        collection_image
+        | image_url: width: collection_image.width
+        | image_tag:
+          loading: 'lazy',
+          class: 'collection-hero__image',
+          widths: '360, 535, 720, 940, 1100, 1200, 1440, 1600, 1800, 2000, 2100, 2200, 2880, 3200, 3600, 4000, 4200, 4400',
+          sizes: sizes
+      }}
+    {%- endif -%}
+
+    <div class="container">
+      <div class="collection-hero__inner {% if section.settings.show_collection_image and collection_image %} collection-hero__inner_image {% endif %}">
+        {% if settings.enable_breadcrumbs %}
+          <div class="breadcrumbs-wrapper">
+            <nav
+              id="breadcrumbs"
+              class="breadcrumb"
+              role="navigation"
+              aria-label="breadcrumbs"
+            >
+              <a
+                href="{{ routes.root_url }}"
+                title="{{ 'general.breadcrumbs.home' | t }}"
+                class="focus-inset"
+              >
+                {{- 'general.breadcrumbs.home' | t -}}
+              </a>
+              <div class="breadcrumb__delimiter">
+                {% render 'icon-caret' %}
+              </div>
+              <span>{{ collection.title }}</span>
+            </nav>
+          </div>
+        {% endif %}
+        <div class="collection-hero__text-wrapper">
+          {% assign heading_tag = section.settings.section_heading_tag %}
+          <{{ heading_tag }} class="collection-hero__title h1 title--page">
+            <span class="visually-hidden">{{- 'sections.collection_template.title' | t }}: </span>
+            {{- collection.title | escape -}}
+          </{{ heading_tag }}>
+          {%- if section.settings.show_collection_description and collection.description != blank -%}
+            <div class="collection-hero__description rte{% if settings.rte_type == 'custom' %} rte__container{% endif %}">
+              {{ collection.description }}
+            </div>
+          {%- endif -%}
+        </div>
+
+        {% if section.settings.collection_list != blank %}
+          <div class="type-filter__list type-filter__all_active">
+            {% comment %}
+              <a
+              	href='{{ routes.all_products_collection_url }}'
+              	class='type-filter__label type-filter__title h4'
+              >
+              	{{- 'products.facets.all' | t -}}
+              </a>
+            {% endcomment %}
+            {%- for collection in section.settings.collection_list -%}
+              <a
+                class="full-unstyled-link type-filter__label type-filter__all_active h3"
+                href="{{ collection.url }}"
+              >
+                {{ collection.title }}
+              </a>
+            {%- endfor -%}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const currentURL = window.location.href;
+
+  document.querySelectorAll('.type-filter__all_active a').forEach(function (link) {
+    if (link.href === currentURL) {
+      link.classList.add('active_opacity');
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "collection-banner-section spaced-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "t:sections.main-list-collections.settings.title.default",
+      "limit": 4
+    },
+    {
+      "type": "select",
+      "id": "section_heading_tag",
+      "label": "t:sections.all.heading.tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "div",
+          "label": "div"
+        },
+        {
+          "value": "p",
+          "label": "p"
+        },
+        {
+          "value": "span",
+          "label": "span"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_overlay",
+      "label": "t:sections.all.header_overlay.label",
+      "info": "t:sections.main-collection-banner.settings.header_overlay.info",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.main-collection-banner.settings.full_width.label",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-3",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0,
+      "label": "t:sections.all.overlay.overlay_opacity.label_secondary"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_products",
+      "label": "t:sections.main-collection-banner.settings.image_products.label",
+      "info": "t:sections.main-collection-banner.settings.image_products.info"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "default": "21/9",
+      "label": "t:sections.all.image.aspect_ratio.label",
+      "options": [
+        {
+          "value": "16/9",
+          "label": "t:sections.all.image.aspect_ratio.options__5.label"
+        },
+        {
+          "value": "21/9",
+          "label": "t:sections.all.image.aspect_ratio.options__6.label"
+        },
+        {
+          "value": "adapt",
+          "label": "t:sections.all.image.aspect_ratio.options__7.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.section-margin.header.content"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "options": [
+        {
+          "value": "no-indent",
+          "label": "t:sections.all.section-margin.options__1.label"
+        },
+        {
+          "value": "xs",
+          "label": "t:sections.all.section-margin.options__2.label"
+        },
+        {
+          "value": "s",
+          "label": "t:sections.all.section-margin.options__3.label"
+        },
+        {
+          "value": "m",
+          "label": "t:sections.all.section-margin.options__4.label"
+        },
+        {
+          "value": "l",
+          "label": "t:sections.all.section-margin.options__5.label"
+        },
+        {
+          "value": "xl",
+          "label": "t:sections.all.section-margin.options__6.label"
+        }
+      ],
+      "default": "no-indent",
+      "label": "t:sections.all.section-margin.margin_top.label"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "options": [
+        {
+          "value": "no-indent",
+          "label": "t:sections.all.section-margin.options__1.label"
+        },
+        {
+          "value": "xs",
+          "label": "t:sections.all.section-margin.options__2.label"
+        },
+        {
+          "value": "s",
+          "label": "t:sections.all.section-margin.options__3.label"
+        },
+        {
+          "value": "m",
+          "label": "t:sections.all.section-margin.options__4.label"
+        },
+        {
+          "value": "l",
+          "label": "t:sections.all.section-margin.options__5.label"
+        },
+        {
+          "value": "xl",
+          "label": "t:sections.all.section-margin.options__6.label"
+        }
+      ],
+      "default": "no-indent",
+      "label": "t:sections.all.section-margin.margin_bottom.label"
+    }
+  ]
+}
+{% endschema %}

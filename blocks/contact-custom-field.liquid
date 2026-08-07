@@ -1,0 +1,140 @@
+{%- liquid
+  assign field_id = 'ContactForm-' | append: section.id | append: '-' | append: block.id
+-%}
+
+{%- if block.settings.type == 'text' -%}
+  <div class="field{% if block.settings.is_required %} field--with-error{% endif %}" {{ block.shopify_attributes }}>
+    <input
+      class="field__input focus-inset"
+      type="text"
+      dir="ltr"
+      id="{{ field_id }}"
+      name="contact[{{ block.settings.label }}]"
+      placeholder="{{ block.settings.placeholder }}"
+      {% if block.settings.is_required %}
+        aria-required="true"
+        required
+      {% endif %}
+    >
+    <label
+      class="field__label"
+      for="{{ field_id }}"
+      placeholder="{{ block.settings.placeholder }}"
+    >
+      {{ block.settings.label }}
+    </label>
+  </div>
+{%- elsif block.settings.type == 'textarea' -%}
+  <div class="field{% if block.settings.is_required %} field--with-error{% endif %}" {{ block.shopify_attributes }}>
+    <textarea
+      class="text-area field__input focus-inset"
+      dir="ltr"
+      id="{{ field_id }}"
+      name="contact[{{ block.settings.label }}]"
+      placeholder="{{ block.settings.placeholder }}"
+      {% if block.settings.is_required %}
+        aria-required="true"
+        required
+      {% endif %}
+    ></textarea>
+    <label
+      class="form__label field__label"
+      for="{{ field_id }}"
+      placeholder="{{ block.settings.placeholder }}"
+    >
+      {{ block.settings.label }}
+    </label>
+  </div>
+{%- elsif block.settings.type == 'checkbox' -%}
+  <div class="field field--checkbox field--with-error" {{ block.shopify_attributes }}>
+    <input
+      type="checkbox"
+      class="focus-inset"
+      name="contact[{{ block.settings.label_checkbox | strip_html }}]"
+      id="{{ field_id }}"
+      {% if block.settings.is_required %}
+        aria-required="true"
+        aria-describedby="{{ field_id }}-client-error"
+        required
+      {% endif %}
+    >
+    <label for="{{ field_id }}">
+      <span>
+        {{- block.settings.label_checkbox -}}
+      </span>
+    </label>
+    {%- if block.settings.is_required -%}
+      <small
+        class="contact-form__field-error contact-form__field-error--client"
+        id="{{ field_id }}-client-error"
+        hidden
+      >
+        <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+        <span class="form__message">
+          {{- 'templates.contact.form.checkbox_required' | t -}}
+        </span>
+      </small>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.contact-form.blocks.custom_field.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "options": [
+        {
+          "value": "text",
+          "label": "t:sections.contact-form.blocks.custom_field.settings.type.options__1.label"
+        },
+        {
+          "value": "textarea",
+          "label": "t:sections.contact-form.blocks.custom_field.settings.type.options__2.label"
+        },
+        {
+          "value": "checkbox",
+          "label": "t:sections.contact-form.blocks.custom_field.settings.type.options__3.label"
+        }
+      ],
+      "default": "text",
+      "label": "t:sections.contact-form.blocks.custom_field.settings.type.label"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:sections.contact-form.blocks.custom_field.settings.label.label",
+      "default": "t:sections.contact-form.blocks.custom_field.settings.label.default",
+      "visible_if": "{{ block.settings.type != 'checkbox' }}"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "t:sections.contact-form.blocks.custom_field.settings.placeholder.label",
+      "default": "t:sections.contact-form.blocks.custom_field.settings.placeholder.default",
+      "visible_if": "{{ block.settings.type != 'checkbox' }}"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "label_checkbox",
+      "label": "t:sections.contact-form.blocks.custom_field.settings.label.label",
+      "default": "t:sections.contact-form.blocks.custom_field.settings.label.default",
+      "visible_if": "{{ block.settings.type == 'checkbox' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_required",
+      "default": false,
+      "label": "t:sections.contact-form.blocks.custom_field.settings.required.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact-form.blocks.custom_field.name"
+    }
+  ]
+}
+{% endschema %}
