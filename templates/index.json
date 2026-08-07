@@ -108,6 +108,70 @@
         "margin_bottom": "no-indent"
       }
     },
+    "ai_kitchen_bUXdrx": {
+      "type": "ai-kitchen",
+      "blocks": {
+        "step_E4ycXp": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/icon-plan-44-x-44_3x_8352fd2c-8b97-4692-bae1-095d323ee88b.png",
+            "text": "Plan"
+          }
+        },
+        "step_W4VddU": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/icon-balance-44-x-44_3x_e0862e32-f10e-4ed3-b5ca-ecacf33d508e.png",
+            "text": "Balance"
+          }
+        },
+        "step_cXfWGW": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/icon-shop-44-x-44_3x_1fd556e2-a965-463a-b588-c72471369e54.png",
+            "text": "Shop"
+          }
+        },
+        "step_FYV6fy": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/icon-cook-44-x-44_3x_65eb475e-2f81-47c4-b29a-ebcce1c16962.png",
+            "text": "Cook"
+          }
+        },
+        "step_XB4Q9L": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/icon-learn-44-x-44_3x_74e89b29-cf18-4f84-9273-0508904edd0c.png",
+            "text": "Learn"
+          }
+        }
+      },
+      "block_order": [
+        "step_E4ycXp",
+        "step_W4VddU",
+        "step_cXfWGW",
+        "step_FYV6fy",
+        "step_XB4Q9L"
+      ],
+      "name": "AI Kitchen",
+      "settings": {
+        "eyebrow": "Your AI Kitchen",
+        "steps_label": "How AI Kitchen works",
+        "heading": "Turn your goals, budget, and tastes into meals tailored just for you.",
+        "download_title": "Download the app",
+        "app_store_image": "shopify://shop_images/apple-store.png",
+        "app_store_url": "https://apps.apple.com/app/brisk-it-grills/id1611261891",
+        "app_store_label": "Download on the App Store",
+        "google_play_image": "shopify://shop_images/googleplay.png",
+        "google_play_url": "https://play.google.com/store/apps/details?id=com.briskitgrill.app",
+        "google_play_label": "Get it on Google Play",
+        "background_color": "#FBF9F6",
+        "accent_color": "#E87928",
+        "step_color": "#666666",
+        "heading_color": "#13294B"
+      }
+    },
     "collections_list_R46PWM": {
       "type": "collections-list",
       "blocks": {
@@ -873,6 +937,7 @@
   },
   "order": [
     "slideshow_HXHbtm",
+    "ai_kitchen_bUXdrx",
     "collections_list_R46PWM",
     "product_grid_WB63CA",
     "blockquote_rwtxJE",
