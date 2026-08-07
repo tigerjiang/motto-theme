@@ -166,10 +166,10 @@
         "google_play_image": "shopify://shop_images/googleplay.png",
         "google_play_url": "https://play.google.com/store/apps/details?id=com.briskitgrill.app",
         "google_play_label": "Get it on Google Play",
-        "background_color": "#FBF9F6",
-        "accent_color": "#E87928",
+        "background_color": "#fbf9f6",
+        "accent_color": "#e87928",
         "step_color": "#666666",
-        "heading_color": "#13294B"
+        "heading_color": "#13294b"
       }
     },
     "collections_list_R46PWM": {
@@ -360,7 +360,7 @@
         "section_heading": "Smarter Cooking, Start to Finish",
         "heading_tag": "h2",
         "section_heading_size": "h3",
-        "subheading": "DETAILS",
+        "subheading": "",
         "dot": true,
         "line": false,
         "subheading_tag": "h4",
@@ -553,6 +553,8 @@
       ],
       "settings": {
         "color_scheme": "",
+        "background_color": "#f6ded4",
+        "overlay_heading": "Brisk It AI handles the cooking. You handle living.",
         "section_heading": "",
         "heading_tag": "h2",
         "section_heading_size": "h2",
