@@ -99,6 +99,159 @@
   [dir='rtl'] .js-split-text .line {
   	text-align: right !important;
   }
+
+  /* Reference hero layout: the header sits above the image while the slide copy
+     stays vertically centred on the left. Scoped to this section instance. */
+  #shopify-section-{{ section.id }} .slideshow-slide > .container {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow-slide__text {
+    width: min(100%, 62rem);
+    max-width: 62rem;
+    margin: 0;
+    pointer-events: auto;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow-slide__eyebrow {
+    margin: 0 0 1.6rem;
+    color: rgb(var(--color-accent));
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow-slide__title {
+    max-width: 62rem;
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow-slide__desc {
+    max-width: 58rem;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow__button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  /* Carousel navigation belongs at the top of the hero, below the site header. */
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom {
+    top: calc(var(--header-height, 0px) + 2rem);
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom .container {
+    width: 100%;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper,
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper.bullets-center {
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper .swiper-pagination__wrapper {
+    margin: 0;
+    pointer-events: auto;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper .swiper-pagination {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper .swiper-pagination .swiper-pagination-bullet,
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper .swiper-pagination .swiper-pagination-bullet-active {
+    width: 3.2rem;
+    height: 0.3rem;
+    background-color: rgba(var(--color-foreground), 0.28);
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper .swiper-pagination .swiper-pagination-bullet::before {
+    top: 0;
+    width: 0;
+    height: 0.3rem;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper .swiper-pagination.not-autoplay .swiper-pagination-bullet-active::before {
+    width: 100%;
+    height: 0.3rem;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .slideshow-bottom__wrapper .swiper-pagination.bullet-autoplay .swiper-pagination-bullet-active::before {
+    animation: slideshow-progress-{{ section.id }} var(--bullet-duration) linear 1 alternate;
+  }
+
+  @keyframes slideshow-progress-{{ section.id }} {
+    to {
+      width: 100%;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .slideshow .swiper-pagination-bullet:only-child {
+    display: none;
+  }
+
+  {% if section.settings.floating_header and section.settings.header_overlay %}
+    @media screen and (min-width: 750px) {
+      body:has(main > #shopify-section-{{ section.id }}:first-child) .shopify-section-header:not(.shopify-section-header-sticky) .header-wrapper {
+        width: auto;
+        margin: 0.8rem 1.6rem 0;
+        border-radius: 0.8rem;
+        box-shadow: 0 0.4rem 1.8rem rgba(0, 0, 0, 0.12);
+      }
+
+      body:has(main > #shopify-section-{{ section.id }}:first-child) .shopify-section-header:not(.shopify-section-header-sticky) .header {
+        border-radius: 0.8rem;
+      }
+    }
+  {% endif %}
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .slideshow-slide > .container {
+      align-items: flex-end;
+      padding-bottom: 5.6rem;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow-slide-mobile--top-left > .container,
+    #shopify-section-{{ section.id }} .slideshow-slide-mobile--top-center > .container {
+      align-items: flex-start;
+      padding-top: calc(var(--header-height, 0px) + 4.8rem);
+      padding-bottom: 2.4rem;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow-slide__text,
+    #shopify-section-{{ section.id }} .slideshow--custom-effect .slideshow-slide__text {
+      width: 100%;
+      max-width: min(100%, 48rem);
+    }
+
+    #shopify-section-{{ section.id }} .slideshow-slide__eyebrow {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow .slideshow-bottom {
+      top: calc(var(--header-height, 0px) + 1.6rem);
+    }
+  }
 {% endstyle %}
 
 {%- for block in section.blocks -%}
@@ -399,6 +552,11 @@
                   {% if section.settings.text_animation %} slideshow-slide__text--animation {% endif %}
                 "
               >
+                {% if block.settings.eyebrow != blank %}
+                  <p class="slideshow-slide__eyebrow {% if section.settings.text_animation %} js-fade {% endif %}">
+                    {{ block.settings.eyebrow | escape }}
+                  </p>
+                {% endif %}
                 {% if block.settings.heading != blank %}
                   {% assign tag = section.settings.heading_tag %}
                   <{{ tag }}
@@ -415,13 +573,20 @@
                     {{ block.settings.text }}
                   </div>
                 {% endif %}
-                {% if block.settings.button_label %}
+                {% if block.settings.button_label != blank or block.settings.button_label_2 != blank %}
                   <div class="slideshow__button-wrapper {% if section.settings.text_animation %} js-fade {% endif %}">
                     {% render 'button',
                       btn_label: block.settings.button_label,
                       btn_link: block.settings.button_link,
                       btn_style: block.settings.button_style,
                       button_dot: block.settings.button_dot,
+                      add_classes: 'focus-inset'
+                    %}
+                    {% render 'button',
+                      btn_label: block.settings.button_label_2,
+                      btn_link: block.settings.button_link_2,
+                      btn_style: block.settings.button_style_2,
+                      button_dot: block.settings.button_dot_2,
                       add_classes: 'focus-inset'
                     %}
                   </div>
@@ -466,6 +631,13 @@
       "id": "header_overlay",
       "label": "t:sections.all.header_overlay.label",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "floating_header",
+      "label": "Use floating header above slideshow",
+      "info": "Adds the inset, rounded header treatment shown in the reference layout when header overlay is enabled.",
+      "default": true
     },
     {
       "type": "checkbox",
@@ -862,6 +1034,12 @@
           "default": "t:sections.slideshow.blocks.settings.heading.default"
         },
         {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "Health optimized. Hands-off."
+        },
+        {
           "type": "richtext",
           "id": "text",
           "label": "t:sections.all.text.label",
@@ -924,6 +1102,46 @@
           ],
           "default": "primary",
           "label": "t:sections.all.button.button_style.label"
+        },
+        {
+          "type": "header",
+          "content": "Second button"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_dot_2",
+          "default": false,
+          "label": "Show button dot"
+        },
+        {
+          "type": "select",
+          "id": "button_style_2",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "tertiary",
+              "label": "Tertiary"
+            }
+          ],
+          "default": "secondary",
+          "label": "Button style"
         },
         {
           "type": "header",
