@@ -27,86 +27,19 @@
   {%- endif -%}
 
   {%- if section.settings.header_type == 'top-menu' and section.settings.menu != blank -%}
-    <nav class="header__inline-menu">
+    {%- assign left_menu_count = section.settings.menu.links.size | plus: 1 | divided_by: 2 -%}
+    <nav class="header__inline-menu header__inline-menu--left" aria-label="Primary navigation">
       <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
-          {% liquid
-            assign mega_menu = false
-            assign simple_mega_menu = false
-          %}
-
-          {% if section.blocks.size > 0 %}
-            {% for block in section.blocks %}
-              {% liquid
-                assign mega_menu_trigger = block.settings.mega_menu_trigger | handle | strip
-                assign simple_mega_menu_trigger = block.settings.simple_mega_menu_trigger | handle | strip
-
-                if link.handle == mega_menu_trigger
-                  assign mega_menu = true
-                elsif link.handle == simple_mega_menu_trigger
-                  assign simple_mega_menu = true
-                endif
-              %}
-            {% endfor %}
-          {% endif %}
-
-          {%- if mega_menu -%}
-            <li
-              class="list-menu-item list-menu--megamenu"
-              {{ shopify_attributes }}
-            >
+          {%- if forloop.index <= left_menu_count -%}
+            <li class="list-menu-item{% if link.current %} list-menu-item--active{% endif %}">
               <a
                 href="{{ link.url }}"
                 class="header__menu-item list-menu__item link focus-inset"
-                {% if link.current %}
-                  aria-current="page"
-                {% endif %}
+                {% if link.current %}aria-current="page"{% endif %}
                 aria-label="{{ link.title | escape }}"
               >
-                <span title="{{ link.title | escape }}">
-                  {{ link.title | escape }}
-                </span>
-              </a>
-              <div class="header__mega-menu mega-menu color-background-1">
-                {% render 'mega-menu',
-                  link: link,
-                  blocks: section.blocks,
-                  menu_heading_tag: section.settings.menu_heading_tag
-                %}
-              </div>
-            </li>
-          {%- elsif link.links != blank -%}
-            <li
-              class="list-menu-item list-menu--submenu"
-              {{ shopify_attributes }}
-            >
-              <a
-                href="{{ link.url }}"
-                class="header__menu-item list-menu__item link focus-inset"
-                {% if link.current %}
-                  aria-current="page"
-                {% endif %}
-                aria-label="{{ link.title | escape }}"
-              >
-                <span title="{{ link.title | escape }}">
-                  {{ link.title | escape }}
-                </span>
-              </a>
-              {% render 'submenu', link: link, simple_mega_menu: simple_mega_menu %}
-            </li>
-          {%- else -%}
-            <li class="list-menu-item">
-              <a
-                href="{{ link.url }}"
-                class="header__menu-item list-menu__item link focus-inset"
-                {% if link.current %}
-                  aria-current="page"
-                {% endif %}
-                aria-label="{{ link.title | escape }}"
-              >
-                <span title="{{ link.title | escape }}">
-                  {{ link.title | escape }}
-                </span>
+                <span title="{{ link.title | escape }}">{{ link.title | escape }}</span>
               </a>
             </li>
           {%- endif -%}
@@ -254,6 +187,27 @@
 {%- endif -%}
 
 <div class="header__icons">
+  {%- if section.settings.header_type == 'top-menu' and section.settings.menu != blank -%}
+    <nav class="header__inline-menu header__inline-menu--right" aria-label="Secondary navigation">
+      <ul class="list-menu list-menu--inline" role="list">
+        {%- for link in section.settings.menu.links -%}
+          {%- if forloop.index > left_menu_count -%}
+            <li class="list-menu-item{% if link.current %} list-menu-item--active{% endif %}">
+              <a
+                href="{{ link.url }}"
+                class="header__menu-item list-menu__item link focus-inset"
+                {% if link.current %}aria-current="page"{% endif %}
+                aria-label="{{ link.title | escape }}"
+              >
+                <span title="{{ link.title | escape }}">{{ link.title | escape }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+  {%- endif -%}
+
   {% render 'color-scheme' %}
 
   {%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
@@ -476,20 +430,13 @@
         <details-modal class="header__search header__search_desktop">
           <details>
             <summary
-              class="header__icon header__icon--search link--text header__icon--summary focus-inset modal__toggle type--{{ section.settings.buttons_type }}"
+              class="header__icon header__icon--search link--text header__icon--summary focus-inset modal__toggle type--icon"
               aria-haspopup="dialog"
               role="button"
             >
-              {% if section.settings.buttons_type == 'icon' or section.settings.buttons_type == 'text_and_icon' %}
-                <span class="header__top_icon">
-                  {%- render 'icon-search-header' -%}
-                </span>
-              {% endif %}
-              {% if section.settings.buttons_type == 'text' or section.settings.buttons_type == 'text_and_icon' %}
-                <span class="header__top_text">
-                  {{ 'general.search.search' | t }}
-                </span>
-              {% endif %}
+              <span class="header__top_icon">
+                {%- render 'icon-search-header' -%}
+              </span>
               <div class="header__search-mobile-close modal-close-button">
                 {%- render 'icon-close' -%}
               </div>
@@ -604,23 +551,16 @@
       </noscript>
     {%- endif -%}
 
-    {% render 'header-account', button_type: section.settings.buttons_type %}
-
     <div class="{% if request.page_type != 'cart' %}header__cart {% else %} header__cart--page{% endif %}">
       <a
         href="{{ routes.cart_url }}"
-        class=" header__icon header__icon--cart link link--text type--{{ section.settings.buttons_type }}"
+        class="header__icon header__icon--cart link link--text type--icon"
         id="cart-icon-bubble"
         aria-label="{{ 'general.cart.view' | t }}"
       >
-        {% if section.settings.buttons_type == 'icon' or section.settings.buttons_type == 'text_and_icon' %}
-          <span class="header__top_icon">
-            {%- render 'icon-cart-header' -%}
-          </span>
-        {% endif %}
-        {% if section.settings.buttons_type == 'text' or section.settings.buttons_type == 'text_and_icon' %}
-          <span class="header__top_text">{{ 'templates.cart.cart' | t }}</span>
-        {% endif %}
+        <span class="header__top_icon">
+          {%- render 'icon-cart-header' -%}
+        </span>
         <div class="cart-count-bubble">
           {%- if cart.item_count < 100 -%}
             <span aria-hidden="true">{{ cart.item_count }}</span>
@@ -631,6 +571,8 @@
         </div>
       </a>
     </div>
+
+    {% render 'header-account', button_type: 'icon' %}
   </div>
 </div>
 
