@@ -6,7 +6,6 @@
     --expandable-cards-background: {{ section.settings.background_color }};
     --expandable-cards-heading: {{ section.settings.heading_color }};
     --expandable-cards-accent: {{ section.settings.accent_color }};
-    --expandable-cards-card-text: {{ section.settings.card_text_color }};
     --expandable-cards-pill-background: {{ section.settings.label_background }};
     --expandable-cards-pill-text: {{ section.settings.label_color }};
   }
@@ -71,7 +70,7 @@
                   <h3 class="expandable-image-cards__card-title">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="expandable-image-cards__card-text rte">{{ block.settings.text }}</div>
+                  <div class="expandable-image-cards__card-description rte">{{ block.settings.text }}</div>
                 {%- endif -%}
               </div>
 
@@ -143,12 +142,6 @@
     },
     {
       "type": "color",
-      "id": "card_text_color",
-      "label": "Expanded content",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
       "id": "label_background",
       "label": "Label background",
       "default": "#E8E4DE"
@@ -185,7 +178,7 @@
         {
           "type": "richtext",
           "id": "text",
-          "label": "Expanded information",
+          "label": "Expanded description",
           "default": "<p>Set your health goals. Brisk It AI plans and cooks around them — so you fuel better, live stronger.</p>"
         }
       ]
