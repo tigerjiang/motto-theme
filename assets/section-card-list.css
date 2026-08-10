@@ -162,6 +162,33 @@
   width: 0;
   padding-bottom: var(--aspect-ratio);
 }
+@media (max-width: calc(576px - 1px)) {
+  .card-list__item {
+    justify-content: flex-start;
+    overflow: visible;
+    aspect-ratio: unset;
+  }
+
+  .card-list__item::after {
+    display: none;
+  }
+
+  .card-list .card-list__item_img {
+    flex-shrink: 0;
+    height: 410px;
+    min-height: 410px;
+    aspect-ratio: unset;
+  }
+
+  .card-list__item:not(.text-always-visible) .card-list__text {
+    display: none;
+  }
+
+  .card-list__item.is-selected .card-list__text,
+  .card-list__item.text-always-visible .card-list__text {
+    display: flex;
+  }
+}
 .card-list__item_img {
   --card-height: 100%;
   position: relative;

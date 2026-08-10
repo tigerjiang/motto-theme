@@ -1,5 +1,6 @@
 (function () {
   const originalSlidesMap = new WeakMap();
+  const mobileMedia = window.matchMedia("(max-width: 575px)");
 
   document.querySelectorAll(".card-list-section").forEach((section) => {
     const slides = section.querySelectorAll(".card-list__list > *");
@@ -40,6 +41,67 @@
       },
       ...autoplayParm,
     };
+  };
+
+  const setupMobileSelection = ($section) => {
+    const items = Array.from(
+      $section[0].querySelectorAll(".card-list__item_active")
+    );
+    if (!items.length) return;
+
+    const textAlwaysVisible = items[0].dataset.textAlwaysVisible === "true";
+
+    const selectItem = (selectedItem) => {
+      items.forEach((item) => {
+        const isSelected = item === selectedItem;
+        const image = item.querySelector(".card-list__item_img_active");
+
+        item.classList.toggle("is-selected", isSelected);
+        if (image) image.setAttribute("aria-expanded", String(isSelected));
+      });
+    };
+
+    items.forEach((item) => {
+      const image = item.querySelector(".card-list__item_img_active");
+      if (!image || image.dataset.mobileSelectionInitialized) return;
+
+      image.dataset.mobileSelectionInitialized = "true";
+      image.addEventListener("click", () => {
+        if (mobileMedia.matches && !textAlwaysVisible) selectItem(item);
+      });
+      image.addEventListener("keydown", (event) => {
+        if (
+          mobileMedia.matches &&
+          !textAlwaysVisible &&
+          (event.key === "Enter" || event.key === " ")
+        ) {
+          event.preventDefault();
+          selectItem(item);
+        }
+      });
+    });
+
+    if (mobileMedia.matches && !textAlwaysVisible) {
+      const selectedItem =
+        items.find((item) => item.classList.contains("is-selected")) || items[0];
+
+      items.forEach((item) => {
+        const image = item.querySelector(".card-list__item_img_active");
+        if (!image) return;
+        image.setAttribute("role", "button");
+        image.setAttribute("tabindex", "0");
+      });
+      selectItem(selectedItem);
+    } else {
+      items.forEach((item) => {
+        const image = item.querySelector(".card-list__item_img_active");
+        item.classList.remove("is-selected");
+        if (!image) return;
+        image.removeAttribute("role");
+        image.removeAttribute("tabindex");
+        image.removeAttribute("aria-expanded");
+      });
+    }
   };
 
   const ensureSlideStructure = ($section) => {
@@ -99,6 +161,8 @@
       const id = $section.attr("id");
       const $box = $section.find(".card-list");
 
+      setupMobileSelection($section);
+
       const $texts = $section.find(".card-list__text");
       const $images = $section.find(".card-list__item_img_active");
       const $items = $section.find(".card-list__item_active");
@@ -132,6 +196,8 @@
                 .on("mouseleave", () => {
                   setImageHeight(true);
                 });
+            } else if (mobileMedia.matches) {
+              $image.css("height", "");
             } else {
               setImageHeight(false);
             }
@@ -165,6 +231,8 @@
       const $section = $(this);
       const $box = $section.find(".card-list");
       const id = $section.attr("id");
+
+      setupMobileSelection($section);
 
       const isMobile = window.innerWidth <= 576;
       const swiperInstance = $box.data("swiper-instance");
@@ -211,6 +279,8 @@
               .on("mouseleave", () => {
                 setImageHeight(true);
               });
+          } else if (mobileMedia.matches) {
+            $image.css("height", "");
           } else {
             setImageHeight(false);
           }
