@@ -1,1 +1,73 @@
-{"type":"footer","name":"t:sections.footer.settings.footer-group.label","sections":{"footer":{"type":"footer","blocks":{"footer-0":{"type":"logo_info","settings":{"logo":"","logo_2":"","logo_width":75,"description":"This section highlights a quick summary of your store’s offerings, like premium products, customer service, or brand values."}},"footer-4":{"type":"contacts","settings":{"address":"","phone":"Phone number","email":"Email address","working_hours":""}},"footer-1":{"type":"link_list","settings":{"heading":"Shop","menu":"footer","default_open":false}},"footer-2":{"type":"link_list","settings":{"heading":"Company","menu":"footer","default_open":false}},"footer-3":{"type":"link_list","settings":{"heading":"Customer Care","menu":"footer","default_open":false}}},"block_order":["footer-0","footer-4","footer-1","footer-2","footer-3"],"settings":{"color_scheme":"","icon_style":"secondary","show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":true,"enable_copyright_date":true,"enable_copyright_shopname":true,"enable_follow_on_shop":false}}},"order":["footer"]}
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brisk-footer-1": {
+          "type": "image-link",
+          "settings": {
+            "image": "shopify://shop_images/cover_briskit_thebbqhq.jpg",
+            "url": "https://www.instagram.com/p/Ct2D2E_Lnpe/"
+          }
+        },
+        "brisk-footer-2": {
+          "type": "image-link",
+          "settings": {
+            "image": "shopify://shop_images/Reelvideo-88719.jpg",
+            "url": "https://www.instagram.com/p/CrcKG0rNhxk/"
+          }
+        },
+        "brisk-footer-3": {
+          "type": "image-link",
+          "settings": {
+            "image": "shopify://shop_images/powersmoke_1080x1080_011d0b86-b708-422f-b4df-8fd5b1ab2a34.png",
+            "url": "https://www.instagram.com/p/Csr3rwauCJ3/"
+          }
+        },
+        "brisk-footer-4": {
+          "type": "image-link",
+          "settings": {
+            "image": "shopify://shop_images/Reelvideo-59276.jpg",
+            "url": "https://www.instagram.com/p/Cm29USrjsh2/"
+          }
+        },
+        "brisk-footer-5": {
+          "type": "image-link",
+          "settings": {
+            "image": "shopify://shop_images/273947402_347131627279514_7879519655038890095_n.jpg",
+            "url": "https://www.instagram.com/p/CaBDQGYhNDt/"
+          }
+        },
+        "brisk-footer-6": {
+          "type": "image-link",
+          "settings": {
+            "image": "shopify://shop_images/Reelvideo-3020.jpg",
+            "url": "https://www.instagram.com/p/CsKVJk2pqiX/"
+          }
+        }
+      },
+      "block_order": [
+        "brisk-footer-1",
+        "brisk-footer-2",
+        "brisk-footer-3",
+        "brisk-footer-4",
+        "brisk-footer-5",
+        "brisk-footer-6"
+      ],
+      "settings": {
+        "background_image": "shopify://shop_images/footer-background_2x_4fbaa2e7-9ced-49b5-97ab-2363bb27ff98.png",
+        "title": "Join the Brisk It Family!",
+        "link_text": "Follow Us on Instagram",
+        "link_url": "https://www.instagram.com/briskitgrills/",
+        "hide_socials": false,
+        "menu": "secondary-menu-mobile",
+        "copyright": "© 2023, Brisk It Labs, Inc.",
+        "newsletter_title": "Let's \"Meat\" Again.\nSign up and stay up to date on all things Brisk It.",
+        "newsletter_placeholder": "Enter your email here"
+      }
+    }
+  },
+  "order": ["footer"]
+}
