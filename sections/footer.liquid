@@ -22,51 +22,6 @@
           <h2 class="brisk-footer__title">{{ footer_settings.title }}</h2>
         {%- endif -%}
 
-        {%- if footer_settings.link_text != blank and footer_settings.link_url != blank -%}
-          <a
-            class="brisk-footer__instagram-link"
-            href="{{ footer_settings.link_url }}"
-            target="_blank"
-            rel="noopener"
-          >
-            {%- render 'icon-instagram' -%}
-            <span>{{ footer_settings.link_text }}</span>
-          </a>
-        {%- endif -%}
-
-        {%- unless footer_settings.hide_socials -%}
-          <ul class="brisk-footer__socials" role="list">
-            {%- if footer_settings.social_instagram_link != blank -%}
-              <li>
-                <a href="{{ footer_settings.social_instagram_link }}" target="_blank" rel="noopener" aria-label="Instagram">
-                  {%- render 'icon-instagram' -%}
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if footer_settings.social_facebook_link != blank -%}
-              <li>
-                <a href="{{ footer_settings.social_facebook_link }}" target="_blank" rel="noopener" aria-label="Facebook">
-                  {%- render 'icon-facebook' -%}
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if footer_settings.social_youtube_link != blank -%}
-              <li>
-                <a href="{{ footer_settings.social_youtube_link }}" target="_blank" rel="noopener" aria-label="YouTube">
-                  {%- render 'icon-youtube' -%}
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if footer_settings.social_tiktok_link != blank -%}
-              <li>
-                <a href="{{ footer_settings.social_tiktok_link }}" target="_blank" rel="noopener" aria-label="TikTok">
-                  {%- render 'icon-tiktok' -%}
-                </a>
-              </li>
-            {%- endif -%}
-          </ul>
-        {%- endunless -%}
-
         <div class="brisk-footer__newsletter">
           {%- if footer_settings.newsletter_title != blank -%}
             <h3 class="brisk-footer__newsletter-title">{{ footer_settings.newsletter_title }}</h3>
@@ -106,6 +61,52 @@
               </button>
             </div>
           {%- endform -%}
+        </div>
+
+        <div class="brisk-footer__social-row">
+          {%- if footer_settings.link_text != blank and footer_settings.link_url != blank -%}
+            <a
+              class="brisk-footer__instagram-link"
+              href="{{ footer_settings.link_url }}"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ footer_settings.link_text }}
+            </a>
+          {%- endif -%}
+
+          {%- unless footer_settings.hide_socials -%}
+            <ul class="brisk-footer__socials" role="list">
+              {%- if footer_settings.social_instagram_link != blank -%}
+                <li>
+                  <a href="{{ footer_settings.social_instagram_link }}" target="_blank" rel="noopener" aria-label="Instagram">
+                    {%- render 'icon-instagram' -%}
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if footer_settings.social_facebook_link != blank -%}
+                <li>
+                  <a href="{{ footer_settings.social_facebook_link }}" target="_blank" rel="noopener" aria-label="Facebook">
+                    {%- render 'icon-facebook' -%}
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if footer_settings.social_youtube_link != blank -%}
+                <li>
+                  <a href="{{ footer_settings.social_youtube_link }}" target="_blank" rel="noopener" aria-label="YouTube">
+                    {%- render 'icon-youtube' -%}
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if footer_settings.social_tiktok_link != blank -%}
+                <li>
+                  <a href="{{ footer_settings.social_tiktok_link }}" target="_blank" rel="noopener" aria-label="TikTok">
+                    {%- render 'icon-tiktok' -%}
+                  </a>
+                </li>
+              {%- endif -%}
+            </ul>
+          {%- endunless -%}
         </div>
       </div>
 
