@@ -16,6 +16,7 @@
           "type": "slideshow_item",
           "settings": {
             "desktop_image": "shopify://shop_images/heroOvenoncounter1920X1080.png",
+            "mobile_image": "shopify://shop_images/hero-ovenoncounter-mobile.png",
             "color_scheme": "",
             "heading": "Eat Better. Think Less.",
             "eyebrow": "Health optimized. Hands-off.",
@@ -96,7 +97,7 @@
         "image_size": "adapt",
         "heading_tag": "h1",
         "image_size_mobile": "full",
-        "text_position_mobile": "bottom-left",
+        "text_position_mobile": "top-left",
         "is_autoplay": true,
         "video_loop": true,
         "is_hover_stop_autoplay": false,
@@ -371,12 +372,11 @@
         "eyebrow": "OPTIMIZE YOUR LIFE",
         "heading": "More Time. Better Food.",
         "text": "<p>Set your taste. Brisk It AI handles the rest — autonomous cooking, healthier eating, and more time for living.</p>",
-        "background_color": "#FBF9F6",
-        "heading_color": "#13294B",
-        "accent_color": "#E65C00",
-        "card_text_color": "#FFFFFF",
-        "label_background": "#E8E4DE",
-        "label_color": "#13294B"
+        "background_color": "#fbf9f6",
+        "heading_color": "#13294b",
+        "accent_color": "#e65c00",
+        "label_background": "#e8e4de",
+        "label_color": "#13294b"
       }
     },
     "card-list": {
