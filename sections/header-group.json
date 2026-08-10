@@ -16,7 +16,7 @@
       "settings": {
         "height": 40,
         "height_mobile": 40,
-        "color_scheme": "",
+        "color_scheme": "background-4",
         "enable_slider": false,
         "slide_duration": 2,
         "speed": 0.8,
