@@ -5,66 +5,103 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "brisk-footer-1": {
-          "type": "image-link",
+        "category-brisk-it": {
+          "type": "category",
           "settings": {
-            "image": "shopify://shop_images/cover_briskit_thebbqhq.jpg",
-            "url": "https://www.instagram.com/p/Ct2D2E_Lnpe/"
+            "category_title": "Brisk It",
+            "category_link_url": "",
+            "link_text_1": "How it Works",
+            "link_url_1": "shopify://pages/how-it-works-backup",
+            "link_text_2": "Why Brisk It",
+            "link_url_2": "shopify://pages/why-brisk-it",
+            "link_text_3": "Shop",
+            "link_url_3": "shopify://collections/shop-all",
+            "link_text_4": "Learn",
+            "link_url_4": "shopify://pages/learn-about-the-brisk-it-grill",
+            "link_text_5": "Contact Us",
+            "link_url_5": "shopify://pages/contact-us-1",
+            "link_text_6": "",
+            "link_url_6": ""
           }
         },
-        "brisk-footer-2": {
-          "type": "image-link",
+        "category-support": {
+          "type": "category",
           "settings": {
-            "image": "shopify://shop_images/Reelvideo-88719.jpg",
-            "url": "https://www.instagram.com/p/CrcKG0rNhxk/"
+            "category_title": "Support",
+            "category_link_url": "",
+            "link_text_1": "Support",
+            "link_url_1": "shopify://pages/help-center",
+            "link_text_2": "Warranty Info",
+            "link_url_2": "shopify://pages/warranty-1",
+            "link_text_3": "User Manual",
+            "link_url_3": "shopify://pages/user-manual",
+            "link_text_4": "",
+            "link_url_4": "",
+            "link_text_5": "",
+            "link_url_5": "",
+            "link_text_6": "",
+            "link_url_6": ""
           }
         },
-        "brisk-footer-3": {
-          "type": "image-link",
+        "category-recipes": {
+          "type": "category",
           "settings": {
-            "image": "shopify://shop_images/powersmoke_1080x1080_011d0b86-b708-422f-b4df-8fd5b1ab2a34.png",
-            "url": "https://www.instagram.com/p/Csr3rwauCJ3/"
+            "category_title": "Recipes",
+            "category_link_url": "",
+            "link_text_1": "Poultry",
+            "link_url_1": "shopify://blogs/recipes/smoked-whole-chicken",
+            "link_text_2": "Beef",
+            "link_url_2": "shopify://blogs/recipes/smoked-beef-ribs",
+            "link_text_3": "Pork",
+            "link_url_3": "shopify://blogs/recipes/simple-smoked-baby-back-ribs",
+            "link_text_4": "Vegetables",
+            "link_url_4": "shopify://blogs/learn/rubs-for-smoking-meat",
+            "link_text_5": "",
+            "link_url_5": "",
+            "link_text_6": "",
+            "link_url_6": ""
           }
         },
-        "brisk-footer-4": {
-          "type": "image-link",
+        "category-retailers": {
+          "type": "category",
           "settings": {
-            "image": "shopify://shop_images/Reelvideo-59276.jpg",
-            "url": "https://www.instagram.com/p/Cm29USrjsh2/"
-          }
-        },
-        "brisk-footer-5": {
-          "type": "image-link",
-          "settings": {
-            "image": "shopify://shop_images/273947402_347131627279514_7879519655038890095_n.jpg",
-            "url": "https://www.instagram.com/p/CaBDQGYhNDt/"
-          }
-        },
-        "brisk-footer-6": {
-          "type": "image-link",
-          "settings": {
-            "image": "shopify://shop_images/Reelvideo-3020.jpg",
-            "url": "https://www.instagram.com/p/CsKVJk2pqiX/"
+            "category_title": "Retailers",
+            "category_link_url": "",
+            "link_text_1": "Become a Brisk It Retailer",
+            "link_url_1": "shopify://pages/contact-us",
+            "link_text_2": "",
+            "link_url_2": "",
+            "link_text_3": "",
+            "link_url_3": "",
+            "link_text_4": "",
+            "link_url_4": "",
+            "link_text_5": "",
+            "link_url_5": "",
+            "link_text_6": "",
+            "link_url_6": ""
           }
         }
       },
       "block_order": [
-        "brisk-footer-1",
-        "brisk-footer-2",
-        "brisk-footer-3",
-        "brisk-footer-4",
-        "brisk-footer-5",
-        "brisk-footer-6"
+        "category-brisk-it",
+        "category-support",
+        "category-recipes",
+        "category-retailers"
       ],
       "settings": {
         "background_image": "shopify://shop_images/footer-background_2x_4fbaa2e7-9ced-49b5-97ab-2363bb27ff98.png",
+        "foot_logo": "shopify://shop_images/2025_Homepage_v8_briskitlogo_light.png",
         "title": "Join the Brisk It Family!",
         "link_text": "Follow Us on Instagram",
         "link_url": "https://www.instagram.com/briskitgrills/",
         "hide_socials": false,
+        "social_instagram_link": "https://www.instagram.com/briskitgrills/",
+        "social_facebook_link": "https://www.facebook.com/briskitgrills",
+        "social_youtube_link": "https://www.youtube.com/channel/UCrZ5M5fwVRQu2Md6GbB_lsA",
+        "social_tiktok_link": "https://www.tiktok.com/@briskitgrills",
         "menu": "secondary-menu-mobile",
-        "copyright": "© 2023, Brisk It Labs, Inc.",
-        "newsletter_title": "Let's \"Meat\" Again.\nSign up and stay up to date on all things Brisk It.",
+        "copyright": "© 2025, Brisk It Labs, Inc.",
+        "newsletter_title": "Sign up and stay up to date on all things Brisk It.",
         "newsletter_placeholder": "Enter your email here"
       }
     }

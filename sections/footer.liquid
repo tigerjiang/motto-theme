@@ -1,15 +1,6 @@
 {{- 'section-footer.css' | asset_url | stylesheet_tag -}}
 
-{%- liquid
-  assign footer_settings = section.settings
-  assign has_footer_meta = false
-  unless footer_settings.hide_socials
-    assign has_footer_meta = true
-  endunless
-  if footer_settings.menu != blank or footer_settings.copyright != blank
-    assign has_footer_meta = true
-  endif
--%}
+{%- assign footer_settings = section.settings -%}
 
 <footer class="brisk-footer">
   {%- if footer_settings.background_image != blank -%}
@@ -26,63 +17,80 @@
     </div>
   {%- endif -%}
 
-  <div class="brisk-footer__inner">
-    <div class="brisk-footer__content">
-      {%- if footer_settings.title != blank or footer_settings.link_text != blank -%}
-        <div class="brisk-footer__head">
-          {%- if footer_settings.title != blank -%}
-            <h2 class="brisk-footer__title">{{ footer_settings.title }}</h2>
-          {%- endif -%}
+  <div class="brisk-footer__wrapper">
+    <div class="brisk-footer__logo">
+      <a href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
+        {%- if footer_settings.foot_logo != blank -%}
+          {{
+            footer_settings.foot_logo
+            | image_url: width: 362
+            | image_tag:
+              loading: 'lazy',
+              widths: '181, 362',
+              sizes: '181px',
+              width: 181,
+              alt: shop.name
+          }}
+        {%- else -%}
+          <span>{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+    </div>
 
-          {%- if footer_settings.link_text != blank and footer_settings.link_url != blank -%}
-            <a
-              href="{{ footer_settings.link_url }}"
-              class="brisk-footer__instagram-button"
-              target="_blank"
-              rel="noopener"
-            >
-              {%- render 'icon-instagram' -%}
-              <span>{{ footer_settings.link_text }}</span>
-            </a>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
+    <div class="brisk-footer__body">
+      <div class="brisk-footer__left">
+        {%- if footer_settings.title != blank -%}
+          <h2 class="brisk-footer__title">{{ footer_settings.title }}</h2>
+        {%- endif -%}
 
-      {%- if section.blocks.size > 0 -%}
-        <div class="brisk-footer__gallery">
-          {%- for block in section.blocks -%}
-            {%- if block.settings.image != blank -%}
-              <div class="brisk-footer__gallery-item" {{ block.shopify_attributes }}>
-                <a
-                  href="{{ block.settings.url | default: '#' }}"
-                  {% if block.settings.url != blank %}
-                    target="_blank"
-                    rel="noopener"
-                  {% endif %}
-                  aria-label="{{ block.settings.image.alt | default: footer_settings.title | escape }}"
-                >
-                  {{
-                    block.settings.image
-                    | image_url: width: 800
-                    | image_tag:
-                      loading: 'lazy',
-                      widths: '240, 360, 480, 640, 800',
-                      sizes: '(min-width: 1024px) 16vw, (min-width: 768px) 33vw, 50vw',
-                      alt: block.settings.image.alt
-                  }}
+        {%- if footer_settings.link_text != blank and footer_settings.link_url != blank -%}
+          <a
+            class="brisk-footer__instagram-link"
+            href="{{ footer_settings.link_url }}"
+            target="_blank"
+            rel="noopener"
+          >
+            {%- render 'icon-instagram' -%}
+            <span>{{ footer_settings.link_text }}</span>
+          </a>
+        {%- endif -%}
+
+        {%- unless footer_settings.hide_socials -%}
+          <ul class="brisk-footer__socials" role="list">
+            {%- if footer_settings.social_instagram_link != blank -%}
+              <li>
+                <a href="{{ footer_settings.social_instagram_link }}" target="_blank" rel="noopener" aria-label="Instagram">
+                  {%- render 'icon-instagram' -%}
                 </a>
-              </div>
+              </li>
             {%- endif -%}
-          {%- endfor -%}
-        </div>
-      {%- endif -%}
+            {%- if footer_settings.social_facebook_link != blank -%}
+              <li>
+                <a href="{{ footer_settings.social_facebook_link }}" target="_blank" rel="noopener" aria-label="Facebook">
+                  {%- render 'icon-facebook' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if footer_settings.social_youtube_link != blank -%}
+              <li>
+                <a href="{{ footer_settings.social_youtube_link }}" target="_blank" rel="noopener" aria-label="YouTube">
+                  {%- render 'icon-youtube' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if footer_settings.social_tiktok_link != blank -%}
+              <li>
+                <a href="{{ footer_settings.social_tiktok_link }}" target="_blank" rel="noopener" aria-label="TikTok">
+                  {%- render 'icon-tiktok' -%}
+                </a>
+              </li>
+            {%- endif -%}
+          </ul>
+        {%- endunless -%}
 
-      <div class="brisk-footer__columns">
         <div class="brisk-footer__newsletter">
           {%- if footer_settings.newsletter_title != blank -%}
-            <h3 class="brisk-footer__newsletter-title">
-              {{ footer_settings.newsletter_title | escape | newline_to_br }}
-            </h3>
+            <h3 class="brisk-footer__newsletter-title">{{ footer_settings.newsletter_title }}</h3>
           {%- endif -%}
 
           {%- form 'customer', class: 'brisk-footer__newsletter-form' -%}
@@ -120,58 +128,55 @@
             </div>
           {%- endform -%}
         </div>
+      </div>
 
-        {%- if has_footer_meta -%}
-          <div class="brisk-footer__meta">
-            {%- unless footer_settings.hide_socials -%}
-              <ul class="brisk-footer__socials" role="list">
-                {%- assign social_platforms = 'instagram,facebook,twitter,youtube,pinterest,tumblr,tiktok,vimeo' | split: ',' -%}
-                {%- for platform in social_platforms -%}
-                  {%- assign setting_key = 'social_' | append: platform | append: '_link' -%}
-                  {%- if settings[setting_key] != blank -%}
+      {%- if section.blocks.size > 0 -%}
+        <div class="brisk-footer__categories">
+          {%- for block in section.blocks -%}
+            <div class="brisk-footer__category" {{ block.shopify_attributes }}>
+              {%- if block.settings.category_title != blank -%}
+                {%- if block.settings.category_link_url != blank -%}
+                  <a class="brisk-footer__category-title" href="{{ block.settings.category_link_url }}">
+                    {{ block.settings.category_title }}
+                  </a>
+                {%- else -%}
+                  <h3 class="brisk-footer__category-title">{{ block.settings.category_title }}</h3>
+                {%- endif -%}
+              {%- endif -%}
+
+              <ul class="brisk-footer__category-links" role="list">
+                {%- for index in (1..6) -%}
+                  {%- assign link_text_key = 'link_text_' | append: index -%}
+                  {%- assign link_url_key = 'link_url_' | append: index -%}
+                  {%- if block.settings[link_text_key] != blank -%}
                     <li>
-                      <a
-                        href="{{ settings[setting_key] }}"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="{{ platform | capitalize }}"
-                      >
-                        {%- case platform -%}
-                          {%- when 'instagram' -%}{%- render 'icon-instagram' -%}
-                          {%- when 'facebook' -%}{%- render 'icon-facebook' -%}
-                          {%- when 'twitter' -%}{%- render 'icon-twitter' -%}
-                          {%- when 'youtube' -%}{%- render 'icon-youtube' -%}
-                          {%- when 'pinterest' -%}{%- render 'icon-pinterest' -%}
-                          {%- when 'tumblr' -%}{%- render 'icon-tumblr' -%}
-                          {%- when 'tiktok' -%}{%- render 'icon-tiktok' -%}
-                          {%- when 'vimeo' -%}{%- render 'icon-vimeo' -%}
-                        {%- endcase -%}
+                      <a href="{{ block.settings[link_url_key] | default: '#' }}">
+                        {{ block.settings[link_text_key] }}
                       </a>
                     </li>
                   {%- endif -%}
                 {%- endfor -%}
               </ul>
-            {%- endunless -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
 
-            {%- if footer_settings.menu != blank -%}
-              <nav class="brisk-footer__nav" aria-label="Footer">
-                <ul role="list">
-                  {%- for link in footer_settings.menu.links -%}
-                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                  {%- endfor -%}
-                </ul>
-              </nav>
-            {%- endif -%}
+    <div class="brisk-footer__bottom">
+      {%- if footer_settings.menu != blank -%}
+        <nav class="brisk-footer__nav" aria-label="Footer">
+          <ul role="list">
+            {%- for link in footer_settings.menu.links -%}
+              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {%- endif -%}
 
-            {%- if footer_settings.copyright != blank -%}
-              <p class="brisk-footer__copyright">
-                {{ footer_settings.copyright }}&nbsp;&nbsp;
-                <a href="https://www.sleeplessmedia.com/" target="_blank" rel="noopener">Design by Sleepless</a>
-              </p>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
-      </div>
+      {%- if footer_settings.copyright != blank -%}
+        <p class="brisk-footer__copyright">{{ footer_settings.copyright }}</p>
+      {%- endif -%}
     </div>
   </div>
 </footer>
@@ -187,6 +192,11 @@
       "label": "Background image"
     },
     {
+      "type": "image_picker",
+      "id": "foot_logo",
+      "label": "Footer logo"
+    },
+    {
       "type": "text",
       "id": "title",
       "label": "Title"
@@ -194,12 +204,12 @@
     {
       "type": "text",
       "id": "link_text",
-      "label": "Link text"
+      "label": "Instagram link text"
     },
     {
       "type": "url",
       "id": "link_url",
-      "label": "Link URL"
+      "label": "Instagram link URL"
     },
     {
       "type": "checkbox",
@@ -208,9 +218,29 @@
       "default": false
     },
     {
+      "type": "url",
+      "id": "social_instagram_link",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "social_facebook_link",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "social_youtube_link",
+      "label": "YouTube URL"
+    },
+    {
+      "type": "url",
+      "id": "social_tiktok_link",
+      "label": "TikTok URL"
+    },
+    {
       "type": "link_list",
       "id": "menu",
-      "label": "Menu"
+      "label": "Bottom menu"
     },
     {
       "type": "textarea",
@@ -235,18 +265,79 @@
   "max_blocks": 6,
   "blocks": [
     {
-      "type": "image-link",
-      "name": "Image link",
+      "type": "category",
+      "name": "Navigation category",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+          "type": "text",
+          "id": "category_title",
+          "label": "Category title",
+          "default": "Category title"
         },
         {
           "type": "url",
-          "id": "url",
-          "label": "URL"
+          "id": "category_link_url",
+          "label": "Category link"
+        },
+        {
+          "type": "text",
+          "id": "link_text_1",
+          "label": "Link 1 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "Link 1 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_2",
+          "label": "Link 2 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_2",
+          "label": "Link 2 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_3",
+          "label": "Link 3 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_3",
+          "label": "Link 3 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_4",
+          "label": "Link 4 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_4",
+          "label": "Link 4 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_5",
+          "label": "Link 5 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_5",
+          "label": "Link 5 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_6",
+          "label": "Link 6 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_6",
+          "label": "Link 6 URL"
         }
       ]
     }
