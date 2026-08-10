@@ -12,8 +12,7 @@
     <div
       id="menu-drawer"
       class="menu-drawer motion-reduce color-background-1"
-      tabind
-      ex="-1"
+      tabindex="-1"
     >
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
@@ -26,9 +25,8 @@
                       <details>
                         <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
                           <span
-                            href="{{ link.url }}"
                             class="menu-drawer__menu-link link--text list-menu__item focus-inset"
-                            {% if childlink.current %}
+                            {% if link.current %}
                               aria-current="page"
                             {% endif %}
                             aria-label="{{ link.title | escape }}"
