@@ -55,6 +55,58 @@
     object-fit: contain;
   }
 
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .brand {
+      padding: 80px 10px 60px;
+    }
+
+    #shopify-section-{{ section.id }} .section-header__subtitle,
+    #shopify-section-{{ section.id }} .section-header__title {
+      justify-content: center;
+      text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .brand__wrapper {
+      margin-top: 28px;
+    }
+
+    #shopify-section-{{ section.id }} .brand-list,
+    #shopify-section-{{ section.id }} .brand-list.swiper .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      column-gap: 0;
+      row-gap: 28px;
+      overflow: visible;
+    }
+
+    #shopify-section-{{ section.id }} .brand-list .brand-list__item {
+      flex: 0 0 33.333%;
+      width: 33.333%;
+      height: 50px;
+      padding: 0 !important;
+      box-sizing: border-box;
+    }
+
+    #shopify-section-{{ section.id }} .brand-list .brand-list__item:nth-child(n + 4) {
+      flex-basis: 50%;
+      width: 50%;
+    }
+
+    #shopify-section-{{ section.id }} .brand-list .brand-list__item:nth-child(n + 6) {
+      flex-basis: 100%;
+      width: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .brand-list__item img {
+      width: auto !important;
+      max-width: 100px;
+      max-height: 50px;
+    }
+  }
+
 {%- endstyle -%}
 
 <div class="brand color-{{ section.settings.color_scheme }} background container section-{{ section.id }}-padding">

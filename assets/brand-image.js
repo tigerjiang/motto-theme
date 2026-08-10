@@ -1,4 +1,6 @@
 (() => {
+  const desktopMedia = window.matchMedia("(min-width: 750px)");
+
   const initSlider = () => {
     const sections = document.querySelectorAll(".brand-list.swiper");
 
@@ -6,6 +8,8 @@
       if (el.swiper) {
         el.swiper.destroy(true, true);
       }
+
+      if (!desktopMedia.matches) return;
 
       const speed1 = Number(el.getAttribute("data-duration")) * 1000;
 
@@ -39,5 +43,7 @@
     document.addEventListener("shopify:section:load", function () {
       initSlider();
     });
+
+    desktopMedia.addEventListener("change", initSlider);
   });
 })();
