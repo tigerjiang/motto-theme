@@ -3,37 +3,16 @@
 {%- assign footer_settings = section.settings -%}
 
 <footer class="brisk-footer">
-  {%- if footer_settings.background_image != blank -%}
-    <div class="brisk-footer__background">
-      {{
-        footer_settings.background_image
-        | image_url: width: 2880
-        | image_tag:
-          loading: 'lazy',
-          widths: '750, 1100, 1500, 2000, 2880',
-          sizes: '100vw',
-          alt: ''
-      }}
-    </div>
-  {%- endif -%}
-
   <div class="brisk-footer__wrapper">
     <div class="brisk-footer__logo">
       <a href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
-        {%- if footer_settings.foot_logo != blank -%}
-          {{
-            footer_settings.foot_logo
-            | image_url: width: 362
-            | image_tag:
-              loading: 'lazy',
-              widths: '181, 362',
-              sizes: '181px',
-              width: 181,
-              alt: shop.name
-          }}
-        {%- else -%}
-          <span>{{ shop.name }}</span>
-        {%- endif -%}
+        <img
+          src="{{ 'brisk-footer-logo.svg' | asset_url }}"
+          width="181"
+          height="46"
+          loading="lazy"
+          alt="{{ shop.name | escape }}"
+        >
       </a>
     </div>
 
@@ -186,16 +165,6 @@
   "name": "Brisk footer",
   "class": "section-brisk-footer",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background image"
-    },
-    {
-      "type": "image_picker",
-      "id": "foot_logo",
-      "label": "Footer logo"
-    },
     {
       "type": "text",
       "id": "title",
