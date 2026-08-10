@@ -330,6 +330,55 @@
         "padding_bottom": "no-indent"
       }
     },
+    "expandable_image_cards_8rXFzC": {
+      "type": "expandable-image-cards",
+      "blocks": {
+        "card_dfK6Mj": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/briskitlife-ladyrunner-405-x-720_2x_77361afa-9306-4448-9c3b-dac4ae25d8b9.png",
+            "label": "Health optimized",
+            "title": "Live Stronger",
+            "text": "<p>Set your health goals. Brisk It AI plans and cooks around them — so you fuel better, live stronger.</p>"
+          }
+        },
+        "card_44h74P": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/briskitlife-malecheckingphone-405-x-720_2x_7abc37ee-418a-434e-be5d-1ddf189141d8.png",
+            "label": "Control anywhere",
+            "title": "Stay Connected",
+            "text": "<p>Monitor and control your cook from wherever life takes you.</p>"
+          }
+        },
+        "card_ggRFh3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png",
+            "label": "Zero Thinking",
+            "title": "Cook Effortlessly",
+            "text": "<p>Let Brisk It handle the details while you enjoy more time around the table.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_dfK6Mj",
+        "card_44h74P",
+        "card_ggRFh3"
+      ],
+      "name": "Expandable image cards",
+      "settings": {
+        "eyebrow": "OPTIMIZE YOUR LIFE",
+        "heading": "More Time. Better Food.",
+        "text": "<p>Set your taste. Brisk It AI handles the rest — autonomous cooking, healthier eating, and more time for living.</p>",
+        "background_color": "#FBF9F6",
+        "heading_color": "#13294B",
+        "accent_color": "#E65C00",
+        "card_text_color": "#FFFFFF",
+        "label_background": "#E8E4DE",
+        "label_color": "#13294B"
+      }
+    },
     "card-list": {
       "type": "card-list",
       "blocks": {
@@ -962,6 +1011,7 @@
     "smarter_every_day_8BzYiH",
     "blockquote_rwtxJE",
     "product_slider_XAHzUr",
+    "expandable_image_cards_8rXFzC",
     "card-list",
     "brand_image_qdxFeE",
     "testimonials_jbRNEW",
