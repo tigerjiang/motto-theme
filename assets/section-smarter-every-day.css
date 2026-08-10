@@ -76,6 +76,10 @@
   min-width: 0;
 }
 
+.smarter-every-day__media picture {
+  display: block;
+}
+
 .smarter-every-day__image,
 .smarter-every-day__placeholder {
   display: block;
@@ -111,7 +115,22 @@
 
   .smarter-every-day__content {
     grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
     gap: 30px;
+  }
+
+  .smarter-every-day__copy {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .smarter-every-day__eyebrow,
+  .smarter-every-day__heading,
+  .smarter-every-day__text,
+  .smarter-every-day__button {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .smarter-every-day__heading {
@@ -121,6 +140,12 @@
 
   .smarter-every-day__text {
     max-width: 420px;
+  }
+
+  .smarter-every-day__media {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .smarter-every-day__placeholder {
