@@ -125,7 +125,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   min-width: 0;
-  padding: 28px 20px;
+  padding: 28px 20px 60px;
 }
 
 .expandable-image-cards__details {
@@ -171,11 +171,15 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
 }
 
+.expandable-image-cards__card-description p {
+  color: #ffffff;
+}
+
 .expandable-image-cards__label {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
-  align-self: center;
+  align-self: flex-start;
   justify-content: center;
   gap: 8px;
   max-width: 100%;
