@@ -96,7 +96,7 @@
         "image_size": "adapt",
         "heading_tag": "h1",
         "image_size_mobile": "full",
-        "text_position_mobile": "top-left",
+        "text_position_mobile": "bottom-left",
         "is_autoplay": true,
         "video_loop": true,
         "is_hover_stop_autoplay": false,

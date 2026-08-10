@@ -237,16 +237,20 @@
   }
 
   {% if section.settings.floating_header and section.settings.header_overlay %}
+    body:has(main > #shopify-section-{{ section.id }}:first-child) .shopify-section-header:not(.shopify-section-header-sticky) .header-wrapper {
+      width: auto;
+      margin: 0.4rem 0.8rem 0;
+      border-radius: 0.8rem;
+      box-shadow: 0 0.4rem 1.8rem rgba(0, 0, 0, 0.12);
+    }
+
+    body:has(main > #shopify-section-{{ section.id }}:first-child) .shopify-section-header:not(.shopify-section-header-sticky) .header {
+      border-radius: 0.8rem;
+    }
+
     @media screen and (min-width: 750px) {
       body:has(main > #shopify-section-{{ section.id }}:first-child) .shopify-section-header:not(.shopify-section-header-sticky) .header-wrapper {
-        width: auto;
         margin: 0.8rem 1.6rem 0;
-        border-radius: 0.8rem;
-        box-shadow: 0 0.4rem 1.8rem rgba(0, 0, 0, 0.12);
-      }
-
-      body:has(main > #shopify-section-{{ section.id }}:first-child) .shopify-section-header:not(.shopify-section-header-sticky) .header {
-        border-radius: 0.8rem;
       }
     }
   {% endif %}
@@ -254,13 +258,13 @@
   @media screen and (max-width: 749px) {
     #shopify-section-{{ section.id }} .slideshow-slide > .container {
       align-items: flex-end;
-      padding: 0 2.4rem 4rem;
+      padding: 0 0.8rem 2.4rem;
     }
 
     #shopify-section-{{ section.id }} .slideshow-slide-mobile--top-left > .container,
     #shopify-section-{{ section.id }} .slideshow-slide-mobile--top-center > .container {
-      align-items: flex-start;
-      padding: calc(var(--header-height, 0px) + 4.8rem) 2.4rem 2.4rem;
+      align-items: flex-end;
+      padding: 0 0.8rem 2.4rem;
     }
 
     #shopify-section-{{ section.id }} .slideshow-slide__text,
@@ -270,17 +274,44 @@
     }
 
     #shopify-section-{{ section.id }} .slideshow-slide__eyebrow {
-      font-size: 1.2rem;
-      letter-spacing: 0.24rem;
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
     }
 
     #shopify-section-{{ section.id }} .slideshow-slide__title {
-      font-size: clamp(4rem, 12vw, 5.6rem);
+      color: #ffffff;
+      font-size: 3.2rem;
+      line-height: 1.2;
+      text-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.2);
     }
 
     #shopify-section-{{ section.id }} .slideshow-slide__desc {
-      font-size: 1.8rem;
-      line-height: 2.7rem;
+      max-width: 34rem;
+      color: #ffffff;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      text-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
+    }
+
+    #shopify-section-{{ section.id }} .slideshow__button-wrapper {
+      gap: 0.6rem;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow__button-wrapper .button {
+      min-width: 0;
+      min-height: 2.8rem;
+      padding: 0.85rem 0.8rem;
+      border-radius: 0.4rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.011rem;
+      clip-path: polygon(
+        0.8rem 0,
+        100% 0,
+        100% calc(100% - 0.8rem),
+        calc(100% - 0.8rem) 100%,
+        0 100%,
+        0 0.8rem
+      );
     }
 
     #shopify-section-{{ section.id }} .slideshow .slideshow-bottom {
@@ -541,12 +572,12 @@
                     <picture>
                       <source
                         srcset="{% for width in widths_arr %}{{ block.settings.mobile_image | image_url: width: width }} {{ width }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
-                        media="(max-width: 575px)"
+                        media="(max-width: 749px)"
                         sizes="{{ sizes }}"
                       >
                       <source
                         srcset="{% for width in widths_arr %}{{ block.settings.desktop_image | image_url: width: width }} {{ width }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
-                        media="(min-width: 576px)"
+                        media="(min-width: 750px)"
                         sizes="{{ sizes }}"
                       >
                       <img

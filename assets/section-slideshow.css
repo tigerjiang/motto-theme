@@ -420,7 +420,7 @@
 .slideshow-slide__img img {
   object-position: var(--focal_point_mobile);
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 750px) {
   .slideshow-slide__img img {
     object-position: var(--focal_point_desktop);
   }
