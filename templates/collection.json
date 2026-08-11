@@ -1,1 +1,58 @@
-{"sections":{"banner":{"type":"main-collection-banner","settings":{"header_overlay":true,"full_width":true,"color_scheme":"","overlay_opacity":0,"show_collection_description":false,"show_collection_image":true,"image_products":"","image_ratio":"adapt","margin_top":"no-indent","margin_bottom":"no-indent"}},"product-grid":{"type":"main-collection-product-grid","settings":{"products_per_page":12,"columns_mobile":"1","image_ratio":"square","image_fit":"cover","show_secondary_image":true,"show_vendor":false,"show_sku":false,"show_collection":false,"show_desc":false,"enable_filtering":true,"enable_sorting":true,"image_filter_ratio":"1\/1","image_filter_fit":"cover","image_filter_columns":4,"margin_top":"xs","margin_bottom":"xl"}}},"order":["banner","product-grid"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "collection_list": [],
+        "section_heading_tag": "h1",
+        "header_overlay": true,
+        "full_width": true,
+        "color_scheme": "",
+        "overlay_opacity": 0,
+        "show_collection_description": false,
+        "show_collection_image": true,
+        "image_ratio": "adapt",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "color_scheme": "",
+        "products_per_page": 12,
+        "columns_mobile": "2",
+        "image_ratio": "square",
+        "image_fit": "contain",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_sku": false,
+        "show_collection": false,
+        "show_desc": false,
+        "product_heading_tag": "span",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "image_filter_ratio": "1/1",
+        "image_filter_fit": "cover",
+        "image_filter_columns": 4,
+        "margin_top": "xs",
+        "margin_bottom": "xl",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}
