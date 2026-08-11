@@ -39,7 +39,7 @@
         "show_sku": false,
         "show_collection": false,
         "show_desc": false,
-        "product_heading_tag": "span",
+        "product_heading_tag": "p",
         "enable_filtering": true,
         "enable_sorting": true,
         "image_filter_ratio": "1/1",
