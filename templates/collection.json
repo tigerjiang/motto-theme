@@ -21,7 +21,7 @@
         "show_collection_description": false,
         "show_collection_image": true,
         "image_products": "shopify://shop_images/Argo_whitebg_closeup_open_grill_left.jpg",
-        "image_ratio": "adapt",
+        "image_ratio": "21/9",
         "margin_top": "no-indent",
         "margin_bottom": "no-indent"
       }
