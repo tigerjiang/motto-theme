@@ -43,6 +43,7 @@
     "cart_show_vendor": false,
     "currency_code_enabled": false,
     "show_back_to_top": false,
+    "enable_breadcrumbs": true,
     "sections": {
       "gift-card": {
         "type": "gift-card",
