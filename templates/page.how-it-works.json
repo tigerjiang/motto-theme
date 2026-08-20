@@ -106,26 +106,37 @@
     "ai_learn": {
       "type": "ai-learn-section",
       "blocks": {
+        "slide_Y6JwaR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/webpreview-01.png",
+            "image_alt": "Brisk It app insight screen"
+          }
+        },
         "slide_1": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/webpreview-02.png",
             "image_alt": "Weekly Brisk It cooking insights"
           }
         },
         "slide_2": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/webpreview-03.png",
             "image_alt": "Brisk It weekly cooking summary"
           }
         },
         "slide_3": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/webpreview-04.png",
             "image_alt": "Brisk It suggested improvements"
           }
         }
       },
       "block_order": [
+        "slide_Y6JwaR",
         "slide_1",
         "slide_2",
         "slide_3"
