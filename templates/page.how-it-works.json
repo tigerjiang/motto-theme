@@ -64,14 +64,16 @@
         "monitor_1": {
           "type": "monitor",
           "settings": {
+            "image": "shopify://shop_images/image-tempcontrol_2x_8ed789f4-8c8f-48b2-9db6-7ed90df7819f.png",
             "image_alt": "Live cooking temperature monitor",
-            "notification_title": "Brisk It Brisket is done!",
-            "notification_text": "Keeping warm"
+            "notification_title": "",
+            "notification_text": ""
           }
         },
         "monitor_2": {
           "type": "monitor",
           "settings": {
+            "image": "shopify://shop_images/frame-164_2x_6de4296d-b277-4a93-8403-cb009ebff9b4.png",
             "image_alt": "Automatic cooking temperature monitor",
             "notification_title": "Sour Dough Bread is done!",
             "notification_text": "Keeping warm"
