@@ -1,0 +1,73 @@
+{{ 'section-how-it-works.css' | asset_url | stylesheet_tag }}
+
+<section class="hiw-section hiw-realtime">
+  <div class="hiw-container">
+    {%- if section.settings.eyebrow != blank -%}<p class="hiw-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h2 class="hiw-title">{{ section.settings.heading | escape }}</h2>
+    {%- if section.settings.subheading != blank -%}<p class="hiw-realtime__subtitle">{{ section.settings.subheading | escape }}</p>{%- endif -%}
+    <div class="hiw-realtime__grid">
+      {%- for block in section.blocks -%}
+        <article class="hiw-realtime__item" {{ block.shopify_attributes }}>
+          <div class="hiw-realtime__notice">
+            <span class="hiw-realtime__brand">BRISK IT</span>
+            <strong>{{ block.settings.notification_title | escape }}</strong>
+            <span>{{ block.settings.notification_text | escape }}</span>
+          </div>
+          <div class="hiw-media hiw-realtime__media">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '420, 640, 800, 1000', sizes: '(min-width: 750px) 42vw, calc(100vw - 32px)', alt: block.settings.image_alt }}
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag: 'hiw-placeholder placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+    <div class="hiw-realtime__download">
+      <p class="hiw-eyebrow hiw-realtime__download-title">{{ section.settings.download_title | escape }}</p>
+      <div class="hiw-realtime__stores">
+        {%- if section.settings.app_store_image != blank -%}
+          <a class="hiw-realtime__store" {% if section.settings.app_store_link != blank %}href="{{ section.settings.app_store_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>{{ section.settings.app_store_image | image_url: width: 300 | image_tag: loading: 'lazy', alt: 'Download on the App Store' }}</a>
+        {%- else -%}<a class="hiw-realtime__store" {% if section.settings.app_store_link != blank %}href="{{ section.settings.app_store_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>Download on the<br>App Store</a>{%- endif -%}
+        {%- if section.settings.google_play_image != blank -%}
+          <a class="hiw-realtime__store" {% if section.settings.google_play_link != blank %}href="{{ section.settings.google_play_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>{{ section.settings.google_play_image | image_url: width: 300 | image_tag: loading: 'lazy', alt: 'Get it on Google Play' }}</a>
+        {%- else -%}<a class="hiw-realtime__store" {% if section.settings.google_play_link != blank %}href="{{ section.settings.google_play_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>Get it on<br>Google Play</a>{%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Real-time precision",
+  "tag": "section",
+  "class": "hiw-realtime-section",
+  "max_blocks": 2,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "WIFI CONTROL" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Real-Time Precision. Zero Effort." },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Real-time monitoring, adjusting, and control." },
+    { "type": "text", "id": "download_title", "label": "Download title", "default": "DOWNLOAD THE APP" },
+    { "type": "image_picker", "id": "app_store_image", "label": "App Store badge" },
+    { "type": "url", "id": "app_store_link", "label": "App Store link" },
+    { "type": "image_picker", "id": "google_play_image", "label": "Google Play badge" },
+    { "type": "url", "id": "google_play_link", "label": "Google Play link" }
+  ],
+  "blocks": [{
+    "type": "monitor", "name": "Cooking monitor",
+    "settings": [
+      { "type": "image_picker", "id": "image", "label": "Monitor image" },
+      { "type": "text", "id": "image_alt", "label": "Image alt text", "default": "Live cooking temperature monitor" },
+      { "type": "text", "id": "notification_title", "label": "Notification title", "default": "Brisk It Brisket is done!" },
+      { "type": "text", "id": "notification_text", "label": "Notification text", "default": "Keeping warm" }
+    ]
+  }],
+  "presets": [{
+    "name": "Real-time precision",
+    "blocks": [
+      { "type": "monitor" },
+      { "type": "monitor", "settings": { "notification_title": "Sour Dough Bread is done!", "image_alt": "Automatic cooking temperature monitor" } }
+    ]
+  }]
+}
+{% endschema %}
