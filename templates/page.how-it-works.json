@@ -89,7 +89,9 @@
         "heading": "Real-Time Precision. Zero Effort.",
         "subheading": "Real-time monitoring, adjusting, and control.",
         "download_title": "DOWNLOAD THE APP",
+        "app_store_image": "shopify://shop_images/apple-button.png",
         "app_store_link": "",
+        "google_play_image": "shopify://shop_images/googleplay.png",
         "google_play_link": ""
       }
     },
