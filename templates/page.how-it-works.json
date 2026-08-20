@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -15,47 +24,160 @@
     "hands_free": {
       "type": "hands-free-section",
       "blocks": {
-        "step_1": { "type": "step", "settings": { "heading": "Tell Brisk It What You Need", "text": "<p>Health goals, cravings, or a photo of your ingredients — Brisk It AI learns it all and builds a recipe around you.</p>" } },
-        "step_2": { "type": "step", "settings": { "heading": "Prep with AI-Powered Guidance", "text": "<p>Smart ingredients, prep steps, and cooking instructions are laid out for you. Brisk It guides your every move.</p>" } },
-        "step_3": { "type": "step", "settings": { "heading": "Let Full-Self Cooking Take Over", "text": "<p>Place your food on the device. Brisk It monitors, adjusts, and controls heat in real time — from ignition to perfect doneness.</p>" } }
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/image-veraapp_2x_8621a5e4-7ceb-454a-8857-1f565b0c008d.png",
+            "heading": "Tell Brisk It What You Need",
+            "text": "<p>Health goals, cravings, or a photo of your ingredients — Brisk It AI learns it all and builds a recipe around you.</p>"
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/image-veraapp_2x_b4ede7f8-f4b9-43be-a4cc-c588edf8660b.png",
+            "heading": "Prep with AI-Powered Guidance",
+            "text": "<p>Smart ingredients, prep steps, and cooking instructions are laid out for you. Brisk It guides your every move.</p>"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/automatedcook_2x_bce86b73-35f6-41c8-8863-fd6689997b12.png",
+            "heading": "Let Full-Self Cooking Take Over",
+            "text": "<p>Place your food on the device. Brisk It monitors, adjusts, and controls heat in real time — from ignition to perfect doneness.</p>"
+          }
+        }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
-      "settings": { "heading": "Simple, effortless, automated, and hands-free." }
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "heading": "Simple, effortless, automated, and hands-free."
+      }
     },
     "real_time": {
       "type": "real-time-section",
       "blocks": {
-        "monitor_1": { "type": "monitor", "settings": { "image_alt": "Live cooking temperature monitor", "notification_title": "Brisk It Brisket is done!", "notification_text": "Keeping warm" } },
-        "monitor_2": { "type": "monitor", "settings": { "image_alt": "Automatic cooking temperature monitor", "notification_title": "Sour Dough Bread is done!", "notification_text": "Keeping warm" } }
+        "monitor_1": {
+          "type": "monitor",
+          "settings": {
+            "image_alt": "Live cooking temperature monitor",
+            "notification_title": "Brisk It Brisket is done!",
+            "notification_text": "Keeping warm"
+          }
+        },
+        "monitor_2": {
+          "type": "monitor",
+          "settings": {
+            "image_alt": "Automatic cooking temperature monitor",
+            "notification_title": "Sour Dough Bread is done!",
+            "notification_text": "Keeping warm"
+          }
+        }
       },
-      "block_order": ["monitor_1", "monitor_2"],
-      "settings": { "eyebrow": "WIFI CONTROL", "heading": "Real-Time Precision. Zero Effort.", "subheading": "Real-time monitoring, adjusting, and control.", "download_title": "DOWNLOAD THE APP" }
+      "block_order": [
+        "monitor_1",
+        "monitor_2"
+      ],
+      "settings": {
+        "eyebrow": "WIFI CONTROL",
+        "heading": "Real-Time Precision. Zero Effort.",
+        "subheading": "Real-time monitoring, adjusting, and control.",
+        "download_title": "DOWNLOAD THE APP",
+        "app_store_link": "",
+        "google_play_link": ""
+      }
     },
     "juggling_life": {
       "type": "juggling-life-section",
-      "settings": { "heading": "Juggling life? AI adapts, so you don’t have to.", "text": "<p>AI is constantly monitoring your grill and adapting to unexpected events to make sure that nothing is overcooked or ruined.</p>" }
+      "settings": {
+        "heading": "Juggling life? AI adapts, so you don’t have to.",
+        "text": "<p>AI is constantly monitoring your grill and adapting to unexpected events to make sure that nothing is overcooked or ruined.</p>"
+      }
     },
     "ai_learn": {
       "type": "ai-learn-section",
       "blocks": {
-        "slide_1": { "type": "slide", "settings": { "image_alt": "Weekly Brisk It cooking insights" } },
-        "slide_2": { "type": "slide", "settings": { "image_alt": "Brisk It weekly cooking summary" } },
-        "slide_3": { "type": "slide", "settings": { "image_alt": "Brisk It suggested improvements" } }
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "image_alt": "Weekly Brisk It cooking insights"
+          }
+        },
+        "slide_2": {
+          "type": "slide",
+          "settings": {
+            "image_alt": "Brisk It weekly cooking summary"
+          }
+        },
+        "slide_3": {
+          "type": "slide",
+          "settings": {
+            "image_alt": "Brisk It suggested improvements"
+          }
+        }
       },
-      "block_order": ["slide_1", "slide_2", "slide_3"],
-      "settings": { "heading": "Brisk It AI Learns With Every Cook.", "text": "<p>Brisk It AI learns your preferences and cooking behavior, optimizing future cooks and creating new, relevant recipes for you to try.</p>", "slider_label": "AI cooking insights" }
+      "block_order": [
+        "slide_1",
+        "slide_2",
+        "slide_3"
+      ],
+      "settings": {
+        "heading": "Brisk It AI Learns With Every Cook.",
+        "text": "<p>Brisk It AI learns your preferences and cooking behavior, optimizing future cooks and creating new, relevant recipes for you to try.</p>",
+        "slider_label": "AI cooking insights"
+      }
     },
     "enjoy": {
       "type": "enjoy-section",
       "blocks": {
-        "image_1": { "type": "image", "settings": { "image_alt": "Food cooking in a Brisk It oven" } },
-        "image_2": { "type": "image", "settings": { "image_alt": "Family enjoying a perfectly cooked meal" } },
-        "image_3": { "type": "image", "settings": { "image_alt": "Serving a freshly cooked meal" } },
-        "image_4": { "type": "image", "settings": { "image_alt": "Brisk It grill cooking hands-free" } }
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image_alt": "Food cooking in a Brisk It oven"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image_alt": "Family enjoying a perfectly cooked meal"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image_alt": "Serving a freshly cooked meal"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image_alt": "Brisk It grill cooking hands-free"
+          }
+        }
       },
-      "block_order": ["image_1", "image_2", "image_3", "image_4"],
-      "settings": { "heading": "Enjoy your perfectly cooked flavors—effortless, automated, and hands-free.", "button_label": "Shop Now", "button_link": "/collections/all" }
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "heading": "Enjoy your perfectly cooked flavors—effortless, automated, and hands-free.",
+        "button_label": "Shop Now",
+        "button_link": "/collections/all"
+      }
     }
   },
-  "order": ["hero", "hands_free", "real_time", "juggling_life", "ai_learn", "enjoy"]
+  "order": [
+    "hero",
+    "hands_free",
+    "real_time",
+    "juggling_life",
+    "ai_learn",
+    "enjoy"
+  ]
 }
