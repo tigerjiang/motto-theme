@@ -153,33 +153,21 @@
         "image_1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/collage-3_2x_f3526dec-643f-44f6-a49a-3dbb4161d846.png",
             "image_alt": "Food cooking in a Brisk It oven"
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/collage-1_2x_4f8c0dfe-79d3-4790-8072-6ec9898ce195.png",
             "image_alt": "Family enjoying a perfectly cooked meal"
-          }
-        },
-        "image_3": {
-          "type": "image",
-          "settings": {
-            "image_alt": "Serving a freshly cooked meal"
-          }
-        },
-        "image_4": {
-          "type": "image",
-          "settings": {
-            "image_alt": "Brisk It grill cooking hands-free"
           }
         }
       },
       "block_order": [
         "image_1",
-        "image_2",
-        "image_3",
-        "image_4"
+        "image_2"
       ],
       "settings": {
         "heading": "Enjoy your perfectly cooked flavors—effortless, automated, and hands-free.",
