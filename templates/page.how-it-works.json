@@ -99,7 +99,8 @@
       "type": "juggling-life-section",
       "settings": {
         "heading": "Juggling life? AI adapts, so you don’t have to.",
-        "text": "<p>AI is constantly monitoring your grill and adapting to unexpected events to make sure that nothing is overcooked or ruined.</p>"
+        "text": "<p>AI is constantly monitoring your grill and adapting to unexpected events to make sure that nothing is overcooked or ruined.</p>",
+        "image": "shopify://shop_images/frame-165_2x_dc5c69a9-3d13-4843-846e-159d47c38b9a.png"
       }
     },
     "ai_learn": {
