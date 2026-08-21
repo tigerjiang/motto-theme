@@ -26,7 +26,16 @@
     {%- if section.settings.eyebrow != blank -%}<p class="hiw-hero__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
     <h1 class="hiw-hero__title">{{ section.settings.heading | escape }}</h1>
     {%- if section.settings.text != blank -%}<div class="hiw-hero__text">{{ section.settings.text }}</div>{%- endif -%}
-    {%- if section.settings.button_label != blank -%}<a class="hiw-button" {% if section.settings.button_link != blank %}href="{{ section.settings.button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>{{ section.settings.button_label | escape }}</a>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <div class="hiw-hero__button">
+        {% render 'button',
+          btn_label: section.settings.button_label,
+          btn_link: section.settings.button_link,
+          btn_style: 'primary',
+          add_classes: 'hiw-hero__button-link focus-inset'
+        %}
+      </div>
+    {%- endif -%}
   </div>
 </section>
 

@@ -14,7 +14,16 @@
         </div>
       {%- endfor -%}
     </div>
-    {%- if section.settings.button_label != blank -%}<a class="hiw-button hiw-enjoy__button" {% if section.settings.button_link != blank %}href="{{ section.settings.button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>{{ section.settings.button_label | escape }}</a>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <div class="hiw-enjoy__button">
+        {% render 'button',
+          btn_label: section.settings.button_label,
+          btn_link: section.settings.button_link,
+          btn_style: 'primary',
+          add_classes: 'hiw-enjoy__button-link focus-inset'
+        %}
+      </div>
+    {%- endif -%}
   </div>
 </section>
 
