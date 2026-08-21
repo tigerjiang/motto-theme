@@ -385,24 +385,14 @@
 
 .hiw-enjoy__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 2fr;
-  grid-template-rows: repeat(2, minmax(170px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.6rem;
-  min-height: 520px;
 }
 
 .hiw-enjoy__item {
   overflow: hidden;
+  aspect-ratio: 1.3;
   border-radius: 1rem;
-}
-
-.hiw-enjoy__item:first-child {
-  grid-column: 1 / 3;
-}
-
-.hiw-enjoy__item:nth-child(2) {
-  grid-column: 3;
-  grid-row: 1 / 3;
 }
 
 .hiw-enjoy__button {
@@ -474,18 +464,7 @@
   }
 
   .hiw-enjoy__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 220px 160px 280px;
-    min-height: 0;
-  }
-
-  .hiw-enjoy__item:first-child {
-    grid-column: 1 / 3;
-  }
-
-  .hiw-enjoy__item:nth-child(2) {
-    grid-column: 1 / 3;
-    grid-row: 3;
+    grid-template-columns: 1fr;
   }
 }
 
