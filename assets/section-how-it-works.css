@@ -237,40 +237,6 @@
   justify-items: center;
 }
 
-.hiw-realtime__notice {
-  position: relative;
-  z-index: 2;
-  width: min(100%, 320px);
-  margin-bottom: 3rem;
-  padding: 1.5rem 1.8rem;
-  border-radius: 1rem;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(27, 38, 54, .13);
-  color: #242c37;
-  font-size: 1.2rem;
-  line-height: 1.35;
-  text-align: left;
-}
-
-.hiw-realtime__brand {
-  display: block;
-  margin-bottom: .5rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
-
-.hiw-realtime__brand::before {
-  content: '▥';
-  margin-right: .7rem;
-  color: var(--hiw-orange);
-}
-
-.hiw-realtime__notice strong,
-.hiw-realtime__notice span {
-  display: block;
-}
-
 .hiw-realtime__media {
   width: min(100%, 470px);
   aspect-ratio: 1;
