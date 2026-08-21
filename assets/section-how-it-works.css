@@ -354,6 +354,12 @@
   max-width: 390px;
 }
 
+.hiw-learn__slider {
+  position: relative;
+  display: block;
+  min-width: 0;
+}
+
 .hiw-learn__track {
   display: grid;
   grid-auto-columns: minmax(210px, 30%);
@@ -363,6 +369,56 @@
   padding: 1rem 2rem 2rem 0;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
+}
+
+.hiw-learn__controls[hidden] {
+  display: none;
+}
+
+.hiw-learn__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(19, 41, 75, .12);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(19, 41, 75, .14);
+  color: var(--hiw-navy);
+  cursor: pointer;
+  transition: opacity 180ms ease, box-shadow 180ms ease;
+}
+
+.hiw-learn__arrow--previous {
+  left: .8rem;
+}
+
+.hiw-learn__arrow--next {
+  right: .8rem;
+}
+
+.hiw-learn__arrow svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.hiw-learn__arrow:hover:not(:disabled) {
+  box-shadow: 0 6px 18px rgba(19, 41, 75, .22);
+}
+
+.hiw-learn__arrow:focus-visible {
+  outline: 2px solid var(--hiw-orange);
+  outline-offset: 2px;
+}
+
+.hiw-learn__arrow:disabled {
+  opacity: .35;
+  cursor: default;
 }
 
 .hiw-learn__slide {
@@ -469,7 +525,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hiw-button {
+  .hiw-button,
+  .hiw-learn__arrow {
     transition: none;
   }
 }

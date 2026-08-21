@@ -6,19 +6,125 @@
       <h2 class="hiw-title">{{ section.settings.heading | escape }}</h2>
       {%- if section.settings.text != blank -%}<div class="hiw-copy">{{ section.settings.text }}</div>{%- endif -%}
     </div>
-    <div class="hiw-learn__track" aria-label="{{ section.settings.slider_label | escape }}">
-      {%- for block in section.blocks -%}
-        <div class="hiw-media hiw-learn__slide" {{ block.shopify_attributes }}>
-          {%- if block.settings.image != blank -%}
-            {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '280, 420, 560, 700', sizes: '(min-width: 750px) 22vw, 72vw', alt: block.settings.image_alt }}
-          {%- else -%}
-            {{ 'product-2' | placeholder_svg_tag: 'hiw-placeholder placeholder-svg' }}
-          {%- endif -%}
-        </div>
-      {%- endfor -%}
-    </div>
+    <ai-learn-slider class="hiw-learn__slider">
+      <div
+        id="AiLearnTrack-{{ section.id }}"
+        class="hiw-learn__track"
+        aria-label="{{ section.settings.slider_label | escape }}"
+      >
+        {%- for block in section.blocks -%}
+          <div class="hiw-media hiw-learn__slide" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '280, 420, 560, 700', sizes: '(min-width: 750px) 22vw, 72vw', alt: block.settings.image_alt }}
+            {%- else -%}
+              {{ 'product-2' | placeholder_svg_tag: 'hiw-placeholder placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="hiw-learn__controls" hidden>
+        <button
+          class="hiw-learn__arrow hiw-learn__arrow--previous"
+          type="button"
+          aria-controls="AiLearnTrack-{{ section.id }}"
+          aria-label="Previous slide"
+          data-direction="previous"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button
+          class="hiw-learn__arrow hiw-learn__arrow--next"
+          type="button"
+          aria-controls="AiLearnTrack-{{ section.id }}"
+          aria-label="Next slide"
+          data-direction="next"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </ai-learn-slider>
   </div>
 </section>
+
+{% javascript %}
+  if (!customElements.get('ai-learn-slider')) {
+    customElements.define(
+      'ai-learn-slider',
+      class AiLearnSlider extends HTMLElement {
+        connectedCallback() {
+          if (this.isInitialized) return;
+
+          this.track = this.querySelector('.hiw-learn__track');
+          this.controls = this.querySelector('.hiw-learn__controls');
+          this.previousButton = this.querySelector('[data-direction="previous"]');
+          this.nextButton = this.querySelector('[data-direction="next"]');
+
+          if (!this.track || !this.controls || !this.previousButton || !this.nextButton) return;
+
+          this.isInitialized = true;
+          this.updateControls = this.updateControls.bind(this);
+          this.handlePrevious = () => this.move(-1);
+          this.handleNext = () => this.move(1);
+
+          this.track.addEventListener('scroll', this.updateControls, { passive: true });
+          this.previousButton.addEventListener('click', this.handlePrevious);
+          this.nextButton.addEventListener('click', this.handleNext);
+
+          this.resizeObserver = new ResizeObserver(this.updateControls);
+          this.resizeObserver.observe(this.track);
+          Array.from(this.track.children).forEach((slide) => this.resizeObserver.observe(slide));
+
+          requestAnimationFrame(this.updateControls);
+        }
+
+        disconnectedCallback() {
+          if (!this.isInitialized) return;
+
+          this.track.removeEventListener('scroll', this.updateControls);
+          this.previousButton.removeEventListener('click', this.handlePrevious);
+          this.nextButton.removeEventListener('click', this.handleNext);
+          this.resizeObserver.disconnect();
+          this.isInitialized = false;
+        }
+
+        move(direction) {
+          const slide = this.track.querySelector('.hiw-learn__slide');
+          if (!slide) return;
+
+          const styles = getComputedStyle(this.track);
+          const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+          const distance = slide.getBoundingClientRect().width + gap;
+
+          this.track.scrollBy({
+            left: distance * direction,
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          });
+        }
+
+        updateControls() {
+          const hasOverflow = this.track.scrollWidth > this.track.clientWidth + 1;
+          this.controls.hidden = !hasOverflow;
+
+          if (!hasOverflow) return;
+
+          const trackRect = this.track.getBoundingClientRect();
+          const slides = this.track.querySelectorAll('.hiw-learn__slide');
+          const firstSlide = slides[0];
+          const lastSlide = slides[slides.length - 1];
+          const tolerance = 2;
+
+          this.previousButton.disabled = firstSlide.getBoundingClientRect().left >= trackRect.left - tolerance;
+          this.nextButton.disabled = lastSlide.getBoundingClientRect().right <= trackRect.right + tolerance;
+        }
+      }
+    );
+  }
+{% endjavascript %}
 
 {% schema %}
 {
