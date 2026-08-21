@@ -119,6 +119,7 @@
 .hiw-hero__text {
   max-width: 650px;
   margin: 2rem 0 2.8rem;
+  color: #fff;
   font-size: clamp(1.6rem, 1.7vw, 2.2rem);
   line-height: 1.4;
 }
