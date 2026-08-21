@@ -12,6 +12,7 @@
     "hero": {
       "type": "hero-section",
       "settings": {
+        "image": "shopify://shop_images/coverTextrevealOvenwithfriends.png",
         "image_position": "center",
         "overlay_opacity": 45,
         "eyebrow": "AI COOKING",
