@@ -75,7 +75,7 @@
         "section_heading_tag": "h1",
         "apply_logo_pages": false,
         "logo_width": 90,
-        "menu": "main-menu",
+        "menu": "main-menu-oven",
         "enable_country_selector": false,
         "show_country_flag": false,
         "enable_language_selector": false,
