@@ -11,13 +11,7 @@
   }
 {%- endstyle -%}
 
-<section
-  class="hiw-section hiw-hero"
-  data-header-overlay="true"
-  data-header-transparent="true"
-  data-header-transparent-color-scheme="color-background-3"
-  data-header-light-logo="true"
->
+<section class="hiw-section hiw-hero">
   <div class="hiw-hero__media" aria-hidden="true">
     {%- if section.settings.image != blank or section.settings.mobile_image != blank -%}
       <picture>
@@ -53,7 +47,7 @@
 {
   "name": "How it works hero",
   "tag": "section",
-  "class": "hiw-hero-section section--has-overlay",
+  "class": "hiw-hero-section",
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Desktop image" },
     { "type": "image_picker", "id": "mobile_image", "label": "Mobile image" },
