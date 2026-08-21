@@ -127,6 +127,10 @@
   padding: clamp(7rem, 9vw, 12rem) 0;
 }
 
+.hiw-hands .hiw-container {
+  width: min(100% - 40px, 1230px);
+}
+
 .hiw-hands__title {
   margin-bottom: 4.6rem;
   text-align: center;
@@ -176,7 +180,7 @@
 
 .hiw-hands__media {
   overflow: hidden;
-  aspect-ratio: 1.47;
+  aspect-ratio: 3 / 2;
   border-radius: 1rem;
 }
 
@@ -402,6 +406,10 @@
 @media screen and (max-width: 749px) {
   .hiw-container {
     width: min(100% - 32px, 1200px);
+  }
+
+  .hiw-hands .hiw-container {
+    width: calc(100% - 32px);
   }
 
   .hiw-title {
