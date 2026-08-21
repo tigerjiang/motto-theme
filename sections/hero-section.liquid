@@ -1,13 +1,23 @@
 {{ 'section-how-it-works.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  body:has(#shopify-section-{{ section.id }} .hiw-hero) > .breadcrumbs-wrapper {
+    display: none;
+  }
+
   #shopify-section-{{ section.id }} .hiw-hero {
     --hiw-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     --hiw-hero-position: {{ section.settings.image_position }};
   }
 {%- endstyle -%}
 
-<section class="hiw-section hiw-hero">
+<section
+  class="hiw-section hiw-hero"
+  data-header-overlay="true"
+  data-header-transparent="true"
+  data-header-transparent-color-scheme="color-background-3"
+  data-header-light-logo="true"
+>
   <div class="hiw-hero__media" aria-hidden="true">
     {%- if section.settings.image != blank or section.settings.mobile_image != blank -%}
       <picture>
@@ -43,7 +53,7 @@
 {
   "name": "How it works hero",
   "tag": "section",
-  "class": "hiw-hero-section",
+  "class": "hiw-hero-section section--has-overlay",
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Desktop image" },
     { "type": "image_picker", "id": "mobile_image", "label": "Mobile image" },
