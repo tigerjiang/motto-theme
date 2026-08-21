@@ -124,6 +124,11 @@
   line-height: 1.4;
 }
 
+.hiw-hero__text p,
+.hiw-hero__text a {
+  color: inherit;
+}
+
 .hiw-hands {
   padding: clamp(7rem, 9vw, 12rem) 0;
 }
