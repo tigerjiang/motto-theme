@@ -185,8 +185,10 @@
 }
 
 .hiw-hands__media {
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 390 / 260;
   border-radius: 1rem;
 }
 
