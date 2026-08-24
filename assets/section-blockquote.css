@@ -74,3 +74,64 @@
   object-position: center;
   display: block;
 }
+
+/* Product statement */
+.template-product .blockquote {
+  min-height: 40.4rem;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0;
+}
+
+.template-product .blockquote .container {
+  width: 100%;
+}
+
+.template-product .blockquote__block,
+.template-product .blockquote-section-header {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.template-product .blockquote-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.template-product .blockquote .blockquote-section-header .section-header__subtitle {
+  margin: 0;
+  color: rgb(var(--color-accent));
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.22em;
+}
+
+.template-product .blockquote__text {
+  display: block;
+  width: 100%;
+  max-width: 88rem;
+  color: rgb(var(--color-foreground-title));
+  font-size: clamp(2.4rem, 2.1vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+
+@media screen and (max-width: 749px) {
+  .template-product .blockquote {
+    min-height: 32rem;
+    padding: 6.4rem 0;
+  }
+
+  .template-product .blockquote-section-header {
+    gap: 3.2rem;
+  }
+
+  .template-product .blockquote__text {
+    font-size: 2.2rem;
+    line-height: 1.45;
+  }
+}

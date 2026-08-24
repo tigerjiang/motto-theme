@@ -116,10 +116,10 @@
         "section_button_link": "",
         "button_dot": true,
         "section_button_style": "primary",
-        "margin_top": "xl",
+        "margin_top": "no-indent",
         "margin_bottom": "no-indent",
-        "padding_top": "xs",
-        "padding_bottom": "xs"
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
       }
     },
     "image-banner": {
