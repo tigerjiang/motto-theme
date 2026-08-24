@@ -1,1 +1,483 @@
-{"sections":{"main-product":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"product_heading_tag":"h1","heading_size":"h2"}},"description":{"type":"description","settings":{"description":"AI Powered Cooking Automation - Let AI create personalized recipes and automate their cooks, worry-free.100% Wood Fired Flavor - Smoke, grill, BBQ, bake, roast, sear, braise, and char-grill on a single wood fired grill."}},"price":{"type":"price","settings":{"show_tax_info":false,"show_shipping":false}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","color_swatches_type":"color","variant_image_ratio":"portrait","enable_linked_products":false,"linked_products_label":"Color"}},"inventory":{"type":"inventory","settings":{"show_inventory_quantity":false}},"countdown_WPCdxx":{"type":"countdown","settings":{"mock_timer":true,"color_scheme":"background-4","date_picker":"2024-10-01","time_picker":"00:00","countdown_block_font":"h3","completed_countdown":"show_text","countdown_heading":"Header after countdown","text":"Hurry, only a few days left! Shop now!"}},"popup":{"type":"popup","disabled":true,"settings":{"label":"Shipping Information","page":"","heading":"Shipping Information","text":"<p>We accept returns. You can return unopened items in the original packaging within 30 days of your purchase with receipt or proof of purchase. If 30 days or more have passed since your purchase, we cannot offer you a refund or an exchange.<br\/><br\/>Upon receipt of the returned item, we will fully examine it and notify you via email, within a reasonable period of time, whether you are entitled to a return. If you are entitled to a return, we will refund your purchase price and a credit will automatically be applied to your original method of payment.<br\/><br\/>Only regular priced items may be refunded. Sale items are non-refundable.<\/p>"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_quantity":true,"show_gift_card_recipient":false}},"pickup_availability":{"type":"pickup_availability","settings":{}},"text_with_icon":{"type":"text_with_icon","settings":{"icon":"file-return","text_with_icon_text":"14 Days Return Policy","icon_second":"file","text_with_icon_text-second":"VAT included"}},"text_with_icon_FqPMQz":{"type":"text_with_icon","settings":{"icon":"shield-check","text_with_icon_text":"Up to 5 Years Warranty","icon_second":"file","text_with_icon_text-second":""}},"share":{"type":"share","settings":{"show_share_facebook":true,"show_share_twitter":true,"show_share_telegram":true,"show_share_reddit":true,"show_share_copy":true}}},"block_order":["title","description","price","variant_picker","inventory","countdown_WPCdxx","popup","buy_buttons","pickup_availability","text_with_icon","text_with_icon_FqPMQz","share"],"settings":{"color_scheme":"","header_overlay":true,"show_navigation":true,"section_layout":"container","section_aspect_ratio":"129.0%","desktop_alignment":"left","mobile_alignment":"before","gallery_type":"thumbs_aside","variant_media_display":"show_all","image_fit":"cover","image_fit_modal":"contain","is_autoplay":false,"is_hover_stop_autoplay":false,"show_arrows":false,"slideshow_speed":1.1,"slideshow_delay":3,"margin_top":"no-indent","margin_bottom":"no-indent"}},"blockquote":{"type":"blockquote","settings":{"color_scheme":"background-2","section_subheading":"Intelligent Grilling, Unmatched Flavor","dot":false,"blockquote":"Barbecue technology today is leaving you to guess. We believe grilling should be effortless, so we built Brisk It to deliver perfection—every time, no matter your skill level.","section_blockquote_size":"h2","author_name":"","author_position":"","section_button_label":"","section_button_link":"","button_dot":true,"section_button_style":"primary","margin_top":"xl","margin_bottom":"no-indent","padding_top":"xs","padding_bottom":"xs"}},"image-banner":{"type":"image-banner","settings":{"color_scheme":"background-3","heading":"","image_heading_tag":"h2","section_heading":"","section_heading_tag":"h2","section_heading_size":"h2","subheading":"","dot":true,"image":"shopify:\/\/shop_images\/coverTextrevealMangrillingonzelos450.png","image_ratio":"large","animation":true,"overlay_enable":false,"overlay_opacity":0.2,"margin_top":"xl","margin_bottom":"no-indent"}},"card-list":{"type":"card-list","blocks":{"product_1":{"type":"card","settings":{"image":"shopify:\/\/shop_images\/smartcookingFriendsyard720X720.png","badge":"Smart Mic Control","badge_style":"primary","subheading":"","text":"Enhance your audio with Smart Mic Control, providing seamless microphone settings for optimal sound in any environment, from recording to live performances."}},"product_2":{"type":"card","settings":{"image":"shopify:\/\/shop_images\/smartcookingAppcontrol720X720.png","badge":"Dual-Capsule","badge_style":"primary","subheading":"","text":"Elevate your recording setup with this dual-capsule microphone, featuring two interchangeable capsules for flexible sound customization in studio and live settings."}},"product_3":{"type":"card","settings":{"image":"shopify:\/\/shop_images\/smartcookingPlatedfood720X720.png","badge":"Compact Size","badge_style":"primary","subheading":"","text":"Experience powerful sound in a portable form with Compact Size, delivering high-quality audio performance in a sleek, space-saving design ideal for any setup."}}},"block_order":["product_1","product_2","product_3"],"settings":{"color_scheme":"","text-number-visible":true,"text-always-visible":false,"section_heading":"Product Features","heading_tag":"h2","section_heading_size":"h3","subheading":"details","dot":true,"line":false,"subheading_tag":"h4","columns_per_row":3,"image_ratio":"3\/4","columns_mobile":"1","swipe_on_mobile":false,"show_arrows":false,"margin_top":"xl","margin_bottom":"no-indent","padding_top":"xs","padding_bottom":"xs"}},"testimonials":{"type":"testimonials","blocks":{"testimonials_slide_r9Vn7C":{"type":"testimonials_slide","settings":{"image":"shopify:\/\/shop_images\/2025_Homepage_v7-Final___socialavatar-TheMKBHDStudio.png","text":"“makes a notoriously time consuming and tricky task of smoking meat completely automated. HUGE, if true???”","author_name":"The MKBHD Studio","position_name":"910K+ subscribers","enable_stars":true,"rating":5}},"testimonials_slide_N9La3b":{"type":"testimonials_slide","settings":{"image":"shopify:\/\/shop_images\/2025_Homepage_v7-Final___socialavatar-antsbbq.png","text":"“The Brisk It Origin Pellet Grill is the best smoker in terms of how cohesive all of the hardware of the smoker works together with the app and it delivers a user experience that is just fantastic.”","author_name":"Ant's BBQ Cookout","position_name":"91.3K+ subscribers","enable_stars":true,"rating":5}},"testimonials_slide_gAjdFa":{"type":"testimonials_slide","settings":{"image":"shopify:\/\/shop_images\/lifehacker400X400.png","text":"“It’s a fool-proof, electric wood pellet smoker that comes with an app and a large color screen in which all I need to do is just follow instructions.“","author_name":"Life Style","position_name":"By Scott Kramer","enable_stars":true,"rating":5}}},"block_order":["testimonials_slide_r9Vn7C","testimonials_slide_N9La3b","testimonials_slide_gAjdFa"],"settings":{"color_scheme":"","section_heading":"","heading_tag":"h2","section_heading_size":"h2","subheading":"Testimonials","dot":true,"is_autoplay":true,"is_hover_stop_autoplay":true,"slideshow_speed":1.1,"slideshow_delay":4,"button_style":"tertiary","margin_top":"xl","margin_bottom":"no-indent","padding_top":"xs","padding_bottom":"xs"}},"collapsible_content_9bNtG8":{"type":"collapsible-content","blocks":{"accordion_CBYedX":{"type":"accordion","settings":{"question":"Here can be a commonly asked question about your product or service.","answer":"<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.<\/p>","default_open":false}},"accordion_bkByqq":{"type":"accordion","settings":{"question":"Here can be a commonly asked question about your product or service.","answer":"<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.<\/p>","default_open":false}},"accordion_RfPiVm":{"type":"accordion","settings":{"question":"Here can be a commonly asked question about your product or service.","answer":"<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.<\/p>","default_open":false}}},"block_order":["accordion_CBYedX","accordion_bkByqq","accordion_RfPiVm"],"name":"t:sections.collapsible-content.name","settings":{"color_scheme":"","section_layout":"row","icon_style":"secondary","section_heading":"Frequently Asked Questions","section_heading_tag":"h2","section_heading_size":"h2","section_subheading":"Brief intro to the collapsible content","dot":false,"collapse_heading_tag":"h4","section_button_label":"Read FAQs","section_button_link":"","button_dot":true,"section_button_style":"primary","margin_top":"s","margin_bottom":"s","padding_top":"xs","padding_bottom":"xs"}},"image_banner_N3E8Pd":{"type":"image-banner","disabled":true,"settings":{"color_scheme":"","heading":"","image_heading_tag":"h2","section_heading":"","section_heading_tag":"h2","section_heading_size":"h2","subheading":"","dot":true,"image_ratio":"adapt","animation":false,"overlay_enable":false,"overlay_opacity":0.2,"margin_top":"xl","margin_bottom":"no-indent"}},"image_banner_yhXbeC":{"type":"image-banner","disabled":true,"settings":{"color_scheme":"","heading":"","image_heading_tag":"h2","section_heading":"","section_heading_tag":"h2","section_heading_size":"h2","subheading":"","dot":true,"image_ratio":"21\/9","animation":false,"overlay_enable":false,"overlay_opacity":0.2,"margin_top":"no-indent","margin_bottom":"no-indent"}},"product-complementary":{"type":"product-complementary","disabled":true,"settings":{"color_scheme":"","layout":"full_width","columns_per_row":4,"products_limit":4,"autoplay":false,"stop_autoplay":true,"show_arrows":true,"slideshow_speed":1.1,"slideshow_delay":3,"section_heading":"Complementary Products","section_heading_tag":"h2","section_heading_size":"h3","subheading":"Some Subheading","dot":true,"line":true,"image_ratio":"3\/4","image_fit":"cover","show_collection_name":false,"show_secondary_image":true,"show_sku":false,"show_vendor":true,"show_desc":false,"margin_top":"m","margin_bottom":"no-indent","padding_top":"xs","padding_bottom":"xs"}},"product-recommendations":{"type":"product-recommendations","settings":{"color_scheme":"","layout":"full_width","columns_per_row":3,"slides_per_view_mobile":"1","products_limit":4,"autoplay":false,"mobile_autoplay":false,"stop_autoplay":true,"show_arrows":true,"slideshow_speed":1.1,"slideshow_delay":3,"section_heading":"You may be interested","section_heading_tag":"h2","section_heading_size":"h2","subheading":"","dot":true,"line":true,"image_ratio":"square","image_fit":"cover","show_collection_name":false,"show_secondary_image":true,"show_sku":false,"show_vendor":true,"show_desc":false,"margin_top":"xl","margin_bottom":"xl","padding_top":"xs","padding_bottom":"xs"}}},"order":["main-product","blockquote","image-banner","card-list","testimonials","collapsible_content_9bNtG8","image_banner_N3E8Pd","image_banner_yhXbeC","product-complementary","product-recommendations"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "product_heading_tag": "h1",
+            "heading_size": "h2"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description": "AI Powered Cooking Automation - Let AI create personalized recipes and automate their cooks, worry-free.100% Wood Fired Flavor - Smoke, grill, BBQ, bake, roast, sear, braise, and char-grill on a single wood fired grill."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_info": false,
+            "show_shipping": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_swatches_type": "color",
+            "variant_image_ratio": "portrait",
+            "enable_linked_products": false,
+            "linked_products_label": "Color"
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "show_inventory_quantity": false
+          }
+        },
+        "countdown_WPCdxx": {
+          "type": "countdown",
+          "settings": {
+            "mock_timer": true,
+            "color_scheme": "background-4",
+            "date_picker": "2024-10-01",
+            "time_picker": "00:00",
+            "countdown_block_font": "h3",
+            "completed_countdown": "show_text",
+            "countdown_heading": "Header after countdown",
+            "text": "Hurry, only a few days left! Shop now!"
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Shipping Information",
+            "page": "",
+            "heading": "Shipping Information",
+            "text": "<p>We accept returns. You can return unopened items in the original packaging within 30 days of your purchase with receipt or proof of purchase. If 30 days or more have passed since your purchase, we cannot offer you a refund or an exchange.<br/><br/>Upon receipt of the returned item, we will fully examine it and notify you via email, within a reasonable period of time, whether you are entitled to a return. If you are entitled to a return, we will refund your purchase price and a credit will automatically be applied to your original method of payment.<br/><br/>Only regular priced items may be refunded. Sale items are non-refundable.</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "settings": {}
+        },
+        "text_with_icon": {
+          "type": "text_with_icon",
+          "settings": {
+            "icon": "file-return",
+            "text_with_icon_text": "14 Days Return Policy",
+            "icon_second": "file",
+            "text_with_icon_text-second": "VAT included"
+          }
+        },
+        "text_with_icon_FqPMQz": {
+          "type": "text_with_icon",
+          "settings": {
+            "icon": "shield-check",
+            "text_with_icon_text": "Up to 5 Years Warranty",
+            "icon_second": "file",
+            "text_with_icon_text-second": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "show_share_facebook": true,
+            "show_share_twitter": true,
+            "show_share_telegram": true,
+            "show_share_reddit": true,
+            "show_share_copy": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "price",
+        "variant_picker",
+        "inventory",
+        "countdown_WPCdxx",
+        "popup",
+        "buy_buttons",
+        "pickup_availability",
+        "text_with_icon",
+        "text_with_icon_FqPMQz",
+        "share"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "header_overlay": true,
+        "show_navigation": true,
+        "section_layout": "container",
+        "section_aspect_ratio": "129.0%",
+        "desktop_alignment": "left",
+        "mobile_alignment": "before",
+        "gallery_type": "thumbs_aside",
+        "variant_media_display": "show_all",
+        "image_fit": "cover",
+        "image_fit_modal": "contain",
+        "is_autoplay": false,
+        "is_hover_stop_autoplay": false,
+        "show_arrows": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "blockquote": {
+      "type": "blockquote",
+      "settings": {
+        "color_scheme": "background-2",
+        "section_subheading": "Intelligent Grilling, Unmatched Flavor",
+        "dot": false,
+        "blockquote": "Barbecue technology today is leaving you to guess. We believe grilling should be effortless, so we built Brisk It to deliver perfection—every time, no matter your skill level.",
+        "section_blockquote_size": "h2",
+        "author_name": "",
+        "author_position": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "button_dot": true,
+        "section_button_style": "primary",
+        "margin_top": "xl",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "image-banner": {
+      "type": "image-banner",
+      "settings": {
+        "color_scheme": "background-3",
+        "heading": "",
+        "image_heading_tag": "h2",
+        "section_heading": "",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": true,
+        "image": "shopify://shop_images/coverTextrevealMangrillingonzelos450.png",
+        "image_ratio": "large",
+        "animation": true,
+        "overlay_enable": false,
+        "overlay_opacity": 0.2,
+        "margin_top": "xl",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "card-list": {
+      "type": "card-list",
+      "blocks": {
+        "product_1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/smartcookingFriendsyard720X720.png",
+            "badge": "Smart Mic Control",
+            "badge_style": "primary",
+            "subheading": "",
+            "text": "Enhance your audio with Smart Mic Control, providing seamless microphone settings for optimal sound in any environment, from recording to live performances."
+          }
+        },
+        "product_2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/smartcookingAppcontrol720X720.png",
+            "badge": "Dual-Capsule",
+            "badge_style": "primary",
+            "subheading": "",
+            "text": "Elevate your recording setup with this dual-capsule microphone, featuring two interchangeable capsules for flexible sound customization in studio and live settings."
+          }
+        },
+        "product_3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/smartcookingPlatedfood720X720.png",
+            "badge": "Compact Size",
+            "badge_style": "primary",
+            "subheading": "",
+            "text": "Experience powerful sound in a portable form with Compact Size, delivering high-quality audio performance in a sleek, space-saving design ideal for any setup."
+          }
+        }
+      },
+      "block_order": [
+        "product_1",
+        "product_2",
+        "product_3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "text-number-visible": true,
+        "text-always-visible": false,
+        "section_heading": "Product Features",
+        "heading_tag": "h2",
+        "section_heading_size": "h3",
+        "subheading": "",
+        "dot": false,
+        "line": false,
+        "subheading_tag": "h4",
+        "columns_per_row": 3,
+        "image_ratio": "3/4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_arrows": false,
+        "margin_top": "xl",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials_slide_r9Vn7C": {
+          "type": "testimonials_slide",
+          "settings": {
+            "image": "shopify://shop_images/2025_Homepage_v7-Final___socialavatar-TheMKBHDStudio.png",
+            "text": "“makes a notoriously time consuming and tricky task of smoking meat completely automated. HUGE, if true???”",
+            "author_name": "The MKBHD Studio",
+            "position_name": "910K+ subscribers",
+            "enable_stars": true,
+            "rating": 5
+          }
+        },
+        "testimonials_slide_N9La3b": {
+          "type": "testimonials_slide",
+          "settings": {
+            "image": "shopify://shop_images/2025_Homepage_v7-Final___socialavatar-antsbbq.png",
+            "text": "“The Brisk It Origin Pellet Grill is the best smoker in terms of how cohesive all of the hardware of the smoker works together with the app and it delivers a user experience that is just fantastic.”",
+            "author_name": "Ant's BBQ Cookout",
+            "position_name": "91.3K+ subscribers",
+            "enable_stars": true,
+            "rating": 5
+          }
+        },
+        "testimonials_slide_gAjdFa": {
+          "type": "testimonials_slide",
+          "settings": {
+            "image": "shopify://shop_images/lifehacker400X400.png",
+            "text": "“It’s a fool-proof, electric wood pellet smoker that comes with an app and a large color screen in which all I need to do is just follow instructions.“",
+            "author_name": "Life Style",
+            "position_name": "By Scott Kramer",
+            "enable_stars": true,
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonials_slide_r9Vn7C",
+        "testimonials_slide_N9La3b",
+        "testimonials_slide_gAjdFa"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "section_heading": "",
+        "heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "Testimonials",
+        "dot": true,
+        "is_autoplay": true,
+        "is_hover_stop_autoplay": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 4,
+        "button_style": "tertiary",
+        "margin_top": "xl",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "collapsible_content_9bNtG8": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_CBYedX": {
+          "type": "accordion",
+          "settings": {
+            "question": "Here can be a commonly asked question about your product or service.",
+            "answer": "<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.</p>",
+            "default_open": false
+          }
+        },
+        "accordion_bkByqq": {
+          "type": "accordion",
+          "settings": {
+            "question": "Here can be a commonly asked question about your product or service.",
+            "answer": "<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.</p>",
+            "default_open": false
+          }
+        },
+        "accordion_RfPiVm": {
+          "type": "accordion",
+          "settings": {
+            "question": "Here can be a commonly asked question about your product or service.",
+            "answer": "<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.</p>",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_CBYedX",
+        "accordion_bkByqq",
+        "accordion_RfPiVm"
+      ],
+      "name": "t:sections.collapsible-content.name",
+      "settings": {
+        "color_scheme": "",
+        "section_layout": "row",
+        "icon_style": "secondary",
+        "section_heading": "Frequently Asked Questions",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "section_subheading": "Brief intro to the collapsible content",
+        "dot": false,
+        "collapse_heading_tag": "h4",
+        "section_button_label": "Read FAQs",
+        "section_button_link": "",
+        "button_dot": true,
+        "section_button_style": "primary",
+        "margin_top": "s",
+        "margin_bottom": "s",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "image_banner_N3E8Pd": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "heading": "",
+        "image_heading_tag": "h2",
+        "section_heading": "",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": true,
+        "image_ratio": "adapt",
+        "animation": false,
+        "overlay_enable": false,
+        "overlay_opacity": 0.2,
+        "margin_top": "xl",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_banner_yhXbeC": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "heading": "",
+        "image_heading_tag": "h2",
+        "section_heading": "",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": true,
+        "image_ratio": "21/9",
+        "animation": false,
+        "overlay_enable": false,
+        "overlay_opacity": 0.2,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "product-complementary": {
+      "type": "product-complementary",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "layout": "full_width",
+        "columns_per_row": 4,
+        "products_limit": 4,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "section_heading": "Complementary Products",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h3",
+        "subheading": "Some Subheading",
+        "dot": true,
+        "line": true,
+        "image_ratio": "3/4",
+        "image_fit": "cover",
+        "show_collection_name": false,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": false,
+        "margin_top": "m",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "color_scheme": "",
+        "layout": "full_width",
+        "columns_per_row": 3,
+        "slides_per_view_mobile": "1",
+        "products_limit": 4,
+        "autoplay": false,
+        "mobile_autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "section_heading": "You may be interested",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": true,
+        "line": true,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_collection_name": false,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": false,
+        "margin_top": "xl",
+        "margin_bottom": "xl",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "blockquote",
+    "image-banner",
+    "card-list",
+    "testimonials",
+    "collapsible_content_9bNtG8",
+    "image_banner_N3E8Pd",
+    "image_banner_yhXbeC",
+    "product-complementary",
+    "product-recommendations"
+  ]
+}
