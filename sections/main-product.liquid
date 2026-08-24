@@ -499,7 +499,7 @@
               <div class="product__buy-buttons" {{ block.shopify_attributes }}>
                 <div class="installment-wrapper">
                   <div class="installment-plan">
-                    <div class="installment-plan__choice">
+                    {% comment %} <div class="installment-plan__choice">
                       <span class="installment-plan__radio" aria-hidden="true"></span>
                       <span class="installment-plan__label">Buy</span>
                       <quantity-input class="installment-plan__quantity quantity">
@@ -528,7 +528,7 @@
                           <span aria-hidden="true">+</span>
                         </button>
                       </quantity-input>
-                    </div>
+                    </div> {% endcomment %}
                     <p class="installment-plan__payment">
                       From <strong>{{ block.settings.installment_price | default: '$49.99/mo' }}</strong> with
                       <span class="installment-plan__provider">affirm</span>
