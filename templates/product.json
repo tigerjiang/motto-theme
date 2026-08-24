@@ -22,7 +22,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "description": "AI Powered Cooking Automation - Let AI create personalized recipes and automate their cooks, worry-free. 100% Wood Fired Flavor - Smoke, grill, BBQ, bake, roast, sear, braise, and char-grill on a single wood fired grill."
+            "description": "AI Powered Cooking Automation - Let AI create personalized recipes and automate their cooks, worry-free.\n100% Wood Fired Flavor - Smoke, grill, BBQ, bake, roast, sear, braise, and char-grill on a single wood fired grill."
           }
         },
         "review_summary": {
@@ -84,7 +84,7 @@
         "header_overlay": true,
         "show_navigation": true,
         "section_layout": "container",
-        "section_aspect_ratio": "129.0%",
+        "section_aspect_ratio": "100%",
         "desktop_alignment": "left",
         "mobile_alignment": "before",
         "gallery_type": "thumbs_aside",

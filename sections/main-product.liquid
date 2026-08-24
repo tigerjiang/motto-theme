@@ -403,7 +403,7 @@
                 {{ block.shopify_attributes }}
               >
                 {% if block.settings.description != blank %}
-                  {{- block.settings.description | escape -}}
+                  {{- block.settings.description | escape | newline_to_br -}}
                 {% elsif product.description != blank %}
                   {{- product.description -}}
                 {% endif %}
@@ -444,17 +444,6 @@
                 </div>
               </div>
 
-              <div class="installment-wrapper" {{ block.shopify_attributes }}>
-                {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                  <input
-                    type="hidden"
-                    name="id"
-                    value="{{ product.selected_or_first_available_variant.id }}"
-                  >
-                  {{ form | payment_terms }}
-                {%- endform -%}
-              </div>
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -508,6 +497,17 @@
               {%- render 'linked-products', product: product, block: block -%}
             {%- when 'buy_buttons' -%}
               <div class="product__buy-buttons" {{ block.shopify_attributes }}>
+                <div class="installment-wrapper">
+                  {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+                  {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                    >
+                    {{ form | payment_terms }}
+                  {%- endform -%}
+                </div>
                 {%- liquid
                   assign gift_card_recipient_feature_active = false
                   if block.settings.show_gift_card_recipient and product.gift_card?
@@ -1639,7 +1639,7 @@
       "limit": 1,
       "settings": [
         {
-          "type": "text",
+          "type": "textarea",
           "id": "description",
           "label": "t:sections.all.text.label",
           "info": "t:sections.main-product.blocks.description.settings.text.info"
