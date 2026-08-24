@@ -127,3 +127,164 @@
 .product-recommendations__loading.loading {
   display: flex;
 }
+
+/* Product page recommendations */
+.template-product .section-product-recommendations {
+  margin: 0;
+  background: #fde8dc;
+}
+
+.template-product .popular-products--recommendations {
+  display: block;
+  width: calc(100% - 16rem);
+  max-width: 176rem;
+  margin-inline: auto;
+  padding: 4rem 0 10rem;
+  background: #fefbf7;
+}
+
+.template-product .popular-products--recommendations > .container,
+.template-product .popular-products--recommendations .swiper-carousel.container {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+
+.template-product .popular-products--recommendations .section-header {
+  margin-bottom: 4rem;
+}
+
+.template-product .popular-products--recommendations .section-header__title {
+  color: #13294b;
+  font-family: "Roboto", sans-serif;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+
+.template-product .popular-products--recommendations .products-slider--full-width .products-slider__swiper {
+  padding-right: 0;
+}
+
+.template-product .popular-products--recommendations .product-card .card > .media {
+  overflow: hidden;
+  border-radius: 1.2rem;
+  background: #f7f4f1;
+}
+
+.template-product .popular-products--recommendations .product-card .card > .media img {
+  border-radius: 1.2rem;
+}
+
+.template-product .popular-products--recommendations .card-information {
+  padding-top: 1.6rem;
+  color: #13294b;
+}
+
+.template-product .popular-products--recommendations .card__title {
+  margin-top: 0;
+  color: #13294b;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.template-product .popular-products--recommendations .card-information-block .price {
+  margin-top: 0.4rem;
+  color: #13294b;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.template-product .popular-products--recommendations .card__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  color: #6d7178;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.template-product .popular-products--recommendations .card__rating-stars {
+  position: relative;
+  display: inline-block;
+  color: #c9c9c9;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  white-space: nowrap;
+}
+
+.template-product .popular-products--recommendations .card__rating-stars > span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  overflow: hidden;
+  color: #111820;
+  white-space: nowrap;
+}
+
+.template-product .popular-products--recommendations .card__link:not(.button--link) {
+  min-height: 5.6rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 999px;
+  clip-path: none;
+  background: #ffc400;
+  color: #13294b;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 990px) {
+  .template-product .popular-products--recommendations .products-slider__swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3.2rem;
+    transform: none !important;
+  }
+
+  .template-product .popular-products--recommendations .products-slider__slide {
+    width: auto !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .template-product .popular-products--recommendations {
+    width: calc(100% - 6.4rem);
+    padding: 4rem 0 6.4rem;
+  }
+
+  .template-product .popular-products--recommendations .section-header__title {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .template-product .popular-products--recommendations {
+    width: calc(100% - 4rem);
+    padding: 3.2rem 0 4.8rem;
+  }
+
+  .template-product .popular-products--recommendations .section-header {
+    margin-bottom: 2.4rem;
+  }
+
+  .template-product .popular-products--recommendations .section-header__title {
+    font-size: 3.2rem;
+  }
+
+  .template-product .popular-products--recommendations .products-slider__swiper {
+    padding-right: 2rem;
+  }
+
+  .template-product .popular-products--recommendations .card__title,
+  .template-product .popular-products--recommendations .card-information-block .price {
+    font-size: 1.6rem;
+  }
+}

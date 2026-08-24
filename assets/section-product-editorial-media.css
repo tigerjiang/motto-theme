@@ -22,8 +22,8 @@
 .product-editorial__panel--inset img,
 .product-editorial__panel--inset svg {
   display: block;
-  width: min(100%, 36rem);
-  aspect-ratio: 246 / 193;
+  width: min(100%, 41rem);
+  aspect-ratio: 410 / 320;
   object-fit: cover;
   border-radius: 1.2rem;
 }
@@ -50,7 +50,7 @@
 
   .product-editorial__panel--inset img,
   .product-editorial__panel--inset svg {
-    width: min(100%, clamp(36rem, 28.47vw, 49.2rem));
+    width: min(100%, 41rem);
   }
 }
 
