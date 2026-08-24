@@ -425,11 +425,17 @@
   }
 
   .hiw-hands .hiw-container {
-    width: calc(100% - 32px);
+    width: min(calc(100% - 32px), 320px);
   }
 
   .hiw-title {
     font-size: 3.2rem;
+  }
+
+  .hiw-hands__title {
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 1.05;
   }
 
   .hiw-hero {
@@ -458,11 +464,42 @@
   }
 
   .hiw-hands__grid {
-    gap: 4.8rem;
+    gap: 48px;
+  }
+
+  .hiw-hands__step {
+    padding: 0 0 0 69px;
+  }
+
+  .hiw-hands__step::before {
+    top: -19px;
+    left: 5px;
+    width: 38px;
+    height: 38px;
+    transform: none;
+  }
+
+  .hiw-hands__media,
+  .hiw-hands__heading,
+  .hiw-hands__text {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .hiw-hands__step::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 23px;
+    width: 0;
+    height: 100%;
+    border-top: 0;
+    border-left: 2px dotted #ec7825;
   }
 
   .hiw-hands__step:not(:last-child)::after {
-    display: none;
+    height: calc(100% + 48px);
   }
 
   .hiw-realtime__download {
