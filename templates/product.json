@@ -22,7 +22,13 @@
         "description": {
           "type": "description",
           "settings": {
-            "description": "AI Powered Cooking Automation - Let AI create personalized recipes and automate their cooks, worry-free.100% Wood Fired Flavor - Smoke, grill, BBQ, bake, roast, sear, braise, and char-grill on a single wood fired grill."
+            "description": "AI Powered Cooking Automation - Let AI create personalized recipes and automate their cooks, worry-free. 100% Wood Fired Flavor - Smoke, grill, BBQ, bake, roast, sear, braise, and char-grill on a single wood fired grill."
+          }
+        },
+        "review_summary": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-review-summary\" aria-label=\"5 out of 5 stars\"><span class=\"product-review-summary__stars\" aria-hidden=\"true\">★★★★★</span><span>4.8 · {{ product.metafields.reviews.rating_count.value | default: 13 }} Reviews</span></div>"
           }
         },
         "price": {
@@ -48,27 +54,10 @@
             "show_inventory_quantity": false
           }
         },
-        "countdown_WPCdxx": {
-          "type": "countdown",
+        "offer_banner": {
+          "type": "custom_liquid",
           "settings": {
-            "mock_timer": true,
-            "color_scheme": "background-4",
-            "date_picker": "2024-10-01",
-            "time_picker": "00:00",
-            "countdown_block_font": "h3",
-            "completed_countdown": "show_text",
-            "countdown_heading": "Header after countdown",
-            "text": "Hurry, only a few days left! Shop now!"
-          }
-        },
-        "popup": {
-          "type": "popup",
-          "disabled": true,
-          "settings": {
-            "label": "Shipping Information",
-            "page": "",
-            "heading": "Shipping Information",
-            "text": "<p>We accept returns. You can return unopened items in the original packaging within 30 days of your purchase with receipt or proof of purchase. If 30 days or more have passed since your purchase, we cannot offer you a refund or an exchange.<br/><br/>Upon receipt of the returned item, we will fully examine it and notify you via email, within a reasonable period of time, whether you are entitled to a return. If you are entitled to a return, we will refund your purchase price and a credit will automatically be applied to your original method of payment.<br/><br/>Only regular priced items may be refunded. Sale items are non-refundable.</p>"
+            "custom_liquid": "<div class=\"product-offer-banner\">Father’s Day special · ends June 30th</div>"
           }
         },
         "buy_buttons": {
@@ -78,53 +67,17 @@
             "show_quantity": true,
             "show_gift_card_recipient": false
           }
-        },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {}
-        },
-        "text_with_icon": {
-          "type": "text_with_icon",
-          "settings": {
-            "icon": "file-return",
-            "text_with_icon_text": "14 Days Return Policy",
-            "icon_second": "file",
-            "text_with_icon_text-second": "VAT included"
-          }
-        },
-        "text_with_icon_FqPMQz": {
-          "type": "text_with_icon",
-          "settings": {
-            "icon": "shield-check",
-            "text_with_icon_text": "Up to 5 Years Warranty",
-            "icon_second": "file",
-            "text_with_icon_text-second": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "show_share_facebook": true,
-            "show_share_twitter": true,
-            "show_share_telegram": true,
-            "show_share_reddit": true,
-            "show_share_copy": true
-          }
         }
       },
       "block_order": [
         "title",
         "description",
+        "review_summary",
         "price",
         "variant_picker",
         "inventory",
-        "countdown_WPCdxx",
-        "popup",
-        "buy_buttons",
-        "pickup_availability",
-        "text_with_icon",
-        "text_with_icon_FqPMQz",
-        "share"
+        "offer_banner",
+        "buy_buttons"
       ],
       "settings": {
         "color_scheme": "",
@@ -136,7 +89,7 @@
         "mobile_alignment": "before",
         "gallery_type": "thumbs_aside",
         "variant_media_display": "show_all",
-        "image_fit": "cover",
+        "image_fit": "contain",
         "image_fit_modal": "contain",
         "is_autoplay": false,
         "is_hover_stop_autoplay": false,
@@ -194,30 +147,30 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/smartcookingFriendsyard720X720.png",
-            "badge": "Smart Mic Control",
+            "badge": "Hands-off automated cooking",
             "badge_style": "primary",
             "subheading": "",
-            "text": "Enhance your audio with Smart Mic Control, providing seamless microphone settings for optimal sound in any environment, from recording to live performances."
+            "text": "Tell Brisk It what you want to cook and let its cooking automation manage the temperature and timing for you."
           }
         },
         "product_2": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/smartcookingAppcontrol720X720.png",
-            "badge": "Dual-Capsule",
+            "badge": "Remote monitoring & control",
             "badge_style": "primary",
             "subheading": "",
-            "text": "Elevate your recording setup with this dual-capsule microphone, featuring two interchangeable capsules for flexible sound customization in studio and live settings."
+            "text": "Set up personalized cooking profiles in seconds. Monitor temperature, adjust settings, and control your cook from the Brisk It app."
           }
         },
         "product_3": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/smartcookingPlatedfood720X720.png",
-            "badge": "Compact Size",
+            "badge": "AI-generated, personalized recipes",
             "badge_style": "primary",
             "subheading": "",
-            "text": "Experience powerful sound in a portable form with Compact Size, delivering high-quality audio performance in a sleek, space-saving design ideal for any setup."
+            "text": "Create recipes around your preferences, ingredients, and available time, then let Brisk It guide the cook from start to finish."
           }
         }
       },
@@ -278,8 +231,8 @@
           "settings": {
             "image": "shopify://shop_images/lifehacker400X400.png",
             "text": "“It’s a fool-proof, electric wood pellet smoker that comes with an app and a large color screen in which all I need to do is just follow instructions.“",
-            "author_name": "Life Style",
-            "position_name": "By Scott Kramer",
+            "author_name": "Lifehacker",
+            "position_name": "By Amanda Blum",
             "enable_stars": true,
             "rating": 5
           }
@@ -292,10 +245,10 @@
       ],
       "settings": {
         "color_scheme": "",
-        "section_heading": "",
+        "section_heading": "What The Experts Are Saying",
         "heading_tag": "h2",
         "section_heading_size": "h2",
-        "subheading": "Testimonials",
+        "subheading": "Reviews",
         "dot": true,
         "is_autoplay": true,
         "is_hover_stop_autoplay": true,
@@ -311,95 +264,90 @@
     "collapsible_content_9bNtG8": {
       "type": "collapsible-content",
       "blocks": {
-        "accordion_CBYedX": {
+        "why_brisk_it": {
           "type": "accordion",
           "settings": {
-            "question": "Here can be a commonly asked question about your product or service.",
-            "answer": "<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.</p>",
+            "question": "Why Brisk It",
+            "answer": "<p>Brisk It combines wood-fired flavor with intelligent automation, so every cook is easier and more consistent.</p>",
             "default_open": false
           }
         },
-        "accordion_bkByqq": {
+        "brisk_it_ai": {
           "type": "accordion",
           "settings": {
-            "question": "Here can be a commonly asked question about your product or service.",
-            "answer": "<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.</p>",
+            "question": "Brisk It AI",
+            "answer": "",
+            "default_open": true,
+            "item_image_1": "shopify://shop_images/smartcookingAppcontrol720X720.png",
+            "item_heading_1": "Endless Personalized Recipes in Seconds.",
+            "item_text_1": "<p>No searching, no guessing. Just tell AI what you want, and get a hyper-tailored recipe instantly.</p>",
+            "item_image_2": "shopify://shop_images/smartcookingFriendsyard720X720.png",
+            "item_heading_2": "Skip the Work. AI Cooks It.",
+            "item_text_2": "<p>Automate any cook, click once, and AI handles everything from temperature to timing.</p>",
+            "item_image_3": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png",
+            "item_heading_3": "No Worries. Just Eat.",
+            "item_text_3": "<p>Try new flavors without fear. Brisk It AI delivers perfection, every single time.</p>"
+          }
+        },
+        "specifications": {
+          "type": "accordion",
+          "settings": {
+            "question": "Specifications",
+            "answer": "<p>See product dimensions, cooking capacity, temperature range, power requirements, and included accessories.</p>",
             "default_open": false
           }
         },
-        "accordion_RfPiVm": {
+        "shipping": {
           "type": "accordion",
           "settings": {
-            "question": "Here can be a commonly asked question about your product or service.",
-            "answer": "<p>This section allows you to give an in-depth explanation, including step-by-step guidance, specific product details, or policy clarifications, ensuring customers get a complete answer to their question without confusion.</p>",
+            "question": "Shipping",
+            "answer": "<p>Shipping options and delivery estimates are shown at checkout.</p>",
+            "default_open": false
+          }
+        },
+        "assembly_care": {
+          "type": "accordion",
+          "settings": {
+            "question": "Assembly/Care",
+            "answer": "<p>Follow the included assembly guide and clean the grill after use for reliable long-term performance.</p>",
             "default_open": false
           }
         }
       },
       "block_order": [
-        "accordion_CBYedX",
-        "accordion_bkByqq",
-        "accordion_RfPiVm"
+        "why_brisk_it",
+        "brisk_it_ai",
+        "specifications",
+        "shipping",
+        "assembly_care"
       ],
       "name": "t:sections.collapsible-content.name",
       "settings": {
         "color_scheme": "",
-        "section_layout": "row",
+        "section_layout": "column",
         "icon_style": "secondary",
-        "section_heading": "Frequently Asked Questions",
+        "section_heading": "",
         "section_heading_tag": "h2",
         "section_heading_size": "h2",
-        "section_subheading": "Brief intro to the collapsible content",
+        "section_subheading": "",
         "dot": false,
         "collapse_heading_tag": "h4",
-        "section_button_label": "Read FAQs",
+        "section_button_label": "",
         "section_button_link": "",
         "button_dot": true,
         "section_button_style": "primary",
-        "margin_top": "s",
-        "margin_bottom": "s",
+        "margin_top": "xl",
+        "margin_bottom": "no-indent",
         "padding_top": "xs",
         "padding_bottom": "xs"
       }
     },
-    "image_banner_N3E8Pd": {
-      "type": "image-banner",
-      "disabled": true,
+    "product_editorial_media": {
+      "type": "product-editorial-media",
       "settings": {
-        "color_scheme": "",
-        "heading": "",
-        "image_heading_tag": "h2",
-        "section_heading": "",
-        "section_heading_tag": "h2",
-        "section_heading_size": "h2",
-        "subheading": "",
-        "dot": true,
-        "image_ratio": "adapt",
-        "animation": false,
-        "overlay_enable": false,
-        "overlay_opacity": 0.2,
-        "margin_top": "xl",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_banner_yhXbeC": {
-      "type": "image-banner",
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "heading": "",
-        "image_heading_tag": "h2",
-        "section_heading": "",
-        "section_heading_tag": "h2",
-        "section_heading_size": "h2",
-        "subheading": "",
-        "dot": true,
-        "image_ratio": "21/9",
-        "animation": false,
-        "overlay_enable": false,
-        "overlay_opacity": 0.2,
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
+        "color_scheme": "background-2",
+        "image_left": "shopify://shop_images/coverTextrevealMangrillingonzelos450.png",
+        "image_right": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png"
       }
     },
     "product-complementary": {
@@ -475,8 +423,7 @@
     "card-list",
     "testimonials",
     "collapsible_content_9bNtG8",
-    "image_banner_N3E8Pd",
-    "image_banner_yhXbeC",
+    "product_editorial_media",
     "product-complementary",
     "product-recommendations"
   ]

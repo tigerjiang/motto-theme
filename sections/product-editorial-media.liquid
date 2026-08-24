@@ -1,0 +1,68 @@
+{{ 'section-product-editorial-media.css' | asset_url | stylesheet_tag }}
+
+<section class="product-editorial color-{{ section.settings.color_scheme }}">
+  <div class="product-editorial__grid">
+    <div class="product-editorial__panel product-editorial__panel--inset">
+      {%- if section.settings.image_left != blank -%}
+        {{
+          section.settings.image_left
+          | image_url: width: 1600
+          | image_tag:
+            loading: 'lazy',
+            widths: '360, 540, 720, 960, 1200, 1600',
+            sizes: '(min-width: 750px) 40vw, 76vw'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+    <div class="product-editorial__panel product-editorial__panel--full">
+      {%- if section.settings.image_right != blank -%}
+        {{
+          section.settings.image_right
+          | image_url: width: 1800
+          | image_tag:
+            loading: 'lazy',
+            widths: '360, 540, 720, 960, 1200, 1600, 1800',
+            sizes: '(min-width: 750px) 50vw, 100vw'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product editorial media",
+  "tag": "section",
+  "class": "product-editorial-media-section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-2",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Left image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Right image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product editorial media"
+    }
+  ]
+}
+{% endschema %}
