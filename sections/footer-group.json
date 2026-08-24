@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer group",
@@ -12,11 +21,11 @@
             "category_link_url": "",
             "link_text_1": "How it Works",
             "link_url_1": "shopify://pages/how-it-works-backup",
-            "link_text_2": "Why Brisk It",
+            "link_text_2": "",
             "link_url_2": "shopify://pages/why-brisk-it",
             "link_text_3": "Shop",
             "link_url_3": "shopify://collections/shop-all",
-            "link_text_4": "Learn",
+            "link_text_4": "",
             "link_url_4": "shopify://pages/learn-about-the-brisk-it-grill",
             "link_text_5": "Contact Us",
             "link_url_5": "shopify://pages/contact-us-1",
@@ -104,5 +113,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
