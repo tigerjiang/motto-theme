@@ -117,6 +117,10 @@
     navigation.dataset.navigationInitialized = "true";
     navigation.classList.add("show-navigation");
 
+    const imageBanner = document.querySelector(
+      ".image-banner-section .image-banner"
+    );
+
     const navigationTargets = sections.map((section) => {
       const target = document.querySelector(section.sectionSelector);
       const link = navigation.querySelector(section.linkSelector);
@@ -147,18 +151,24 @@
 
       const footer = document.querySelector(".footer");
       const navigationHeight = navigation.offsetHeight;
+      const bannerRect = imageBanner?.getBoundingClientRect();
+      const hasReachedBannerMiddle = bannerRect
+        ? bannerRect.top + bannerRect.height / 2 <= window.innerHeight
+        : false;
       const isNearFooter = footer
         ? footer.getBoundingClientRect().top <=
           window.innerHeight + navigationHeight + 16
         : false;
 
-      navigation.style.transform = isNearFooter
-        ? "translateX(-50%) translateY(calc(100% + 16px))"
-        : "translateX(-50%) translateY(0)";
+      navigation.classList.toggle(
+        "is-visible",
+        hasReachedBannerMiddle && !isNearFooter
+      );
     };
 
     updateNavigation();
     document.addEventListener("scroll", updateNavigation, { passive: true });
+    window.addEventListener("resize", updateNavigation, { passive: true });
   }
 
   document.addEventListener("shopify:section:load", function () {

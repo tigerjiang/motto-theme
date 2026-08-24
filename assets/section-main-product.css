@@ -93,7 +93,10 @@
   position: fixed;
   bottom: 1.6rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(calc(100% + 1.6rem));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   padding: 0.8rem 0.8rem 0.8rem 2.4rem;
   justify-content: space-between;
   align-items: center;
@@ -103,11 +106,19 @@
   backdrop-filter: blur(9px);
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.06);
   z-index: 11;
-  transition: opacity 0.5s, transform 0.4s;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
 }
 @media (min-width: 990px) {
   .product__media_navigation.show-navigation {
     display: flex;
+  }
+
+  .product__media_navigation.show-navigation.is-visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
   }
 }
 .product__media_navigation .shopify-payment-button__button {
