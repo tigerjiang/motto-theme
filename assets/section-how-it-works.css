@@ -425,7 +425,7 @@
   }
 
   .hiw-hands .hiw-container {
-    width: min(calc(100% - 32px), 320px);
+    width: calc(100% - 20px);
   }
 
   .hiw-title {
@@ -468,12 +468,12 @@
   }
 
   .hiw-hands__step {
-    padding: 0 0 0 69px;
+    padding: 0 0 0 64px;
   }
 
   .hiw-hands__step::before {
     top: -19px;
-    left: 5px;
+    left: 0;
     width: 38px;
     height: 38px;
     transform: none;
@@ -483,18 +483,19 @@
   .hiw-hands__heading,
   .hiw-hands__text {
     width: 100%;
-    max-width: 240px;
+    max-width: none;
   }
 
-  .hiw-hands__step::after {
+  .hiw-hands__step:not(:last-child)::after,
+  .hiw-hands__step:last-child::after {
     content: '';
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 23px;
+    left: 18px;
     width: 0;
     height: 100%;
-    border-top: 0;
+    border-top: none;
     border-left: 2px dotted #ec7825;
   }
 
