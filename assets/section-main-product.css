@@ -107,6 +107,8 @@
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.06);
   z-index: 11;
   transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+  color: #13294b;
+  font-family: "Roboto", sans-serif;
 }
 @media (min-width: 990px) {
   .product__media_navigation.show-navigation {
@@ -138,7 +140,11 @@
   border: none;
 }
 .product__media_navigation-title {
-  font-weight: var(--font-button-weight);
+  color: #13294b;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
   width: 33%;
   max-width: 33%;
   overflow: hidden;
@@ -158,29 +164,23 @@
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
 }
 .product__media_navigation-list li,
 .product__media_navigation-list a {
   list-style: none;
   text-decoration: none;
-  color: rgb(var(--color-foreground-secondary));
+  color: #13294b;
 }
 .product__media_navigation-list li {
   position: relative;
   cursor: pointer;
 }
 .product__media_navigation-list li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 0.4rem;
-  width: 0.4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  bottom: -0.6rem;
-  transition: background var(--duration-default);
-  background-color: transparent;
+  display: none;
 }
 .product__media_navigation-list li:hover {
   color: rgb(var(--color-foreground));
@@ -193,6 +193,35 @@
 }
 .product__media_navigation-list .product__media_navigation-item.active::before {
   background-color: rgb(var(--color-foreground));
+}
+
+.product__media_navigation .product-form__submit {
+  min-width: 11.8rem;
+  min-height: 4.4rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: 0.7rem;
+  clip-path: polygon(
+    1.4rem 0,
+    100% 0,
+    100% calc(100% - 1.4rem),
+    calc(100% - 1.4rem) 100%,
+    0 100%,
+    0 1.4rem
+  );
+  background: #ef3b0b;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+.product__media_navigation .product-form__submit:hover,
+.product__media_navigation .product-form__submit:focus {
+  background: #d9320a;
+  color: #ffffff;
 }
 .product__outer {
   display: flex;
