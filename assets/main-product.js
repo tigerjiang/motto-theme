@@ -110,58 +110,55 @@
 
   function navigationInit(sections) {
     const navigation = document.querySelector(".product__media_navigation");
-    if (navigation) {
-      navigation.style.transform =
-        "translateX(-50%) translateY(calc(100% + 16px))";
+    if (!navigation || navigation.dataset.navigationInitialized === "true") {
+      return;
     }
-    document.addEventListener("scroll", () => {
-      if (navigation) {
-        navigation.classList.add("show-navigation");
-      }
-      if (navigation) {
-        const footer = document.querySelector(".footer");
-        const navigationHeight = navigation.offsetHeight;
-        const secondSection = document.querySelectorAll(
-          "#MainContent .shopify-section"
-        )[1];
-        const screen = window.scrollY;
-        sections.forEach((section, i) => {
-          if (section) {
-            const em = document.querySelector(`${section.sectionSelector}`);
-            if (em) {
-              const rect = em.getBoundingClientRect();
-              if (rect.top <= 1 && rect.top > rect.height * -1) {
-                document
-                  .querySelector(`${section.linkSelector}`)
-                  .classList.add("active");
-              } else {
-                document
-                  .querySelector(`${section.linkSelector}`)
-                  .classList.remove("active");
-              }
-              document
-                .querySelector(`${section.linkSelector}`)
-                .addEventListener("click", () => {
-                  em.scrollIntoView({ behavior: "smooth" });
-                });
-            } else {
-              document.querySelector(`${section.linkSelector}`).style.display =
-                "none";
-            }
-          }
+
+    navigation.dataset.navigationInitialized = "true";
+    navigation.classList.add("show-navigation");
+
+    const navigationTargets = sections.map((section) => {
+      const target = document.querySelector(section.sectionSelector);
+      const link = navigation.querySelector(section.linkSelector);
+
+      if (!link) return { target, link };
+
+      if (target) {
+        link.addEventListener("click", () => {
+          target.scrollIntoView({ behavior: "smooth" });
         });
-
-        const rect = secondSection.getBoundingClientRect();
-        const isSecondSectionScrolled = rect.top < 0;
-        const isNearFooter =
-          window.innerHeight + screen - navigationHeight > footer.offsetTop;
-
-        navigation.style.transform =
-          isSecondSectionScrolled && !isNearFooter
-            ? "translateX(-50%) translateY(0)"
-            : "translateX(-50%) translateY(calc(100% + 16px))";
+      } else {
+        link.style.display = "none";
       }
+
+      return { target, link };
     });
+
+    const updateNavigation = () => {
+      navigationTargets.forEach(({ target, link }) => {
+        if (!target || !link) return;
+
+        const rect = target.getBoundingClientRect();
+        link.classList.toggle(
+          "active",
+          rect.top <= 1 && rect.bottom > 1
+        );
+      });
+
+      const footer = document.querySelector(".footer");
+      const navigationHeight = navigation.offsetHeight;
+      const isNearFooter = footer
+        ? footer.getBoundingClientRect().top <=
+          window.innerHeight + navigationHeight + 16
+        : false;
+
+      navigation.style.transform = isNearFooter
+        ? "translateX(-50%) translateY(calc(100% + 16px))"
+        : "translateX(-50%) translateY(0)";
+    };
+
+    updateNavigation();
+    document.addEventListener("scroll", updateNavigation, { passive: true });
   }
 
   document.addEventListener("shopify:section:load", function () {
