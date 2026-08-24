@@ -19,13 +19,19 @@
   background-color: #fff0dc;
 }
 
-.product-editorial__panel--inset img,
-.product-editorial__panel--inset svg {
-  display: block;
+.product-editorial__image-frame {
   width: min(100%, 41rem);
   aspect-ratio: 410 / 320;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 1.2rem;
+}
+
+.product-editorial__image-frame img,
+.product-editorial__image-frame svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .product-editorial__panel--full img,
@@ -48,8 +54,7 @@
     padding: 4rem;
   }
 
-  .product-editorial__panel--inset img,
-  .product-editorial__panel--inset svg {
+  .product-editorial__image-frame {
     width: min(100%, 41rem);
   }
 }
