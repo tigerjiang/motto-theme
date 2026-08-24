@@ -41,6 +41,8 @@
 
     section._scrollHandler = changeSectionSizes;
 
+    changeSectionSizes();
+
     if (window.innerWidth >= 750) {
       window.addEventListener("scroll", changeSectionSizes);
     }
