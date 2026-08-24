@@ -203,66 +203,6 @@
         "padding_bottom": "xs"
       }
     },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonials_slide_r9Vn7C": {
-          "type": "testimonials_slide",
-          "settings": {
-            "image": "shopify://shop_images/2025_Homepage_v7-Final___socialavatar-TheMKBHDStudio.png",
-            "text": "“makes a notoriously time consuming and tricky task of smoking meat completely automated. HUGE, if true???”",
-            "author_name": "The MKBHD Studio",
-            "position_name": "910K+ subscribers",
-            "enable_stars": true,
-            "rating": 5
-          }
-        },
-        "testimonials_slide_N9La3b": {
-          "type": "testimonials_slide",
-          "settings": {
-            "image": "shopify://shop_images/2025_Homepage_v7-Final___socialavatar-antsbbq.png",
-            "text": "“The Brisk It Origin Pellet Grill is the best smoker in terms of how cohesive all of the hardware of the smoker works together with the app and it delivers a user experience that is just fantastic.”",
-            "author_name": "Ant's BBQ Cookout",
-            "position_name": "91.3K+ subscribers",
-            "enable_stars": true,
-            "rating": 5
-          }
-        },
-        "testimonials_slide_gAjdFa": {
-          "type": "testimonials_slide",
-          "settings": {
-            "image": "shopify://shop_images/lifehacker400X400.png",
-            "text": "“It’s a fool-proof, electric wood pellet smoker that comes with an app and a large color screen in which all I need to do is just follow instructions.“",
-            "author_name": "Lifehacker",
-            "position_name": "By Amanda Blum",
-            "enable_stars": true,
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "testimonials_slide_r9Vn7C",
-        "testimonials_slide_N9La3b",
-        "testimonials_slide_gAjdFa"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "section_heading": "What The Experts Are Saying",
-        "heading_tag": "h2",
-        "section_heading_size": "h2",
-        "subheading": "Reviews",
-        "dot": true,
-        "is_autoplay": true,
-        "is_hover_stop_autoplay": true,
-        "slideshow_speed": 1.1,
-        "slideshow_delay": 4,
-        "button_style": "tertiary",
-        "margin_top": "xl",
-        "margin_bottom": "no-indent",
-        "padding_top": "xs",
-        "padding_bottom": "xs"
-      }
-    },
     "collapsible_content_9bNtG8": {
       "type": "collapsible-content",
       "blocks": {
@@ -271,7 +211,13 @@
           "settings": {
             "question": "Why Brisk It",
             "answer": "<p>Brisk It combines wood-fired flavor with intelligent automation, so every cook is easier and more consistent.</p>",
-            "default_open": false
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         },
         "brisk_it_ai": {
@@ -296,7 +242,13 @@
           "settings": {
             "question": "Specifications",
             "answer": "<p>See product dimensions, cooking capacity, temperature range, power requirements, and included accessories.</p>",
-            "default_open": false
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         },
         "shipping": {
@@ -304,7 +256,13 @@
           "settings": {
             "question": "Shipping",
             "answer": "<p>Shipping options and delivery estimates are shown at checkout.</p>",
-            "default_open": false
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         },
         "assembly_care": {
@@ -312,7 +270,13 @@
           "settings": {
             "question": "Assembly/Care",
             "answer": "<p>Follow the included assembly guide and clean the grill after use for reliable long-term performance.</p>",
-            "default_open": false
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         }
       },
@@ -423,7 +387,6 @@
     "blockquote",
     "image-banner",
     "card-list",
-    "testimonials",
     "collapsible_content_9bNtG8",
     "product_editorial_media",
     "product-complementary",
