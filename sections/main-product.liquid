@@ -498,15 +498,45 @@
             {%- when 'buy_buttons' -%}
               <div class="product__buy-buttons" {{ block.shopify_attributes }}>
                 <div class="installment-wrapper">
-                  {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                  {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                    <input
-                      type="hidden"
-                      name="id"
-                      value="{{ product.selected_or_first_available_variant.id }}"
-                    >
-                    {{ form | payment_terms }}
-                  {%- endform -%}
+                  <div class="installment-plan">
+                    <div class="installment-plan__choice">
+                      <span class="installment-plan__radio" aria-hidden="true"></span>
+                      <span class="installment-plan__label">Buy</span>
+                      <quantity-input class="installment-plan__quantity quantity">
+                        <button
+                          class="quantity__button no-js-hidden focus-inset"
+                          name="minus"
+                          type="button"
+                          aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}"
+                        >
+                          <span aria-hidden="true">−</span>
+                        </button>
+                        <input
+                          class="quantity__input focus-inset"
+                          type="number"
+                          name="installment_quantity"
+                          value="1"
+                          min="1"
+                          aria-label="Quantity"
+                        >
+                        <button
+                          class="quantity__button no-js-hidden focus-inset"
+                          name="plus"
+                          type="button"
+                          aria-label="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}"
+                        >
+                          <span aria-hidden="true">+</span>
+                        </button>
+                      </quantity-input>
+                    </div>
+                    <p class="installment-plan__payment">
+                      From <strong>{{ block.settings.installment_price | default: '$49.99/mo' }}</strong> with
+                      <span class="installment-plan__provider">affirm</span>
+                    </p>
+                    {%- if block.settings.installment_disclaimer != blank -%}
+                      <p class="installment-plan__disclaimer">{{ block.settings.installment_disclaimer | escape }}</p>
+                    {%- endif -%}
+                  </div>
                 </div>
                 {%- liquid
                   assign gift_card_recipient_feature_active = false
@@ -685,7 +715,7 @@
                         <button
                           type="submit"
                           name="add"
-                          class="product-form__submit button button--secondary button--primary-size dot_active focus-inset"
+                          class="product-form__submit button button--secondary button--primary-size focus-inset"
                           {% if product.selected_or_first_available_variant.available == false %}
                             disabled
                           {% else %}
@@ -1810,6 +1840,18 @@
           "default": false,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        },
+        {
+          "type": "text",
+          "id": "installment_price",
+          "default": "$49.99/mo",
+          "label": "Installment price"
+        },
+        {
+          "type": "text",
+          "id": "installment_disclaimer",
+          "default": "*Not including subscription",
+          "label": "Installment disclaimer"
         }
       ]
     },

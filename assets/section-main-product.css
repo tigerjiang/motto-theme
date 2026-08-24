@@ -2764,18 +2764,85 @@ noscript .product__media img {
 .main-product .installment-wrapper {
   min-height: 12rem;
   margin: 0 0 3.2rem;
-  padding: 2.4rem;
+  padding: 1.6rem;
   border: 0.1rem solid rgb(var(--color-border));
-  display: flex;
-  align-items: center;
 }
 
 .main-product .installment-wrapper:empty {
   display: none;
 }
 
-.main-product .installment-wrapper .installment {
+.main-product .installment-plan {
   width: 100%;
+}
+
+.main-product .installment-plan__choice {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.main-product .installment-plan__radio {
+  position: relative;
+  flex: 0 0 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 0.1rem solid rgb(var(--color-border));
+  border-radius: 50%;
+}
+
+.main-product .installment-plan__radio::after {
+  content: "";
+  position: absolute;
+  inset: 0.4rem;
+  border-radius: 50%;
+  background-color: rgb(var(--color-accent));
+}
+
+.main-product .installment-plan__label,
+.main-product .installment-plan__payment,
+.main-product .installment-plan__disclaimer {
+  font-size: 1.2rem;
+}
+
+.main-product .installment-plan__quantity.quantity {
+  width: 6.6rem;
+  height: 3rem;
+  margin-left: 0.2rem;
+  border: 0.1rem solid rgb(var(--color-border));
+  border-radius: 0;
+  background-color: rgb(var(--color-background));
+}
+
+.main-product .installment-plan__quantity .quantity__button {
+  width: 2.2rem;
+  border-radius: 0;
+  font-size: 1.2rem;
+}
+
+.main-product .installment-plan__quantity .quantity__input {
+  min-width: 2.2rem;
+  font-size: 1.2rem;
+}
+
+.main-product .installment-plan__payment {
+  margin: 1.2rem 0 0;
+}
+
+.main-product .installment-plan__payment strong {
+  color: rgb(var(--color-accent));
+}
+
+.main-product .installment-plan__provider {
+  color: #101f6b;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.main-product .installment-plan__disclaimer {
+  margin: 1.2rem 0 0;
+  color: rgb(var(--color-foreground-secondary));
 }
 
 .main-product .product__buy-buttons {
@@ -2787,8 +2854,13 @@ noscript .product__media img {
   align-items: center;
 }
 
+.main-product .product-form__quantity .quantity {
+  width: 12.9rem;
+}
+
 .main-product .product-form__submit {
   min-height: 4.2rem;
+  justify-content: center;
   text-transform: none;
 }
 

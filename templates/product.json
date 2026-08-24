@@ -65,7 +65,9 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_quantity": true,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": false,
+            "installment_price": "$49.99/mo",
+            "installment_disclaimer": "*Not including subscription"
           }
         }
       },
