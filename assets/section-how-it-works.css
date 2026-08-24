@@ -138,7 +138,7 @@
 }
 
 .hiw-hands__title {
-  margin-bottom: 4.6rem;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -153,7 +153,7 @@
 
 .hiw-hands__step {
   position: relative;
-  padding-top: 4.2rem;
+  padding-top: 68px;
 }
 
 .hiw-hands__step::before {
@@ -193,16 +193,24 @@
 }
 
 .hiw-hands__heading {
-  margin: 1.6rem 0 0;
+  margin: 20px 0 0;
   color: var(--hiw-navy);
   font-size: clamp(2.2rem, 2.1vw, 3rem);
   line-height: 1.08;
 }
 
 .hiw-hands__text {
-  margin: 1.2rem 0 0;
+  margin: 20px 0 0;
   font-size: 1.5rem;
   line-height: 1.45;
+}
+
+.hiw-hands__text p {
+  margin: 0;
+}
+
+.hiw-hands__text p + p {
+  margin-top: 1em;
 }
 
 .hiw-realtime {
