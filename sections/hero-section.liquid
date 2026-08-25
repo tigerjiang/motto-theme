@@ -11,7 +11,17 @@
   }
 {%- endstyle -%}
 
-<section class="hiw-section hiw-hero">
+<section
+  class="hiw-section hiw-hero"
+  {% if section.settings.header_overlay %}
+    data-header-overlay="true"
+  {% endif %}
+  {% if section.settings.header_transparent %}
+    data-header-transparent="true"
+    data-header-transparent-color-scheme="color-{{ section.settings.color_scheme_header }}"
+    data-header-light-logo="{{ section.settings.light_logo }}"
+  {% endif %}
+>
   <div class="hiw-hero__media" aria-hidden="true">
     {%- if section.settings.image != blank or section.settings.mobile_image != blank -%}
       <picture>
@@ -49,6 +59,10 @@
   "tag": "section",
   "class": "hiw-hero-section",
   "settings": [
+    { "type": "checkbox", "id": "header_overlay", "label": "Overlay header on hero", "default": true },
+    { "type": "checkbox", "id": "header_transparent", "label": "Transparent header", "default": true },
+    { "type": "color_scheme", "id": "color_scheme_header", "label": "Header color scheme", "default": "background-3" },
+    { "type": "checkbox", "id": "light_logo", "label": "Use light logo", "default": true },
     { "type": "image_picker", "id": "image", "label": "Desktop image" },
     { "type": "image_picker", "id": "mobile_image", "label": "Mobile image" },
     { "type": "select", "id": "image_position", "label": "Image position", "default": "center", "options": [{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}] },
