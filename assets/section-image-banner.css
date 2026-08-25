@@ -134,6 +134,12 @@
   color: rgb(var(--color-foreground));
   z-index: 3;
 }
+.template-index .image-banner__heading {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.8rem;
+  font-weight: 700;
+}
 .image-banner__wrapper {
   position: relative;
   display: flex;
@@ -250,5 +256,9 @@
     font-size: 3.2rem;
     line-height: 1.15;
     transform: translate(-50%, -50%);
+  }
+
+  .template-index .image-banner__heading {
+    font-size: 4.8rem;
   }
 }
