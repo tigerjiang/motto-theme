@@ -47,6 +47,10 @@
 {% style %}
   {% render 'section-margin' %}
 
+  #shopify-section-{{ section.id }} {
+    padding-top: 0;
+  }
+
   #shopify-section-{{ section.id }} .image-banner {
     --aspect_ratio: {{ aspect_ratio }};
   }
