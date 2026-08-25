@@ -2728,7 +2728,7 @@ noscript .product__media img {
 
 .main-product .product__title {
   font-family: 'Roboto', sans-serif;
-  font-size: 3.2rem;
+  font-size: 4.8rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.1;
@@ -2738,7 +2738,7 @@ noscript .product__media img {
 
 .main-product .product__description {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -2747,38 +2747,47 @@ noscript .product__media img {
 .main-product .product-review-summary,
 .main-product .product-review-summary * {
   font-family: 'Roboto', sans-serif !important;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
 }
 
 .main-product .product-form__group-name {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.36rem;
 }
 
 .main-product .price-wrapper .price,
 .main-product .price-wrapper .price-item {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.088rem;
+}
+
+.main-product .price-wrapper .price-item--sale {
+  color: #eb3300;
+}
+
+.main-product .price-wrapper .price-item--regular {
+  color: #6e6e73;
+  text-decoration-color: #6e6e73;
 }
 
 .main-product .product__inventory-inner {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0;
 }
 
 .main-product .product-offer-banner {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0;
@@ -2794,12 +2803,6 @@ noscript .product__media img {
 
 .main-product .installment-plan__payment strong {
   font-weight: 700;
-}
-
-@media screen and (min-width: 990px) {
-  .main-product .product__title {
-    font-size: 3.6rem;
-  }
 }
 
 @media screen and (min-width: 990px) {
