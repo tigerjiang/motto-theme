@@ -23,7 +23,7 @@
             "blog_show_author": true,
             "blog_show_date": true,
             "image_ratio": "21/9",
-            "show_share": true,
+            "show_share": false,
             "show_share_label": true,
             "show_share_facebook": true,
             "show_share_twitter": true,
