@@ -13,26 +13,6 @@
 <div class="contact-form section-{{ section.id }} color-{{ section.settings.color_scheme }} background section-{{ section.id }}-padding">
   <div class="container">
     <div class="contact-form__container contact-form__container--{{ section.settings.content_align }}">
-      {% if template == 'page.contact' %}
-        <nav
-          id="breadcrumbs"
-          class="breadcrumb"
-          role="navigation"
-          aria-label="breadcrumbs"
-        >
-          <a
-            href="{{ routes.root_url }}"
-            title="{{ 'general.breadcrumbs.home' | t }}"
-            class="focus-inset"
-          >
-            {{- 'general.breadcrumbs.home' | t -}}
-          </a>
-          <div class="breadcrumb__delimiter">
-            {% render 'icon-caret' %}
-          </div>
-          <span>{{ page.title }}</span>
-        </nav>
-      {% endif %}
       <div class="contact-form__inner">
         <div class="contact-form__wrapper">
           {%- if section.settings.heading != blank -%}

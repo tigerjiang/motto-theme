@@ -250,37 +250,6 @@
         class="product__info-container {% if section.settings.gallery_type == 'slideshow' and section.settings.section_layout != 'container' %}container{% endif %}"
         style="--desktop-height: {{ desktop_height }}px;"
       >
-        {% if section.settings.enable_breadcrumbs and section.settings.product_item != blank %}
-          <div class="container breadcrumbs-wrapper background">
-            <nav
-              id="breadcrumbs"
-              class="breadcrumb {% if section.settings.gallery_type == 'thumbs_aside' %}breadcrumb-thumbs_aside{% else %}breadcrumb-default{% endif %}"
-              role="navigation"
-              aria-label="breadcrumbs"
-            >
-              <a
-                href="{{ routes.root_url }}"
-                title="{{ 'general.breadcrumbs.home' | t }}"
-                class="focus-inset"
-              >
-                {{- 'general.breadcrumbs.home' | t -}}
-              </a>
-
-              <div class="breadcrumb__delimiter">
-                {% render 'icon-caret' %}
-              </div>
-              {% if product.collections[0] %}
-                <a href="{{ product.collections[0].url }}" class="focus-inset">
-                  {{- product.collections[0].title }}
-                </a>
-                <div class="breadcrumb__delimiter">
-                  {% render 'icon-caret' %}
-                </div>
-              {% endif %}
-              <span>{{ product.title }} </span>
-            </nav>
-          </div>
-        {% endif %}
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
         {%- for block in section.blocks -%}
           {%- case block.type -%}

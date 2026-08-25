@@ -13,7 +13,7 @@
 <div class="customer login register color-background-1">
   <div class="login__wrapper">
     <div class="container login__container">
-      {% if settings.enable_breadcrumbs %}
+      {% if request.page_type == 'product' and settings.enable_breadcrumbs %}
         <div class="breadcrumbs-wrapper background">
           <nav
             id="breadcrumbs"

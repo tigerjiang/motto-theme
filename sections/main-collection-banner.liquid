@@ -47,28 +47,6 @@
 
     <div class="container">
       <div class="collection-hero__inner {% if section.settings.show_collection_image and collection_image %} collection-hero__inner_image {% endif %}">
-        {% if settings.enable_breadcrumbs %}
-          <div class="breadcrumbs-wrapper">
-            <nav
-              id="breadcrumbs"
-              class="breadcrumb"
-              role="navigation"
-              aria-label="breadcrumbs"
-            >
-              <a
-                href="{{ routes.root_url }}"
-                title="{{ 'general.breadcrumbs.home' | t }}"
-                class="focus-inset"
-              >
-                {{- 'general.breadcrumbs.home' | t -}}
-              </a>
-              <div class="breadcrumb__delimiter">
-                {% render 'icon-caret' %}
-              </div>
-              <span>{{ collection.title }}</span>
-            </nav>
-          </div>
-        {% endif %}
         <div class="collection-hero__text-wrapper">
           {% assign heading_tag = section.settings.section_heading_tag %}
           <{{ heading_tag }} class="collection-hero__title h1 title--page">
