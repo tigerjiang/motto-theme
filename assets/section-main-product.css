@@ -2804,6 +2804,7 @@ noscript .product__media img {
 .main-product .installment-wrapper {
   min-height: 12rem;
   margin: 0 0 3.2rem;
+   background-color: #ffffff;
   padding: 1.6rem;
   border: 0.1rem solid rgb(var(--color-border));
 }
