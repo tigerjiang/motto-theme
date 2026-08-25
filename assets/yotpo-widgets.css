@@ -1,0 +1,4 @@
+.yotpo-widget-instance--summary .yotpo-sr-bottom-line-right-panel,
+.yotpo-widget-instance--summary .yotpo-sr-vertical-border {
+  display: none !important;
+}
