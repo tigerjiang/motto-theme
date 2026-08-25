@@ -26,7 +26,7 @@
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
-  background-color: #fff0d8;
+  background: rgb(var(--color-accent));
   vertical-align: middle;
   line-height: var(--font-heading-line-height);
 }
