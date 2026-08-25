@@ -23,7 +23,7 @@
       ></div>
     {%- when 'product_summary' -%}
       <div
-        class="yotpo-widget-instance yotpo-widget-instance--summary"
+        class="yotpo-widget-instance yotpo-widget-instance--summary{% unless yotpo_show_review_count %} yotpo-widget-instance--hide-count{% endunless %}"
         data-yotpo-instance-id="1343248"
         data-yotpo-product-id="{{ yotpo_product.id }}"
         data-yotpo-cart-product-id="{{ yotpo_product.id }}"

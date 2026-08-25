@@ -1,4 +1,4 @@
-.yotpo-widget-instance--summary .yotpo-sr-bottom-line-right-panel,
-.yotpo-widget-instance--summary .yotpo-sr-vertical-border {
+.yotpo-widget-instance--hide-count .yotpo-sr-bottom-line-right-panel,
+.yotpo-widget-instance--hide-count .yotpo-sr-vertical-border {
   display: none !important;
 }
