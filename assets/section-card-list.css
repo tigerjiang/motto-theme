@@ -319,7 +319,8 @@
   }
 }
 
-/* Product Features typography and card proportions */
+/* Homepage and Product Features typography and card proportions */
+.template-index .card-list .section-header__title,
 .template-product .card-list .section-header__title {
   color: #13294b;
   font-family: 'Roboto', sans-serif;
@@ -328,6 +329,7 @@
   font-weight: 700;
 }
 
+.template-index .card-list__badge,
 .template-product .card-list__badge {
   color: #1d1d1f;
   font-family: 'Roboto', sans-serif;
@@ -337,6 +339,8 @@
   text-transform: uppercase;
 }
 
+.template-index .card-list__text,
+.template-index .card-list__text p,
 .template-product .card-list__text,
 .template-product .card-list__text p {
   color: #13294b;
@@ -346,6 +350,7 @@
   font-weight: 400;
 }
 
+.template-index .card-list__text.number-visible::before,
 .template-product .card-list__text.number-visible::before {
   width: 44px !important;
   min-width: 44px !important;
@@ -359,6 +364,7 @@
 }
 
 @media (min-width: 990px) {
+  .template-index .card-list__item.item_aspect_ratio,
   .template-product .card-list__item.item_aspect_ratio {
     aspect-ratio: 410 / 480;
   }

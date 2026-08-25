@@ -647,7 +647,7 @@
         "subheading": "",
         "dot": true,
         "image": "shopify://shop_images/coverTextrevealOvenwithfriends.png",
-        "image_ratio": "1/1",
+        "image_ratio": "large",
         "animation": true,
         "overlay_enable": true,
         "overlay_opacity": 0.2,
