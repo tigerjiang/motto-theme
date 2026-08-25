@@ -81,6 +81,7 @@
   display: flex;
   align-items: center;
   padding: 8rem 0;
+  background: #fff0d8;
 }
 
 .template-product .blockquote .container {
@@ -102,22 +103,29 @@
 
 .template-product .blockquote .blockquote-section-header .section-header__subtitle {
   margin: 0;
-  color: rgb(var(--color-accent));
-  font-size: 1.2rem;
+  color: #e87928;
+  font-family: "RobotoFlex", "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.32rem;
+  text-transform: uppercase;
 }
 
 .template-product .blockquote__text {
   display: block;
   width: 100%;
   max-width: 88rem;
-  color: rgb(var(--color-foreground-title));
-  font-size: clamp(2.4rem, 2.1vw, 3.2rem);
+  color: #13294b;
+  font-family: "RobotoFlex", "Roboto", sans-serif;
+  font-size: 4.4rem;
+  font-style: normal;
   font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -0.025em;
+  line-height: 7rem;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
 }
 
 @media screen and (max-width: 749px) {
@@ -128,10 +136,5 @@
 
   .template-product .blockquote-section-header {
     gap: 3.2rem;
-  }
-
-  .template-product .blockquote__text {
-    font-size: 2.2rem;
-    line-height: 1.45;
   }
 }
