@@ -1,0 +1,33 @@
+{%- liquid
+  assign yotpo_product = yotpo_product | default: product
+  assign yotpo_section_id = yotpo_section_id | default: section.id | default: template.name | default: template
+  assign yotpo_image_url = blank
+  if yotpo_product.featured_image != blank
+    assign yotpo_image_url = yotpo_product.featured_image | image_url: width: 600 | prepend: 'https:' | replace: '?', '%3F' | replace: '&', '%26'
+  endif
+-%}
+
+{%- if yotpo_product != blank -%}
+  {%- case yotpo_type -%}
+    {%- when 'product_reviews' -%}
+      <div
+        class="yotpo-widget-instance"
+        data-yotpo-instance-id="1343249"
+        data-yotpo-product-id="{{ yotpo_product.id }}"
+        data-yotpo-name="{{ yotpo_product.title | escape }}"
+        data-yotpo-url="{{ shop.url }}{{ yotpo_product.url }}"
+        data-yotpo-image-url="{{ yotpo_image_url }}"
+        data-yotpo-price="{{ yotpo_product.price | divided_by: 100.0 }}"
+        data-yotpo-currency="{{ cart.currency.iso_code | default: shop.currency }}"
+        data-yotpo-description="{{ yotpo_product.description | strip_html | escape }}"
+      ></div>
+    {%- when 'product_summary' -%}
+      <div
+        class="yotpo-widget-instance"
+        data-yotpo-instance-id="1343248"
+        data-yotpo-product-id="{{ yotpo_product.id }}"
+        data-yotpo-cart-product-id="{{ yotpo_product.id }}"
+        data-yotpo-section-id="{{ yotpo_section_id }}"
+      ></div>
+  {%- endcase -%}
+{%- endif -%}

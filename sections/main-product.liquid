@@ -408,6 +408,14 @@
                   {{- product.description -}}
                 {% endif %}
               </div>
+            {%- when 'yotpo_summary' -%}
+              <div class="product-review-summary" {{ block.shopify_attributes }}>
+                {%- render 'yotpo-widgets',
+                  yotpo_type: 'product_summary',
+                  yotpo_product: product,
+                  yotpo_section_id: section.id
+                -%}
+              </div>
             {%- when 'price' -%}
               {%- liquid
                 assign has_volume_pricing = false
@@ -1578,6 +1586,11 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "yotpo_summary",
+      "name": "Yotpo review summary",
+      "limit": 1
     },
     {
       "type": "text",

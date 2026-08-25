@@ -498,20 +498,12 @@
         </p>
       {%- endif -%}
       {%- if show_rating -%}
-        {%- liquid
-          assign rating_value = product_card_product.metafields.reviews.rating.value.rating | default: 4.5
-          assign rating_scale_max = product_card_product.metafields.reviews.rating.value.scale_max | default: 5
-          assign rating_percentage = rating_value | times: 100.0 | divided_by: rating_scale_max
-        -%}
-        <div
-          class="card__rating"
-          aria-label="{{ rating_value }} out of {{ rating_scale_max }} stars"
-        >
-          <span class="card__rating-stars" aria-hidden="true">
-            ★★★★★
-            <span style="width: {{ rating_percentage }}%;">★★★★★</span>
-          </span>
-          <span class="card__rating-value">({{ rating_value }})</span>
+        <div class="card__rating">
+          {%- render 'yotpo-widgets',
+            yotpo_type: 'product_summary',
+            yotpo_product: product_card_product,
+            yotpo_section_id: section_id
+          -%}
         </div>
       {%- endif -%}
       {%- if show_collection_name -%}

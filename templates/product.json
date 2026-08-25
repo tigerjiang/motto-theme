@@ -26,10 +26,8 @@
           }
         },
         "review_summary": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"product-review-summary\" aria-label=\"5 out of 5 stars\"><span class=\"product-review-summary__stars\" aria-hidden=\"true\">★★★★★</span><span>4.8 · {{ product.metafields.reviews.rating_count.value | default: 13 }} Reviews</span></div>"
-          }
+          "type": "yotpo_summary",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -380,6 +378,16 @@
         "padding_top": "no-indent",
         "padding_bottom": "no-indent"
       }
+    },
+    "yotpo-reviews": {
+      "type": "yotpo-reviews",
+      "settings": {
+        "color_scheme": "",
+        "margin_top": "l",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
     }
   },
   "order": [
@@ -389,6 +397,7 @@
     "card-list",
     "collapsible_content_9bNtG8",
     "product_editorial_media",
+    "yotpo-reviews",
     "product-complementary",
     "product-recommendations"
   ]

@@ -32,6 +32,11 @@
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script
+      src="https://cdn-widgetsrepository.yotpo.com/v1/loader/fiDNpJqDU5kkPKJL53Lf0Bj2q5E1eLHGRQdiHCsY"
+      async
+    ></script>
+    <script src="{{ 'yotpo-widgets.js' | asset_url }}" defer="defer"></script>
 
     {%- if settings.quickview_show or settings.add_to_cart_enabled or settings.show_on_mobile -%}
       <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
