@@ -105,12 +105,15 @@
   margin: 0;
   color: #e87928;
   font-family: "Roboto", sans-serif;
+  font-synthesis: none;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 3.2px;
   text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .template-product .blockquote__text {
@@ -119,12 +122,15 @@
   max-width: 88rem;
   color: #13294b;
   font-family: "Roboto", sans-serif;
+  font-synthesis: none;
   font-size: 44px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 500 !important;
   letter-spacing: 0;
   text-align: center;
   text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media screen and (max-width: 749px) {
