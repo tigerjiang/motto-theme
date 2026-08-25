@@ -38,7 +38,8 @@
         collection_image
         | image_url: width: collection_image.width
         | image_tag:
-          loading: 'lazy',
+          loading: 'eager',
+          fetchpriority: 'high',
           class: 'collection-hero__image',
           widths: '360, 535, 720, 940, 1100, 1200, 1440, 1600, 1800, 2000, 2100, 2200, 2880, 3200, 3600, 4000, 4200, 4400',
           sizes: sizes

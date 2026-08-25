@@ -612,7 +612,8 @@ summary::-webkit-details-marker {
   }
 }
 /* Header overlay */
-main .section--has-overlay.shopify-section:first-child {
+main > .shopify-section:first-child:has([data-header-overlay]),
+main > .section--has-overlay.shopify-section:first-child {
   margin-top: calc(-1 * (var(--header-height) + var(--breadcrumbs-height)));
 }
 
