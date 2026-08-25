@@ -13,10 +13,24 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
+      "blocks": {
+        "announcement_slide_JVpBx3": {
+          "type": "announcement_slide",
+          "settings": {
+            "color_scheme": "background-3",
+            "text": "Display a limited-time deal or important notice here.",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_slide_JVpBx3"
+      ],
       "settings": {
         "height": 40,
         "height_mobile": 40,
-        "color_scheme": "background-4",
+        "color_scheme": "background-2",
         "enable_slider": false,
         "slide_duration": 2,
         "speed": 0.8,
