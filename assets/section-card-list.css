@@ -318,3 +318,48 @@
     display: none;
   }
 }
+
+/* Product Features typography and card proportions */
+.template-product .card-list .section-header__title {
+  color: #13294b;
+  font-family: 'Roboto', sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.template-product .card-list__badge {
+  color: #1d1d1f;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.template-product .card-list__text,
+.template-product .card-list__text p {
+  color: #13294b;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.template-product .card-list__text.number-visible::before {
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 44px !important;
+  color: #ffffff !important;
+  background: #000000 !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+}
+
+@media (min-width: 990px) {
+  .template-product .card-list__item.item_aspect_ratio {
+    aspect-ratio: 410 / 480;
+  }
+}
