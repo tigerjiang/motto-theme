@@ -4755,6 +4755,7 @@ body:not(.mouse-focus) .list-menu-item:focus-visible > .header__submenu,
 body:not(.mouse-focus) .list-menu-item:focus > .header__submenu {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
 }
 body:not(.mouse-focus) .list-menu-item:focus-within > .mega-menu,
 body:not(.mouse-focus) .list-menu-item:focus-visible > .mega-menu,
@@ -4778,10 +4779,12 @@ body:not(.mouse-focus) .list-menu-item:focus > .mega-menu__items {
 body:not(.mouse-focus) .header__menu-item + .header__submenu:focus-within, body:not(.mouse-focus) .header__menu-item + .header__submenu:focus-visible, body:not(.mouse-focus) .header__menu-item + .header__submenu:focus {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
 }
 body:not(.mouse-focus) .header__menu-item:focus-within + .header__submenu, body:not(.mouse-focus) .header__menu-item:focus-visible + .header__submenu, body:not(.mouse-focus) .header__menu-item:focus + .header__submenu {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
 }
 body:not(.mouse-focus) .header__submenu:focus-within::after, body:not(.mouse-focus) .header__submenu:focus-visible::after, body:not(.mouse-focus) .header__submenu:focus::after {
   display: block;
@@ -4791,6 +4794,7 @@ body:not(.mouse-focus) .header__inline-menu li:focus-visible > .header__submenu,
 body:not(.mouse-focus) .header__inline-menu li:focus > .header__submenu {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
 }
 body:not(.mouse-focus) .mega-menu:focus, body:not(.mouse-focus) .mega-menu:focus-visible, body:not(.mouse-focus) .mega-menu:focus-within {
   opacity: 1;

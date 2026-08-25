@@ -32,7 +32,7 @@
       <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
           {%- if forloop.index <= left_menu_count -%}
-            <li class="list-menu-item{% if link.current %} list-menu-item--active{% endif %}">
+            <li class="list-menu-item{% if link.links != blank %} list-menu--submenu{% endif %}{% if link.current %} list-menu-item--active{% endif %}">
               <a
                 href="{{ link.url }}"
                 class="header__menu-item list-menu__item link focus-inset"
@@ -41,6 +41,9 @@
               >
                 <span title="{{ link.title | escape }}">{{ link.title | escape }}</span>
               </a>
+              {%- if link.links != blank -%}
+                {% render 'submenu', link: link %}
+              {%- endif -%}
             </li>
           {%- endif -%}
         {%- endfor -%}
@@ -192,7 +195,7 @@
       <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
           {%- if forloop.index > left_menu_count -%}
-            <li class="list-menu-item{% if link.current %} list-menu-item--active{% endif %}">
+            <li class="list-menu-item{% if link.links != blank %} list-menu--submenu{% endif %}{% if link.current %} list-menu-item--active{% endif %}">
               <a
                 href="{{ link.url }}"
                 class="header__menu-item list-menu__item link focus-inset"
@@ -201,6 +204,9 @@
               >
                 <span title="{{ link.title | escape }}">{{ link.title | escape }}</span>
               </a>
+              {%- if link.links != blank -%}
+                {% render 'submenu', link: link %}
+              {%- endif -%}
             </li>
           {%- endif -%}
         {%- endfor -%}
