@@ -13,7 +13,7 @@
       "type": "hero-section",
       "settings": {
         "header_overlay": true,
-        "header_transparent": true,
+        "header_transparent": false,
         "color_scheme_header": "background-3",
         "light_logo": true,
         "image": "shopify://shop_images/bg-howitworkshero.png",

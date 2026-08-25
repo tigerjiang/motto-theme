@@ -25,6 +25,13 @@
 
 <script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
 
+{% liquid
+  assign sticky_header_type = section.settings.sticky_header_type
+  if template.suffix == 'how-it-works'
+    assign sticky_header_type = 'always'
+  endif
+%}
+
 <style>
   header-drawer {
   	flex-shrink: 0;
@@ -78,7 +85,7 @@
     text-transform: uppercase;
   }
 
-  {% if section.settings.sticky_header_type == "always" %}
+  {% if sticky_header_type == "always" %}
   	.shopify-section-header {
   		position: sticky;
   		top: 0;
@@ -94,10 +101,6 @@
 
   .shopify-section-header:not(.shopify-section-header-sticky) .header {
     border-radius: 0.8rem;
-  }
-
-  .shopify-section-header.color-background-overlay:not(.shopify-section-header-sticky) .header-wrapper {
-    box-shadow: none;
   }
 
   @media screen and (min-width: 750px) {
@@ -123,10 +126,10 @@
 {%- capture header_wrapper_classes -%}
 	header-wrapper {% if section.settings.enable_border and section.settings.full_menu %}header--border{% endif %} {% if section.settings.full_menu == false %}container{% endif %} header-wrapper--{{ section.settings.header_type }}{% if section.settings.full_menu %} header-wrapper--full-width{% endif %}
 {%- endcapture -%}
-{% if section.settings.sticky_header_type != 'none' -%}
+{% if sticky_header_type != 'none' -%}
   <sticky-header
     class="{{ header_wrapper_classes | strip }}"
-    data-sticky-type="{{ section.settings.sticky_header_type }}"
+    data-sticky-type="{{ sticky_header_type }}"
   >
 {%- else -%}
   <div class="{{ header_wrapper_classes | strip }}">
@@ -153,7 +156,7 @@
 >
   {% render 'header-inner' %}
 </header>
-{% if section.settings.sticky_header_type != 'none' -%}
+{% if sticky_header_type != 'none' -%}
   </sticky-header>
 {%- else -%}
   </div>
