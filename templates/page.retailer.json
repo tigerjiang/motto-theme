@@ -11,6 +11,7 @@
   "sections": {
     "hero": {
       "type": "hero-faq",
+      "disabled": true,
       "settings": {
         "image_desktop": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
         "image_mobile": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
@@ -21,8 +22,13 @@
     },
     "form": {
       "type": "retailer-form",
-      "settings": { "description": "" }
+      "settings": {
+        "description": ""
+      }
     }
   },
-  "order": ["hero", "form"]
+  "order": [
+    "hero",
+    "form"
+  ]
 }
