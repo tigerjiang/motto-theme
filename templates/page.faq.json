@@ -11,6 +11,7 @@
   "sections": {
     "hero": {
       "type": "hero-faq",
+      "disabled": true,
       "settings": {
         "image_desktop": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
         "image_mobile": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
@@ -24,7 +25,9 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": { "title": "Frequently Asked Questions" }
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
         },
         "question-1": {
           "type": "accordion",
@@ -62,9 +65,19 @@
           }
         }
       },
-      "block_order": ["title", "question-1", "question-2", "question-3", "question-4", "question-5"],
+      "block_order": [
+        "title",
+        "question-1",
+        "question-2",
+        "question-3",
+        "question-4",
+        "question-5"
+      ],
       "settings": {}
     }
   },
-  "order": ["hero", "faq"]
+  "order": [
+    "hero",
+    "faq"
+  ]
 }
