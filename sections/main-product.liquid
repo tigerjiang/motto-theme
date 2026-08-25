@@ -539,8 +539,17 @@
                       </quantity-input>
                     </div> {% endcomment %}
                     <p class="installment-plan__payment">
-                      From <strong>{{ block.settings.installment_price | default: '$49.99/mo' }}</strong> with
-                      <span class="installment-plan__provider">affirm</span>
+                      <span>From</span>
+                      <strong>{{ block.settings.installment_price | default: '$49.99/mo' }}</strong>
+                      <span>with</span>
+                      <img
+                        class="installment-plan__provider"
+                        src="{{ 'affirm.png' | asset_url }}"
+                        alt="Affirm"
+                        width="59"
+                        height="24"
+                        loading="lazy"
+                      >
                     </p>
                     {%- if block.settings.installment_disclaimer != blank -%}
                       <p class="installment-plan__disclaimer">{{ block.settings.installment_disclaimer | escape }}</p>

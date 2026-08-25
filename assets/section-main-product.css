@@ -2866,18 +2866,23 @@ noscript .product__media img {
 }
 
 .main-product .installment-plan__payment {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   margin: 1.2rem 0 0;
+  color: #58595a;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .main-product .installment-plan__payment strong {
-  color: rgb(var(--color-accent));
+  color: #58595a;
 }
 
 .main-product .installment-plan__provider {
-  color: #101f6b;
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: -0.06em;
+  display: block;
+  width: 4.4rem;
+  height: auto;
 }
 
 .main-product .installment-plan__disclaimer {
