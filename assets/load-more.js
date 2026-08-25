@@ -31,6 +31,7 @@ const loadItems = (button) => {
         $(responseHTML).find(".load-more-grid").html()
       );
       colorSwatches();
+      window.MottoYotpo?.scheduleRefresh();
     },
     complete: function () {
       if (currentPage <= totalPages) {

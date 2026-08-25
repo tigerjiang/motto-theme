@@ -130,6 +130,7 @@ class FacetFiltersForm extends HTMLElement {
     }
 
     colorSwatches();
+    window.MottoYotpo?.scheduleRefresh();
   }
 
   static renderProductCount(html) {

@@ -4180,6 +4180,7 @@ class ProductRecommendations extends HTMLElement {
           const recommendations = html.querySelector("product-recommendations");
           if (recommendations && recommendations.innerHTML.trim().length) {
             this.innerHTML = recommendations.innerHTML;
+            window.MottoYotpo?.scheduleRefresh();
           }
 
           if (this.querySelector(".product-recommendations__empty")) {
