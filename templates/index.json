@@ -617,6 +617,7 @@
         "marker_QDYwbY",
         "marker_mRa6EM"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "background_color": "#f6ded4",
@@ -631,6 +632,27 @@
         "overlay_opacity": 0,
         "margin_top": "xl",
         "margin_bottom": "no-indent"
+      }
+    },
+    "image_banner_n9g7r4": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "color_scheme": "background-4",
+        "heading": "Brisk It AI handles the cooking. You handle living.",
+        "image_heading_tag": "h2",
+        "section_heading": "",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": true,
+        "image": "shopify://shop_images/coverTextrevealOvenwithfriends.png",
+        "image_ratio": "1/1",
+        "animation": true,
+        "overlay_enable": true,
+        "overlay_opacity": 0.2,
+        "margin_top": "m",
+        "margin_bottom": "m"
       }
     },
     "featured_product_dzfXNd": {
@@ -882,7 +904,13 @@
           "settings": {
             "question": "Is the exclusive webcam compatible with all devices?",
             "answer": "<p>Yes, it is compatible with most devices, including laptops and desktops. It connects via USB and works with major operating systems like Windows, macOS, and Linux. Please check the product page for specific requirements.</p>",
-            "default_open": true
+            "default_open": true,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         },
         "accordion_jJwiGM": {
@@ -890,7 +918,13 @@
           "settings": {
             "question": "How long will my order take to ship?",
             "answer": "<p>Standard shipping typically takes 3-5 business days. Expedited options can deliver in 1-2 days. You will receive a tracking number once your order ships.</p>",
-            "default_open": false
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         },
         "accordion_4bXptC": {
@@ -898,7 +932,13 @@
           "settings": {
             "question": "What if my order is lost or stolen?",
             "answer": "<p>If your order is lost or stolen, contact us immediately. We will investigate and offer a solution. In most cases, we provide a replacement or refund.</p>",
-            "default_open": false
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         },
         "accordion_4fDqPE": {
@@ -906,7 +946,13 @@
           "settings": {
             "question": "Can I change the contents of my order?",
             "answer": "<p>You can change your order within 24 hours of placing it. Contact customer service to request changes. After 24 hours, modifications may not be possible due to processing.</p>",
-            "default_open": false
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
           }
         }
       },
@@ -1017,6 +1063,7 @@
     "brand_image_qdxFeE",
     "testimonials_jbRNEW",
     "product_markers_f4LUNk",
+    "image_banner_n9g7r4",
     "featured_product_dzfXNd",
     "before_after_XphnTY",
     "multicolumn_yAV7KB",

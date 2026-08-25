@@ -314,6 +314,16 @@
         "image_right": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png"
       }
     },
+    "yotpo-reviews": {
+      "type": "yotpo-reviews",
+      "settings": {
+        "color_scheme": "",
+        "margin_top": "l",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
     "product-complementary": {
       "type": "product-complementary",
       "disabled": true,
@@ -375,16 +385,6 @@
         "show_desc": false,
         "margin_top": "no-indent",
         "margin_bottom": "no-indent",
-        "padding_top": "no-indent",
-        "padding_bottom": "no-indent"
-      }
-    },
-    "yotpo-reviews": {
-      "type": "yotpo-reviews",
-      "settings": {
-        "color_scheme": "",
-        "margin_top": "l",
-        "margin_bottom": "l",
         "padding_top": "no-indent",
         "padding_bottom": "no-indent"
       }
