@@ -2712,6 +2712,96 @@ noscript .product__media img {
   background-color: rgb(var(--color-background));
 }
 
+/* Product typography mirrors the Brisk It product-page design. */
+.main-product .product__info-container {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.main-product .breadcrumb {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.main-product .product__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.main-product .product__description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.main-product .product-review-summary,
+.main-product .product-review-summary * {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.main-product .product-form__group-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.18em;
+}
+
+.main-product .price-wrapper .price,
+.main-product .price-wrapper .price-item {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.main-product .product__inventory-inner {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.main-product .product-offer-banner {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.main-product .installment-plan__label,
+.main-product .installment-plan__payment,
+.main-product .installment-plan__disclaimer {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.main-product .installment-plan__payment strong {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 990px) {
+  .main-product .product__title {
+    font-size: 3.6rem;
+  }
+}
+
 @media screen and (min-width: 990px) {
   .main-product .product__outer--thumbs-aside {
     display: grid;
@@ -2788,10 +2878,6 @@ noscript .product__media img {
   min-height: 5.6rem;
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
-}
-
-.main-product .product-form__group-name {
-  letter-spacing: 0.18em;
 }
 
 .main-product .product-offer-banner {
