@@ -104,12 +104,12 @@
 .template-product .blockquote .blockquote-section-header .section-header__subtitle {
   margin: 0;
   color: #e87928;
-  font-family: "RobotoFlex", "Roboto", sans-serif;
-  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.32rem;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
 }
 
@@ -118,11 +118,11 @@
   width: 100%;
   max-width: 88rem;
   color: #13294b;
-  font-family: "RobotoFlex", "Roboto", sans-serif;
-  font-size: 4.4rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
   font-style: normal;
   font-weight: 500;
-  line-height: 7rem;
+  line-height: 70px;
   letter-spacing: 0;
   text-align: center;
   text-transform: none;
