@@ -1,0 +1,62 @@
+{{- 'section-brisk-pages.css' | asset_url | stylesheet_tag -}}
+
+<section class="brisk-manuals">
+  <div class="brisk-manuals__inner">
+    {%- if section.settings.title != blank -%}
+      <h1 class="brisk-manuals__title">{{ section.settings.title }}</h1>
+    {%- endif -%}
+    {%- if section.settings.desc != blank -%}
+      <div class="brisk-manuals__description">{{ section.settings.desc }}</div>
+    {%- endif -%}
+
+    <div class="brisk-manuals__grid">
+      {%- for block in section.blocks -%}
+        <article class="brisk-manual-card" {{ block.shopify_attributes }}>
+          {%- if block.settings.manual_photo != blank -%}
+            {{
+              block.settings.manual_photo
+              | image_url: width: 600
+              | image_tag:
+                class: 'brisk-manual-card__image',
+                loading: 'lazy',
+                widths: '240, 380, 600',
+                sizes: '(max-width: 749px) 45vw, 190px',
+                alt: block.settings.manual_title
+            }}
+          {%- endif -%}
+          {%- if block.settings.manual_title != blank -%}
+            <h2 class="brisk-manual-card__title">{{ block.settings.manual_title }}</h2>
+          {%- endif -%}
+          {%- if block.settings.manual_url != blank -%}
+            <a class="brisk-manual-card__link" href="{{ block.settings.manual_url }}" target="_blank" rel="noopener">
+              {{ block.settings.arrow_text | default: 'Download PDF' }}
+            </a>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manual collection",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Title" },
+    { "type": "textarea", "id": "desc", "label": "Description" }
+  ],
+  "blocks": [
+    {
+      "type": "manual",
+      "name": "Manual",
+      "settings": [
+        { "type": "image_picker", "id": "manual_photo", "label": "Manual photo" },
+        { "type": "text", "id": "manual_title", "label": "Manual title" },
+        { "type": "url", "id": "manual_url", "label": "Manual URL" },
+        { "type": "text", "id": "arrow_text", "label": "Link text", "default": "Download PDF" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Manual collection" }]
+}
+{% endschema %}

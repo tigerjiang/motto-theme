@@ -1,0 +1,250 @@
+.brisk-page-hero {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  color: #fff;
+  background: #13294b;
+}
+
+.brisk-page-hero__media,
+.brisk-page-hero__media::after {
+  position: absolute;
+  inset: 0;
+}
+
+.brisk-page-hero__media::after {
+  content: '';
+  background: linear-gradient(90deg, rgba(19, 41, 75, 0.78), rgba(19, 41, 75, 0.12));
+}
+
+.brisk-page-hero__media picture,
+.brisk-page-hero__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.brisk-page-hero__media img {
+  object-fit: cover;
+}
+
+.brisk-page-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1440px;
+  min-height: 520px;
+  margin: 0 auto;
+  padding: 80px 60px;
+}
+
+.brisk-page-hero__content {
+  max-width: 700px;
+}
+
+.brisk-page-hero__title {
+  margin: 0;
+  color: inherit;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(4.8rem, 7vw, 9rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.brisk-page-hero__text {
+  margin-top: 24px;
+  font-size: 1.8rem;
+  line-height: 1.55;
+}
+
+.brisk-page-hero__footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 36px;
+  margin-top: 36px;
+}
+
+.brisk-page-hero__footer a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brisk-manuals {
+  min-height: 70vh;
+  padding: 64px 40px 80px;
+  color: #13294b;
+  background: #f5f6f8;
+}
+
+.brisk-manuals__inner,
+.brisk-faq__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brisk-manuals__title {
+  margin: 0 0 24px;
+  color: inherit;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(4.8rem, 7vw, 8rem);
+  line-height: 1;
+  text-align: center;
+}
+
+.brisk-manuals__description {
+  max-width: 920px;
+  margin: 0 auto 40px;
+  color: #29303d;
+  font-size: 1.6rem;
+  line-height: 1.55;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.brisk-manuals__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.brisk-manual-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(19, 41, 75, 0.08);
+}
+
+.brisk-manual-card__image {
+  display: block;
+  width: 190px;
+  max-width: 100%;
+  aspect-ratio: 190 / 257;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.brisk-manual-card__title {
+  margin: 0;
+  color: #13294b;
+  font-size: 2rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.brisk-manual-card__link {
+  position: relative;
+  padding-left: 18px;
+  color: #eb3300;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brisk-manual-card__link::before {
+  content: '›';
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  font-size: 2rem;
+  transform: translateY(-54%);
+}
+
+.brisk-faq {
+  padding: 72px 40px 90px;
+  color: #13294b;
+  background: #fff;
+}
+
+.brisk-faq__heading {
+  margin: 0 0 28px;
+  color: inherit;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(3.6rem, 5vw, 6rem);
+  line-height: 1.05;
+}
+
+.brisk-faq__item {
+  border-top: 1px solid rgba(19, 41, 75, 0.25);
+}
+
+.brisk-faq__item:last-child {
+  border-bottom: 1px solid rgba(19, 41, 75, 0.25);
+}
+
+.brisk-faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.brisk-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.brisk-faq__item summary::after {
+  content: '+';
+  flex: 0 0 auto;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.brisk-faq__item[open] summary::after {
+  content: '−';
+}
+
+.brisk-faq__answer {
+  max-width: 900px;
+  padding: 0 0 28px;
+  color: #29303d;
+  font-size: 1.6rem;
+  line-height: 1.65;
+}
+
+@media screen and (max-width: 989px) {
+  .brisk-manuals__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .brisk-page-hero,
+  .brisk-page-hero__inner {
+    min-height: 420px;
+  }
+
+  .brisk-page-hero__inner {
+    padding: 60px 20px;
+  }
+
+  .brisk-manuals,
+  .brisk-faq {
+    padding: 48px 20px 64px;
+  }
+
+  .brisk-manuals__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .brisk-manual-card {
+    padding: 20px 10px;
+  }
+
+  .brisk-manual-card__title {
+    font-size: 1.7rem;
+  }
+}

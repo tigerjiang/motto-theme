@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-faq",
+      "settings": {
+        "image_desktop": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
+        "image_mobile": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
+        "description": "",
+        "phone": "",
+        "email": ""
+      }
+    },
+    "form": {
+      "type": "retailer-form",
+      "settings": { "description": "" }
+    }
+  },
+  "order": ["hero", "form"]
+}

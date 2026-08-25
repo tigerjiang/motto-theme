@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-faq",
+      "settings": {
+        "image_desktop": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
+        "image_mobile": "shopify://shop_images/Vera_Website_2024_Final___contactbanner.png",
+        "description": "",
+        "phone": "",
+        "email": ""
+      }
+    },
+    "faq": {
+      "type": "accordions-faq",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": { "title": "Frequently Asked Questions" }
+        },
+        "question-1": {
+          "type": "accordion",
+          "settings": {
+            "title": "When is the Brisk It Grill Launching?",
+            "text": "<p>The Brisk It smart grill has just recently completed our Early Access launch! The reception and feedback was beyond our expectations! We are now currently moving towards a full scale launch. Subscribe to our newsletter to get the latest updates on new grills, smart technology features, recipes, and more!</p>"
+          }
+        },
+        "question-2": {
+          "type": "accordion",
+          "settings": {
+            "title": "What is InnoGrill?",
+            "text": "<p>InnoGrill the name given to Brisk It's automated cooking artificial intelligence. InnoGrill not only cooks a recipe by itself start to finish, but adapts to different cooking styles and situations such as ingredient size and/or cooking preferences. InnoGrill is being continuously improved upon by our engineering and culinary experts to ensure it stays at the cutting edge of automated grilling - and the best part is any improvements are sent directly to you via over-the-air updates!</p>"
+          }
+        },
+        "question-3": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where do I find recipes to cook on the grill?",
+            "text": "<p>Our mobile app is the best resource for delicious recipes made just for a Brisk It grill. Plus, the mobile app is how you can experience our InnoGrill Cooking A.I.'s ability to cook a recipe start to finish! If you don't have the mobile app, we keep a continually updating database of recipes on our website.</p>"
+          }
+        },
+        "question-4": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I download the Mobile App?",
+            "text": "<p>Go to your mobile device's Google Play Store or Apple App Store and search for \"Brisk It\". Our app will appear and can be downloaded and installed.</p>"
+          }
+        },
+        "question-5": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where do I buy wood pellets?",
+            "text": "<p>We are currently testing and developing several in-house wood pellet mixes to ensure great flavor and a stable cooking experience. These pellets are developed specifically to bring the best out of your Brisk It grill. In the meantime, we recommend any barbecue wood pellets—Hickory and Oak are two of our go-to choices.</p>"
+          }
+        }
+      },
+      "block_order": ["title", "question-1", "question-2", "question-3", "question-4", "question-5"],
+      "settings": {}
+    }
+  },
+  "order": ["hero", "faq"]
+}

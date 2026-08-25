@@ -1,0 +1,550 @@
+{%- style -%}
+       .section-contact {
+          width: 80%; /* 设置宽度为80% */
+          margin: 0 auto; /* 上下外边距为0，左右外边距为auto */
+          padding: 20px; /* 可选：增加一些内边距 */
+          box-sizing: border-box; /* 包含内边距和边框计算在内 */
+        }
+        .form-field-row {
+          display: flex;
+         width: 100%;
+         justify-content: space-between;
+          flex-direction:row;
+
+      }
+  .form-field-row > * {
+    margin-right: 16px; /* 设置子元素之间的间距 */
+  }
+
+  .form-field-row > *:last-child {
+    margin-right: 0; /* 最后一个子元素不添加右边距 */
+  }
+      .column {
+      flex: 1;
+    }
+     .checkbox-group-store {
+      margin-top: 10px;
+       padding-right:10px;
+      flex: 1;
+    }
+    #hiddenInput-store {
+      display: none;
+    }
+
+
+    .radio-group-market {
+      margin-top: 10px;
+      flex: 1;
+      padding-right:10px;
+    }
+    #hiddenInput-market {
+      display: none;
+    }
+    .checkbox-group-brand {
+      margin-top: 10px;
+      padding-right:10px;
+      flex: 1;
+    }
+    #hiddenInput-brand {
+      display: none;
+    }
+
+      .form-field-row label {
+        color: rgb(41,48,61);
+        font-family: 'Roboto' !important;
+        font-weight:400 !important;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.14px;
+      }
+      .form-field {
+        position: relative;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        flex: 1 1 auto; /* 使所有表单字段平均分配表单行宽度 */
+      }
+
+      .form-field__input {
+        font-size: 14px;
+        color: rgb(41,48,61);
+        padding: 1rem 0.5rem 0.5rem;
+        border: none;
+        border-bottom: 1px solid #ccc; /* 设置下划线颜色为灰色 */
+        width: 100%;
+        box-sizing: border-box;
+       background-color: transparent; /* 使用transparent来去除背景色 */
+        transition: border-color 0.3s, box-shadow 0.3s;
+        outline: none;
+      }
+
+      .form-area__input {
+        font-size: 14px;
+        color: rgb(41,48,61);
+        padding: 1rem 0.5rem 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        outline: none;
+      }
+
+      .form-area__input:focus,
+      .form-area__input:not(:placeholder-shown) {
+        border-color:rgb(41,48,61);
+        box-shadow: 0 0 1px rgb(41,48,61);
+      }
+
+      .form-field__label_title {
+        position: absolute;
+        top: 50%;
+        left: 0.5rem;
+        transform: translateY(-50%);
+        font-size: 14px;
+        pointer-events: none;
+        transition: all 0.3s;
+        color: rgb(41,48,61);
+        font-family: 'Roboto' !important;
+        font-weight:400 !important;
+      }
+
+      .__label_title {
+        color: rgb(41,48,61);
+        font-family: 'Roboto' !important;
+        font-weight:400 !important;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        letter-spacing: 0.16px;
+      }
+
+
+
+
+
+      .form-field__input:focus,
+      .form-field__input:not(:placeholder-shown) {
+        border-color: rgb(41, 48, 61);
+      }
+
+      .form-field__input:focus + .form-field__label_title,
+      .form-field__input:not(:placeholder-shown) + .form-field__label_title {
+        top: 0;
+        transform: translateY(-100%);
+        font-size: 12px;
+        color: rgb(41,48,61);
+      }
+      /* 使多选下拉列表更美观 */
+      .form-field__input[multiple] {
+        height: auto;
+        padding: 1rem;
+        cursor: pointer;
+      }
+      /* 可选：为小屏幕设备调整布局 */
+      @media (max-width: 768px) {
+        .form-field-row {
+          display: flex;
+          flex-direction: column;
+      }
+          .form-field-row > * {
+    margin-right: 0px; /* 设置子元素之间的间距 */
+  }
+
+  .form-field-row > *:last-child {
+    margin-right: 0; /* 最后一个子元素不添加右边距 */
+  }
+      }
+{%- endstyle -%}
+<section
+  class="section-contact"
+  style="background-size: cover;background-repeat: no-repeat;background-position: top center;"
+>
+  <div class="shell">
+    <div
+      style="font-size: 30px;width: 100%;text-align: left;font-family:'Roboto' !important;color: rgb(41,48,61)"
+    >
+      Contact Us
+    </div>
+    {%- if section.settings.description != blank -%}
+      <div style="margin-top:24px;margin-bottom:24px;">
+        {{- section.settings.description -}}
+      </div>
+    {%- endif -%}
+    <div
+      style="font-size:14px;width:100%;text-align:right;margin-top:24px;font-family:'Roboto' !important;color:rgb(41,48,61)"
+    >
+      Required*
+    </div>
+    {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+      <input type="hidden" name="contact[ subject]" value="Become A Brisk It Retailer">
+      {%- if form.posted_successfully? -%}
+        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {% render 'icon-success' %}
+          Thanks for contacting us. We'll get back to you as soon as possible.
+        </h2>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2
+            class="form-status caption-large text-body"
+            role="alert"
+            style="max-height:44px !important"
+            tabindex="-1"
+            autofocus
+          >
+            {% render 'icon-error' %}
+            Please adjust the following:
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+          <li>
+            <a href="#first-name" class="link">
+              {{- form.errors.translated_fields.first_name | capitalize }}
+              {{ form.errors.messages.first_name -}}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+
+      <div class="form-field-row" style="margin-top: 24px;">
+        <div class="form-field">
+          <input
+            type="text"
+            id="first-name"
+            name="contact[first_name]"
+            class="form-field__input"
+            placeholder=" "
+            value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}"
+            required
+          >
+          <label for="first-name" class="form-field__label_title">
+            First Name
+            <span aria-hidden="true">*</span></label
+          >
+        </div>
+
+        <div class="form-field">
+          <input
+            type="text"
+            id="last-name"
+            name="contact[last_name]"
+            class="form-field__input"
+            placeholder=" "
+            value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}"
+          >
+          <label for="last-name" class="form-field__label_title">Last Name</label>
+        </div>
+      </div>
+      <div class="form-field-row">
+        <div class="form-field">
+          <input
+            type="text"
+            id="email"
+            name="contact[email]"
+            class="form-field__input"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+            placeholder=" "
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            required
+          >
+          <label for="email" class="form-field__label_title">
+            Email
+            <span aria-hidden="true">*</span></label
+          >
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {%- render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+        <div class="form-field">
+          <input
+            type="text"
+            id="phone"
+            name="contact[phone]"
+            class="form-field__input"
+            placeholder=" "
+            pattern="[0-9\-]*"
+            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+          >
+          <label for="phone" class="form-field__label_title">Phone Number</label>
+        </div>
+      </div>
+      <div class="form-field-row">
+        <div class="form-field">
+          <input
+            type="text"
+            id="address"
+            name="contact[address]"
+            class="form-field__input"
+            placeholder=" "
+            value="{% if form.address %}{{ form.address }}{% elsif customer %}{{ customer.address }}{% endif %}"
+            required
+          >
+          <label for="address" class="form-field__label_title">Street*</label>
+        </div>
+
+        <div class="form-field">
+          <input
+            type="text"
+            id="city"
+            name="contact[city]"
+            class="form-field__input"
+            placeholder=" "
+            value="{% if form.city %}{{ form.city }}{% elsif customer %}{{ customer.city }}{% endif %}"
+            required
+          >
+          <label for="city" class="form-field__label_title">City*</label>
+        </div>
+      </div>
+      <div class="form-field-row">
+        <div class="form-field">
+          <input
+            type="text"
+            id="country"
+            name="contact[country]"
+            class="form-field__input"
+            placeholder=" "
+            value="{% if form.country %}{{ form.country }}{% elsif customer %}{{ customer.country }}{% endif %}"
+            required
+          >
+          <label for="country" class="form-field__label_title">Country*</label>
+        </div>
+        <div class="form-field">
+          <input
+            type="text"
+            id="province"
+            name="contact[province]"
+            class="form-field__input"
+            placeholder=" "
+            value="{% if form.province %}{{ form.province }}{% elsif customer %}{{ customer.province }}{% endif %}"
+            required
+          >
+          <label for="province" class="form-field__label_title">State/Province*</label>
+        </div>
+        <div class="form-field">
+          <input
+            type="text"
+            id="zip"
+            name="contact[zip]"
+            class="form-field__input"
+            placeholder=" "
+            value="{% if form.zip %}{{ form.zip }}{% elsif customer %}{{ customer.zip }}{% endif %}"
+            required
+          >
+          <label for="zip" class="form-field__label_title">Zip/Postal Code*</label>
+        </div>
+      </div>
+      <div class="form-field-row">
+        <div class="checkbox-group-store stores">
+          <input type="hidden" id="hiddenInput-store" name="contact[stores]" value="" required>
+          <label for="stores" class="__label_title">TYPE OF STORE (CHECK ALL THAT APPLY) *</label>
+          <div>
+            <input type="checkbox" id="store1" name="store_1" value="Hardware">
+            <label for="store1">Hardware</label>
+          </div>
+          <div>
+            <input type="checkbox" id="store2" name="store_2" value="Grocery">
+            <label for="store2">Grocery</label>
+          </div>
+          <div>
+            <input type="checkbox" id="store3" name="store_3" value="Butcher">
+            <label for="store3">Butcher</label>
+          </div>
+          <div>
+            <input type="checkbox" id="store4" name="store_4" value="Speciality BBQ Store">
+            <label for="store4">Speciality BBQ Store</label>
+          </div>
+          <div>
+            <input type="checkbox" id="store5" name="store_5" value="Furniture and/or Appliance">
+            <label for="store5">Furniture and/or Appliance</label>
+          </div>
+          <div>
+            <input type="checkbox" id="store6" name="store_6" value="Sporting Goods/Outdoor">
+            <label for="store6">Sporting Goods/Outdoor</label>
+          </div>
+          <div>
+            <input type="checkbox" id="store7" name="store_7" value="Other">
+            <label for="store7">Other</label>
+          </div>
+        </div>
+
+        <div class="radio-group-market">
+          <input type="hidden" id="hiddenInput-market" name="contact[market_type]" value="" required>
+          <label for="market-type" class="__label_title">WHERE WILL YOU SELL BRISK IT? (ONE CHOICE ALLOWED) *</label>
+          <div>
+            <input type="radio" id="market1" name="market_type" value="Retail Store Only">
+            <label for="market1">&nbsp;&nbsp;Retail Store Only</label>
+          </div>
+          <div>
+            <input type="radio" id="market2" name="market_type" value="Retail Store + Website">
+            <label for="market2">&nbsp;&nbsp;Retail Store + Website</label><br>
+          </div>
+          <div>
+            <input type="radio" id="market3" name="market_type" value="Other">
+            <label for="market3">&nbsp;&nbsp;Other</label><br>
+          </div>
+        </div>
+
+        <div class="checkbox-group-brand">
+          <input type="hidden" id="hiddenInput-brand" name="contact[brands]" value="" required>
+          <label for="brands" class="__label_title">WHICH GRILL BRANDS DO YOU CURRENTLY SELL? (CHECK ALL THAT APPLY)</label>
+          <div>
+            <input type="checkbox" id="brand0" name="brands_1" value="We currently don't sell grills">
+            <label for="brand0">We currently don't sell grills</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand1" name="brands_2" value="Camp Chef">
+            <label for="brand1">Camp Chef</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand2" name="brands_3" value="Charbroil">
+            <label for="brand2">Charbroil</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand3" name="brands_4" value="Green Mountain Grills">
+            <label for="brand3">Green Mountain Grills</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand4" name="brands_5" value="Halo Grills">
+            <label for="brand4">Halo Grills</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand5" name="brands_6" value="Napoleon">
+            <label for="brand5">Napoleon</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand6" name="brands_7" value="PitBoss">
+            <label for="brand6">PitBoss</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand7" name="brands_8" value="RecTeq">
+            <label for="brand7">RecTeq</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand8" name="brands_9" value="Traeger">
+            <label for="brand8">Traeger</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="brand9" name="brands_10" value="Weber">
+            <label for="brand9">Weber</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="brand10" name="brands_11" value="Other">
+            <label for="brand10">Other</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="__label_title" style="display:block;margin-bottom:10px;" for="reason">WHY DO YOU THINK BRISK IT WOULD BE A GOOD FIT FOR YOUR STORE? *</label>
+        <textarea
+          id="reason"
+          class="form-area__input"
+          rows="10"
+          cols="50"
+          name="contact[comments]"
+          placeholder="Comments"
+          required
+        >{% if form.comments %}{{ form.comments }}{% endif %}</textarea
+        ><br>
+        <br>
+        <!-- /.cols cols-/-section -->
+        <div class="contact__button">
+          <button type="submit" id="submitButton" class="btn btn--primary btn--red">
+            <span> Submit</span>
+          </button>
+        </div>
+      </div>
+    {%- endform -%}
+  </div>
+</section>
+
+{% javascript %}
+  document.querySelectorAll('.checkbox-group-store input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.addEventListener('change', function () {
+      const selectedValues = Array.from(
+        document.querySelectorAll('.checkbox-group-store input[type="checkbox"]:checked')
+      ).map((cb) => cb.value);
+      document.getElementById('hiddenInput-store').value = selectedValues.join(', ');
+    });
+  });
+
+  document.querySelectorAll('.radio-group-market input[type="radio"]').forEach((radio) => {
+    radio.addEventListener('change', function () {
+      const selectedValues = Array.from(
+        document.querySelectorAll('.radio-group-market input[type="radio"]:checked')
+      ).map((radio) => radio.value);
+      document.getElementById('hiddenInput-market').value = selectedValues.join(', ');
+    });
+  });
+
+  document.querySelectorAll('.checkbox-group-brand input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.addEventListener('change', function () {
+      const selectedValues = Array.from(
+        document.querySelectorAll('.checkbox-group-brand input[type="checkbox"]:checked')
+      ).map((cb) => cb.value);
+      document.getElementById('hiddenInput-brand').value = selectedValues.join(', ');
+    });
+  });
+
+  document.getElementById('submitButton').addEventListener('click', function (event) {
+    // 检查必填字段
+    const requiredFields = ['first-name', 'email', 'address', 'city', 'country', 'province', 'zip', 'reason'];
+    for (let field of requiredFields) {
+      const input = document.getElementById(field);
+      if (!input.value.trim()) {
+        // alert(`Please fill out the required field: ${field}`);
+        return;
+      }
+    }
+
+    const inputStoreValue = document.getElementById('hiddenInput-store').value;
+    const inputMarketValue = document.getElementById('hiddenInput-market').value;
+    const inputBrandValue = document.getElementById('hiddenInput-brand').value;
+    console.log(inputStoreValue + ' -- ' + inputMarketValue + ' -- ' + inputBrandValue);
+    if (inputStoreValue === '') {
+      event.preventDefault(); // 防止表单提交
+      alert('Please select at least one store type option.');
+    } else if (inputMarketValue === '') {
+      event.preventDefault(); // 防止表单提交
+      alert('Please select one market option.');
+    /* } else if (inputBrandValue === '') {
+      event.preventDefault(); // 防止表单提交
+      alert('Please select at least one brand option.'); */
+    } else {
+    }
+  });
+{% endjavascript %}
+{% schema %}
+{
+  "name": "Contact Us",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "info": "Add comments for collecting user information and how long it will take to reply to customers"
+    }
+  ]
+}
+{% endschema %}

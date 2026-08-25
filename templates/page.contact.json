@@ -1,1 +1,23 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"heading_size":"h3","margin_top":"no-indent","margin_bottom":"no-indent"}},"form":{"type":"contact-form","settings":{"content_align":"center","heading":"Contact form","heading_size":"h2","text":"Feel free to connect with us via email for personalized assistance.","additional_text":"By clicking the button you agree to the <a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Privacy Policy<\/a>.","image":"","image_ratio":"adapt","button_style":"primary","margin_top":"l","margin_bottom":"xl"}}},"order":["main","form"]}
+{
+  "sections": {
+    "hero": {
+      "type": "hero-contact",
+      "settings": {
+        "image_desktop": "shopify://shop_images/vera_contactus_bg.png",
+        "image_mobile": "shopify://shop_images/vera_contactus_mobile_bg1.png",
+        "description": "",
+        "phone": "",
+        "email": ""
+      }
+    },
+    "form": {
+      "type": "custom-contact-form",
+      "settings": {
+        "description": "<p>Whether you have a quick question, need detailed assistance, or just want to chat, we’re here to help. Call us for immediate assistance, email us for a prompt response, or fill out the form below for more detailed inquiries—we look forward to hearing from you!</p>",
+        "phone": "1 (888) 817-8825",
+        "email": "support@briskitgrills.com"
+      }
+    }
+  },
+  "order": ["hero", "form"]
+}

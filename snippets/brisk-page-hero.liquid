@@ -1,0 +1,48 @@
+{%- assign hero_settings = section.settings -%}
+
+<section class="brisk-page-hero">
+  {%- if hero_settings.image_desktop != blank -%}
+    <div class="brisk-page-hero__media">
+      <picture>
+        {%- if hero_settings.image_mobile != blank -%}
+          <source
+            media="(max-width: 749px)"
+            srcset="{{ hero_settings.image_mobile | image_url: width: 1000 }}"
+          >
+        {%- endif -%}
+        {{
+          hero_settings.image_desktop
+          | image_url: width: 2400
+          | image_tag:
+            loading: 'eager',
+            widths: '750, 1100, 1500, 2000, 2400',
+            sizes: '100vw',
+            alt: page.title
+        }}
+      </picture>
+    </div>
+  {%- endif -%}
+
+  <div class="brisk-page-hero__inner">
+    <div class="brisk-page-hero__content">
+      <h1 class="brisk-page-hero__title">{{ page.title }}</h1>
+      {%- if page.content != blank -%}
+        <div class="brisk-page-hero__text rte">{{ page.content }}</div>
+      {%- endif -%}
+
+      {%- if hero_settings.description != blank or hero_settings.phone != blank or hero_settings.email != blank -%}
+        <div class="brisk-page-hero__footer">
+          {%- if hero_settings.description != blank -%}
+            <div class="rte">{{ hero_settings.description }}</div>
+          {%- endif -%}
+          {%- if hero_settings.phone != blank -%}
+            <a href="tel:{{ hero_settings.phone | replace: ' ', '' }}">{{ hero_settings.phone }}</a>
+          {%- endif -%}
+          {%- if hero_settings.email != blank -%}
+            <a href="mailto:{{ hero_settings.email }}">{{ hero_settings.email }}</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
