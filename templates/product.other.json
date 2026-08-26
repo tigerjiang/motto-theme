@@ -1,0 +1,404 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "product_heading_tag": "h1",
+            "heading_size": "h2"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description": "AI Powered Cooking Automation - Let AI create personalized recipes and automate their cooks, worry-free.\n100% Wood Fired Flavor - Smoke, grill, BBQ, bake, roast, sear, braise, and char-grill on a single wood fired grill."
+          }
+        },
+        "review_summary": {
+          "type": "yotpo_summary",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_info": false,
+            "show_shipping": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_swatches_type": "color",
+            "variant_image_ratio": "portrait",
+            "enable_linked_products": false,
+            "linked_products_label": "Color"
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "show_inventory_quantity": false
+          }
+        },
+        "offer_banner": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-offer-banner\">Father’s Day special · ends June 30th</div>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false,
+            "installment_price": "$49.99/mo",
+            "installment_disclaimer": "*Not including subscription"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "review_summary",
+        "price",
+        "variant_picker",
+        "inventory",
+        "offer_banner",
+        "buy_buttons"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "header_overlay": true,
+        "show_navigation": true,
+        "section_layout": "container",
+        "section_aspect_ratio": "100%",
+        "desktop_alignment": "left",
+        "mobile_alignment": "before",
+        "gallery_type": "thumbs_aside",
+        "variant_media_display": "show_all",
+        "image_fit": "contain",
+        "image_fit_modal": "contain",
+        "is_autoplay": false,
+        "is_hover_stop_autoplay": false,
+        "show_arrows": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "blockquote": {
+      "type": "blockquote",
+      "settings": {
+        "color_scheme": "background-2",
+        "section_subheading": "Intelligent Grilling, Unmatched Flavor",
+        "dot": false,
+        "blockquote": "Barbecue technology today is leaving you to guess. We believe grilling should be effortless, so we built Brisk It to deliver perfection—every time, no matter your skill level.",
+        "section_blockquote_size": "h2",
+        "author_name": "",
+        "author_position": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "button_dot": true,
+        "section_button_style": "primary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "image-banner": {
+      "type": "image-banner",
+      "settings": {
+        "color_scheme": "background-3",
+        "heading": "Wood-fired flavor, redefined.",
+        "image_heading_tag": "h2",
+        "section_heading": "",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": true,
+        "image": "shopify://shop_images/coverTextrevealMangrillingonzelos450.png",
+        "image_ratio": "large",
+        "animation": true,
+        "overlay_enable": false,
+        "overlay_opacity": 0.2,
+        "margin_top": "xl",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "card-list": {
+      "type": "card-list",
+      "blocks": {
+        "product_1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/smartcookingFriendsyard720X720.png",
+            "badge": "Hands-off automated cooking",
+            "badge_style": "primary",
+            "subheading": "",
+            "text": "Tell Brisk It what you want to cook and let its cooking automation manage the temperature and timing for you."
+          }
+        },
+        "product_2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/smartcookingAppcontrol720X720.png",
+            "badge": "Remote monitoring & control",
+            "badge_style": "primary",
+            "subheading": "",
+            "text": "Set up personalized cooking profiles in seconds. Monitor temperature, adjust settings, and control your cook from the Brisk It app."
+          }
+        },
+        "product_3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/smartcookingPlatedfood720X720.png",
+            "badge": "AI-generated, personalized recipes",
+            "badge_style": "primary",
+            "subheading": "",
+            "text": "Create recipes around your preferences, ingredients, and available time, then let Brisk It guide the cook from start to finish."
+          }
+        }
+      },
+      "block_order": [
+        "product_1",
+        "product_2",
+        "product_3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "text-number-visible": true,
+        "text-always-visible": false,
+        "section_heading": "Product Features",
+        "heading_tag": "h2",
+        "section_heading_size": "h3",
+        "subheading": "",
+        "dot": false,
+        "line": false,
+        "subheading_tag": "h4",
+        "columns_per_row": 3,
+        "image_ratio": "3/4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_arrows": false,
+        "margin_top": "xl",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "collapsible_content_9bNtG8": {
+      "type": "collapsible-content",
+      "blocks": {
+        "why_brisk_it": {
+          "type": "accordion",
+          "settings": {
+            "question": "Why Brisk It",
+            "answer": "<p>Brisk It combines wood-fired flavor with intelligent automation, so every cook is easier and more consistent.</p>",
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
+          }
+        },
+        "brisk_it_ai": {
+          "type": "accordion",
+          "settings": {
+            "question": "Brisk It AI",
+            "answer": "",
+            "default_open": true,
+            "item_image_1": "shopify://shop_images/smartcookingAppcontrol720X720.png",
+            "item_heading_1": "Endless Personalized Recipes in Seconds.",
+            "item_text_1": "<p>No searching, no guessing. Just tell AI what you want, and get a hyper-tailored recipe instantly.</p>",
+            "item_image_2": "shopify://shop_images/smartcookingFriendsyard720X720.png",
+            "item_heading_2": "Skip the Work. AI Cooks It.",
+            "item_text_2": "<p>Automate any cook, click once, and AI handles everything from temperature to timing.</p>",
+            "item_image_3": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png",
+            "item_heading_3": "No Worries. Just Eat.",
+            "item_text_3": "<p>Try new flavors without fear. Brisk It AI delivers perfection, every single time.</p>"
+          }
+        },
+        "specifications": {
+          "type": "accordion",
+          "settings": {
+            "question": "Specifications",
+            "answer": "<p>See product dimensions, cooking capacity, temperature range, power requirements, and included accessories.</p>",
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
+          }
+        },
+        "shipping": {
+          "type": "accordion",
+          "settings": {
+            "question": "Shipping",
+            "answer": "<p>Shipping options and delivery estimates are shown at checkout.</p>",
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
+          }
+        },
+        "assembly_care": {
+          "type": "accordion",
+          "settings": {
+            "question": "Assembly/Care",
+            "answer": "<p>Follow the included assembly guide and clean the grill after use for reliable long-term performance.</p>",
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "why_brisk_it",
+        "brisk_it_ai",
+        "specifications",
+        "shipping",
+        "assembly_care"
+      ],
+      "name": "t:sections.collapsible-content.name",
+      "settings": {
+        "color_scheme": "",
+        "section_layout": "column",
+        "icon_style": "secondary",
+        "section_heading": "",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "section_subheading": "",
+        "dot": false,
+        "collapse_heading_tag": "h4",
+        "section_button_label": "",
+        "section_button_link": "",
+        "button_dot": true,
+        "section_button_style": "primary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "l",
+        "padding_bottom": "l"
+      }
+    },
+    "product_editorial_media": {
+      "type": "product-editorial-media",
+      "settings": {
+        "color_scheme": "background-2",
+        "image_left": "shopify://shop_images/coverTextrevealMangrillingonzelos450.png",
+        "image_right": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png"
+      }
+    },
+    "yotpo-reviews": {
+      "type": "yotpo-reviews",
+      "settings": {
+        "color_scheme": "",
+        "margin_top": "l",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "product-complementary": {
+      "type": "product-complementary",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "layout": "full_width",
+        "columns_per_row": 4,
+        "products_limit": 4,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "section_heading": "Complementary Products",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h3",
+        "subheading": "Some Subheading",
+        "dot": true,
+        "line": true,
+        "image_ratio": "3/4",
+        "image_fit": "cover",
+        "show_collection_name": false,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": false,
+        "margin_top": "m",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "color_scheme": "",
+        "layout": "full_width",
+        "columns_per_row": 3,
+        "slides_per_view_mobile": "1",
+        "products_limit": 3,
+        "autoplay": false,
+        "mobile_autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "section_heading": "You May Be Interested",
+        "section_heading_tag": "h2",
+        "section_heading_size": "h2",
+        "subheading": "",
+        "dot": false,
+        "line": false,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_collection_name": false,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_desc": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "blockquote",
+    "image-banner",
+    "card-list",
+    "collapsible_content_9bNtG8",
+    "product_editorial_media",
+    "yotpo-reviews",
+    "product-complementary",
+    "product-recommendations"
+  ]
+}
