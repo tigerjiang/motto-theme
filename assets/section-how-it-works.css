@@ -99,29 +99,32 @@
 
 .hiw-hero__eyebrow {
   margin: 0 0 1.6rem;
-  color: #ff7a28;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: .22em;
+  color: #e87928;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
 }
 
 .hiw-hero__title {
-  max-width: 780px;
+  max-width: 100%;
   margin: 0;
   color: #fff;
-  font-size: clamp(4.4rem, 6vw, 8.2rem);
+  font-family: 'Roboto', sans-serif;
+  font-size: 8rem;
   font-weight: 700;
   line-height: .98;
   letter-spacing: -.045em;
 }
 
 .hiw-hero__text {
-  max-width: 650px;
+  max-width: 100%;
   margin: 2rem 0 2.8rem;
   color: #fff;
-  font-size: clamp(1.6rem, 1.7vw, 2.2rem);
-  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
 }
 
 .hiw-hero__text p,
@@ -129,8 +132,19 @@
   color: inherit;
 }
 
+.hiw-hero__text p {
+  margin: 0;
+}
+
+@media screen and (min-width: 990px) {
+  .hiw-hero__title,
+  .hiw-hero__text p {
+    white-space: nowrap;
+  }
+}
+
 .hiw-hands {
-  padding: clamp(7rem, 9vw, 12rem) 0;
+  padding: 6rem 0;
 }
 
 .hiw-hands .hiw-container {
@@ -170,8 +184,10 @@
   border-radius: 50%;
   background: #ec7825;
   color: #fff;
-  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
   font-weight: 700;
+  font-style: italic;
 }
 
 .hiw-hands__step:not(:last-child)::after {
@@ -194,19 +210,25 @@
 
 .hiw-hands__heading {
   margin: 20px 0 0;
-  color: var(--hiw-navy);
-  font-size: clamp(2.2rem, 2.1vw, 3rem);
+  color: #13294b;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.4rem;
+  font-weight: 600;
   line-height: 1.08;
 }
 
 .hiw-hands__text {
   margin: 20px 0 0;
-  font-size: 1.5rem;
+  color: #13294b;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
   line-height: 1.45;
 }
 
 .hiw-hands__text p {
   margin: 0;
+  color: inherit;
 }
 
 .hiw-hands__text p + p {
@@ -454,6 +476,11 @@
 
   .hiw-hero__title {
     font-size: 4.6rem;
+  }
+
+  .hiw-hero__text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
   }
 
   .hiw-hands__grid,
