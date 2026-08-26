@@ -180,6 +180,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "shop-all",
+            "custom_title": "Shop Grills",
             "color_scheme": "",
             "image": "shopify://shop_images/img-zelosbypool-720x720.png",
             "image_has_container": false,
@@ -192,6 +193,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "shop-all",
+            "custom_title": "Shop Oven",
             "color_scheme": "",
             "image": "shopify://shop_images/img-ovenondarkcounter-720x720.png",
             "image_has_container": false,
