@@ -101,7 +101,7 @@
   }
 
   /* Reference hero layout: the header sits above the image while the slide copy
-     stays vertically centred on the left. Scoped to this section instance. */
+     stays anchored on the lower left with enough breathing room below it. */
   #shopify-section-{{ section.id }} .slideshow-slide > .container {
     position: absolute;
     inset: 0;
@@ -111,7 +111,7 @@
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 0 8rem 8rem;
+    padding: 0 8rem clamp(10rem, 10vw, 14rem);
     box-sizing: border-box;
     pointer-events: none;
   }
