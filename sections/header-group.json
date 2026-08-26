@@ -88,7 +88,7 @@
         "logo": "shopify://shop_images/briskit.png",
         "section_heading_tag": "h1",
         "apply_logo_pages": false,
-        "logo_width": 120,
+        "logo_width": 155,
         "menu": "main-menu-oven",
         "enable_country_selector": false,
         "show_country_flag": false,

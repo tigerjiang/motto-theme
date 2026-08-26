@@ -193,8 +193,8 @@
   {%- if section.settings.header_type == 'top-menu' and section.settings.menu != blank -%}
     <nav class="header__inline-menu header__inline-menu--right" aria-label="Secondary navigation">
       <ul class="list-menu list-menu--inline" role="list">
-        {%- for link in section.settings.menu.links -%}
-          {%- if forloop.index > left_menu_count -%}
+        {%- for link in section.settings.menu.links reversed -%}
+          {%- if forloop.rindex > left_menu_count -%}
             <li class="list-menu-item{% if link.links != blank %} list-menu--submenu{% endif %}{% if link.current %} list-menu-item--active{% endif %}">
               <a
                 href="{{ link.url }}"
