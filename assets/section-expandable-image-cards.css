@@ -2,7 +2,7 @@
   --expandable-cards-background: #fbf9f6;
   --expandable-cards-heading: #13294b;
   --expandable-cards-accent: #e65c00;
-  --expandable-cards-pill-background: #e8e4de;
+  --expandable-cards-pill-background: rgba(255, 248, 234, 0.5);
   --expandable-cards-pill-text: #13294b;
   display: block;
   background: var(--expandable-cards-background);
@@ -33,7 +33,7 @@
   margin-bottom: 14px;
   color: var(--expandable-cards-accent);
   font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: 3px;
@@ -43,7 +43,7 @@
 .expandable-image-cards__heading {
   color: var(--expandable-cards-heading);
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(32px, 3.1vw, 48px);
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -54,7 +54,8 @@
   margin: 14px auto 0;
   color: var(--expandable-cards-heading);
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -137,7 +138,7 @@
   max-width: 390px;
   margin: 0 auto;
   color: #ffffff;
-  font-family: 'RobotoFlex', 'Roboto Flex', 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   opacity: 0;
   transform: translateY(12px);
   visibility: hidden;
@@ -164,7 +165,7 @@
 .expandable-image-cards__card-description {
   margin-top: 6px;
   color: #ffffff;
-  font-size: 28px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
@@ -189,8 +190,10 @@
   border-radius: 999px;
   color: var(--expandable-cards-pill-text);
   background: var(--expandable-cards-pill-background);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
   white-space: nowrap;
