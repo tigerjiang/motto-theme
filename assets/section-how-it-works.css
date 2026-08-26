@@ -236,7 +236,7 @@
 }
 
 .hiw-realtime {
-  padding: clamp(8rem, 10vw, 14rem) 0 clamp(7rem, 9vw, 12rem);
+  padding: 6rem 0;
   text-align: center;
 }
 
@@ -415,7 +415,11 @@
   overflow-x: auto;
   padding: 1rem 2rem 2rem 0;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+}
+
+.hiw-learn__track::-webkit-scrollbar {
+  display: none;
 }
 
 .hiw-learn__controls[hidden] {
