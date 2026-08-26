@@ -50,6 +50,7 @@
 
     .header--center-logo .header__left {
       justify-content: flex-start;
+      box-sizing: border-box;
       width: 100%;
       padding-right: clamp(2.4rem, 3vw, 4.8rem);
       min-width: 0;
@@ -57,6 +58,7 @@
 
     .header--center-logo .header__icons {
       justify-content: space-between;
+      box-sizing: border-box;
       width: 100%;
       padding-left: clamp(2.4rem, 3vw, 4.8rem);
       margin-left: 0;
@@ -70,6 +72,22 @@
 
     .header--center-logo .header__inline-menu--left .list-menu--inline {
       justify-content: space-between;
+    }
+
+    .header--center-logo .header__inline-menu--right,
+    .header--center-logo .header__inline-menu--right .list-menu--inline,
+    .header--center-logo .header__icons-wrapper {
+      display: contents;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .header--center-logo .header__left {
+      padding-right: 15rem;
+    }
+
+    .header--center-logo .header__icons {
+      padding-left: 15rem;
     }
   }
 
