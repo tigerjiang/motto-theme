@@ -10,7 +10,7 @@
 {
   "current": {
     "color_scheme": "light",
-    "dark_mode_toggle": true,
+    "dark_mode_toggle": false,
     "type_header_font": "dm_sans_n4",
     "type_header_font_card": "dm_sans_n5",
     "type_text_font_card": "dm_sans_n4",
