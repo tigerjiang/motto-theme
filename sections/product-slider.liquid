@@ -13,6 +13,34 @@
   .carousel_change-postion_next, .carousel_change-postion_next-2, .carousel_change-postion_prev {
   	transition: transform {{ section.settings.slideshow_speed }}s, padding {{ section.settings.slideshow_speed }}s;
   }
+
+  #shopify-section-{{ section.id }} .product-card .card__title,
+  #shopify-section-{{ section.id }} .product-card .card__title a {
+    color: #13294b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  #shopify-section-{{ section.id }} .product-card .price,
+  #shopify-section-{{ section.id }} .product-card .price-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  #shopify-section-{{ section.id }} .product-card .price__regular .price-item--regular,
+  #shopify-section-{{ section.id }} .product-card .price__sale .price-item--sale {
+    color: #13294b;
+  }
+
+  #shopify-section-{{ section.id }} .product-card .price__compare .price-item--regular {
+    color: #6e6e73;
+    text-decoration-color: #6e6e73;
+  }
 {% endstyle %}
 
 {% liquid
