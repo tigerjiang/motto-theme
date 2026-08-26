@@ -9,6 +9,15 @@
     padding-bottom: 0;
   }
 
+  #shopify-section-{{ section.id }} .collections-list__item-title--inner,
+  #shopify-section-{{ section.id }} .collections-list__link {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+
 {%- endstyle -%}
 
 {% liquid
@@ -50,6 +59,14 @@
             assign collection_image = block.settings.image
           else
             assign collection_image = block.settings.collection.featured_image
+          endif
+
+          assign collection_title = block.settings.custom_title | strip
+          if collection_title == blank
+            assign collection_title = block.settings.collection.title
+          endif
+          if collection_title == blank
+            assign collection_title = 'general.card.collection_name' | t
           endif
         %}
         {% style %}
@@ -122,15 +139,15 @@
                   <a
                     href="{{ block.settings.collection.url }}"
                     class="collections-list__link"
-                    aria-label="{{ block.settings.collection.title }}"
+                    aria-label="{{ collection_title | escape }}"
                   >
                     <div class="{{ section.settings.content-align }}">
-                      {{ block.settings.collection.title }}
+                      {{ collection_title | escape }}
                     </div>
                   </a>
                 {% else %}
                   <div class="{{ section.settings.content-align }}">
-                    {{- 'general.card.collection_name' | t -}}
+                    {{ collection_title | escape }}
                   </div>
                 {% endif %}
               </{{ collection_heading_tag }}>
@@ -532,6 +549,12 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collections-list.blocks.settings.collection.label"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom name",
+          "info": "Leave blank to use the collection title."
         },
         {
           "type": "color_scheme",
