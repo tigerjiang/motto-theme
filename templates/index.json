@@ -15,7 +15,7 @@
         "slideshow_item_Dj7yai": {
           "type": "slideshow_item",
           "settings": {
-            "desktop_image": "shopify://shop_images/heroOvenoncounter1920X1080.png",
+            "desktop_image": "shopify://shop_images/2025-11-13_JZ0556.jpg",
             "mobile_image": "shopify://shop_images/hero-ovenoncounter-mobile_7082e74e-1d7d-4c3a-9abc-a63b0f34b394.png",
             "color_scheme": "",
             "heading": "Eat Better. Think Less.",
@@ -181,6 +181,7 @@
           "settings": {
             "collection": "shop-all",
             "custom_title": "Shop Grills",
+            "custom_link": "",
             "color_scheme": "",
             "image": "shopify://shop_images/img-zelosbypool-720x720.png",
             "image_has_container": false,
@@ -194,6 +195,7 @@
           "settings": {
             "collection": "shop-all",
             "custom_title": "Shop Oven",
+            "custom_link": "",
             "color_scheme": "",
             "image": "shopify://shop_images/img-ovenondarkcounter-720x720.png",
             "image_has_container": false,
