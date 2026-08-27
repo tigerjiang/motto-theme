@@ -19,7 +19,7 @@
         "image": "shopify://shop_images/bg-howitworkshero.png",
         "mobile_image": "shopify://shop_images/image-mobile-howitworkshero.png",
         "image_position": "center",
-        "overlay_opacity": 45,
+        "overlay_opacity": 0,
         "eyebrow": "AI COOKING",
         "heading": "Cooking Made Simpler",
         "text": "<p>Brisk It makes your cooking experience simpler with the power of AI.</p>",

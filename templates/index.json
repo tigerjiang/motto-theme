@@ -437,7 +437,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/smartcookingPlatedfood720X720.png",
-            "badge": "AI GENERATED, PERSONALIZED RECIPES",
+            "badge": "AI-GENERATED, PERSONALIZED RECIPES",
             "badge_style": "primary",
             "subheading": "",
             "text": "Say goodbye to recipe ruts and generic searches. Our AI learns your preferences and suggests unique, tailored dishes that evolve with your taste. Simply share a craving, a main ingredient, or even a photo, and receive a custom recipe designed specifically for you and your equipment, making every meal an exciting new discovery."
