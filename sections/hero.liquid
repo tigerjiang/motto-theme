@@ -5,6 +5,14 @@
   <script src="{{ 'hero.js' | asset_url }}" defer="defer"></script>
 {% endif %}
 
+{%- style -%}
+  #shopify-section-{{ section.id }} .hero {
+    --hero-eyebrow-color: {{ section.settings.eyebrow_color }};
+    --hero-title-color: {{ section.settings.title_color }};
+    --hero-text-color: {{ section.settings.text_color }};
+  }
+{%- endstyle -%}
+
 {%- render 'hero', mod_class: 'hero--title-large' -%}
 
 {% schema %}
@@ -51,14 +59,32 @@
       "label": "Eyebrow"
     },
     {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#E87928"
+    },
+    {
       "type": "inline_richtext",
       "id": "title",
       "label": "Title"
     },
     {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#13294B"
+    },
+    {
       "type": "richtext",
       "id": "text",
       "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
     },
     {
       "type": "select",
