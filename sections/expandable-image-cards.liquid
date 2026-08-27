@@ -9,6 +9,10 @@
     --expandable-cards-pill-background: {{ section.settings.label_background | color_modify: 'alpha', 0.5 }};
     --expandable-cards-pill-text: {{ section.settings.label_color }};
   }
+
+  #shopify-section-{{ section.id }} .expandable-image-cards__eyebrow {
+    font-size: 16px;
+  }
 {%- endstyle -%}
 
 <expandable-image-cards class="expandable-image-cards" data-default-index="0">
