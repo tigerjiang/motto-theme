@@ -1770,6 +1770,7 @@ deferred-media {
 .button--secondary:hover,
 .customer .button--secondary:hover {
   background-color: rgb(var(--color-button-secondary-background-hover));
+  color: rgb(var(--color-button-secondary-text-hover));
 }
 .button--secondary.dot_active:hover,
 .customer .button--secondary.dot_active:hover {
@@ -1795,6 +1796,7 @@ deferred-media {
 .button--tertiary:hover,
 .customer .button--tertiary:hover {
   background-color: rgb(var(--color-button-tertiary-background-hover));
+  color: rgb(var(--color-button-tertiary-text-hover));
 }
 .button--tertiary.dot_active:hover,
 .customer .button--tertiary.dot_active:hover {
@@ -1820,8 +1822,6 @@ deferred-media {
   gap: 0.8rem;
   border: 0;
   border-radius: 0.7rem;
-  background: #e03813;
-  color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-style: normal;
@@ -1844,17 +1844,6 @@ deferred-media {
   padding: 1.4rem;
 }
 
-.button--primary:focus,
-.button--primary:hover,
-.button--secondary:hover,
-.button--tertiary:hover,
-.customer .button--primary:focus,
-.customer .button--primary:hover,
-.customer .button--secondary:hover,
-.customer .button--tertiary:hover {
-  background: #c93211;
-  color: #ffffff;
-}
 .button--arrow,
 .customer .button--arrow {
   display: inline-flex;

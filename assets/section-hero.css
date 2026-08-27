@@ -117,20 +117,29 @@ body:has(main > .section-hero:first-child)
 
 .section-hero .hero__title {
   margin: 0;
-  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 8rem;
   font-weight: 700;
   line-height: 1;
 }
 
+.section-hero .hero__title,
+.section-hero .hero__title * {
+  color: rgb(var(--color-foreground-title));
+}
+
 .section-hero .hero__body {
   max-width: 85.2rem;
   margin: 1.5rem 0;
-  color: rgb(var(--color-foreground));
   font-family: 'Roboto', sans-serif;
   font-size: 2.4rem;
   line-height: 3.6rem;
+}
+
+.section-hero .hero__body,
+.section-hero .hero__body p,
+.section-hero .hero__body a {
+  color: rgb(var(--color-foreground));
 }
 
 .section-hero .hero__body p {
