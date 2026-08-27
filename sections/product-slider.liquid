@@ -16,7 +16,7 @@
 
   #shopify-section-{{ section.id }} .product-card .card__title,
   #shopify-section-{{ section.id }} .product-card .card__title a {
-    color: #13294b;
+    color: rgb(var(--color-foreground-title));
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     font-style: normal;
@@ -34,12 +34,12 @@
 
   #shopify-section-{{ section.id }} .product-card .price__regular .price-item--regular,
   #shopify-section-{{ section.id }} .product-card .price__sale .price-item--sale {
-    color: #13294b;
+    color: rgb(var(--color-foreground));
   }
 
   #shopify-section-{{ section.id }} .product-card .price__compare .price-item--regular {
-    color: #6e6e73;
-    text-decoration-color: #6e6e73;
+    color: rgb(var(--color-foreground-secondary));
+    text-decoration-color: rgb(var(--color-foreground-secondary));
   }
 {% endstyle %}
 

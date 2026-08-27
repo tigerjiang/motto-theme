@@ -50,7 +50,7 @@
     }
 
       .form-field-row label {
-        color: rgb(41,48,61);
+        color: rgb(var(--color-foreground));
         font-family: 'Roboto' !important;
         font-weight:400 !important;
         font-size: 14px;
@@ -67,10 +67,10 @@
 
       .form-field__input {
         font-size: 14px;
-        color: rgb(41,48,61);
+        color: rgb(var(--color-foreground));
         padding: 1rem 0.5rem 0.5rem;
         border: none;
-        border-bottom: 1px solid #ccc; /* 设置下划线颜色为灰色 */
+        border-bottom: 1px solid rgb(var(--color-border));
         width: 100%;
         box-sizing: border-box;
        background-color: transparent; /* 使用transparent来去除背景色 */
@@ -80,9 +80,9 @@
 
       .form-area__input {
         font-size: 14px;
-        color: rgb(41,48,61);
+        color: rgb(var(--color-foreground));
         padding: 1rem 0.5rem 0.5rem;
-        border: 1px solid #ccc;
+        border: 1px solid rgb(var(--color-border));
         border-radius: 4px;
         width: 100%;
         box-sizing: border-box;
@@ -92,8 +92,8 @@
 
       .form-area__input:focus,
       .form-area__input:not(:placeholder-shown) {
-        border-color:rgb(41,48,61);
-        box-shadow: 0 0 1px rgb(41,48,61);
+        border-color: rgb(var(--color-foreground));
+        box-shadow: 0 0 1px rgb(var(--color-foreground));
       }
 
       .form-field__label_title {
@@ -104,13 +104,13 @@
         font-size: 14px;
         pointer-events: none;
         transition: all 0.3s;
-        color: rgb(41,48,61);
+        color: rgb(var(--color-foreground));
         font-family: 'Roboto' !important;
         font-weight:400 !important;
       }
 
       .__label_title {
-        color: rgb(41,48,61);
+        color: rgb(var(--color-foreground));
         font-family: 'Roboto' !important;
         font-weight:400 !important;
         font-size: 16px;
@@ -126,7 +126,7 @@
 
       .form-field__input:focus,
       .form-field__input:not(:placeholder-shown) {
-        border-color: rgb(41, 48, 61);
+        border-color: rgb(var(--color-foreground));
       }
 
       .form-field__input:focus + .form-field__label_title,
@@ -134,7 +134,7 @@
         top: 0;
         transform: translateY(-100%);
         font-size: 12px;
-        color: rgb(41,48,61);
+        color: rgb(var(--color-foreground));
       }
       /* 使多选下拉列表更美观 */
       .form-field__input[multiple] {
@@ -158,12 +158,12 @@
       }
 {%- endstyle -%}
 <section
-  class="section-contact"
+  class="section-contact color-{{ section.settings.color_scheme }} background"
   style="background-size: cover;background-repeat: no-repeat;background-position: top center;"
 >
   <div class="shell">
     <div
-      style="font-size: 30px;width: 100%;text-align: left;font-family:'Roboto' !important;color: rgb(41,48,61)"
+      style="font-size: 30px;width: 100%;text-align: left;font-family:'Roboto' !important;color: rgb(var(--color-foreground-title))"
     >
       Contact Us
     </div>
@@ -173,7 +173,7 @@
       </div>
     {%- endif -%}
     <div
-      style="font-size:14px;width:100%;text-align:right;margin-top:24px;font-family:'Roboto' !important;color:rgb(41,48,61)"
+      style="font-size:14px;width:100%;text-align:right;margin-top:24px;font-family:'Roboto' !important;color:rgb(var(--color-foreground))"
     >
       Required*
     </div>
@@ -539,6 +539,12 @@
   "name": "Contact Us",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "Color scheme"
+    },
     {
       "type": "richtext",
       "id": "description",

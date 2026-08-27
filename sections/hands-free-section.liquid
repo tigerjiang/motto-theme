@@ -1,6 +1,6 @@
 {{ 'section-how-it-works.css' | asset_url | stylesheet_tag }}
 
-<section class="hiw-section hiw-hands">
+<section class="hiw-section hiw-hands color-{{ section.settings.color_scheme }} background">
   <div class="hiw-container">
     <h2 class="hiw-title hiw-hands__title">{{ section.settings.heading | escape }}</h2>
     <ol class="hiw-hands__grid">
@@ -27,7 +27,10 @@
   "tag": "section",
   "class": "hiw-hands-section",
   "max_blocks": 3,
-  "settings": [{ "type": "text", "id": "heading", "label": "Heading", "default": "Simple, effortless, automated, and hands-free." }],
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Simple, effortless, automated, and hands-free." }
+  ],
   "blocks": [{
     "type": "step", "name": "Step",
     "settings": [

@@ -17,7 +17,7 @@
 
 {%- if hero_settings.video != blank or desktop_image != blank -%}
   <div
-    class="hero{% if mod_class %} {{ mod_class }}{% endif %}"
+    class="hero{% if mod_class %} {{ mod_class }}{% endif %} color-{{ hero_settings.color_scheme }} background"
     data-header-overlay="true"
   >
     <div class="hero__background image-fit" aria-hidden="true">

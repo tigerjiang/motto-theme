@@ -1,6 +1,6 @@
 {{ 'section-how-it-works.css' | asset_url | stylesheet_tag }}
 
-<section class="hiw-section hiw-learn">
+<section class="hiw-section hiw-learn color-{{ section.settings.color_scheme }} background">
   <div class="hiw-container hiw-learn__layout">
     <div class="hiw-learn__copy">
       <h2 class="hiw-title">{{ section.settings.heading | escape }}</h2>
@@ -133,6 +133,7 @@
   "class": "hiw-learn-section",
   "max_blocks": 8,
   "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Brisk It AI Learns With Every Cook." },
     { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Brisk It AI learns your preferences and cooking behavior, optimizing future cooks and creating new, relevant recipes for you to try.</p>" },
     { "type": "text", "id": "slider_label", "label": "Slider accessibility label", "default": "AI cooking insights" }

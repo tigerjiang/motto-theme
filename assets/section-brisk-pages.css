@@ -2,8 +2,8 @@
   position: relative;
   min-height: 520px;
   overflow: hidden;
-  color: #fff;
-  background: #13294b;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
 }
 
 .brisk-page-hero__media,
@@ -14,7 +14,7 @@
 
 .brisk-page-hero__media::after {
   content: '';
-  background: linear-gradient(90deg, rgba(19, 41, 75, 0.78), rgba(19, 41, 75, 0.12));
+  background: linear-gradient(90deg, rgba(var(--color-overlay), 0.78), rgba(var(--color-overlay), 0.12));
 }
 
 .brisk-page-hero__media picture,
@@ -76,8 +76,8 @@
 .brisk-manuals {
   min-height: 70vh;
   padding: 64px 40px 80px;
-  color: #13294b;
-  background: #f5f6f8;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
 }
 
 .brisk-manuals__inner,
@@ -98,7 +98,7 @@
 .brisk-manuals__description {
   max-width: 920px;
   margin: 0 auto 40px;
-  color: #29303d;
+  color: rgb(var(--color-foreground-secondary));
   font-size: 1.6rem;
   line-height: 1.55;
   text-align: center;
@@ -117,9 +117,9 @@
   align-items: center;
   gap: 14px;
   padding: 30px 20px;
-  background: #fff;
+  background: rgb(var(--color-background-secondary));
   border-radius: 20px;
-  box-shadow: 0 8px 28px rgba(19, 41, 75, 0.08);
+  box-shadow: 0 8px 28px rgba(var(--color-foreground), 0.08);
 }
 
 .brisk-manual-card__image {
@@ -133,7 +133,7 @@
 
 .brisk-manual-card__title {
   margin: 0;
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-size: 2rem;
   line-height: 1.25;
   text-align: center;
@@ -142,7 +142,7 @@
 .brisk-manual-card__link {
   position: relative;
   padding-left: 18px;
-  color: #eb3300;
+  color: rgb(var(--color-accent));
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
@@ -159,8 +159,8 @@
 
 .brisk-faq {
   padding: 72px 40px 90px;
-  color: #13294b;
-  background: #fff;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
 }
 
 .brisk-faq__heading {
@@ -172,11 +172,11 @@
 }
 
 .brisk-faq__item {
-  border-top: 1px solid rgba(19, 41, 75, 0.25);
+  border-top: 1px solid rgba(var(--color-border), 0.25);
 }
 
 .brisk-faq__item:last-child {
-  border-bottom: 1px solid rgba(19, 41, 75, 0.25);
+  border-bottom: 1px solid rgba(var(--color-border), 0.25);
 }
 
 .brisk-faq__item summary {
@@ -209,7 +209,7 @@
 .brisk-faq__answer {
   max-width: 900px;
   padding: 0 0 28px;
-  color: #29303d;
+  color: rgb(var(--color-foreground-secondary));
   font-size: 1.6rem;
   line-height: 1.65;
 }

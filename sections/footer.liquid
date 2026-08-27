@@ -2,7 +2,7 @@
 
 {%- assign footer_settings = section.settings -%}
 
-<footer class="brisk-footer">
+<footer class="brisk-footer color-{{ section.settings.color_scheme }} background">
   <div class="brisk-footer__wrapper">
     <div class="brisk-footer__logo">
       <a href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
@@ -166,6 +166,12 @@
   "name": "Brisk footer",
   "class": "section-brisk-footer",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "Color scheme"
+    },
     {
       "type": "text",
       "id": "title",

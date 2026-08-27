@@ -1,6 +1,6 @@
 {{ 'section-how-it-works.css' | asset_url | stylesheet_tag }}
 
-<section class="hiw-section hiw-realtime">
+<section class="hiw-section hiw-realtime color-{{ section.settings.color_scheme }} background">
   <div class="hiw-container">
     {%- if section.settings.eyebrow != blank -%}<p class="hiw-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
     <h2 class="hiw-title">{{ section.settings.heading | escape }}</h2>
@@ -39,6 +39,7 @@
   "class": "hiw-realtime-section",
   "max_blocks": 2,
   "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "WIFI CONTROL" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Real-Time Precision. Zero Effort." },
     { "type": "text", "id": "subheading", "label": "Subheading", "default": "Real-time monitoring, adjusting, and control." },

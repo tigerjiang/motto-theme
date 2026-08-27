@@ -81,7 +81,7 @@
   display: flex;
   align-items: center;
   padding: 8rem 0;
-  background: #fefbf7;
+  background: rgb(var(--color-background));
 }
 
 .template-product .blockquote .container {
@@ -103,7 +103,7 @@
 
 .template-product .blockquote .blockquote-section-header .section-header__subtitle {
   margin: 0;
-  color: #e87928;
+  color: rgb(var(--color-accent));
   font-family: "Roboto", sans-serif;
   font-synthesis: none;
   font-size: 16px;
@@ -120,7 +120,7 @@
   display: block;
   width: 100%;
   max-width: 88rem;
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: "Roboto", sans-serif;
   font-synthesis: none;
   font-size: 44px;

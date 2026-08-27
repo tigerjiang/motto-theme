@@ -1,8 +1,4 @@
 .smarter-every-day {
-  --smarter-background-start: #f7f2ee;
-  --smarter-background-end: #f6f3f1;
-  --smarter-accent: #e87928;
-  --smarter-text: #13294b;
   background: linear-gradient(90deg, var(--smarter-background-start) 0%, var(--smarter-background-end) 100%);
 }
 
@@ -89,8 +85,9 @@
 
 .smarter-every-day__placeholder {
   min-height: 360px;
-  color: rgba(19, 41, 75, 0.18);
-  background: rgba(255, 255, 255, 0.32);
+  color: var(--smarter-text);
+  background: var(--smarter-background-end);
+  opacity: 0.18;
 }
 
 @media screen and (max-width: 1199px) {

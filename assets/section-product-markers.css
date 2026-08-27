@@ -16,7 +16,7 @@
   z-index: 2;
   width: calc(100% - 4rem);
   margin: 0;
-  color: #ffffff;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', 'Roboto Flex', sans-serif;
   font-size: clamp(2.8rem, 4vw, 4.8rem);
   font-weight: 700;

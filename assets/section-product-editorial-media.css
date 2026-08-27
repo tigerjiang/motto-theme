@@ -16,7 +16,7 @@
   place-items: center;
   min-height: 44rem;
   padding: 6.4rem 3.2rem;
-  background-color: #fff0dc;
+  background-color: rgb(var(--color-background-secondary));
 }
 
 .product-editorial__image-frame {

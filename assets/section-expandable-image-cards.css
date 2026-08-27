@@ -1,9 +1,4 @@
 .expandable-image-cards {
-  --expandable-cards-background: #fbf9f6;
-  --expandable-cards-heading: #13294b;
-  --expandable-cards-accent: #e65c00;
-  --expandable-cards-pill-background: rgba(255, 248, 234, 0.5);
-  --expandable-cards-pill-text: #13294b;
   display: block;
   background: var(--expandable-cards-background);
 }
@@ -108,8 +103,9 @@
 }
 
 .expandable-image-cards__placeholder {
-  color: rgba(19, 41, 75, 0.2);
-  background: #e9e5df;
+  color: var(--expandable-cards-heading);
+  background: var(--expandable-cards-background);
+  opacity: 0.2;
 }
 
 .expandable-image-cards__overlay {
@@ -137,7 +133,7 @@
   width: auto;
   max-width: 390px;
   margin: 0 auto;
-  color: #ffffff;
+  color: var(--expandable-cards-card-text);
   font-family: 'Roboto', sans-serif;
   opacity: 0;
   transform: translateY(12px);
@@ -153,7 +149,7 @@
 }
 
 .expandable-image-cards__card-title {
-  color: #ffffff;
+  color: var(--expandable-cards-card-text);
   font-size: 34px;
   font-style: normal;
   font-weight: 600;
@@ -164,7 +160,7 @@
 
 .expandable-image-cards__card-description {
   margin-top: 6px;
-  color: #ffffff;
+  color: var(--expandable-cards-card-text);
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
@@ -173,7 +169,7 @@
 }
 
 .expandable-image-cards__card-description p {
-  color: #ffffff;
+  color: var(--expandable-cards-card-text);
 }
 
 .expandable-image-cards__label {
@@ -302,7 +298,7 @@
     width: calc(100vw - 68px);
     height: 318px;
     border-radius: 8px;
-    background: #ffffff;
+    background: var(--expandable-cards-background);
     cursor: grab;
     scroll-snap-align: start;
     scroll-snap-stop: always;

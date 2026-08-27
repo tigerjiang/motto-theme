@@ -1,6 +1,6 @@
 {{ 'section-how-it-works.css' | asset_url | stylesheet_tag }}
 
-<section class="hiw-section hiw-split">
+<section class="hiw-section hiw-split color-{{ section.settings.color_scheme }} background">
   <div class="hiw-container hiw-split__grid">
     <div class="hiw-split__content">
       <h2 class="hiw-title">{{ section.settings.heading | escape | newline_to_br }}</h2>
@@ -22,6 +22,7 @@
   "tag": "section",
   "class": "hiw-juggling-section",
   "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Juggling life? AI adapts, so you don’t have to." },
     { "type": "richtext", "id": "text", "label": "Text", "default": "<p>AI is constantly monitoring your grill and adapting to unexpected events to make sure that nothing is overcooked or ruined.</p>" },
     { "type": "image_picker", "id": "image", "label": "Image" }

@@ -1,6 +1,6 @@
 {{ 'section-how-it-works.css' | asset_url | stylesheet_tag }}
 
-<section class="hiw-section hiw-enjoy">
+<section class="hiw-section hiw-enjoy color-{{ section.settings.color_scheme }} background">
   <div class="hiw-container">
     <h2 class="hiw-title hiw-enjoy__title">{{ section.settings.heading | escape }}</h2>
     <div class="hiw-enjoy__grid">
@@ -34,6 +34,7 @@
   "class": "hiw-enjoy-section",
   "max_blocks": 2,
   "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Enjoy your perfectly cooked flavors—effortless, automated, and hands-free." },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop Now" },
     { "type": "url", "id": "button_link", "label": "Button link" }

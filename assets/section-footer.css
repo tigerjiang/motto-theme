@@ -7,7 +7,7 @@
   position: relative;
   overflow: hidden;
   min-height: 620px;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   font-family: 'Roboto', sans-serif;
 }
 
@@ -69,7 +69,7 @@
 
 .brisk-footer__title {
   margin-bottom: 24px;
-  color: #eb3300;
+  color: rgb(var(--color-accent));
   font-size: 2rem;
   line-height: 1.4;
   font-weight: 400;
@@ -87,7 +87,7 @@
 .brisk-footer__instagram-link {
   display: inline-flex;
   align-items: center;
-  color: #eb3300;
+  color: rgb(var(--color-accent));
   font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
@@ -95,7 +95,7 @@
 }
 
 .brisk-footer__instagram-link:hover {
-  color: #13294b;
+  color: rgb(var(--color-foreground));
 }
 
 .brisk-footer__socials {
@@ -109,17 +109,17 @@
 
 .brisk-footer__socials a {
   display: block;
-  color: #77787c;
+  color: rgb(var(--color-foreground-secondary));
   line-height: 0;
   transition: color 0.25s ease;
 }
 
 .brisk-footer__socials a:hover {
-  color: #eb3300;
+  color: rgb(var(--color-accent));
 }
 
 .brisk-footer__socials li:first-child a {
-  color: #eb3300;
+  color: rgb(var(--color-accent));
 }
 
 .brisk-footer__socials svg {
@@ -149,10 +149,10 @@
   width: 100%;
   min-height: 52px;
   padding: 10px 40px 10px 22px;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #13294b;
+  border-bottom: 1px solid rgb(var(--color-foreground));
   border-radius: 0;
   box-shadow: none;
   font-family: inherit;
@@ -161,13 +161,13 @@
 }
 
 .brisk-footer__field::placeholder {
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   opacity: 1;
 }
 
 .brisk-footer__field:focus {
   outline: 0;
-  border-color: #eb3300;
+  border-color: rgb(var(--color-accent));
 }
 
 .brisk-footer__submit {
@@ -177,7 +177,7 @@
   width: 42px;
   height: 52px;
   padding: 0;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -195,7 +195,7 @@
 
 .brisk-footer__submit:hover,
 .brisk-footer__submit:focus-visible {
-  color: #eb3300;
+  color: rgb(var(--color-accent));
 }
 
 .brisk-footer__form-message {
@@ -229,7 +229,7 @@
 .brisk-footer__category-title {
   display: block;
   margin: 0 0 22px;
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   line-height: 1.2;
@@ -249,7 +249,7 @@
 }
 
 .brisk-footer__category-links a {
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 600;
@@ -260,7 +260,7 @@
 
 .brisk-footer__category-title:hover,
 .brisk-footer__category-links a:hover {
-  color: #eb3300;
+  color: rgb(var(--color-accent));
 }
 
 .brisk-footer__bottom {
@@ -282,7 +282,7 @@
 }
 
 .brisk-footer__nav a {
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
@@ -290,12 +290,12 @@
 }
 
 .brisk-footer__nav a:hover {
-  color: #eb3300;
+  color: rgb(var(--color-accent));
 }
 
 .brisk-footer__copyright {
   margin: 0;
-  color: rgba(19, 41, 75, 0.55);
+  color: rgba(var(--color-foreground), 0.55);
   font-size: 1.2rem;
   line-height: 1.5;
 }

@@ -1,5 +1,5 @@
 .card-list {
-  background-color: #fefbf7;
+  background-color: rgb(var(--color-background));
 }
 
 .card-list__container {
@@ -12,7 +12,7 @@
 }
 
 .card-list .section-header__title {
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 3.2rem;
   font-style: normal;
@@ -322,7 +322,7 @@
 /* Homepage and Product Features typography and card proportions */
 .template-index .card-list .section-header__title,
 .template-product .card-list .section-header__title {
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 44px;
   font-style: normal;
@@ -331,7 +331,7 @@
 
 .template-index .card-list__badge,
 .template-product .card-list__badge {
-  color: #1d1d1f;
+  color: rgb(var(--color-foreground));
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -343,7 +343,7 @@
 .template-index .card-list__text p,
 .template-product .card-list__text,
 .template-product .card-list__text p {
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -355,8 +355,8 @@
   width: 44px !important;
   min-width: 44px !important;
   height: 44px !important;
-  color: #ffffff !important;
-  background: #000000 !important;
+  color: rgb(var(--color-button-text)) !important;
+  background: rgb(var(--color-button)) !important;
   font-family: 'Roboto', sans-serif !important;
   font-size: 16px !important;
   font-style: normal;

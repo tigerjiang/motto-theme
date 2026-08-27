@@ -1,5 +1,5 @@
 .collections-list{
-  background-color: #fefbf7;   
+  background-color: rgb(var(--color-background));
 }
 
 .collections-list .swipe-on-mobile__nav {

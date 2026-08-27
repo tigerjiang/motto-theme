@@ -8,6 +8,7 @@
     --expandable-cards-accent: {{ section.settings.accent_color }};
     --expandable-cards-pill-background: {{ section.settings.label_background | color_modify: 'alpha', 0.5 }};
     --expandable-cards-pill-text: {{ section.settings.label_color }};
+    --expandable-cards-card-text: {{ section.settings.card_text_color }};
   }
 
   #shopify-section-{{ section.id }} .expandable-image-cards__eyebrow {
@@ -159,6 +160,12 @@
       "id": "label_color",
       "label": "Label text",
       "default": "#13294B"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text",
+      "default": "#FFFFFF"
     }
   ],
   "blocks": [

@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   min-height: 48.5vw;
-  background: #010101;
+  background: rgb(var(--color-background));
 }
 
 body:has(main > .section-hero:first-child)
@@ -71,7 +71,7 @@ body:has(main > .section-hero:first-child)
   align-items: flex-start;
   justify-content: flex-end;
   width: 70%;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   text-align: left;
 }
 
@@ -81,7 +81,7 @@ body:has(main > .section-hero:first-child)
 
 .section-hero .hero__eyebrow {
   margin: 0 0 1.6rem;
-  color: #e87928;
+  color: rgb(var(--color-accent));
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: 600;
@@ -117,7 +117,7 @@ body:has(main > .section-hero:first-child)
 
 .section-hero .hero__title {
   margin: 0;
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 8rem;
   font-weight: 700;
@@ -127,7 +127,7 @@ body:has(main > .section-hero:first-child)
 .section-hero .hero__body {
   max-width: 85.2rem;
   margin: 1.5rem 0;
-  color: #fff;
+  color: rgb(var(--color-foreground));
   font-family: 'Roboto', sans-serif;
   font-size: 2.4rem;
   line-height: 3.6rem;

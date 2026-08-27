@@ -1,6 +1,6 @@
 {{- 'section-brisk-pages.css' | asset_url | stylesheet_tag -}}
 
-<section class="brisk-faq">
+<section class="brisk-faq color-{{ section.settings.color_scheme }} background">
   <div class="brisk-faq__inner">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -23,6 +23,9 @@
 {% schema %}
 {
   "name": "FAQ accordions",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" }
+  ],
   "blocks": [
     {
       "type": "title",

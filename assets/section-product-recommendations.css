@@ -140,7 +140,7 @@
   max-width: 176rem;
   margin-inline: auto;
   padding: 4rem 0 10rem;
-  background: #fefbf7;
+  background: rgb(var(--color-background));
 }
 
 .template-product .popular-products--recommendations > .container,
@@ -155,7 +155,7 @@
 }
 
 .template-product .popular-products--recommendations .section-header__title {
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: "Roboto", sans-serif;
   font-size: 4.8rem;
   font-weight: 700;
@@ -171,7 +171,7 @@
 .template-product .popular-products--recommendations .product-card .card > .media {
   overflow: hidden;
   border-radius: 1.2rem;
-  background: #f7f4f1;
+  background: rgb(var(--color-background-secondary));
 }
 
 .template-product .popular-products--recommendations .product-card .card > .media img {
@@ -180,12 +180,12 @@
 
 .template-product .popular-products--recommendations .card-information {
   padding-top: 1.6rem;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
 }
 
 .template-product .popular-products--recommendations .card__title {
   margin-top: 0;
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
@@ -195,7 +195,7 @@
 
 .template-product .popular-products--recommendations .card-information-block .price {
   margin-top: 0.4rem;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
   line-height: 1.3;
@@ -206,7 +206,7 @@
   align-items: center;
   gap: 0.6rem;
   margin-top: 0.4rem;
-  color: #6d7178;
+  color: rgb(var(--color-foreground-secondary));
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 1;
@@ -234,8 +234,8 @@
   padding: 1.6rem 3.2rem;
   border-radius: 999px;
   clip-path: none;
-  background: #ffc400;
-  color: #13294b;
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
   font-size: 1.4rem;
   font-weight: 700;
 }

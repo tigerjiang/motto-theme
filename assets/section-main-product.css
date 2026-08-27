@@ -107,7 +107,7 @@
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.06);
   z-index: 11;
   transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   font-family: "Roboto", sans-serif;
 }
 @media (min-width: 990px) {
@@ -140,7 +140,7 @@
   border: none;
 }
 .product__media_navigation-title {
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.2;
@@ -173,7 +173,7 @@
 .product__media_navigation-list a {
   list-style: none;
   text-decoration: none;
-  color: #13294b;
+  color: rgb(var(--color-foreground));
 }
 .product__media_navigation-list li {
   position: relative;
@@ -208,8 +208,8 @@
     0 100%,
     0 1.4rem
   );
-  background: #ef3b0b;
-  color: #ffffff;
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
@@ -220,8 +220,8 @@
 
 .product__media_navigation .product-form__submit:hover,
 .product__media_navigation .product-form__submit:focus {
-  background: #d9320a;
-  color: #ffffff;
+  background: rgb(var(--color-button-hover));
+  color: rgb(var(--color-button-text-hover));
 }
 .product__outer {
   display: flex;
@@ -1097,7 +1097,7 @@
   gap: 0.6rem;
 }
 .product .text_with_icon__item_text {
-  color: #161616;
+  color: rgb(var(--color-foreground));
 }
 .product .text_with_icon__item svg,
 .product .text_with_icon__item img {
@@ -2769,12 +2769,12 @@ noscript .product__media img {
 }
 
 .main-product .price-wrapper .price-item--sale {
-  color: #eb3300;
+  color: rgb(var(--color-accent));
 }
 
 .main-product .price-wrapper .price-item--regular {
-  color: #6e6e73;
-  text-decoration-color: #6e6e73;
+  color: rgb(var(--color-foreground-secondary));
+  text-decoration-color: rgb(var(--color-foreground-secondary));
 }
 
 .main-product .product__inventory-inner {
@@ -2886,14 +2886,14 @@ noscript .product__media img {
 .main-product .product-offer-banner {
   margin: 2rem 0;
   padding: 2rem;
-  background-color: #fff0d8;
+  background-color: rgb(var(--color-background-secondary));
   border-radius: 0.6rem;
 }
 
 .main-product .installment-wrapper {
   min-height: 12rem;
   margin: 0 0 3.2rem;
-   background-color: #ffffff;
+  background-color: rgb(var(--color-background));
   padding: 1.6rem;
   border: 0.1rem solid rgb(var(--color-border));
 }
@@ -2960,13 +2960,13 @@ noscript .product__media img {
   align-items: center;
   gap: 0.4rem;
   margin: 1.2rem 0 0;
-  color: #58595a;
+  color: rgb(var(--color-foreground-secondary));
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
 .main-product .installment-plan__payment strong {
-  color: #58595a;
+  color: rgb(var(--color-foreground-secondary));
 }
 
 .main-product .installment-plan__provider {

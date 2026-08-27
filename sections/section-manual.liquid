@@ -1,6 +1,6 @@
 {{- 'section-brisk-pages.css' | asset_url | stylesheet_tag -}}
 
-<section class="brisk-manuals">
+<section class="brisk-manuals color-{{ section.settings.color_scheme }} background">
   <div class="brisk-manuals__inner">
     {%- if section.settings.title != blank -%}
       <h1 class="brisk-manuals__title">{{ section.settings.title }}</h1>
@@ -44,6 +44,7 @@
 {
   "name": "Manual collection",
   "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
     { "type": "text", "id": "title", "label": "Title" },
     { "type": "textarea", "id": "desc", "label": "Description" }
   ],

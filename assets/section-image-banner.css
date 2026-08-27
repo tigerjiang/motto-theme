@@ -135,7 +135,7 @@
   z-index: 3;
 }
 .template-index .image-banner__heading {
-  color: #fff;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 4.8rem;
   font-weight: 700;

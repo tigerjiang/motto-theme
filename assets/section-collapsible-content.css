@@ -207,7 +207,7 @@
 }
 
 .template-product .collapsible-content {
-  background: #fefbf7;
+  background: rgb(var(--color-background));
 }
 
 .template-product .collapsible-content__wrapper.column-direction .collapsible-content-main-container {
@@ -236,7 +236,7 @@
 .template-product .collapsible-content__toggle-group::before {
   content: counter(product-detail);
   flex: 0 0 10rem;
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   font-weight: 500;
@@ -244,7 +244,7 @@
 }
 
 .template-product .collapsible-content__question {
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   font-weight: 500;
@@ -254,8 +254,8 @@
 .template-product .collapsible-content__icon {
   width: 4rem;
   height: 4rem;
-  background-color: #424242;
-  color: #ffffff;
+  background-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
 }
 
 .template-product .collapsible-content__icon .icon-plus,
@@ -290,7 +290,7 @@
 
 .template-product .collapsible-content__media-heading {
   margin-bottom: 0.8rem;
-  color: #13294e;
+  color: rgb(var(--color-foreground-title));
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
@@ -299,7 +299,7 @@
 
 .template-product .collapsible-content__media-text,
 .template-product .collapsible-content__media-text p {
-  color: #58595a;
+  color: rgb(var(--color-foreground-secondary));
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;

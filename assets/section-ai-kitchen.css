@@ -1,8 +1,4 @@
 .ai-kitchen {
-  --ai-kitchen-accent: #e87928;
-  --ai-kitchen-step-color: #666666;
-  --ai-kitchen-heading-color: #13294b;
-  --ai-kitchen-background: #fbf9f6;
   background: var(--ai-kitchen-background);
 }
 

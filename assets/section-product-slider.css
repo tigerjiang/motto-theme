@@ -24,7 +24,7 @@
 .popular-products.popular-products--featured {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background: #fefbf7;
+  background: rgb(var(--color-background));
 }
 
 .popular-products--featured .popular-products__header {
@@ -42,7 +42,7 @@
 }
 
 .popular-products--featured .popular-products__eyebrow {
-  color: #e87928;
+  color: rgb(var(--color-accent));
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.2;
@@ -51,7 +51,7 @@
 }
 
 .popular-products--featured .popular-products__heading {
-  color: #13294b;
+  color: rgb(var(--color-foreground-title));
   font-size: 4.8rem;
   font-weight: 700;
   line-height: 1.15;
@@ -60,7 +60,7 @@
 }
 
 .popular-products--featured .popular-products__description {
-  color: #13294b;
+  color: rgb(var(--color-foreground));
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.4rem;
