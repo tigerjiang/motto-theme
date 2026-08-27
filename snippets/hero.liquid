@@ -7,33 +7,11 @@
   assign hero_settings = mod_section.settings
   assign desktop_image = mod_image | default: hero_settings.image_desktop | default: hero_settings.image_mobile
   assign mobile_image = hero_settings.image_mobile | default: desktop_image
-  assign content_block = mod_section.blocks.first
-
-  if content_block != blank
-    assign content_settings = content_block.settings
-    assign hero_title = mod_title | default: content_settings.heading
-    assign hero_text = mod_text | default: content_settings.text
-    assign button_first_text = content_settings.button_label
-    assign button_first_url = content_settings.button_link
-    assign button_first_style = content_settings.button_style
-    assign button_first_dot = content_settings.button_dot
-    assign button_second_text = content_settings.button_label_2
-    assign button_second_url = content_settings.button_link_2
-    assign button_second_style = content_settings.button_style_2
-    assign button_second_dot = content_settings.button_dot_2
-    assign text_width = content_settings.text_width
-  else
-    assign hero_title = mod_title | default: hero_settings.title
-    assign hero_text = mod_text | default: hero_settings.text
-    assign button_first_text = hero_settings.button_first_text
-    assign button_first_url = hero_settings.button_first_url
-    assign button_first_style = 'primary'
-    assign button_second_text = hero_settings.button_second_text
-    assign button_second_url = hero_settings.button_second_url
-    assign button_second_style = 'secondary'
-    assign text_width = 'large'
-  endif
-
+  assign hero_title = mod_title | default: hero_settings.title
+  assign hero_text = mod_text | default: hero_settings.text
+  assign button_first_style = hero_settings.button_first_style | default: 'primary'
+  assign button_second_style = hero_settings.button_second_style | default: 'secondary'
+  assign text_width = hero_settings.text_width | default: 'large'
   assign heading_tag = hero_settings.heading_tag | default: 'h1'
 -%}
 
@@ -88,16 +66,15 @@
 
     {%- if hero_title != blank
       or hero_text != blank
-      or button_first_text != blank
-      or button_second_text != blank
+      or hero_settings.button_first_text != blank
+      or hero_settings.button_second_text != blank
       or hero_settings.badge != blank
-      or content_settings.eyebrow != blank
+      or hero_settings.eyebrow != blank
     -%}
       <div class="hero__inner hero2__inner">
         <div class="hero__shell">
           <div
             class="hero__content hero__content--left hero__content--{{ text_width }}{% if hero_settings.text_animation %} hero__content--animation{% endif %}"
-            {% if content_block != blank %}{{ content_block.shopify_attributes }}{% endif %}
           >
             {%- if hero_settings.badge != blank -%}
               <div class="hero__badge">
@@ -113,9 +90,9 @@
               </div>
             {%- endif -%}
 
-            {%- if content_settings.eyebrow != blank -%}
+            {%- if hero_settings.eyebrow != blank -%}
               <p class="hero__eyebrow{% if hero_settings.text_animation %} js-fade{% endif %}">
-                {{ content_settings.eyebrow | escape }}
+                {{ hero_settings.eyebrow | escape }}
               </p>
             {%- endif -%}
 
@@ -136,25 +113,25 @@
               </div>
             {%- endif -%}
 
-            {%- if button_first_text != blank or button_second_text != blank -%}
+            {%- if hero_settings.button_first_text != blank or hero_settings.button_second_text != blank -%}
               <div class="hero__footer{% if hero_settings.text_animation %} js-fade{% endif %}">
                 <div class="hero__actions">
-                  {%- if button_first_text != blank -%}
+                  {%- if hero_settings.button_first_text != blank -%}
                     {% render 'button',
-                      btn_label: button_first_text,
-                      btn_link: button_first_url,
+                      btn_label: hero_settings.button_first_text,
+                      btn_link: hero_settings.button_first_url,
                       btn_style: button_first_style,
-                      button_dot: button_first_dot,
+                      button_dot: hero_settings.button_first_dot,
                       add_classes: 'hero__button hero__button--first focus-inset'
                     %}
                   {%- endif -%}
 
-                  {%- if button_second_text != blank -%}
+                  {%- if hero_settings.button_second_text != blank -%}
                     {% render 'button',
-                      btn_label: button_second_text,
-                      btn_link: button_second_url,
+                      btn_label: hero_settings.button_second_text,
+                      btn_link: hero_settings.button_second_url,
                       btn_style: button_second_style,
-                      button_dot: button_second_dot,
+                      button_dot: hero_settings.button_second_dot,
                       add_classes: 'hero__button hero__button--second focus-inset'
                     %}
                   {%- endif -%}
