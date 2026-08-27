@@ -11,8 +11,31 @@
   "sections": {
     "hero_YgbyFA": {
       "type": "hero",
+      "blocks": {
+        "content_KWMg8m": {
+          "type": "content",
+          "settings": {
+            "eyebrow": "Health optimized. Hands-off.",
+            "heading": "Tell your story",
+            "text": "<p>Pair text with a background image or video.</p>",
+            "text_width": "large",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_dot": true,
+            "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_dot_2": false,
+            "button_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "content_KWMg8m"
+      ],
       "name": "Hero",
       "settings": {
+        "video": "",
         "image_desktop": "shopify://shop_images/heroOvenoncounter1920X1080.png",
         "image_mobile": "shopify://shop_images/hero-ovenoncounter-mobile.png",
         "title": "Eat Better. Think Less.",
@@ -20,7 +43,9 @@
         "button_first_text": "Shop Now",
         "button_first_url": "",
         "button_second_text": "How it Works",
-        "button_second_url": ""
+        "button_second_url": "",
+        "text_animation": true,
+        "heading_tag": "h1"
       }
     },
     "slideshow_HXHbtm": {
