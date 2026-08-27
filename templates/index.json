@@ -9,6 +9,20 @@
  */
 {
   "sections": {
+    "hero_YgbyFA": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "image_desktop": "shopify://shop_images/heroOvenoncounter1920X1080.png",
+        "image_mobile": "shopify://shop_images/hero-ovenoncounter-mobile.png",
+        "title": "Eat Better. Think Less.",
+        "text": "<p>Meals built around you. Planned by AI. Cooked automatically.</p>",
+        "button_first_text": "Shop Now",
+        "button_first_url": "",
+        "button_second_text": "How it Works",
+        "button_second_url": ""
+      }
+    },
     "slideshow_HXHbtm": {
       "type": "slideshow",
       "blocks": {
@@ -1053,6 +1067,7 @@
     }
   },
   "order": [
+    "hero_YgbyFA",
     "slideshow_HXHbtm",
     "ai_kitchen_bUXdrx",
     "collections_list_R46PWM",
