@@ -17,7 +17,7 @@
           "settings": {
             "desktop_image": "shopify://shop_images/img-pellets01_3x_753c6389-b6c0-43d0-a3c6-81943f67b816.png",
             "mobile_image": "shopify://shop_images/hero-ovenoncounter-mobile_7082e74e-1d7d-4c3a-9abc-a63b0f34b394.png",
-            "color_scheme": "background-3",
+            "color_scheme": "background-4",
             "heading": "Eat Better. Think Less.",
             "eyebrow": "HEALTH OPTIMIZED. HANDS-OFF.",
             "text": "<p>Meals built around you. Planned by AI. Cooked automatically.</p>",
@@ -89,7 +89,7 @@
         "header_overlay": true,
         "floating_header": true,
         "header_transparent": false,
-        "color_scheme_header": "",
+        "color_scheme_header": "background-5",
         "light_logo": true,
         "section_layout": "full",
         "text_position": "left",
@@ -381,7 +381,8 @@
         "heading_color": "#13294b",
         "accent_color": "#e65c00",
         "label_background": "#e8e4de",
-        "label_color": "#13294b"
+        "label_color": "#13294b",
+        "card_text_color": "#ffffff"
       }
     },
     "card-list": {
@@ -1052,6 +1053,28 @@
         "padding_top": "m",
         "padding_bottom": "m"
       }
+    },
+    "hero_pETdTx": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "color_scheme": "",
+        "image_desktop": "shopify://shop_images/heroOvenoncounter1920X1080.png",
+        "image_mobile": "shopify://shop_images/hero-ovenoncounter-mobile_7082e74e-1d7d-4c3a-9abc-a63b0f34b394.png",
+        "eyebrow": "HEALTH OPTIMIZED. HANDS-OFF.",
+        "title": "Eat Better. Think Less.",
+        "text": "<p>Meals built around you. Planned by AI. Cooked automatically.</p>",
+        "text_width": "large",
+        "button_first_text": "Shop Now",
+        "button_first_url": "shopify://collections/shop-all",
+        "button_first_style": "primary",
+        "button_second_text": "How it Works",
+        "button_second_url": "",
+        "button_second_dot": false,
+        "button_second_style": "secondary",
+        "text_animation": true,
+        "heading_tag": "h1"
+      }
     }
   },
   "order": [
@@ -1074,6 +1097,7 @@
     "featured_blog_geAXtY",
     "collapsible_content_VRdJUD",
     "image_collage_eixXBp",
-    "newsletter_fp7GUw"
+    "newsletter_fp7GUw",
+    "hero_pETdTx"
   ]
 }
