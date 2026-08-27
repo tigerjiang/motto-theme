@@ -88,6 +88,29 @@
   text-align: left;
 }
 
+.section-hero .hero__content--small {
+  max-width: 62.2rem;
+}
+
+.section-hero .hero__eyebrow {
+  margin: 0 0 1.6rem;
+  color: currentColor;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.section-hero .hero__content--animation .js-fade {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.section-hero .hero__content--animation .js-fade.visible {
+  opacity: 1;
+}
+
 .section-hero .hero__badge {
   max-width: 25rem;
   margin-bottom: 2rem;

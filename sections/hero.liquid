@@ -1,4 +1,9 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
+{% if section.settings.text_animation %}
+  {{ 'component-heading-animations.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'split-type.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'hero.js' | asset_url }}" defer="defer"></script>
+{% endif %}
 
 {%- render 'hero', mod_class: 'hero--title-large' -%}
 
@@ -32,7 +37,7 @@
     },
     {
       "type": "header",
-      "content": "Content"
+      "content": "Content (legacy fallback)"
     },
     {
       "type": "image_picker",
@@ -77,12 +82,140 @@
       "type": "url",
       "id": "button_second_url",
       "label": "Button URL"
+    },
+    {
+      "type": "header",
+      "content": "Content animation"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_animation",
+      "default": true,
+      "label": "Enable text animation"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" },
+        { "value": "div", "label": "div" },
+        { "value": "p", "label": "p" },
+        { "value": "span", "label": "span" }
+      ],
+      "default": "h1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "Health optimized. Hands-off."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Tell your story"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Pair text with a background image or video.</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_width",
+          "options": [
+            { "value": "small", "label": "Small" },
+            { "value": "large", "label": "Large" }
+          ],
+          "default": "large",
+          "label": "Text width"
+        },
+        {
+          "type": "header",
+          "content": "First button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_dot",
+          "default": true,
+          "label": "Show button dot"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            { "value": "primary", "label": "Primary" },
+            { "value": "secondary", "label": "Secondary" },
+            { "value": "tertiary", "label": "Tertiary" }
+          ],
+          "default": "primary",
+          "label": "Button style"
+        },
+        {
+          "type": "header",
+          "content": "Second button"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_dot_2",
+          "default": false,
+          "label": "Show button dot"
+        },
+        {
+          "type": "select",
+          "id": "button_style_2",
+          "options": [
+            { "value": "primary", "label": "Primary" },
+            { "value": "secondary", "label": "Secondary" },
+            { "value": "tertiary", "label": "Tertiary" }
+          ],
+          "default": "secondary",
+          "label": "Button style"
+        }
+      ]
     }
   ],
   "presets": [
     {
       "name": "Hero",
-      "category": "Heroes"
+      "category": "Heroes",
+      "blocks": [{ "type": "content" }]
     }
   ]
 }
