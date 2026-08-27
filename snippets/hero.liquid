@@ -1,0 +1,126 @@
+{%- liquid
+  assign mod_section = mod_section | default: section
+  assign mod_class = mod_class | default: false
+  assign mod_title = mod_title | default: false
+  assign mod_text = mod_text | default: false
+  assign mod_image = mod_image | default: false
+  assign hero_settings = mod_section.settings
+  assign desktop_image = mod_image | default: hero_settings.image_desktop | default: hero_settings.image_mobile
+  assign mobile_image = hero_settings.image_mobile | default: desktop_image
+  assign hero_title = mod_title | default: hero_settings.title
+  assign hero_text = mod_text | default: hero_settings.text
+-%}
+
+{%- if hero_settings.video != blank or desktop_image != blank -%}
+  <div class="hero{% if mod_class %} {{ mod_class }}{% endif %}">
+    <div class="hero__background image-fit" aria-hidden="true">
+      {%- if hero_settings.video != blank -%}
+        <div class="video-background hero__video">
+          {%- if hero_settings.video.type == 'youtube' -%}
+            <iframe
+              src="https://www.youtube.com/embed/{{ hero_settings.video.id }}?autoplay=1&mute=1&controls=0&loop=1&playlist={{ hero_settings.video.id }}&playsinline=1&rel=0"
+              title="Background video"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              loading="eager"
+              tabindex="-1"
+            ></iframe>
+          {%- elsif hero_settings.video.type == 'vimeo' -%}
+            <iframe
+              src="https://player.vimeo.com/video/{{ hero_settings.video.id }}?background=1&autoplay=1&muted=1&loop=1&byline=0&title=0&controls=0"
+              title="Background video"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              loading="eager"
+              tabindex="-1"
+            ></iframe>
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        <picture>
+          {%- unless mod_image -%}
+            {%- if hero_settings.image_mobile != blank -%}
+              <source
+                media="(max-width: 749px)"
+                srcset="{{ mobile_image | image_url: width: 1000 }}"
+                width="{{ mobile_image.width }}"
+                height="{{ mobile_image.height }}"
+              >
+            {%- endif -%}
+          {%- endunless -%}
+          {{
+            desktop_image
+            | image_url: width: 2400
+            | image_tag:
+              loading: 'eager',
+              fetchpriority: 'high',
+              widths: '750, 1100, 1500, 1920, 2400',
+              sizes: '100vw',
+              alt: desktop_image.alt
+          }}
+        </picture>
+      {%- endif -%}
+    </div>
+
+    {%- if hero_title != blank
+      or hero_text != blank
+      or hero_settings.button_first_text != blank
+      or hero_settings.button_second_text != blank
+      or hero_settings.badge != blank
+    -%}
+      <div class="hero__inner hero2__inner">
+        <div class="hero__shell">
+          <div class="hero__content hero__content--left">
+            {%- if hero_settings.badge != blank -%}
+              <div class="hero__badge">
+                {{
+                  hero_settings.badge
+                  | image_url: width: 500
+                  | image_tag:
+                    loading: 'eager',
+                    widths: '160, 240, 320, 500',
+                    sizes: '(max-width: 749px) 160px, 250px',
+                    alt: hero_settings.badge.alt
+                }}
+              </div>
+            {%- endif -%}
+
+            {%- if hero_title != blank -%}
+              <header class="hero__head">
+                <h1 class="hero__title hero__title--large">{{ hero_title }}</h1>
+              </header>
+            {%- endif -%}
+
+            {%- if hero_text != blank -%}
+              <div class="hero__body rte">
+                {{ hero_text }}
+              </div>
+            {%- endif -%}
+
+            {%- if hero_settings.button_first_text != blank or hero_settings.button_second_text != blank -%}
+              <div class="hero__footer">
+                <div class="hero__actions">
+                  {%- if hero_settings.button_first_text != blank -%}
+                    {% render 'button',
+                      btn_label: hero_settings.button_first_text,
+                      btn_link: hero_settings.button_first_url,
+                      btn_style: 'primary',
+                      add_classes: 'hero__button hero__button--first focus-inset'
+                    %}
+                  {%- endif -%}
+
+                  {%- if hero_settings.button_second_text != blank -%}
+                    {% render 'button',
+                      btn_label: hero_settings.button_second_text,
+                      btn_link: hero_settings.button_second_url,
+                      btn_style: 'secondary',
+                      add_classes: 'hero__button hero__button--second focus-inset'
+                    %}
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

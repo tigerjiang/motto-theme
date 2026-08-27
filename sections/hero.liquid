@@ -1,0 +1,89 @@
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
+{%- render 'hero', mod_class: 'hero--title-large' -%}
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "class": "section-hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "video_url",
+      "id": "video",
+      "label": "Video URL",
+      "accept": ["youtube", "vimeo"],
+      "info": "Higher priority over the images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Image - Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image - Mobile",
+      "info": "Optional."
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge",
+      "label": "Badge",
+      "info": "Upload 2x size image to ensure it's retina"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Button first"
+    },
+    {
+      "type": "text",
+      "id": "button_first_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_first_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "header",
+      "content": "Button second"
+    },
+    {
+      "type": "text",
+      "id": "button_second_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_second_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "category": "Heroes"
+    }
+  ]
+}
+{% endschema %}
