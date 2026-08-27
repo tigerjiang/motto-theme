@@ -68,6 +68,11 @@
           if collection_title == blank
             assign collection_title = 'general.card.collection_name' | t
           endif
+
+          assign collection_link = block.settings.custom_link
+          if collection_link == blank
+            assign collection_link = block.settings.collection.url
+          endif
         %}
         {% style %}
           #shopify-section-{{ section.id }} [data-id="{{ block.id }}"].collections-list__item  {
@@ -135,9 +140,9 @@
               {% assign collection_heading_tag = section.settings.collection_heading_tag %}
 
               <{{ collection_heading_tag }} class="collections-list__item-title--inner {{block.settings.collection_heading_size}}">
-                {% if block.settings.collection != blank %}
+                {% if collection_link != blank %}
                   <a
-                    href="{{ block.settings.collection.url }}"
+                    href="{{ collection_link }}"
                     class="collections-list__link"
                     aria-label="{{ collection_title | escape }}"
                   >
@@ -555,6 +560,12 @@
           "id": "custom_title",
           "label": "Custom name",
           "info": "Leave blank to use the collection title."
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom link",
+          "info": "Leave blank to use the collection link."
         },
         {
           "type": "color_scheme",
