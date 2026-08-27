@@ -34,9 +34,9 @@
         "enable_slider": false,
         "slide_duration": 2,
         "speed": 0.8,
-        "text": "Display a limited-time deal or important notice here",
+        "text": "FREE SHIPPING on All A.I. Devices",
         "button_label": "Shop Now",
-        "button_link": ""
+        "button_link": "shopify://collections/all"
       }
     },
     "header": {

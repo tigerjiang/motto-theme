@@ -9,28 +9,6 @@
  */
 {
   "sections": {
-    "hero_YgbyFA": {
-      "type": "hero",
-      "name": "Hero",
-      "settings": {
-        "video": "",
-        "image_desktop": "shopify://shop_images/heroOvenoncounter1920X1080.png",
-        "image_mobile": "shopify://shop_images/hero-ovenoncounter-mobile.png",
-        "eyebrow": "Eat Better. Think Less.",
-        "title": "Eat Better. Think Less.",
-        "text": "<p>Meals built around you. Planned by AI. Cooked automatically.</p>",
-        "text_width": "large",
-        "button_first_text": "Shop Now",
-        "button_first_url": "",
-        "button_first_style": "primary",
-        "button_second_text": "How it Works",
-        "button_second_url": "",
-        "button_second_dot": false,
-        "button_second_style": "secondary",
-        "text_animation": true,
-        "heading_tag": "h1"
-      }
-    },
     "slideshow_HXHbtm": {
       "type": "slideshow",
       "blocks": {
@@ -107,7 +85,6 @@
         "slideshow_item_NmwndF",
         "slideshow_item_rTgUtP"
       ],
-      "disabled": true,
       "settings": {
         "header_overlay": true,
         "floating_header": true,
@@ -544,7 +521,7 @@
           "type": "testimonials_slide",
           "settings": {
             "image": "shopify://shop_images/2025_Homepage_v7-Final___socialavatar-TheMKBHDStudio.png",
-            "text": "“This small microphone is a game-changer for my remote work setup. The sound quality is fantastic, even in noisy environments.”",
+            "text": "“makes a notoriously time consuming and tricky task of smoking meat completely automated. <strong>HUGE</strong>, if true???”",
             "author_name": "The MKBHD Studio",
             "position_name": "910K+ subscribers",
             "enable_stars": true,
@@ -554,10 +531,10 @@
         "testimonials_slide_N9La3b": {
           "type": "testimonials_slide",
           "settings": {
-            "image": "shopify://shop_images/2025_Homepage_v7-Final___socialavatar-antsbbq.png",
-            "text": "“At first i was hesitant about buying the Motto R1. Now i can’t picture life without it.”",
-            "author_name": "Ant's BBQ Cookout",
-            "position_name": "91.3K+ subscribers",
+            "image": "shopify://shop_images/lifehacker400X400.png",
+            "text": "\"The Brisk It... Is the Best Smart Grill I've Ever Used\"",
+            "author_name": "LifeHacker",
+            "position_name": "Amanda Blum",
             "enable_stars": true,
             "rating": 5
           }
@@ -565,10 +542,10 @@
         "testimonials_slide_gAjdFa": {
           "type": "testimonials_slide",
           "settings": {
-            "image": "shopify://shop_images/lifehacker400X400.png",
+            "image": "shopify://shop_images/forbes-logo-download-eps-svg-png-1536x1536.jpg",
             "text": "“It’s a fool-proof, electric wood pellet smoker that comes with an app and a large color screen in which all I need to do is just follow instructions.“",
-            "author_name": "Life Style",
-            "position_name": "By Scott Kramer",
+            "author_name": "Forbes",
+            "position_name": "Scott Kramer",
             "enable_stars": true,
             "rating": 5
           }
@@ -1076,7 +1053,6 @@
     }
   },
   "order": [
-    "hero_YgbyFA",
     "slideshow_HXHbtm",
     "ai_kitchen_bUXdrx",
     "collections_list_R46PWM",
