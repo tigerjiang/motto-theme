@@ -22,7 +22,6 @@
         "text_width": "large",
         "button_first_text": "Shop Now",
         "button_first_url": "",
-        "button_first_dot": true,
         "button_first_style": "primary",
         "button_second_text": "How it Works",
         "button_second_url": "",
