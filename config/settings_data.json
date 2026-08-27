@@ -257,6 +257,42 @@
           "color_border": "#ececec",
           "colors_background_3": "#f3f4f1"
         }
+      },
+      "background-6": {
+        "settings": {
+          "colors_text": "#f9f9f9",
+          "colors_secondary_text": "#d9e2ec",
+          "colors_tertiary_text": "#b8c7d9",
+          "colors_text_title": "#ffffff",
+          "colors_background_1": "#13294b",
+          "colors_background_2": "#1e3a5f",
+          "background_gradient": "",
+          "colors_solid_button_labels": "#13294b",
+          "colors_solid_button_labels_hover": "#13294b",
+          "colors_solid_button_background": "#f7d400",
+          "colors_solid_button_background_hover": "#eed228",
+          "colors_secondary_button_labels": "#ffffff",
+          "colors_secondary_button_labels_hover": "#ffffff",
+          "colors_secondary_button_background": "#1e3a5f",
+          "colors_secondary_button_background_hover": "#294b74",
+          "colors_tertiary_button_labels": "#ffffff",
+          "colors_tertiary_button_labels_hover": "#ffffff",
+          "colors_tertiary_button_background": "#13294b",
+          "colors_tertiary_button_background_hover": "#1e3a5f",
+          "card_new_price_color": "#ffffff",
+          "card_old_price_color": "#b8c7d9",
+          "colors_badge_background": "#f7d400",
+          "colors_badge_labels": "#13294b",
+          "colors_input_background": "#1e3a5f",
+          "colors_input_hover_background": "#294b74",
+          "colors_input_border": "#6f87a3",
+          "colors_input_hover_border": "#d9e2ec",
+          "colors_marker_background": "#f7d400",
+          "colors_accent": "#f7d400",
+          "colors_background_overlay": "#071426",
+          "color_border": "#405a78",
+          "colors_background_3": "#0d203b"
+        }
       }
     }
   },
