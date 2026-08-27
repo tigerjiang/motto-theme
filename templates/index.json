@@ -107,6 +107,7 @@
         "slideshow_item_NmwndF",
         "slideshow_item_rTgUtP"
       ],
+      "disabled": true,
       "settings": {
         "header_overlay": true,
         "floating_header": true,
