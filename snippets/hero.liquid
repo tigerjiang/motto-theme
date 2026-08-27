@@ -55,11 +55,11 @@
           {%- endunless -%}
           {{
             desktop_image
-            | image_url: width: 2400
+            | image_url: width: 3840
             | image_tag:
               loading: 'eager',
               fetchpriority: 'high',
-              widths: '750, 1100, 1500, 1920, 2400',
+              widths: '750, 1100, 1500, 1920, 2400, 2880, 3200, 3840',
               sizes: '100vw',
               alt: desktop_image.alt
           }}

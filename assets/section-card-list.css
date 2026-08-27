@@ -48,6 +48,16 @@
   }
 }
 
+@media (min-width: 1920px) {
+  .card-list__container {
+    max-width: 1800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+}
+
 .card-list-pagination {
   display: flex;
   margin-bottom: 2.4rem;

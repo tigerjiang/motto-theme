@@ -15,6 +15,24 @@
   text-align: center;
 }
 
+@media screen and (min-width: 1920px) {
+  .ai-kitchen__inner {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 120px 64px;
+  }
+
+  .ai-kitchen__steps {
+    width: min(100%, 1000px);
+  }
+
+  .ai-kitchen__heading {
+    max-width: 1400px;
+    font-size: 52px;
+    line-height: 1.35;
+  }
+}
+
 .ai-kitchen__eyebrow,
 .ai-kitchen__download-title {
   margin: 0;

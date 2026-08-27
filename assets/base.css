@@ -7,6 +7,31 @@
   --duration-short: 100ms;
   --duration-default: 250ms;
   --duration-long: 500ms;
+  --container-max-width: 1440px;
+  --page-width-max: 139.6rem;
+  --container-gutter: 2rem;
+  --page-gutter: 2.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  :root {
+    --page-gutter: 5rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  :root {
+    --container-gutter: 5rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  :root {
+    --container-max-width: 1800px;
+    --page-width-max: 180rem;
+    --container-gutter: 6.4rem;
+    --page-gutter: 6.4rem;
+  }
 }
 
 :root {
@@ -265,8 +290,8 @@
 .shopify-policy__container-sm,
 .shopify-policy__container {
   width: 100%;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: var(--container-gutter);
+  padding-left: var(--container-gutter);
   margin-right: auto;
   margin-left: auto;
 }
@@ -284,8 +309,8 @@
   .container-sm,
   .shopify-policy__container-sm,
   .shopify-policy__container {
-    padding-right: 5rem;
-    padding-left: 5rem;
+    padding-right: var(--container-gutter);
+    padding-left: var(--container-gutter);
   }
 }
 
@@ -331,7 +356,7 @@
   .shopify-policy__container-md, .container-sm,
   .shopify-policy__container-sm, .container,
   .shopify-policy__container {
-    max-width: 1440px;
+    max-width: var(--container-max-width);
   }
 }
 /* Base */
@@ -388,9 +413,9 @@ html[style*="overflow:hidden"] body {
 }
 
 .page-width {
-  max-width: 139.6rem;
+  max-width: var(--page-width-max);
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 var(--page-gutter);
 }
 
 .page-width--narrow {
@@ -401,7 +426,7 @@ html[style*="overflow:hidden"] body {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 var(--page-gutter);
   }
 }
 @media screen and (min-width: 1100px) {

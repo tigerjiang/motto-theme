@@ -2863,6 +2863,26 @@ noscript .product__media img {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .main-product .product.container {
+    max-width: 180rem;
+    padding-right: 6.4rem;
+    padding-left: 6.4rem;
+  }
+
+  .main-product .product__outer--thumbs-aside {
+    gap: 9.6rem;
+  }
+
+  .main-product .product__title {
+    font-size: 5.6rem;
+  }
+
+  .main-product .product__description {
+    font-size: 2rem;
+  }
+}
+
 .main-product .product__title__wrapper {
   margin-bottom: 1.4rem;
 }

@@ -10,7 +10,7 @@
         <article class="hiw-realtime__item" {{ block.shopify_attributes }}>
           <div class="hiw-media hiw-realtime__media">
             {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '420, 640, 800, 1000', sizes: '(min-width: 750px) 42vw, calc(100vw - 32px)', alt: block.settings.image_alt }}
+              {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '420, 640, 800, 1000, 1200, 1440, 1600', sizes: '(min-width: 1920px) 720px, (min-width: 750px) 42vw, calc(100vw - 32px)', alt: block.settings.image_alt }}
             {%- else -%}
               {{ 'product-1' | placeholder_svg_tag: 'hiw-placeholder placeholder-svg' }}
             {%- endif -%}

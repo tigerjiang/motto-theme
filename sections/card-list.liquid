@@ -72,9 +72,15 @@
             <div class="card-list__item_img {% if block.settings.text != blank %} card-list__item_img_active {% endif %} ">
               {%- if block.settings.image != blank -%}
                 {%- assign widths = '360, 535, 720, 940, 1070, 1200, 1500, 1780, 2000, 2400, 2800' -%}
-                {%- capture sizes -%}
-                  (min-width: 1100px) calc((100vw - 128px)), calc((100vw - 40px))
-                {%- endcapture -%}
+                {%- if columns_per_row == 1 -%}
+                  {%- assign sizes = '(min-width: 1920px) 1672px, (min-width: 990px) calc(100vw - 160px), calc(100vw - 40px)' -%}
+                {%- elsif columns_per_row == 2 -%}
+                  {%- assign sizes = '(min-width: 1920px) 828px, (min-width: 990px) calc((100vw - 176px) / 2), (min-width: 576px) calc((100vw - 56px) / 2), calc(100vw - 40px)' -%}
+                {%- elsif columns_per_row == 4 -%}
+                  {%- assign sizes = '(min-width: 1920px) 406px, (min-width: 1100px) calc((100vw - 208px) / 4), (min-width: 990px) calc((100vw - 192px) / 3), (min-width: 576px) calc((100vw - 56px) / 2), calc(100vw - 40px)' -%}
+                {%- else -%}
+                  {%- assign sizes = '(min-width: 1920px) 547px, (min-width: 990px) calc((100vw - 192px) / 3), (min-width: 576px) calc((100vw - 56px) / 2), calc(100vw - 40px)' -%}
+                {%- endif -%}
                 {{
                   block.settings.image
                   | image_url: width: block.settings.image.width

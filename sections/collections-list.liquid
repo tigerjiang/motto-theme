@@ -108,19 +108,21 @@
               >
                 {% if column_per_row == 1 %}
                   {%- capture sizes -%}
-									calc((100vw ))
-								{%- endcapture -%}
+										(min-width: 1920px) 1672px, calc(100vw - 40px)
+									{%- endcapture -%}
                 {% elsif column_per_row == 2 %}
                   {%- capture sizes -%}
-									(min-width: 750) calc((50vw )), 
-									calc((100vw ))
-								{%- endcapture -%}
+										(min-width: 1920px) 828px,
+										(min-width: 750px) calc((100vw - 56px) / 2),
+										calc(100vw - 40px)
+									{%- endcapture -%}
                 {% else %}
                   {%- capture sizes -%}
-									(min-width: 1200) calc((33vw )), 
-									(min-width: 750) calc((50vw )), 
-									calc((100vw ))
-								{%- endcapture -%}
+										(min-width: 1920px) 547px,
+										(min-width: 1200px) calc((100vw - 72px) / 3),
+										(min-width: 750px) calc((100vw - 56px) / 2),
+										calc(100vw - 40px)
+									{%- endcapture -%}
                 {% endif %}
                 {% if collection_image != blank %}
                   {{

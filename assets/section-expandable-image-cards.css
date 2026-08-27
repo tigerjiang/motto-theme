@@ -14,6 +14,17 @@
   padding: 60px;
 }
 
+@media screen and (min-width: 1920px) {
+  .expandable-image-cards__inner {
+    max-width: 1800px;
+    padding: 80px 64px;
+  }
+
+  .expandable-image-cards__card {
+    height: 480px;
+  }
+}
+
 .expandable-image-cards__header {
   margin: 0 auto 30px;
   text-align: center;

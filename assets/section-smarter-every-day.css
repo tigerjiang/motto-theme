@@ -10,6 +10,29 @@
   padding: 80px 60px;
 }
 
+@media screen and (min-width: 1920px) {
+  .smarter-every-day__inner {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 100px 64px;
+  }
+
+  .smarter-every-day__content {
+    grid-template-columns: minmax(300px, 0.28fr) minmax(0, 1fr);
+    gap: 64px;
+  }
+
+  .smarter-every-day__heading {
+    font-size: 56px;
+  }
+
+  .smarter-every-day__text {
+    max-width: 320px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
 .smarter-every-day__content {
   display: grid;
   grid-template-columns: 228px minmax(0, 1fr);

@@ -8,7 +8,7 @@
     </div>
     <div class="hiw-media hiw-split__media">
       {%- if section.settings.image != blank -%}
-        {{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '540, 750, 1000, 1300, 1600', sizes: '(min-width: 750px) 60vw, calc(100vw - 32px)', alt: section.settings.heading }}
+        {{ section.settings.image | image_url: width: 2000 | image_tag: loading: 'lazy', widths: '540, 750, 1000, 1300, 1600, 1800, 2000', sizes: '(min-width: 1920px) 880px, (min-width: 750px) 60vw, calc(100vw - 32px)', alt: section.settings.heading }}
       {%- else -%}
         {{ 'lifestyle-2' | placeholder_svg_tag: 'hiw-placeholder placeholder-svg' }}
       {%- endif -%}

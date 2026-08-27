@@ -171,6 +171,23 @@ body:has(main > .section-hero:first-child)
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .section-hero .hero,
+  .section-hero .hero__inner {
+    min-height: clamp(90rem, 48.5vw, 108rem);
+  }
+
+  .section-hero .hero__shell {
+    max-width: 180rem;
+    padding-right: 6.4rem;
+    padding-left: 6.4rem;
+  }
+
+  .section-hero .hero__title {
+    font-size: clamp(8rem, 3.75vw, 9.6rem);
+  }
+}
+
 @media screen and (max-width: 1250px) {
   .section-hero .hero,
   .section-hero .hero__inner {

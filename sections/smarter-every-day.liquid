@@ -65,11 +65,11 @@
             {%- endif -%}
             {{
               display_image
-              | image_url: width: 2200
+              | image_url: width: 3200
               | image_tag:
                 loading: 'lazy',
-                widths: '480, 720, 960, 1200, 1600, 2000, 2200',
-                sizes: '(min-width: 990px) calc(100vw - 400px), calc(100vw - 40px)',
+                widths: '480, 720, 960, 1200, 1600, 2000, 2200, 2600, 3200',
+                sizes: '(min-width: 1920px) 1260px, (min-width: 990px) calc(100vw - 400px), calc(100vw - 40px)',
                 class: 'smarter-every-day__image',
                 alt: image_alt
             }}

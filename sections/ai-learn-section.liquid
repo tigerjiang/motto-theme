@@ -15,7 +15,7 @@
         {%- for block in section.blocks -%}
           <div class="hiw-media hiw-learn__slide" {{ block.shopify_attributes }}>
             {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '280, 420, 560, 700', sizes: '(min-width: 750px) 22vw, 72vw', alt: block.settings.image_alt }}
+              {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '280, 420, 560, 700, 900, 1100, 1200', sizes: '(min-width: 1920px) 290px, (min-width: 750px) 22vw, 72vw', alt: block.settings.image_alt }}
             {%- else -%}
               {{ 'product-2' | placeholder_svg_tag: 'hiw-placeholder placeholder-svg' }}
             {%- endif -%}
