@@ -63,7 +63,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   width: 70%;
-  color: #fff;
+  color: #13294b;
   text-align: left;
 }
 
@@ -143,6 +143,24 @@
   min-width: 17.4rem;
   min-height: 5.1rem;
   font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1251px) {
+  .section-hero .hero,
+  .section-hero .hero__inner {
+    min-height: clamp(70rem, 48.5vw, 90rem);
+  }
+
+  .section-hero .hero__inner {
+    padding-top: 6rem;
+    padding-bottom: clamp(8rem, 5.5556vw, 14.2rem);
+  }
+
+  .section-hero .hero__shell {
+    max-width: none;
+    padding-right: clamp(8rem, 5.5556vw, 14.2rem);
+    padding-left: clamp(8rem, 5.5556vw, 14.2rem);
+  }
 }
 
 @media screen and (max-width: 1250px) {
