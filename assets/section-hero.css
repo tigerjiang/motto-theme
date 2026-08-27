@@ -5,6 +5,14 @@
   background: #010101;
 }
 
+body:has(main > .section-hero:first-child)
+  .shopify-section-header:not(.shopify-section-header-sticky),
+body:has(main > .section-hero:first-child)
+  .shopify-section-header:not(.shopify-section-header-sticky)
+  .header-wrapper {
+  background: transparent;
+}
+
 .section-hero .hero__background,
 .section-hero .hero__background picture,
 .section-hero .hero__background img,
@@ -109,7 +117,7 @@
 
 .section-hero .hero__title {
   margin: 0;
-  color: #fff;
+  color: #13294b;
   font-family: 'Roboto', sans-serif;
   font-size: 8rem;
   font-weight: 700;
