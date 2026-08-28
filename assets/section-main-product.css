@@ -2819,6 +2819,21 @@ noscript .product__media img {
     max-width: none;
   }
 
+  .main-product .product__outer--thumbs-aside .product__main {
+    height: auto;
+  }
+
+  .main-product .product__outer--thumbs-aside .product__media-wrapper,
+  .main-product .product__outer--thumbs-aside .product__media-list-wrapper {
+    flex: none;
+    height: auto;
+  }
+
+  .main-product .product__outer--thumbs-aside .product__media-list {
+    flex-grow: 0;
+    height: auto;
+  }
+
   .main-product .product__outer--thumbs-aside .product__media-sublist-outer {
     width: 8.8rem;
     min-width: 8.8rem;
