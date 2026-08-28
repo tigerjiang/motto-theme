@@ -85,6 +85,7 @@
         "show_navigation": true,
         "section_layout": "container",
         "section_aspect_ratio": "100%",
+        "match_thumbnail_height_to_product_info": true,
         "desktop_alignment": "left",
         "mobile_alignment": "before",
         "gallery_type": "thumbs_aside",

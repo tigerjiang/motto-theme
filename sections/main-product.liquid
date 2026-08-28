@@ -124,6 +124,7 @@
                     class="product__media-sublist js-media-sublist swiper"
                     data-js-media-list-id="slider-{{ product.id }}"
                     data-section-layout="{{ section.settings.section_layout }}"
+                    data-match-product-info-height="{{ section.settings.match_thumbnail_height_to_product_info }}"
                   >
                     <div class="swiper-wrapper">
                       {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -2243,6 +2244,12 @@
           "label": "t:sections.main-product.settings.aspect_ratio.option__3.label"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "match_thumbnail_height_to_product_info",
+      "label": "Match thumbnail list height to product information",
+      "default": false
     },
     {
       "type": "select",

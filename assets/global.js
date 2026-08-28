@@ -233,16 +233,27 @@ const subSliderInit = (isUpdate, root) => {
     scope.querySelectorAll(".js-media-sublist") &&
     scope.querySelectorAll(".js-media-sublist").length > 0
   ) {
-    scope.querySelectorAll(".js-media-sublist").forEach((elem, index) => {
+    scope.querySelectorAll(".js-media-sublist").forEach((elem) => {
+      if (elem.productThumbHeightCleanup) {
+        elem.productThumbHeightCleanup();
+      }
       if (elem.swiper) {
         elem.swiper.destroy(true, true);
       }
 
       const box = elem;
 
-      const mainImg = document.querySelector(".product__media-list");
+      const productRoot = elem.closest(".product");
+      if (!productRoot) return;
+
+      const mainImg = productRoot.querySelector(".product__media-list");
+      const productInfo = productRoot.querySelector(".product__info-container");
+      if (!mainImg) return;
+
       const mainImgHeight = mainImg.offsetHeight;
-      const subitems = document.querySelectorAll(".product__media-subitem");
+      const subitems = productRoot.querySelectorAll(".product__media-subitem");
+      if (subitems.length === 0) return;
+
       const subitemsWidth = subitems[0].offsetWidth;
       const subitemsHeight = subitemsWidth / 0.775 + 16;
       const subitemsCountInView = mainImgHeight / subitemsHeight;
@@ -320,26 +331,59 @@ const subSliderInit = (isUpdate, root) => {
         },
       });
 
-      const sliderResizeObserve = new ResizeObserver((entries) => {
-        const [entry] = entries;
-        setTimeout(() => {
-          const sliders = document.querySelectorAll(".js-media-list");
-          const thumbs = document.querySelectorAll(".product__media-sublist");
-          if (sliders.length > 0 && thumbs.length > 0) {
-            if (index >= 0 && index < sliders.length) {
-              const sliderHeight =
-                sliders[index].getBoundingClientRect().height;
-              thumbs[index].style.height = `${sliderHeight - 1}px`;
-            }
-          }
-        }, 400);
-      });
-      if (document.querySelector(".product-section"))
-        sliderResizeObserve.observe(document.querySelector(".product-section"));
-      if (document.querySelector(".featured-product"))
-        sliderResizeObserve.observe(
-          document.querySelector(".featured-product")
+      const desktopMediaQuery = window.matchMedia("(min-width: 990px)");
+      const getProductInfoContentHeight = () => {
+        if (!productInfo) return 0;
+
+        const infoRect = productInfo.getBoundingClientRect();
+        const paddingBottom = parseFloat(
+          window.getComputedStyle(productInfo).paddingBottom
+        ) || 0;
+        const contentBottom = Array.from(productInfo.children).reduce(
+          (currentBottom, child) => {
+            const childRect = child.getBoundingClientRect();
+            return childRect.width > 0 && childRect.height > 0
+              ? Math.max(currentBottom, childRect.bottom)
+              : currentBottom;
+          },
+          infoRect.top
         );
+
+        return contentBottom - infoRect.top + paddingBottom;
+      };
+      let resizeFrame;
+      const syncSubSliderHeight = () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(() => {
+          const matchProductInfoHeight =
+            box.dataset.matchProductInfoHeight === "true" &&
+            productInfo &&
+            desktopMediaQuery.matches;
+          const referenceHeight = matchProductInfoHeight
+            ? getProductInfoContentHeight()
+            : mainImg.getBoundingClientRect().height;
+          const nextHeight = `${Math.max(referenceHeight - 1, 0)}px`;
+          if (elem.style.height !== nextHeight) {
+            elem.style.height = nextHeight;
+            subSlider.update();
+          }
+        });
+      };
+      const sliderResizeObserve = new ResizeObserver(syncSubSliderHeight);
+      sliderResizeObserve.observe(mainImg);
+      if (productInfo) {
+        sliderResizeObserve.observe(productInfo);
+        Array.from(productInfo.children).forEach((child) => {
+          sliderResizeObserve.observe(child);
+        });
+      }
+      desktopMediaQuery.addEventListener("change", syncSubSliderHeight);
+      elem.productThumbHeightCleanup = () => {
+        cancelAnimationFrame(resizeFrame);
+        sliderResizeObserve.disconnect();
+        desktopMediaQuery.removeEventListener("change", syncSubSliderHeight);
+      };
+      syncSubSliderHeight();
 
       if (isUpdate) {
         setTimeout(function () {
