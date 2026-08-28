@@ -221,7 +221,7 @@
           "settings": {
             "collection": "shop-all",
             "custom_title": "Shop Oven",
-            "custom_link": "",
+            "custom_link": "shopify://products/neoma",
             "color_scheme": "",
             "image": "shopify://shop_images/img-ovenondarkcounter-720x720.png",
             "image_has_container": false,
