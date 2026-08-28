@@ -166,11 +166,11 @@
         "product_3": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/smartcookingPlatedfood720X720.png",
-            "badge": "AI-generated, personalized recipes",
+            "image": "shopify://shop_images/photo-ovenandappinhand-720-x-720_2x_3d7da1d1-6ce1-4f3a-8e7e-6682f75e312c.png",
+            "badge": "Remote monitoring & control",
             "badge_style": "primary",
             "subheading": "",
-            "text": "Create recipes around your preferences, ingredients, and available time, then let Brisk It guide the cook from start to finish."
+            "text": "True freedom comes from being untethered. Whether you're inside preparing sides, running a quick errand, or relaxing with guests, complete command is always in your pocket. Monitor every detail and make real-time adjustments from anywhere, giving you total peace of mind and ultimate flexibility."
           }
         }
       },
