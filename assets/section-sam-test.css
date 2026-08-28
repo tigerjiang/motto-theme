@@ -9,6 +9,7 @@
 }
 
 .sam-app-showcase {
+  --sam-screen-shift-x: clamp(24px, 3vw, 38px);
   position: relative;
   overflow: hidden;
   padding: 80px 32px 96px;
@@ -67,7 +68,7 @@
   max-height: 414px;
   overflow: hidden;
   border-radius: 18px;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% - var(--sam-screen-shift-x)), -50%);
 }
 
 .sam-app-showcase__screen img,
@@ -132,23 +133,12 @@
 }
 
 .sam-app-showcase__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
   margin-top: 24px;
-  padding: 12px 24px;
-  border: 1px solid var(--sam-button-text-color, var(--sam-foreground));
-  border-radius: 999px;
   color: var(--sam-button-text-color, var(--sam-foreground));
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 160ms ease, color 160ms ease;
 }
 
 .sam-app-showcase__button:hover {
-  background: var(--sam-button-text-color, var(--sam-foreground));
-  color: var(--sam-background);
+  color: var(--sam-button-text-color, var(--sam-foreground));
 }
 
 .sam-app-showcase__navigation {

@@ -74,9 +74,13 @@
                 {%- endif -%}
 
                 {%- if block.settings.button_text != blank and block.settings.button_url != blank -%}
-                  <a class="sam-app-showcase__button" href="{{ block.settings.button_url }}">
-                    {{- block.settings.button_text -}}
-                  </a>
+                  {% render 'button',
+                    btn_label: block.settings.button_text,
+                    btn_link: block.settings.button_url,
+                    btn_style: 'primary',
+                    button_dot: false,
+                    add_classes: 'sam-app-showcase__button focus-inset'
+                  %}
                 {%- endif -%}
               </div>
             {%- endfor -%}
