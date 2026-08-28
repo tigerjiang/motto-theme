@@ -124,14 +124,14 @@
       "type": "image-banner",
       "settings": {
         "color_scheme": "background-3",
-        "heading": "Wood-fired flavor, redefined.",
+        "heading": "Text that appears is : Health, optimized.",
         "image_heading_tag": "h2",
         "section_heading": "",
         "section_heading_tag": "h2",
         "section_heading_size": "h2",
         "subheading": "",
         "dot": true,
-        "image": "shopify://shop_images/coverTextrevealMangrillingonzelos450.png",
+        "image": "shopify://shop_images/cover-textreveal-neomatopviewopen_2x_eec63246-9cf7-4875-a5d4-f429899bd049.png",
         "image_ratio": "large",
         "animation": true,
         "overlay_enable": false,
@@ -146,11 +146,11 @@
         "product_1": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/smartcookingFriendsyard720X720.png",
-            "badge": "Hands-off automated cooking",
+            "image": "shopify://shop_images/photo-neoma-8-1-modes-720-x-720_2x_e7b08041-066c-42dd-88bb-51b30686c173.png",
+            "badge": "8 Modes. Limitless Menus.",
             "badge_style": "primary",
             "subheading": "",
-            "text": "Tell Brisk It what you want to cook and let its cooking automation manage the temperature and timing for you."
+            "text": "From air frying and roasting to proofing and dehydrating, your oven handles it all. Whether you're crisping, slow cooking, or baking, every mode is optimized for perfect results with zero guesswork."
           }
         },
         "product_2": {
