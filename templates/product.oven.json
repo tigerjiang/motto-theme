@@ -156,11 +156,11 @@
         "product_2": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/smartcookingAppcontrol720X720.png",
-            "badge": "Remote monitoring & control",
+            "image": "shopify://shop_images/smartcooking-neoma-appcontrol-720-x-720_2x_d47a486c-0e9f-424d-b282-d46024e699e6.png",
+            "badge": "AI-generated Meal Plans",
             "badge_style": "primary",
             "subheading": "",
-            "text": "Set up personalized cooking profiles in seconds. Monitor temperature, adjust settings, and control your cook from the Brisk It app."
+            "text": "Tell the AI your cravings, health goals, or dietary preferences. It generates a full week of personalized meals and a complete shopping list—so you're set for days."
           }
         },
         "product_3": {
