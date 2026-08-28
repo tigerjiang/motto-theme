@@ -133,6 +133,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.template-product .blockquote__text.h3 {
+  font-size: 28px;
+  line-height: 1.6;
+}
+
 @media screen and (max-width: 749px) {
   .template-product .blockquote {
     min-height: 32rem;
