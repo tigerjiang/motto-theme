@@ -77,6 +77,9 @@
     else
       assign init_color_value = value.name | handle | strip
       assign color_value = init_color_value | remove: '-'
+      if init_color_value contains 'black'
+        assign color_value = 'black'
+      endif
     endif
 
     # reassignment to custom colors
