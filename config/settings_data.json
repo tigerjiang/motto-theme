@@ -67,6 +67,69 @@
         "settings": {
           "color_scheme": ""
         }
+      },
+      "brisk-app": {
+        "type": "brisk-app",
+        "blocks": {
+          "sam-phone-3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/phone-image3.png"
+            }
+          },
+          "sam-phone-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/phone-image2.png"
+            }
+          },
+          "sam-phone-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/phone-image1.png"
+            }
+          },
+          "sam-content-app": {
+            "type": "content",
+            "settings": {
+              "heading": "Grill Anywhere, Anytime",
+              "title": "The Brisk It**tm** App",
+              "text": "<p>Build a connection to your grill with the ability to monitor and control your grill from your phone. Discover the latest recipes, set cook temperatures and experience what it's like to have a grill do all the work for you.</p>",
+              "button_text": "How it Works",
+              "button_url": "shopify://pages/how-it-works-backup"
+            }
+          },
+          "sam-content-ai": {
+            "type": "content",
+            "settings": {
+              "heading": "Automated Grilling Redefined",
+              "title": "InnoGrill **tm** Automated Cooking A.I.",
+              "text": "<p>Experience what it's like to smoke a delicious meal start to finish with a single push of a button. From ingredient prep and seasoning, to dynamically adjusting cooking temperatures, InnoGrill artificial intelligence has the grill covered so you don't have to.</p>",
+              "button_text": "Learn More",
+              "button_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "sam-phone-3",
+          "sam-phone-2",
+          "sam-phone-1",
+          "sam-content-app",
+          "sam-content-ai"
+        ],
+        "settings": {
+          "image_left": "shopify://shop_images/phones_2x_12be52d4-3c5a-49a8-a1ae-f23ffb7ed118.png"
+        }
+      },
+      "section-download-app": {
+        "type": "section-download-app",
+        "settings": {
+          "heading": "DOWNLOAD THE APP",
+          "button_apple_image": "shopify://shop_images/apple-button.png",
+          "button_apple_url": "https://apps.apple.com/app/brisk-it-grills/id1611261891",
+          "button_google_image": "shopify://shop_images/google_2x_a713503e-c002-43a1-b68e-9d24089b636f.png",
+          "button_google_url": "https://play.google.com/store/apps/details?id=com.briskitgrill.app"
+        }
       }
     },
     "content_for_index": [],

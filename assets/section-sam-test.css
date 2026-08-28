@@ -1,0 +1,269 @@
+.sam-app-showcase,
+.sam-download-app {
+  --sam-background: #010101;
+  --sam-foreground: #fff;
+  --sam-muted: #b7b7b7;
+  --sam-accent: #f04b32;
+  background: var(--sam-background);
+  color: var(--sam-foreground);
+}
+
+.sam-app-showcase {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 32px 96px;
+}
+
+.sam-app-showcase__smoke {
+  position: absolute;
+  inset: -40% 35% 20% -25%;
+  background:
+    radial-gradient(ellipse at 35% 45%, rgba(255, 255, 255, 0.18), transparent 42%),
+    radial-gradient(ellipse at 60% 55%, rgba(255, 255, 255, 0.09), transparent 52%);
+  filter: blur(32px);
+  opacity: 0.75;
+  pointer-events: none;
+  transform: rotate(-12deg);
+}
+
+.sam-app-showcase__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+  width: min(1320px, 100%);
+  margin: 0 auto;
+}
+
+.sam-app-showcase__media {
+  position: relative;
+  min-height: 560px;
+}
+
+.sam-app-showcase__phones,
+.sam-app-showcase__screens {
+  position: absolute;
+}
+
+.sam-app-showcase__phones {
+  inset: 50% auto auto 50%;
+  width: min(100%, 650px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.sam-app-showcase__phones img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sam-app-showcase__screens {
+  top: 50%;
+  left: 50%;
+  width: 190px;
+  max-height: 414px;
+  overflow: hidden;
+  border-radius: 18px;
+  transform: translate(-50%, -50%);
+}
+
+.sam-app-showcase__screen img,
+.sam-app-showcase__screen svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sam-app-showcase__content {
+  width: 100%;
+  min-width: 0;
+  padding: 24px 0 48px;
+  border-bottom: 2px solid #4a4a4a;
+}
+
+.sam-app-showcase__content-slide {
+  height: auto;
+}
+
+.sam-app-showcase__eyebrow,
+.sam-download-app__heading {
+  margin: 0 0 56px;
+  font-family: var(--font-subtitle-family, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.sam-app-showcase__title {
+  margin: 0 0 20px;
+  color: inherit;
+  font-size: clamp(38px, 4.2vw, 68px);
+  line-height: 0.98;
+}
+
+.sam-app-showcase__title sup {
+  font-size: 0.28em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.sam-app-showcase__text {
+  max-width: 560px;
+  color: var(--sam-muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.sam-app-showcase__text p {
+  margin: 0 0 16px;
+}
+
+.sam-app-showcase__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 12px 24px;
+  border: 1px solid var(--sam-foreground);
+  border-radius: 999px;
+  color: var(--sam-foreground);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.sam-app-showcase__button:hover {
+  background: var(--sam-foreground);
+  color: var(--sam-background);
+}
+
+.sam-app-showcase__navigation {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.sam-app-showcase__arrow {
+  display: inline-grid;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid #595959;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--sam-foreground);
+  cursor: pointer;
+  place-items: center;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.sam-app-showcase__arrow:hover {
+  border-color: var(--sam-foreground);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sam-download-app {
+  padding: 8px 24px 72px;
+  text-align: center;
+}
+
+.sam-download-app__inner {
+  width: min(720px, 100%);
+  margin: 0 auto;
+}
+
+.sam-download-app__heading {
+  margin-bottom: 24px;
+}
+
+.sam-download-app__stores {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sam-download-app__store {
+  display: block;
+  transition: transform 160ms ease;
+}
+
+.sam-download-app__store:hover {
+  transform: scale(1.04);
+}
+
+.sam-download-app__store img {
+  display: block;
+  width: auto;
+  height: 48px;
+}
+
+@media screen and (max-width: 989px) {
+  .sam-app-showcase {
+    padding-inline: 24px;
+  }
+
+  .sam-app-showcase__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sam-app-showcase__media {
+    min-height: min(620px, 78vw);
+  }
+
+  .sam-app-showcase__content {
+    width: min(720px, 100%);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .sam-app-showcase {
+    padding: 48px 20px 64px;
+  }
+
+  .sam-app-showcase__media {
+    min-height: 112vw;
+  }
+
+  .sam-app-showcase__phones {
+    width: 116%;
+  }
+
+  .sam-app-showcase__screens {
+    width: 33.5%;
+    border-radius: 12px;
+  }
+
+  .sam-app-showcase__content {
+    padding-bottom: 32px;
+  }
+
+  .sam-app-showcase__eyebrow {
+    margin-bottom: 28px;
+  }
+
+  .sam-app-showcase__text {
+    font-size: 16px;
+  }
+
+  .sam-download-app {
+    padding-bottom: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sam-app-showcase__button,
+  .sam-app-showcase__arrow,
+  .sam-download-app__store {
+    transition: none;
+  }
+}

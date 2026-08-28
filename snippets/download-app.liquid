@@ -1,0 +1,36 @@
+{%- assign download_settings = section.settings -%}
+
+{%- if download_settings.heading != blank
+  or download_settings.button_apple_image != blank
+  or download_settings.button_google_image != blank
+-%}
+  <section class="sam-download-app">
+    <div class="sam-download-app__inner">
+      {%- if download_settings.heading != blank -%}
+        <h2 class="sam-download-app__heading">{{ download_settings.heading }}</h2>
+      {%- endif -%}
+
+      <div class="sam-download-app__stores">
+        {%- if download_settings.button_apple_url != blank and download_settings.button_apple_image != blank -%}
+          <a class="sam-download-app__store" href="{{ download_settings.button_apple_url }}">
+            {{
+              download_settings.button_apple_image
+              | image_url: width: 540
+              | image_tag: loading: 'lazy', widths: '270, 405, 540'
+            }}
+          </a>
+        {%- endif -%}
+
+        {%- if download_settings.button_google_url != blank and download_settings.button_google_image != blank -%}
+          <a class="sam-download-app__store" href="{{ download_settings.button_google_url }}">
+            {{
+              download_settings.button_google_image
+              | image_url: width: 604
+              | image_tag: loading: 'lazy', widths: '302, 453, 604'
+            }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}

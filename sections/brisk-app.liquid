@@ -1,0 +1,153 @@
+{{ 'section-sam-test.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-sam-test.js' | asset_url }}" defer="defer"></script>
+
+{%- assign image_blocks = section.blocks | where: 'type', 'image' -%}
+{%- assign content_blocks = section.blocks | where: 'type', 'content' -%}
+
+{%- if image_blocks.size > 0 or content_blocks.size > 0 -%}
+  <section
+    class="sam-app-showcase"
+    data-sam-app-showcase
+    data-section-id="{{ section.id }}"
+  >
+    <div class="sam-app-showcase__smoke" aria-hidden="true"></div>
+
+    <div class="sam-app-showcase__inner">
+      <div class="sam-app-showcase__media">
+        {%- if section.settings.image_left != blank -%}
+          <div class="sam-app-showcase__phones" aria-hidden="true">
+            {{
+              section.settings.image_left
+              | image_url: width: 1200
+              | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200'
+            }}
+          </div>
+        {%- endif -%}
+
+        {%- if image_blocks.size > 0 -%}
+          <div class="sam-app-showcase__screens swiper" data-sam-screen-slider>
+            <div class="swiper-wrapper">
+              {%- for block in image_blocks -%}
+                <div class="sam-app-showcase__screen swiper-slide" {{ block.shopify_attributes }}>
+                  {%- if block.settings.image != blank -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 564
+                      | image_tag: loading: 'lazy', widths: '240, 360, 480, 564'
+                    }}
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if content_blocks.size > 0 -%}
+        <div class="sam-app-showcase__content swiper" data-sam-content-slider>
+          <div class="swiper-wrapper">
+            {%- for block in content_blocks -%}
+              <div class="sam-app-showcase__content-slide swiper-slide" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <p class="sam-app-showcase__eyebrow">{{ block.settings.heading }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.title != blank -%}
+                  <h2 class="sam-app-showcase__title">
+                    {{- block.settings.title | replace_first: '**', '<sup>' | replace_first: '**', '</sup>' -}}
+                  </h2>
+                {%- endif -%}
+
+                {%- if block.settings.text != blank -%}
+                  <div class="sam-app-showcase__text rte">{{ block.settings.text }}</div>
+                {%- endif -%}
+
+                {%- if block.settings.button_text != blank and block.settings.button_url != blank -%}
+                  <a class="sam-app-showcase__button" href="{{ block.settings.button_url }}">
+                    {{- block.settings.button_text -}}
+                  </a>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+
+          {%- if content_blocks.size > 1 -%}
+            <div class="sam-app-showcase__navigation">
+              <button class="sam-app-showcase__arrow" type="button" data-sam-prev aria-label="Previous slide">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="sam-app-showcase__arrow" type="button" data-sam-next aria-label="Next slide">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Brisk app showcase",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Phone frame image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "App screen",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Wrap superscript text in **. Example: Brisk It**tm**"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brisk app showcase"
+    }
+  ]
+}
+{% endschema %}
