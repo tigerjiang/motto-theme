@@ -224,13 +224,13 @@
             "question": "Brisk It AI",
             "answer": "",
             "default_open": true,
-            "item_image_1": "shopify://shop_images/smartcookingAppcontrol720X720.png",
+            "item_image_1": "shopify://shop_images/briskitlife-malecheckingphone-405-x-720_2x_7abc37ee-418a-434e-be5d-1ddf189141d8.png",
             "item_heading_1": "Endless Personalized Recipes in Seconds.",
             "item_text_1": "<p>No searching, no guessing. Just tell AI what you want, and get a hyper-tailored recipe instantly.</p>",
             "item_image_2": "shopify://shop_images/smartcookingFriendsyard720X720.png",
             "item_heading_2": "Skip the Work. AI Cooks It.",
             "item_text_2": "<p>Automate any cook, click once, and AI handles everything from temperature to timing.</p>",
-            "item_image_3": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png",
+            "item_image_3": "shopify://shop_images/collage-1_2x_4f8c0dfe-79d3-4790-8072-6ec9898ce195.png",
             "item_heading_3": "No Worries. Just Eat.",
             "item_text_3": "<p>Try new flavors without fear. Brisk It AI delivers perfection, every single time.</p>"
           }
@@ -311,7 +311,7 @@
       "settings": {
         "color_scheme": "background-2",
         "image_left": "shopify://shop_images/coverTextrevealMangrillingonzelos450.png",
-        "image_right": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png"
+        "image_right": "shopify://shop_images/photo-maleeatingbeefrib-720-x-720_3x_89cb258c-5c84-4d8a-b068-e8c5342290ed.png"
       }
     },
     "yotpo-reviews": {
