@@ -119,7 +119,6 @@
 .template-product .blockquote__text {
   display: block;
   width: 100%;
-  max-width: 88rem;
   color: #13294b;
   font-family: "Roboto", sans-serif;
   font-synthesis: none;
