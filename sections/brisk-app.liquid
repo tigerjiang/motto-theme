@@ -47,9 +47,18 @@
 
       {%- if content_blocks.size > 0 -%}
         <div class="sam-app-showcase__content swiper" data-sam-content-slider>
-          <div class="swiper-wrapper">
-            {%- for block in content_blocks -%}
-              <div class="sam-app-showcase__content-slide swiper-slide" {{ block.shopify_attributes }}>
+            <div class="swiper-wrapper">
+              {%- for block in content_blocks -%}
+              <div
+                class="sam-app-showcase__content-slide swiper-slide"
+                style="
+                  --sam-heading-color: {{ block.settings.heading_color | default: '#FFFFFF' }};
+                  --sam-title-color: {{ block.settings.title_color | default: '#FFFFFF' }};
+                  --sam-text-color: {{ block.settings.text_color | default: '#B7B7B7' }};
+                  --sam-button-text-color: {{ block.settings.button_text_color | default: '#FFFFFF' }};
+                "
+                {{ block.shopify_attributes }}
+              >
                 {%- if block.settings.heading != blank -%}
                   <p class="sam-app-showcase__eyebrow">{{ block.settings.heading }}</p>
                 {%- endif -%}
@@ -121,10 +130,22 @@
           "label": "Heading"
         },
         {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading color",
+          "default": "#FFFFFF"
+        },
+        {
           "type": "text",
           "id": "title",
           "label": "Title",
           "info": "Wrap superscript text in **. Example: Brisk It**tm**"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title color",
+          "default": "#FFFFFF"
         },
         {
           "type": "richtext",
@@ -132,9 +153,21 @@
           "label": "Text"
         },
         {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#B7B7B7"
+        },
+        {
           "type": "text",
           "id": "button_text",
           "label": "Button text"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color",
+          "default": "#FFFFFF"
         },
         {
           "type": "url",

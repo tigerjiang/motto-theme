@@ -4,7 +4,10 @@
   or download_settings.button_apple_image != blank
   or download_settings.button_google_image != blank
 -%}
-  <section class="sam-download-app">
+  <section
+    class="sam-download-app"
+    style="--sam-download-heading-color: {{ download_settings.heading_color | default: '#FFFFFF' }};"
+  >
     <div class="sam-download-app__inner">
       {%- if download_settings.heading != blank -%}
         <h2 class="sam-download-app__heading">{{ download_settings.heading }}</h2>

@@ -99,9 +99,13 @@
   text-transform: uppercase;
 }
 
+.sam-app-showcase__eyebrow {
+  color: var(--sam-heading-color, var(--sam-foreground));
+}
+
 .sam-app-showcase__title {
   margin: 0 0 20px;
-  color: inherit;
+  color: var(--sam-title-color, var(--sam-foreground));
   font-size: clamp(38px, 4.2vw, 68px);
   line-height: 0.98;
 }
@@ -114,9 +118,13 @@
 
 .sam-app-showcase__text {
   max-width: 560px;
-  color: var(--sam-muted);
+  color: var(--sam-text-color, var(--sam-muted));
   font-size: 17px;
   line-height: 1.65;
+}
+
+.sam-app-showcase__text * {
+  color: inherit;
 }
 
 .sam-app-showcase__text p {
@@ -130,16 +138,16 @@
   min-height: 48px;
   margin-top: 24px;
   padding: 12px 24px;
-  border: 1px solid var(--sam-foreground);
+  border: 1px solid var(--sam-button-text-color, var(--sam-foreground));
   border-radius: 999px;
-  color: var(--sam-foreground);
+  color: var(--sam-button-text-color, var(--sam-foreground));
   font-weight: 600;
   text-decoration: none;
   transition: background-color 160ms ease, color 160ms ease;
 }
 
 .sam-app-showcase__button:hover {
-  background: var(--sam-foreground);
+  background: var(--sam-button-text-color, var(--sam-foreground));
   color: var(--sam-background);
 }
 
@@ -180,6 +188,7 @@
 
 .sam-download-app__heading {
   margin-bottom: 24px;
+  color: var(--sam-download-heading-color, var(--sam-foreground));
 }
 
 .sam-download-app__stores {
