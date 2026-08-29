@@ -225,13 +225,13 @@
             "question": "Brisk It AI",
             "answer": "",
             "default_open": true,
-            "item_image_1": "shopify://shop_images/smartcookingAppcontrol720X720.png",
+            "item_image_1": "shopify://shop_images/neoma-kitchenwoman.png",
             "item_heading_1": "Personalized Meal Plans That Learn You.",
             "item_text_1": "<p>No searching, no guessing. Just tell Brisk It AI your health goals and taste preferences. It independently builds weekly meal plans tailored to you—instantly.</p>",
-            "item_image_2": "shopify://shop_images/smartcookingFriendsyard720X720.png",
+            "item_image_2": "shopify://shop_images/neoma-smartingredient.png",
             "item_heading_2": "Smart Shopping Lists, Automated",
             "item_text_2": "<p>One tap generates a complete grocery list ready for Instacart. No more forgetting ingredients or wasted trips. Neoma thinks ahead, so you don't have to.</p>",
-            "item_image_3": "shopify://shop_images/briskitlife-neomafamilyeating-405-x-720_2x_a4ef92c1-a8a9-4e3f-a774-229ab484e56c.png",
+            "item_image_3": "shopify://shop_images/neoma-kitchenfamily.png",
             "item_heading_3": "You Supervise. It Executes.",
             "item_text_3": "<p>From meal planning to grocery assistance, to the perfect results—Neoma automates your AI cook and meal plans. You stay in control. It does the work.</p>"
           }
