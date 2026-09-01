@@ -223,7 +223,7 @@
           "type": "accordion",
           "settings": {
             "question": "What's Included",
-            "answer": "",
+            "answer": "<p><strong>In the box</strong></p><ul><li>Neoma 8-in-1 AI countertop oven</li><li>Oven rack</li><li>Baking pan</li><li>Air fry basket</li><li>Rotisserie fork</li><li>Quick start guide</li></ul><p><strong>With your purchase</strong></p><ul><li>Brisk It app for iOS and Android — free, no subscription required</li><li>Brisk It AI trial included, then subscription (see Subscription)</li><li>Limited warranty (see Warranty)</li></ul>",
             "default_open": false,
             "item_heading_1": "",
             "item_text_1": "",
@@ -277,6 +277,20 @@
             "item_heading_3": "",
             "item_text_3": ""
           }
+        },
+        "accordion_VzimJG": {
+          "type": "accordion",
+          "settings": {
+            "question": "Shipping & Returns",
+            "answer": "<p><strong>Shipping</strong><br/><br/>Free standard shipping on all orders within the contiguous U.S. You'll get tracking by email as soon as your oven leaves the warehouse.</p><p>Alaska, Hawaii, and Puerto Rico: additional shipping charges apply, calculated at checkout. We don't currently ship outside the U.S.</p><p>Neoma ships in a single box and arrives ready to use — no assembly required.</p><p><strong>Returns</strong><br/><br/>Return your Neoma oven within [30] days of delivery for a refund. The oven should be in its original packaging with all included accessories. Return shipping is paid by the customer.</p><p>To start a return, email <a href=\"mailto:support@briskit.ai\"><strong>support@briskit.ai</strong></a> with your order number.</p>",
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
+          }
         }
       },
       "block_order": [
@@ -284,7 +298,8 @@
         "specifications",
         "brisk_it_ai",
         "shipping",
-        "assembly_care"
+        "assembly_care",
+        "accordion_VzimJG"
       ],
       "name": "t:sections.collapsible-content.name",
       "settings": {
