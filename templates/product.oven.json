@@ -253,8 +253,8 @@
         "shipping": {
           "type": "accordion",
           "settings": {
-            "question": "Subscription",
-            "answer": "<p>Ships Free to Continental United States.</p>",
+            "question": "Subscription Features",
+            "answer": "<p><strong>What the optional subscription includes</strong></p><ul><li>Weekly meal plans built around your health goals, taste, budget, and schedule</li><li>An AI agent that learns from what you cook and what you skip, so plans improve over time</li><li>One-tap shopping lists</li><li>A higher monthly allowance for AI recipe generation</li></ul><p><strong>Your oven works without it</strong><br/><br/>All 8 cooking modes, manual temperature and time control, app control, remote monitoring, and automated cooking programs stay available with no subscription — permanently. AI recipe generation is included free with a monthly usage allowance. The subscription adds meal planning, personalization, and more generation capacity; it's never required to cook.</p><p><strong>Terms</strong><br/><br/>Subscriptions renew automatically until cancelled. Cancel anytime from your account settings — no cancellation fee, and you keep access through the end of the current billing period. One subscription covers all Brisk It appliances on your account.<br/><br/>Full Subscription terms can be found in your Brisk It mobile app.</p>",
             "default_open": false,
             "item_heading_1": "",
             "item_text_1": "",
