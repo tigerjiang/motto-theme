@@ -55,7 +55,7 @@
         "offer_banner": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"product-offer-banner\">Father’s Day special · ends June 30th</div>"
+            "custom_liquid": "<div class=\"product-offer-banner\">Save $75 With Discount Code TIKTOK75*</div>"
           }
         },
         "buy_buttons": {
@@ -208,8 +208,22 @@
         "why_brisk_it": {
           "type": "accordion",
           "settings": {
-            "question": "Why Brisk It",
-            "answer": "<p>Brisk It combines wood-fired flavor with intelligent automation, so every cook is easier and more consistent.</p>",
+            "question": "Product Specifications and Dimensions",
+            "answer": "<p><strong>Dimensions:</strong> 17.9 × 17.3 × 14.7 in<br/><br/><strong>Weight:</strong> 31 lb<br/><br/><strong>Interior capacity:</strong> 32 qt<br/><br/><strong>Cooking modes (8+):</strong> Air fry, bake, roast, toast, slow cook, dehydrate, proof, reheat<br/><br/><strong>Temperature range:</strong> 120°F – 450°F<br/><br/><strong>Power:</strong> 1800W · standard 120V household outlet<br/><br/><strong>Connectivity:</strong> Wi-Fi (2.4 GHz)<br/><br/><strong>Controls:</strong> Digital Controller on the unit, plus full control from the Brisk It app (iOS and Android)<br/><br/><strong>Interior finish:</strong> Aluminum</p>",
+            "default_open": false,
+            "item_heading_1": "",
+            "item_text_1": "",
+            "item_heading_2": "",
+            "item_text_2": "",
+            "item_heading_3": "",
+            "item_text_3": ""
+          }
+        },
+        "specifications": {
+          "type": "accordion",
+          "settings": {
+            "question": "What's Included",
+            "answer": "",
             "default_open": false,
             "item_heading_1": "",
             "item_text_1": "",
@@ -222,7 +236,7 @@
         "brisk_it_ai": {
           "type": "accordion",
           "settings": {
-            "question": "Brisk It AI",
+            "question": "How Brisk It AI Works",
             "answer": "",
             "default_open": true,
             "item_image_1": "shopify://shop_images/neoma-kitchenwoman.png",
@@ -236,25 +250,11 @@
             "item_text_3": "<p>From meal planning to grocery assistance, to the perfect results—Neoma automates your AI cook and meal plans. You stay in control. It does the work.</p>"
           }
         },
-        "specifications": {
-          "type": "accordion",
-          "settings": {
-            "question": "Specifications",
-            "answer": "<p>See product dimensions, cooking capacity, temperature range, power requirements, and included accessories.</p>",
-            "default_open": false,
-            "item_heading_1": "",
-            "item_text_1": "",
-            "item_heading_2": "",
-            "item_text_2": "",
-            "item_heading_3": "",
-            "item_text_3": ""
-          }
-        },
         "shipping": {
           "type": "accordion",
           "settings": {
-            "question": "Shipping",
-            "answer": "<p>Shipping options and delivery estimates are shown at checkout.</p>",
+            "question": "Subscription",
+            "answer": "<p>Ships Free to Continental United States.</p>",
             "default_open": false,
             "item_heading_1": "",
             "item_text_1": "",
@@ -267,8 +267,8 @@
         "assembly_care": {
           "type": "accordion",
           "settings": {
-            "question": "Assembly/Care",
-            "answer": "<p>Follow the included assembly guide and clean the grill after use for reliable long-term performance.</p>",
+            "question": "Warranty",
+            "answer": "<p>Every Neoma is covered by Brisk It's <strong>limited warranty</strong> against defects in materials and workmanship, starting from the date of purchase.</p><p></p><p>To start a claim, email <a href=\"mailto:support@briskit.ai\"><strong>support@briskit.ai</strong></a> with your order number and a short description of the issue.</p><p>Full Warranty Terms can be found here: https://briskit.ai/pages/warranty-returns</p>",
             "default_open": false,
             "item_heading_1": "",
             "item_text_1": "",
@@ -281,8 +281,8 @@
       },
       "block_order": [
         "why_brisk_it",
-        "brisk_it_ai",
         "specifications",
+        "brisk_it_ai",
         "shipping",
         "assembly_care"
       ],
