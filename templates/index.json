@@ -13,7 +13,7 @@
       "type": "hero",
       "name": "Hero",
       "settings": {
-        "video": "https://www.youtube.com/watch?v=E-VoeBjZPDk",
+        "video": "shopify://files/videos/e1e0e6c91814c53243619fa4dbae7f65.mp4",
         "image_desktop": "shopify://shop_images/2025_Homepage_v7-Final___hero-background-1920x1050.png",
         "image_mobile": "shopify://shop_images/hero-ovenoncounter-mobile_7082e74e-1d7d-4c3a-9abc-a63b0f34b394.png",
         "eyebrow": "HEALTH OPTIMIZED. HANDS-OFF.",
