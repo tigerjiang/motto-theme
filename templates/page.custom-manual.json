@@ -12,6 +12,15 @@
     "manuals": {
       "type": "section-manual",
       "blocks": {
+        "manual_QjiVqM": {
+          "type": "manual",
+          "settings": {
+            "manual_photo": "shopify://shop_images/User_Manuals___manualcover-neoma.png",
+            "manual_title": "NEOMA AI OVEN",
+            "manual_url": "https://briskimages.s3.us-west-1.amazonaws.com/files/manual/Owner's+Manual_Neoma_V1.pdf",
+            "arrow_text": "Download PDF"
+          }
+        },
         "origin-940": {
           "type": "manual",
           "settings": {
@@ -50,6 +59,7 @@
         }
       },
       "block_order": [
+        "manual_QjiVqM",
         "origin-940",
         "origin-580",
         "origin-450",
