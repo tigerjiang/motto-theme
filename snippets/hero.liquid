@@ -23,23 +23,16 @@
     <div class="hero__background image-fit" aria-hidden="true">
       {%- if hero_settings.video != blank -%}
         <div class="video-background hero__video">
-          {%- if hero_settings.video.type == 'youtube' -%}
-            <iframe
-              src="https://www.youtube.com/embed/{{ hero_settings.video.id }}?autoplay=1&mute=1&controls=0&loop=1&playlist={{ hero_settings.video.id }}&playsinline=1&rel=0"
-              title="Background video"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              loading="eager"
-              tabindex="-1"
-            ></iframe>
-          {%- elsif hero_settings.video.type == 'vimeo' -%}
-            <iframe
-              src="https://player.vimeo.com/video/{{ hero_settings.video.id }}?background=1&autoplay=1&muted=1&loop=1&byline=0&title=0&controls=0"
-              title="Background video"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              loading="eager"
-              tabindex="-1"
-            ></iframe>
-          {%- endif -%}
+          {{
+            hero_settings.video
+            | video_tag:
+              image_size: '1100x',
+              autoplay: true,
+              loop: hero_settings.video_loop | default: true,
+              controls: false,
+              muted: true,
+              playsinline: true
+          }}
         </div>
       {%- else -%}
         <picture>
@@ -74,10 +67,10 @@
       or hero_settings.badge != blank
       or hero_settings.eyebrow != blank
     -%}
-      <div class="hero__inner hero2__inner">
+      <div class="hero__inner">
         <div class="hero__shell">
           <div
-            class="hero__content hero__content--left hero__content--{{ text_width }}{% if hero_settings.text_animation %} hero__content--animation{% endif %}"
+            class="hero__content hero__content--{{ hero_settings.text_position | default: 'left' }} hero__content--{{ text_width }}{% if hero_settings.text_animation %} hero__content--animation{% endif %}"
           >
             {%- if hero_settings.badge != blank -%}
               <div class="hero__badge">
@@ -102,7 +95,7 @@
             {%- if hero_title != blank -%}
               <header class="hero__head">
                 <{{ heading_tag }}
-                  class="hero__title hero__title--large{% if hero_settings.text_animation %} js-split-text{% endif %}"
+                  class="hero__title hero__title--{{ hero_settings.heading_size | default: 'large' }}{% if hero_settings.text_animation %} js-split-text{% endif %}"
                   dir="ltr"
                 >
                   {{ hero_title }}
