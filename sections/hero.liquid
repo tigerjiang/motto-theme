@@ -10,6 +10,56 @@
     --hero-eyebrow-color: {{ section.settings.eyebrow_color }};
     --hero-title-color: {{ section.settings.title_color }};
     --hero-text-color: {{ section.settings.text_color }};
+
+    /* === 核心：强制 Section 撑满全屏 === */
+    min-height: 100vh;
+    min-height: 100dvh; /* 兼容移动端浏览器 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* 让内容垂直居中，不干扰背景 */
+  }
+
+  /* 背景容器：绝对定位铺满整个 hero */
+  #shopify-section-{{ section.id }} .hero__background {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  /* 视频容器：强制占满背景 */
+  #shopify-section-{{ section.id }} .hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 双重保险：video 标签自身也强制拉伸 */
+  #shopify-section-{{ section.id }} .hero__video video {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* 裁剪铺满，不留黑边 */
+    object-position: center center !important;
+  }
+
+  /* 文字内容必须在视频之上 */
+  #shopify-section-{{ section.id }} .hero__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  /* 如果你有 .image-fit 类干扰，强行覆盖 */
+  #shopify-section-{{ section.id }} .image-fit {
+    position: absolute !important;
+    inset: 0 !important;
   }
 {%- endstyle -%}
 
