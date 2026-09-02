@@ -16,7 +16,7 @@
           "type": "manual",
           "settings": {
             "manual_photo": "shopify://shop_images/User_Manuals___manualcover-940.png",
-            "manual_title": "Brisk It Origin 940 A.I.",
+            "manual_title": "Origin-940",
             "manual_url": "https://cdn.shopify.com/s/files/1/0568/4271/5314/files/Origin-940_Owners_Manual.pdf?v=1749521467",
             "arrow_text": "Download PDF"
           }
@@ -25,7 +25,7 @@
           "type": "manual",
           "settings": {
             "manual_photo": "shopify://shop_images/User_Manuals___manualcover-580.png",
-            "manual_title": "Brisk It Origin 580 A.I.",
+            "manual_title": "Origin-580",
             "manual_url": "https://cdn.shopify.com/s/files/1/0568/4271/5314/files/Origin-580_Owners_Manual.pdf?v=1749521468",
             "arrow_text": "Download PDF"
           }
@@ -34,7 +34,7 @@
           "type": "manual",
           "settings": {
             "manual_photo": "shopify://shop_images/User_Manuals___manualcover-450.png",
-            "manual_title": "Brisk It Origin 450 A.I.",
+            "manual_title": "Zelos 450",
             "manual_url": "https://cdn.shopify.com/s/files/1/0568/4271/5314/files/ZELOS-450_Owners_Manual.pdf?v=1749521470",
             "arrow_text": "Download PDF"
           }
@@ -43,18 +43,25 @@
           "type": "manual",
           "settings": {
             "manual_photo": "shopify://shop_images/User_Manuals___manualcover-640.png",
-            "manual_title": "Brisk It Origin 640 A.I.",
+            "manual_title": "Argo - 640",
             "manual_url": "https://cdn.shopify.com/s/files/1/0568/4271/5314/files/ARGO-640_Owners_Manual.pdf?v=1749521444",
             "arrow_text": "Download PDF"
           }
         }
       },
-      "block_order": ["origin-940", "origin-580", "origin-450", "origin-640"],
+      "block_order": [
+        "origin-940",
+        "origin-580",
+        "origin-450",
+        "origin-640"
+      ],
       "settings": {
         "title": "User Manuals",
         "desc": "Looking for your grill manual? You're in the right place. Below you’ll find downloadable PDFs to help you get set up, stay safe, and make the most of your grill. Whether you need assembly instructions, safety tips, or a quick reminder on how to connect and ignite your A.I grill—it's all here.\n\nJust choose the manual you need and you’re good to go!"
       }
     }
   },
-  "order": ["manuals"]
+  "order": [
+    "manuals"
+  ]
 }
