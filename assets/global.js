@@ -146,7 +146,29 @@ const sliderInit = (isUpdate, root) => {
           },
           slideChangeTransitionStart: function () {
             if (mediaListId && mediaSublist) {
-              mediaSublist.swiper.slideTo(this.activeIndex);
+              const thumbsSlider = mediaSublist.swiper;
+              const activeIndex = this.activeIndex;
+              const visibleSlides = Array.from(
+                thumbsSlider.slides || []
+              ).filter((slide) =>
+                slide.classList.contains("swiper-slide-visible")
+              );
+              const activeThumb = thumbsSlider.slides?.[activeIndex];
+
+              // Keep the thumbnail rail still while the active thumbnail is
+              // already visible. This also lets Swiper clamp the last group to
+              // the bottom instead of moving the final thumbnail to the top.
+              if (activeThumb && !visibleSlides.includes(activeThumb)) {
+                const visibleCount = Math.max(
+                  Math.floor(thumbsSlider.params.slidesPerView || 1),
+                  1
+                );
+                const targetIndex = Math.min(
+                  activeIndex,
+                  Math.max(thumbsSlider.slides.length - visibleCount, 0)
+                );
+                thumbsSlider.slideTo(targetIndex);
+              }
             }
           },
           slideChange: function () {
