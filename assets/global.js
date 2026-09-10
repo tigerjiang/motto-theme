@@ -148,25 +148,29 @@ const sliderInit = (isUpdate, root) => {
             if (mediaListId && mediaSublist) {
               const thumbsSlider = mediaSublist.swiper;
               const activeIndex = this.activeIndex;
-              const visibleSlides = Array.from(
-                thumbsSlider.slides || []
-              ).filter((slide) =>
+              const thumbSlides = Array.from(thumbsSlider.slides || []);
+              const visibleSlides = thumbSlides.filter((slide) =>
                 slide.classList.contains("swiper-slide-visible")
               );
-              const activeThumb = thumbsSlider.slides?.[activeIndex];
+              const activeThumb = thumbSlides[activeIndex];
 
-              // Keep the thumbnail rail still while the active thumbnail is
-              // already visible. This also lets Swiper clamp the last group to
-              // the bottom instead of moving the final thumbnail to the top.
-              if (activeThumb && !visibleSlides.includes(activeThumb)) {
-                const visibleCount = Math.max(
-                  Math.floor(thumbsSlider.params.slidesPerView || 1),
-                  1
+              // Only move by the number of slides outside the visible range.
+              // Swiper can then clamp the final group against the bottom edge.
+              if (
+                activeThumb &&
+                visibleSlides.length &&
+                !visibleSlides.includes(activeThumb)
+              ) {
+                const firstVisibleIndex = thumbSlides.indexOf(visibleSlides[0]);
+                const lastVisibleIndex = thumbSlides.indexOf(
+                  visibleSlides[visibleSlides.length - 1]
                 );
-                const targetIndex = Math.min(
-                  activeIndex,
-                  Math.max(thumbsSlider.slides.length - visibleCount, 0)
-                );
+                const targetIndex =
+                  activeIndex > lastVisibleIndex
+                    ? thumbsSlider.activeIndex + activeIndex - lastVisibleIndex
+                    : thumbsSlider.activeIndex +
+                      activeIndex -
+                      firstVisibleIndex;
                 thumbsSlider.slideTo(targetIndex);
               }
             }
@@ -318,8 +322,8 @@ const subSliderInit = (isUpdate, root) => {
             spaceBetween: 16,
             direction: "vertical",
             slidesPerView: perViewTablet,
-            centeredSlides: true,
-            centeredSlidesBounds: true,
+            centeredSlides: false,
+            centeredSlidesBounds: false,
             slideToClickedSlide: true,
           },
           1200: {
