@@ -55,7 +55,7 @@
         "offer_banner": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"product-offer-banner\">Save $75 With Discount Code TIKTOK75*</div>"
+            "custom_liquid": "<div class=\"product-offer-banner\">Save EXTRA $50 With Discount Code \"LAUNCH50\"</div>"
           }
         },
         "buy_buttons": {
