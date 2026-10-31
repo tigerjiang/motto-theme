@@ -55,7 +55,7 @@
         "offer_banner": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"product-offer-banner\">Father’s Day special · ends June 30th</div>"
+            "custom_liquid": "<div class=\"product-offer-banner\">Save Additional 20% with Code BLACKFRIDAY20</div>"
           }
         },
         "buy_buttons": {
@@ -85,6 +85,7 @@
         "show_navigation": true,
         "section_layout": "container",
         "section_aspect_ratio": "100%",
+        "match_thumbnail_height_to_product_info": false,
         "desktop_alignment": "left",
         "mobile_alignment": "before",
         "gallery_type": "thumbs_aside",
