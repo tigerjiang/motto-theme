@@ -18,8 +18,8 @@
           "type": "announcement_slide",
           "settings": {
             "color_scheme": "background-3",
-            "text": "Display a limited-time deal or important notice here.",
-            "button_label": "Shop Now",
+            "text": "Free shipping to the contiguous US",
+            "button_label": "",
             "button_link": ""
           }
         }
